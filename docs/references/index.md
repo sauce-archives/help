@@ -4,4 +4,6 @@ layout: en
 permalink: scripting-api/
 ---
 
-Test
+TestObject provides a comprehensive JavaScript API to write tests and access devices:
+
+{% include apis.html %}

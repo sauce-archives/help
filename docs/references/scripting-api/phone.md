@@ -6,7 +6,7 @@ permalink: phone/
 
 <ul>
 	<li>
-		<h4>receiveCall( phoneNumber , [ recordedImage ] )</h3>
+		<h4 id="receiveCall">receiveCall( phoneNumber , [ recordedImage ] )</h3>
 		<p>call the phone with the given number</p>
 		<p><ul>
 			<li>
@@ -26,7 +26,7 @@ permalink: phone/
 		</p>
 	</li>
 	<li>
-		<h4>hangupCall( phoneNumber , [ recordedImage ] )</h3>
+		<h4 id="hangupCall">hangupCall( phoneNumber , [ recordedImage ] )</h3>
 		<p>stop the call with the given number</p>
 		<p><ul>
 			<li>
@@ -46,7 +46,7 @@ permalink: phone/
 		</p>
 	</li>
 	<li>
-		<h4>receiveSMS( message, phoneNumber , [ recordedImage ] )</h3>
+		<h4 id="receiveSMS">receiveSMS( message, phoneNumber , [ recordedImage ] )</h3>
 		<p>send a message to the phone from the given number</p>
 		<p><ul>
 			<li>
@@ -71,7 +71,7 @@ permalink: phone/
 		</p>
 	</li>
 		<li>
-		<h4>executeShellCommand( command, [ recordedImage ] )</h3>
+		<h4 id="execeuteShellCommand">executeShellCommand( command, [ recordedImage ] )</h3>
 		<p>execute the given (adb) command on the device</p>
 		<p><ul>
 			<li>

@@ -6,7 +6,7 @@ permalink: locator/
 
 <ul>
 	<li>
-		<h4>find( targetLocator , [timeout] , [recordedImage])</h3>
+		<h4 id="clickLocator">find( targetLocator , [timeout] , [recordedImage])</h4>
 		<p>rotate the device to landscape view</p>
 		<p><ul>
 			<li>
@@ -36,7 +36,7 @@ permalink: locator/
 		</p>
 	</li>
 	<li>
-		<h4>waitVanish( targetLocator , [timeout] , [recordedImage] )</h3>
+		<h4 id="waitVanish">waitVanish( targetLocator , [timeout] , [recordedImage] )</h4>
 		<p>wait until the targetLocator vanishes from the screen, fails if the targetLocator is still visible after the given timeout</p>
 		<p><ul>
 			<li>
@@ -61,7 +61,7 @@ permalink: locator/
 		</p>
 	</li>
 	<li>
-		<h4>waitAppear( targetLocator , [timeout] , [recordedImage] )</h3>
+		<h4 id="waitAppear">waitAppear( targetLocator , [timeout] , [recordedImage] )</h4>
 		<p>wait until the targetLocator appears on the screen, fails if the targetLocator doesn't appear after the given timeout</p>
 		<p><ul>
 			<li>

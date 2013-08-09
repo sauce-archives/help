@@ -6,7 +6,7 @@ permalink: sensor/
 
 <ul>
 	<li>
-		<h4>rotateToLandscape( [ recordedImage ] )</h3>
+		<h4 id="rotateToLandscape">rotateToLandscape( [ recordedImage ] )</h3>
 		<p>rotate the device to landscape view</p>
 		<p><ul>
 			<li>
@@ -21,7 +21,7 @@ permalink: sensor/
 		</p>
 	</li>
 	<li>
-		<h4>rotateToPortrait( [ recordedImage ] )</h3>
+		<h4 id="rotateToPortrait">rotateToPortrait( [ recordedImage ] )</h3>
 		<p>rotate the device to portrait view</p>
 		<p><ul>
 			<li>
@@ -36,7 +36,7 @@ permalink: sensor/
 		</p>
 	</li>
 	<li>
-		<h4>setGPS( latitude , longitude , elevation, [ recordedImage ] )</h3>
+		<h4 id="setGPS">setGPS( latitude , longitude , elevation, [ recordedImage ] )</h3>
 		<p>change the gps position of the device</p>
 		<p><ul>
 			<li>

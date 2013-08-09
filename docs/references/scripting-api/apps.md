@@ -6,7 +6,7 @@ permalink: apps/
 
 <ul>
 	<li>
-		<h4>installApp( appId )</h3>
+		<h4 id="install">installApp( appId )</h4>
 		<p>install the dependency with the given id</p>
 		<p><ul>
 			<li>
@@ -21,14 +21,14 @@ permalink: apps/
 		</p>
 	</li>
 	<li>
-		<h4>launchDefaultApp()</h3>
+		<h4 id="launch">launchDefaultApp()</h4>
 		<p>launch the default app of the current project</p>
 		<strong>Example:</strong>
 		{% highlight js %}launchDefaultApp(){% endhighlight %}
 		</p>
 	</li>
 	<li>
-		<h4>restartDefaultApp()</h3>
+		<h4 id="restart">restartDefaultApp()</h4>
 		<p>restart the default app of the current project</p>
 		<strong>Example:</strong>
 		{% highlight js %}restartDefaultApp(){% endhighlight %}

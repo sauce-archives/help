@@ -6,7 +6,7 @@ permalink: input/
 
 <ul>
 	<li>
-		<h4>click( targetLocator , [ timeout ] , [ recordedImage ] )</h3>
+		<h4 id="clickLocator">click( targetLocator , [ timeout ] , [ recordedImage ] )</h4>
 		<p>click on the given locator when it appears on the screen, fails if the locator doesn't appear after given timeout</p>
 		<p><ul>
 			<li>
@@ -31,7 +31,7 @@ permalink: input/
 		</p>
 	</li>
 	<li>
-		<h4>click( x , y , [ recordedImage ] )</h3>
+		<h4 id="clickPosition">click( x , y , [ recordedImage ] )</h4>
 		<p>click immediately on the given position</p>
 		<p><ul>
 			<li>
@@ -56,7 +56,7 @@ permalink: input/
 		</p>
 	</li>
 	<li>
-		<h4>longPress( targetLocator , [ timeout ] , [ recordedImage ] )</h3>
+		<h4 id="longPressLocator">longPress( targetLocator , [ timeout ] , [ recordedImage ] )</h4>
 		<p>long press on the given locator when it appears on the screen, fails if the locator doesn't appear after given timeout</p>
 		<p><ul>
 			<li>
@@ -81,7 +81,7 @@ permalink: input/
 		</p>
 	</li>
 	<li>
-		<h4>longPress( x , y , [ recordedImage ] )</h3>
+		<h4 id"longPressPosition">longPress( x , y , [ recordedImage ] )</h4>
 		<p>click immediately on the given position</p>
 		<p><ul>
 			<li>
@@ -106,7 +106,7 @@ permalink: input/
 		</p>
 	</li>
 	<li>
-		<h4>drag( flow , [ recordedImage ] )</h3>
+		<h4 id="drag">drag( flow , [ recordedImage ] )</h4>
 		<p>drag using the defined flow, flow is an array containing flow points</p>
 		<p><ul>
 			<li>
@@ -126,7 +126,7 @@ permalink: input/
 		</p>
 	</li>
 		<li>
-		<h4>type( text , [ recordedImage ] )</h3>
+		<h4 id="type">type( text , [ recordedImage ] )</h4>
 		<p>type the given text</p>
 		<p><ul>
 			<li>

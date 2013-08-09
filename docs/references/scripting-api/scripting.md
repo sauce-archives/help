@@ -6,7 +6,7 @@ permalink: scripting/
 
 <ul>
 	<li>
-		<h4>runScript( scriptId )</h3>
+		<h4 id="runScript">runScript( scriptId )</h3>
 		<p>executes the given script, should be used to execute actions from another script immediately</p>
 		<p><ul>
 			<li>
@@ -21,7 +21,7 @@ permalink: scripting/
 		</p>
 	</li>
 	<li>
-		<h4>importScript( scriptId )</h3>
+		<h4 id="importScript">importScript( scriptId )</h3>
 		<p>executes the given script, and returns its global scope as object, should be used to invoke methods defined in other scripts</p>
 		<p><ul>
 			<li>
@@ -39,7 +39,7 @@ script.invokeMethodFromAnotherScript();
 		</p>
 	</li>
 	<li>
-		<h4>sleep( n )</h3>
+		<h4 id="sleep">sleep( n )</h3>
 		<p>pause script execution for n seconds</p>
 		<p><ul>
 			<li>
@@ -54,7 +54,7 @@ script.invokeMethodFromAnotherScript();
 		</p>
 	</li>
 	<li>
-		<h4>print( message )</h3>
+		<h4 id="print">print( message )</h3>
 		<p>print a message to the test log</p>
 		<p><ul>
 			<li>
