@@ -1,7 +1,7 @@
 ---
 title: Input Methods
 layout: en
-permalink: input/
+permalink: docs/references/scripting-api/input/
 ---
 
 <ul>

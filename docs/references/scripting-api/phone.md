@@ -1,7 +1,7 @@
 ---
 title: Phone Methods
 layout: en
-permalink: phone/
+permalink: docs/references/scripting-api/phone/
 ---
 
 <ul>

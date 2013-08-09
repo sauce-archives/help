@@ -1,7 +1,7 @@
 ---
 title: Automate your Test Execution using Ant
 layout: en
-permalink: ant-task/
+permalink: docs/guides/ant-task/
 ---
 
 

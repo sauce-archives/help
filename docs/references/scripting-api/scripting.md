@@ -1,7 +1,7 @@
 ---
 title: Sensor Methods
 layout: en
-permalink: scripting/
+permalink: docs/references/scripting-api/scripting/
 ---
 
 <ul>

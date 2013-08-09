@@ -1,6 +1,7 @@
 exclude: [bin, CNAME, Gemfile, Gemfile.lock, README.md]
 markdown: rdiscount
 permalink: :title
+relative_permalinks: false
 pygments: true
 gravatars:
   - j2h: 21b21efe14359ec323f9a70464b91e39

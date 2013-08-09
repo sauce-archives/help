@@ -1,7 +1,7 @@
 ---
 title: Locator Methods
 layout: en
-permalink: locator/
+permalink: docs/references/scripting-api/locator/
 ---
 
 <ul>

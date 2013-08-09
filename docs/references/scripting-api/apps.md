@@ -1,7 +1,7 @@
 ---
 title: Apps Methods
 layout: en
-permalink: apps/
+permalink: docs/references/scripting-api/apps/
 ---
 
 <ul>
