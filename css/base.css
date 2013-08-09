@@ -1,0 +1,18 @@
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  clear: both;
+}
+
+h2 {
+  font-size: 1.6em !important;
+  margin-bottom: 1em !important;
+  line-height: 1em !important;
+  letter-spacing: -0.5px !important;
+  clear: both !important;
+}
+
+ol, ul {
+  list-style-type: none;
+}
