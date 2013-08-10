@@ -3,6 +3,7 @@ markdown: rdiscount
 permalink: :title
 relative_permalinks: false
 pygments: true
+destination: _site/help
 gravatars:
   - j2h: 21b21efe14359ec323f9a70464b91e39
   - roidrage: 1f093c9fe42d562390aca2cb18936a67
