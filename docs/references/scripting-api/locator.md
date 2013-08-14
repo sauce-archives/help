@@ -6,7 +6,7 @@ permalink: docs/references/scripting-api/locator/
 
 <ul>
 	<li>
-		<h4 id="clickLocator">find( targetLocator , [timeout] , [recordedImage])</h4>
+		<h4 id="find">find( targetLocator , [timeout] , [recordedImage])</h4>
 		<p>rotate the device to landscape view</p>
 		<p><ul>
 			<li>
