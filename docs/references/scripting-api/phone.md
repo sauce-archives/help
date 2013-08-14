@@ -71,7 +71,7 @@ permalink: docs/references/scripting-api/phone/
 		</p>
 	</li>
 		<li>
-		<h4 id="execeuteShellCommand">executeShellCommand( command, [ recordedImage ] )</h3>
+		<h4 id="executeShellCommand">executeShellCommand( command, [ recordedImage ] )</h3>
 		<p>execute the given (adb) command on the device</p>
 		<p><ul>
 			<li>
