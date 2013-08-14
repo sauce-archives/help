@@ -1,5 +1,5 @@
 ---
-title: Sensor Methods
+title: Scripting Methods
 layout: en
 permalink: docs/references/scripting-api/scripting/
 ---
