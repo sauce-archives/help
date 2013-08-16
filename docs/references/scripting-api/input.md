@@ -146,7 +146,7 @@ permalink: docs/references/scripting-api/input/
 		</p>
 	</li>
 	<li>
-		<h4 id="type">randomInput( config , [ recordedImage ] )</h4>
+		<h4 id="randomInput">randomInput( config , [ recordedImage ] )</h4>
 		<p>Sends random touch and key events to your application. Fails if an exception (e.g. NullPointerException) is thrown by your application.</p>
 		<p><ul>
 			<li>
