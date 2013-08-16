@@ -125,7 +125,7 @@ permalink: docs/references/scripting-api/input/
 		{% highlight js %}drag([[387, 615, 0], [450, 182, 20]], image(11)){% endhighlight %}
 		</p>
 	</li>
-		<li>
+	<li>
 		<h4 id="type">type( text , [ recordedImage ] )</h4>
 		<p>type the given text</p>
 		<p><ul>
@@ -143,6 +143,36 @@ permalink: docs/references/scripting-api/input/
 		<p>
 		<strong>Example:</strong>
 		{% highlight js %}type('sample text', image(12)){% endhighlight %}
+		</p>
+	</li>
+	<li>
+		<h4 id="type">randomInput( config , [ recordedImage ] )</h4>
+		<p>Sends random touch and key events to your application. Fails if an exception (e.g. NullPointerException) is thrown by your application.</p>
+		<p><ul>
+			<li>
+				<strong>config</strong>
+				<div>Type: JSON</div>
+				<em>json parameters
+				    <ul>
+					<li>eventCount - number of events to send to your app</li>
+					<li>throttle - delay between two events</li>
+					<li>seed - Seed value for pseudo-random number generator. If you re-run the randomInput with the same seed value, it will generate the same sequence of events.</li>
+				   </ul> 	
+				</em>
+			</li>
+			<li>
+				<strong>recordedImage</strong>
+				<div>Type: Image</div>
+				<em>reference to the screenshots taken during recording</em>
+			</li>
+		</ul></p>
+		<p>
+		<strong>Example 1: execute always the same sequence of events</strong>
+		{% highlight js %}randomInput({eventCount: 10000, throttle: 0, seed: 123}){% endhighlight %}
+		</p>
+		<p>
+		<strong>Example 2: execute always a different sequence of events</strong>
+		{% highlight js %}randomInput({eventCount: 10000, throttle: 0, seed: Math.random() * 100}){% endhighlight %}
 		</p>
 	</li>
 </ul>
