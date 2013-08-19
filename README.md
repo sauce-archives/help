@@ -19,6 +19,10 @@ Make sure you have Ruby and RubyGems installed. Next install
 
     gem install bundler
 
+Enter help folder
+
+    cd help
+
 Then install dependencies:
 
     bundle install --binstubs
