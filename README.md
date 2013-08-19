@@ -1,6 +1,6 @@
 # About this repository #
 
-This is the documentation site for TestOBJect! (http://help.testobject.com)
+This is the documentation site for TestObject! (http://help.testobject.com)
 
 ## How to contribute
 
