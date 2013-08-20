@@ -6,4 +6,4 @@ permalink: docs/references/scripting-api/
 
 TestObject provides a comprehensive JavaScript API to write tests and access devices:
 
-{% include apis.html %}
+{% include nav-api.html %}

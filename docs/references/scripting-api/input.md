@@ -6,7 +6,7 @@ permalink: docs/references/scripting-api/input/
 
 <ul>
 	<li>
-		<h4 id="clickLocator">click( targetLocator , [ timeout ] , [ recordedImage ] )</h4>
+		<h4 id="click-box">click( targetLocator , [ timeout ] , [ recordedImage ] )</h4>
 		<p>click on the given locator when it appears on the screen, fails if the locator doesn't appear after given timeout</p>
 		<p><ul>
 			<li>
@@ -31,7 +31,7 @@ permalink: docs/references/scripting-api/input/
 		</p>
 	</li>
 	<li>
-		<h4 id="clickPosition">click( x , y , [ recordedImage ] )</h4>
+		<h4 id="click-position">click( x , y , [ recordedImage ] )</h4>
 		<p>click immediately on the given position</p>
 		<p><ul>
 			<li>
@@ -56,7 +56,7 @@ permalink: docs/references/scripting-api/input/
 		</p>
 	</li>
 	<li>
-		<h4 id="longPressLocator">longPress( targetLocator , [ timeout ] , [ recordedImage ] )</h4>
+		<h4 id="longPress-box">longPress( targetLocator , [ timeout ] , [ recordedImage ] )</h4>
 		<p>long press on the given locator when it appears on the screen, fails if the locator doesn't appear after given timeout</p>
 		<p><ul>
 			<li>
@@ -81,7 +81,7 @@ permalink: docs/references/scripting-api/input/
 		</p>
 	</li>
 	<li>
-		<h4 id"longPressPosition">longPress( x , y , [ recordedImage ] )</h4>
+		<h4 id"longPress-position">longPress( x , y , [ recordedImage ] )</h4>
 		<p>click immediately on the given position</p>
 		<p><ul>
 			<li>
