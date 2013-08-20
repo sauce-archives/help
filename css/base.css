@@ -13,6 +13,19 @@ h2 {
   clear: both !important;
 }
 
+h3 {
+  text-transform: none !important;
+  font-size: 1.4em !important;
+  margin-top: 30px !important;
+  margin-bottom: 10px !important;
+}
+
+h4 {
+  font-size: 1.2em !important;
+  color: #777 !important;
+  margin-bottom: 6px !important;
+}
+
 ol, ul {
   list-style-type: none;
 }

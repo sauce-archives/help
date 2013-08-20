@@ -1,5 +1,5 @@
 ---
-title: Continuous Recorder
+title: CONTINUOUS Recorder
 layout: en
 permalink: docs/references/recorder/
 ---

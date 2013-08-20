@@ -11,8 +11,8 @@ This dialog assists you in creating assertions for a specific screenshot. An ass
 <p><strong>Draw new:</strong> Draw a new locator box. This automatically picks the locator and thus stages it for insertion into the script.</p>
 <p><strong>Delete:</strong> Click on a locator to remove it from the screen.</p>
 
-<h4 id="vanish"><a href="#vanish">Vanishing Locators</a></h4>
+<h3 id="vanish"><a href="#vanish">Vanishing Locators</a></h3>
 <p>In this tab pick locators that are visible on the shown screen but should not be visible on the next screen anymore. For each locator that has been picked a <a href="/docs/references/scripting-api/locator#waitVanish">waitVanish</a> assertion will be added to the script.</p>
 
-<h4 id="appear"><a href="#appear">Appearing Locators</a></h4>
+<h3 id="appear"><a href="#appear">Appearing Locators</a></h3>
 <p>In this tab pick locators that have to be visible on the shown screen but were not visible on the previous screen. For each locator that has been picked a <a href="/docs/references/scripting-api/locator#waitAppear">waitAppear</a> assertion will be added to the script.</p>

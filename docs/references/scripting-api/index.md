@@ -1,5 +1,5 @@
 ---
-title: Continuous JavaScript Testing API
+title: CONTINUOUS JavaScript Testing API
 layout: en
 permalink: docs/references/scripting-api/
 ---
