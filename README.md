@@ -14,28 +14,29 @@ Install pygments for code highlighting:
     sudo apt-get install python-setuptools python-dev build-essential
     sudo easy_install Pygments
 
-Make sure you have Ruby and RubyGems installed. Next install
-[bundler](http://gembundler.com/):
+Install Ruby 1.9.1 which includes the gem command, and the make command:  
 
-    gem install bundler
+    sudo apt-get install ruby1.9.1 ruby1.9.1-dev make  
+    
+Install Jekyll:  
 
-Enter help folder
+    sudo gem install jekyll  
+    
+Start Jekyll  
 
-    cd help
+Jekyll can be run inside the website directory:  
 
-Then install dependencies:
-
-    bundle install --binstubs
+    jekyll  
 
 In order to run a local Web server that will serve documentation site, run:
 
-    ./bin/jekyll serve
+    jekyll serve
 
 and then open [localhost:4000](http://localhost:4000/) in your browser. 
 
 To regenerate the HTML pages automatically when you make changes to Markdown source files, use
 
-    ./bin/jekyll serve --watch
+    jekyll serve --watch
 
 Note that quoted entities may be escaped or unescaped depending on the Ruby
 version (1.8 vs. 1.9) used. It is normal.
