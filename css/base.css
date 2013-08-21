@@ -49,10 +49,17 @@ header nav ul.nav-main {
   margin-top: 30px;
 }
 
+
+/* Sidebar */
+
 .sidebar h6 {
   color: #777;
   margin-bottom: 6px;
   font-size: 16px;
+}
+
+.sidebar ul {
+  list-style-type: none;
 }
 
 .sidebar h6 + ul {
@@ -62,6 +69,9 @@ header nav ul.nav-main {
 .sidebar ul + h6 {
   margin-top: 30px;
 }
+
+
+/* Main */
 
 h2 {
   font-size: 36px;
@@ -90,6 +100,21 @@ h3 + h4 {
   margin-top: 20px;
 }
 
-ol, ul {
-  list-style-type: none;
+.main p + ul {
+  margin-top: -16px;
+}
+
+.main img {
+  display: block;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shadow {
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
 }
