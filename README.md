@@ -21,6 +21,7 @@ Install Ruby 1.9.1 which includes the gem command, and the make command:
 Install Jekyll:  
 
     sudo gem install jekyll  
+    sudo gem install rdiscount
     
 Start Jekyll  
 
