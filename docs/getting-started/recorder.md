@@ -1,10 +1,10 @@
 ---
 title: Using the Recorder
 layout: en
-permalink: docs/guides/recorder/
+permalink: docs/getting-started/recorder/
 ---
 
-In this guide you will get to know the components of the CONTINUOUS Recorder. It consists of
+In this tutorial you will get to know the components of the CONTINUOUS Recorder. It consists of
 
 <ul>
 	<li>The device in the middle.</li>

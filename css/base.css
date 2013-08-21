@@ -1,29 +1,93 @@
-h1 {
-  font-size: 3em;
-  line-height: 1em;
-  margin-bottom: 0.5em;
-  clear: both;
+/* Header */
+
+header {
+  border-top: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+header .logo {
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+header .logo img {
+  height: 45px;
+}
+
+header h1 {
+  margin: 0;
+  float: left;
+  margin-top: 10px;
+  font-size: 30px;
+  margin-left: 30px;
+  vertical-align: middle;
+}
+
+header h1 a {
+  color: #777;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+  color: #777;
+}
+
+header nav {
+  margin-top: 17px;
+}
+
+header nav ul.nav-main {
+  margin-bottom: 0;
+}
+
+
+/* Body */
+
+.container {
+  margin-top: 30px;
+}
+
+.sidebar h6 {
+  color: #777;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.sidebar h6 + ul {
+  margin-left: 0;
+}
+
+.sidebar ul + h6 {
+  margin-top: 30px;
 }
 
 h2 {
-  font-size: 1.6em !important;
-  margin-bottom: 1em !important;
-  line-height: 1em !important;
-  letter-spacing: -0.5px !important;
-  clear: both !important;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 30px;
 }
 
 h3 {
-  text-transform: none !important;
-  font-size: 1.4em !important;
-  margin-top: 30px !important;
-  margin-bottom: 10px !important;
+  color: #121214;
+  text-transform: none;
+  font-size: 26px;
+  font-weight: 300;
+  margin-top: 60px;
+  margin-bottom: 10px;
 }
 
 h4 {
-  font-size: 1.2em !important;
-  color: #777 !important;
-  margin-bottom: 6px !important;
+  color: #121214;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 6px;
+  margin-top: 40px;
+}
+
+h3 + h4 {
+  margin-top: 20px;
 }
 
 ol, ul {

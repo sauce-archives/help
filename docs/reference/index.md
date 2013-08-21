@@ -1,7 +1,7 @@
 ---
 title: CONTINUOUS JavaScript Testing API
 layout: en
-permalink: docs/references/scripting-api/
+permalink: docs/api/
 ---
 
 TestObject provides a comprehensive JavaScript API to write tests and access devices:

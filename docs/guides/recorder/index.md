@@ -1,7 +1,7 @@
 ---
 title: CONTINUOUS Recorder
 layout: en
-permalink: docs/references/recorder/
+permalink: docs/guides/recorder/
 ---
 
 {% include nav-recorder.html %}
