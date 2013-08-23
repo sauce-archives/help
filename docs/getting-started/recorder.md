@@ -7,7 +7,7 @@ permalink: docs/getting-started/recorder/
 In this tutorial we will walk you through the different components of the CONTINUOUS Recorder.
 
 
-What you will need:
+What you need:
 
 + A web browser
 + An app (*.apk file) - <a href="https://docs.google.com/file/d/0ByR0JcAYUAoWdS1faUNJdGxONzg/edit?usp=sharing" target="_blank" rel="nofollow">download our sample app here...</a>
