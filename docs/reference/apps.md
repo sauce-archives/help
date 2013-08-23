@@ -2,6 +2,7 @@
 title: Apps Methods
 layout: en
 permalink: docs/api/apps/
+alias: docs/references/scripting-api/apps/
 ---
 
 <h3 id="install">installApp( appId )</h3>

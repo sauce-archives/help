@@ -2,6 +2,7 @@
 title: Sensor Methods
 layout: en
 permalink: docs/api/sensor/
+alias: docs/references/scripting-api/sensor/
 ---
 
 <h3 id="rotateToLandscape">rotateToLandscape( [ recordedImage ] )</h3>

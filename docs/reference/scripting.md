@@ -2,6 +2,7 @@
 title: Scripting Methods
 layout: en
 permalink: docs/api/scripting/
+alias: docs/references/scripting-api/scripting/
 ---
 
 <h3 id="runScript">runScript( scriptId )</h3>

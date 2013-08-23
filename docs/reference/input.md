@@ -2,6 +2,7 @@
 title: Input Methods
 layout: en
 permalink: docs/api/input/
+alias: docs/references/scripting-api/input/
 ---
 
 <h3 id="click-box">click( targetLocator , [ timeout ] , [ recordedImage ] )</h3>

@@ -2,6 +2,7 @@
 title: Phone Methods
 layout: en
 permalink: docs/api/phone/
+alias: docs/references/scripting-api/phone/
 ---
 
 <h3 id="receiveCall">receiveCall( phoneNumber , [ recordedImage ] )</h3>

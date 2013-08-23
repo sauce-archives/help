@@ -2,6 +2,7 @@
 title: Locator Methods
 layout: en
 permalink: docs/api/locator/
+alias: docs/references/scripting-api/locator/
 ---
 
 <h3 id="find">find( targetLocator , [timeout] , [recordedImage])</h3>
