@@ -5,8 +5,7 @@ permalink: docs/guides/file-download/
 ---
 
 <h3>File download steps</h3>
-<p>Some applications require certain native files to be present on the device.</p>
-<p>The feature to install arbitrary files as dependencies will be implemented but until it's released there is a workaround.</p>
+<p>Some applications require certain native files to be present on the device. A feature installing arbitrary files as dependencies will be implemented but until it's released there is a workaround.</p>
 <p>
 Our scripting API allows executing arbitrary commands on Android devices. We will use this feature to create steps to download files to any location on the device:
 
