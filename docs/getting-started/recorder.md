@@ -30,7 +30,7 @@ In the middle of the screen you'll find the testing device. It gives you access 
 
 When recording is enabled the actions you perform on the device are recorded. This means, the respective steps are added to the script on the right side of the screen.
 
-If you are using our sample app, click on the 'Continue' button and notice step that gets added to the script as a new line.
+If you are using our sample app, click on the 'Continue' button and notice the step that gets added to the script as a new line.
 
 
 <h3>Step 3: Adjust Locator</h3>
@@ -57,7 +57,7 @@ See the recorder guide for more details about <a href="/docs/guides/recorder/act
 
 <h3>Step 5: Fine-tune Matching</h3>
 
-In the <em>Fine-tune Matching</em> tab you can adjust the sensitivity of the image matcher. With a high value the locator must always look very similar and appear in a almost in the same position on the screen, with a low value both can deviate more from the original. Adjusting the matching precision is usually very handy when a warning or an error occurs during replay.
+In the Fine-tune Matching tab you can adjust the sensitivity of the image matcher. With a high value the locator must always look very similar and appear in the same position on the screen. With a low value both can deviate more from the original. Adjusting the matching precision is usually very handy when a warning or an error occurs during replay.
 
 See the recorder guide for more details about <a href="/docs/guides/recorder/action-settings#matching">fine-tuning the matching</a>.
 
@@ -70,7 +70,7 @@ In most test cases you don't only want to validate the click execution but also 
 
 <img src="/img/guides/recorder/recorder-06.png">
 
-This will open the assertion builder. On the left side you'll see two devices side by side which represent your app before and after the execution of the click action. In the <em>Appearing Locators</em> tab pick elements which you expect to appear after an action the performed. The system gives you a few suggestions that you can you can modify in the <em>Move and Resize</em> mode. You can also draw your own in the <em>Draw New</em> mode.
+This will open the assertion builder. On the left side you'll see two devices side by side which represent your app before and after the execution of the click action. In the Appearing Locators tab pick elements which you expect to appear after the action was executed. The system gives you a few suggestions that you can modify in the Move and Resize mode. You can also draw your own locator in the Draw New mode.
 
 <img src="/img/guides/recorder/recorder-07.png" class="center shadow">
 
@@ -87,8 +87,7 @@ Now click <em>Insert Assertions</em> to close the dialog. Notice the new lines t
 
 Input actions and assertions can also be added using the operations bar on the left side. You will then see the settings dialog from above with a screenshot of the current device screen.
 
-The operations bar offers you additional functionality. For example try out the <em>Sensor</em> actions to rotate the device or set the GPS coordinates.
-
+The operations bar offers you additional functionalities. For example, try out the Sensor actions to rotate the device or set the GPS coordinates.
 <img src="/img/guides/recorder/recorder-09.png">
 
 More details you will find in the JavaScript API reference for <a href="/docs/api/sensor">sensor methods</a>.
@@ -107,7 +106,7 @@ You can now replay your test. To do so press the <em>Play</em> button.
 
 <img src="/img/guides/recorder/recorder-11.png">
 
-You will then get a fresh device so that the replay starts in a clean state. The editor, the device and the operations bar are locked during replay. You can now follow the execution of your test.
+You will then get a fresh device so that the replay starts in a clean state. The editor, the device and the operations bar are locked during the replay. You can now follow the execution of your test.
 
 <img src="/img/guides/recorder/recorder-12.png">
 
@@ -118,8 +117,7 @@ As soon as the replay has finished, the result is shown at the top. It includes 
 
 <img src="/img/guides/recorder/recorder-13.png">
 
-In the report the executed steps are listed with two screenshots. The first was taken during recording and the second during replay. Like that you can easily compare if your app was behaving differently after replaying for example on a different version of your app or a another Android version.
-
+In the report, all executed steps are listed next to two screenshots. The first screenshot taken during the recording and the second during the replay. In such a way you can easily compare your app’s behaviour after replaying. For example while running the test on a different version of your app or another Android version.
 <img src="/img/guides/recorder/recorder-14.png" class="center shadow">
 
 
