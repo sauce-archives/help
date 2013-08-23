@@ -122,3 +122,15 @@ h3 + h4 {
 pre {
   margin-bottom: 30px;
 }
+
+/* Emulators */
+
+.emulator-table th,
+.emulator-table td {
+	text-align: center;
+}
+
+.emulator-table tr th:first-of-type,
+.emulator-table tr td:first-of-type {
+	text-align: left;
+}

@@ -139,7 +139,7 @@ alias: docs/references/scripting-api/input/
 {% highlight js %}type('sample text', image(12)){% endhighlight %}
 </p>
 
-<h3 id="randomInput">randomInput( config , [ recordedImage ] )</h3>
+<h3 id="randomInput">randomInput( config)</h3>
 <p>Sends random touch and key events to your application. Fails if an exception (e.g. NullPointerException) is thrown by your application.</p>
 <p><ul>
 	<li>
@@ -152,11 +152,6 @@ alias: docs/references/scripting-api/input/
 			<li>seed - Seed value for pseudo-random number generator. If you re-run the randomInput with the same seed value, it will generate the same sequence of events.</li>
 		   </ul> 	
 		</em>
-	</li>
-	<li>
-		<strong>recordedImage</strong>
-		<div>Type: Image</div>
-		<em>reference to the screenshots taken during recording</em>
 	</li>
 </ul></p>
 <p>
