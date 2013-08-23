@@ -70,7 +70,7 @@ In most test cases you don't only want to validate the click execution but also 
 
 <img src="/img/guides/recorder/recorder-06.png">
 
-This will open the assertion builder. In the <em>Appearing Locators</em> tab pick elements which you expect to appear after an action was performed. The system gives you a few suggestions that you can you can modify in the <em>Move and Resize</em> mode. You can also draw your own in the <em>Draw New</em> mode.
+This will open the assertion builder. On the left side you'll see two devices side by side which represent your app before and after the execution of the click action. In the <em>Appearing Locators</em> tab pick elements which you expect to appear after an action the performed. The system gives you a few suggestions that you can you can modify in the <em>Move and Resize</em> mode. You can also draw your own in the <em>Draw New</em> mode.
 
 <img src="/img/guides/recorder/recorder-07.png" class="center shadow">
 
