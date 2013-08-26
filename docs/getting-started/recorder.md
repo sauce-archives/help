@@ -57,7 +57,7 @@ See the recorder guide for more details about <a href="/docs/guides/recorder/act
 
 <h3>Step 5: Fine-tune Matching</h3>
 
-In the Fine-tune Matching tab you can adjust the sensitivity of the image matcher. With a high value the locator must always look very similar and appear in the same position on the screen. With a low value both can deviate more from the original. Adjusting the matching precision is usually very handy when a warning or an error occurs during replay.
+In the <em>Fine-tune Matching</em> tab you can adjust the sensitivity of the image matcher. With a high value the locator must always look very similar and appear in the same position on the screen. With a low value both can deviate more from the original. Adjusting the matching precision is usually very handy when a warning or an error occurs during replay.
 
 See the recorder guide for more details about <a href="/docs/guides/recorder/action-settings#matching">fine-tuning the matching</a>.
 
@@ -70,7 +70,7 @@ In most test cases you don't only want to validate the click execution but also 
 
 <img src="/img/guides/recorder/recorder-06.png">
 
-This will open the assertion builder. On the left side you'll see two devices side by side which represent your app before and after the execution of the click action. In the Appearing Locators tab pick elements which you expect to appear after the action was executed. The system gives you a few suggestions that you can modify in the Move and Resize mode. You can also draw your own locator in the Draw New mode.
+This will open the assertion builder. On the left side you'll see two devices side by side which represent your app before and after the execution of the click action. In the <em>Appearing Locators</em> tab pick elements which you expect to appear after the action was executed. The system gives you a few suggestions that you can modify in the <em>Move and Resize</em> mode. You can also draw your own locator in the <em>Draw New</em> mode.
 
 <img src="/img/guides/recorder/recorder-07.png" class="center shadow">
 
@@ -87,7 +87,7 @@ Now click <em>Insert Assertions</em> to close the dialog. Notice the new lines t
 
 Input actions and assertions can also be added using the operations bar on the left side. You will then see the settings dialog from above with a screenshot of the current device screen.
 
-The operations bar offers you additional functionalities. For example, try out the Sensor actions to rotate the device or set the GPS coordinates.
+The operations bar offers you additional functionalities. For example, try out the <em>Sensor</em> actions to rotate the device or set the GPS coordinates.
 <img src="/img/guides/recorder/recorder-09.png">
 
 More details you will find in the JavaScript API reference for <a href="/docs/api/sensor">sensor methods</a>.
