@@ -5,7 +5,7 @@ permalink: docs/getting-started/first-test/
 alias: [docs/guides/getting-started/, wiki/display/cf/Getting+Started+Tutorial/index.html]
 ---
 
-Welcome to TestObject! Get ready to create and run your first test in 3 easy steps!<br>
+Welcome to TestObject! Get ready to create and run your first mobile app test in 3 easy steps!<br>
 In this tutorial we will walk you through the steps to write and run your first automated GUI test.
 
 What you need:
@@ -38,7 +38,7 @@ To sign up, fill in your name and email address, select a username and password 
 
 <h3 id="GettingStartedTutorial-Step2%3ACreateanewProject">Step 2: Create a New Project</h3>
 		
-After <a href="http://app.testobject.com/login">signing in</a> to your account, click <strong>New Project</strong> to create a your first project.<br>
+After <a href="http://app.testobject.com/login">signing in</a> to your account, click <strong>New Project</strong> to create your first project.<br>
 Name the project "MyProject" and click <em>Save</em>.
 
 Choose whether you are going to test a native Android app or a web app (website). In this tutorial we will test a native app.
@@ -62,7 +62,7 @@ Then choose a device to record your test on and click <em>Continue</em>. You wil
 
 After the sample app has loaded on the device, you are ready to start recording. To do so click <em>Record</em>. Each action executed by the user will then be added as a line in the script.
 			
-In the sample app 'Continue' and notice that for the click action a new line is generated in the script on the right side.<br>
+In the sample app click 'Continue' and notice that for the click action a new line is generated in the script on the right side.<br>
 Now click <em>Stop</em> to leave the recording mode and then <em>Replay</em> to run your test.
 
 Congratulations, you have successfully recorded and replayed a test for your app. Good for you!
@@ -70,7 +70,7 @@ Congratulations, you have successfully recorded and replayed a test for your app
 
 <h3 id="GettingStartedTutorial-What%E2%80%99snext%3F">What's next?</h3>
 
-If you want to try out some more advanced functionality, read more on <a href="/docs/guides/recorder">Using the Recorder...</a>
+If you want to try out some more advanced functionalities, read more on <a href="/docs/guides/recorder">Using the Recorder...</a>
 
 You might as well want to
 
