@@ -2,6 +2,7 @@
 title: Action Settings
 layout: en
 permalink: docs/guides/recorder/action-settings/
+alias: docs/references/recorder/action-settings/
 ---
 
 This dialog assists you in editing the settings of an action or assertion. Those are an API call of either the <a href="/docs/api/input#click-box">click on box</a>, <a href="/docs/api/input#longPress-box">longPress on box</a>, <a href="/docs/api/input#click-position">click on position</a>, <a href="/docs/api/input#longPress-position">longPress on position</a>, <a href="/docs/api/locator#find">find</a>, <a href="/docs/api/locator#waitVanish">waitVanish</a> or <a href="/docs/api/locator#waitAppear">waitAppear</a> function. It updates the respective line in the script.

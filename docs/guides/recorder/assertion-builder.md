@@ -2,6 +2,7 @@
 title: Assertion Builder
 layout: en
 permalink: docs/guides/recorder/assertion-builder/
+alias: docs/references/recorder/assertion-builder/
 ---
 
 This dialog assists you in creating assertions for a specific screenshot. An assertion makes sure that a locator vanishes from or appears on the screen. It is an API call of either the <a href="/docs/api/locator#waitVanish">waitVanish</a> or the <a href="/docs/api/locator#waitAppear">waitAppear</a> function. For each locator that has been picked it creates a new line in the script.
