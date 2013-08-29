@@ -23,7 +23,7 @@ Let's get started!
 
 <h3 id="project">Step 1: Create a New Project</h3>
 
-After <a href="http://app.testobject.com/signup" target="_blank">signing in</a> to your TestObject account, click the *New Project* button to create your first project.
+After <a href="http://app.testobject.com/login" target="_blank">signing in</a> to your TestObject account, click the *New Project* button to create your first project.
 
 <img src="/img/getting-started/first-test/first-test-01.png">
 

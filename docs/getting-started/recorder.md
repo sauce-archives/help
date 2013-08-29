@@ -52,7 +52,7 @@ Now try out adjusting your newly created step by clicking the settings icon in t
 
 <img src="/img/getting-started/recorder/recorder-03.png">
 
-This will open the settings dialog. In the <em>Adjust Locator</em> tab you can modify the locator. Just enable either the <em>Move and Resize</em> or the <em>Draw New</em> mode. In order to set the precise click position use the <em>Set Offset</em> mode. This will set the click coordinates relative to the locator box. Alterntively, you can also switch the <em>click strategy</em> to <em>click on position</em> to click on an absolute position on the screen.
+This will open the settings dialog. In the <em>Adjust Locator</em> tab you can modify the locator. Just enable either the <em>Move and Resize</em> or the <em>Draw New</em> mode. In order to set the precise click position use the <em>Set Offset</em> mode. This will set the click coordinates relative to the locator box. Alternatively, you can also switch the <em>click strategy</em> to <em>click on position</em> to click on an absolute position on the screen.
 
 <img src="/img/getting-started/recorder/recorder-04.png" class="center shadow">
 
