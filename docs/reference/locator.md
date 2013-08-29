@@ -101,18 +101,18 @@ alias: docs/references/scripting-api/locator/
 {% highlight js %}waitUpdates(60){% endhighlight %}
 </p>
   In some cases application requires some time to update the screen between actions.  
-  For example when user needs to login he first needs to click "Login" button, then type his credentials and press "Confirm" button.  
-  If application takes some time to load login form then system might start typing credentials when screen is not ready yet.  
-  **waitUpdates()** ensures that screen is ready before next action can be performed.  
-  If screen still changes next action will not be performed until there are no more updates except for really 
+  For example when a user needs to login he first needs to click on the "Login" button, then type his credentials and press the "Confirm" button.  
+  If an application takes some time to load the login form then the system might start typing credentials when the screen is not ready yet.  
+  **waitUpdates()** ensures that the screen is ready before next action can be performed.  
+  If the screen still changes next action will not be performed until there are no more updates except for really 
   small ones to ignore blinking cursors.  
-  If page is supposed to change all the time because of animation, then timeout can be decreased.  
+  If an application screen is supposed to change all the time because of an animation, then the timeout can be decreased.  
   When to use:  
   - System starts typing when textfield is not yet on the screen.  
-  - Normally system clicks the button as soon as it finds it on the screen. In some cases all elements on the screen has to be loaded first.  
+  - Normally the system clicks on the button as soon as it finds it on the screen. In some cases all elements on the screen have to be loaded beforehand.  
   
-  Usually **waitUpdates()** are inserted during the recording when system detects that an action was followed by a lot of screen changes.  
-  Load speed characteristics of web applications can vary from execution to execution so in some cases **waitUpdates()** 
+  Usually **waitUpdates()** are inserted during the recording when the system detects that an action was followed by a lot of screen changes.  
+  Load speed characteristics of web applications can vary from an execution to an execution so in some cases **waitUpdates()** 
   might not be inserted automatically because the page loaded fast during recording but loads slowly during some of the replays.  
   In this case **waitUpdates()** should be inserted manually.  
   Read more about <a href="docs/guides/bulletproof-tests">making your tests bulletproof</a>.

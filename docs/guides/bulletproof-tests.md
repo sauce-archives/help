@@ -29,7 +29,9 @@ permalink: docs/guides/bulletproof-tests/
   Most of stability issues come from the time that an application needs to generate view for the user.  
 
   Lets look at screenshots below:  
-  <img src="/img/guides/bulletproof-tests/theverge1.png" /> <img src="/img/guides/bulletproof-tests/theverge2.png" />
+<div class="side-by-side">
+ 	<img src="/img/guides/bulletproof-tests/theverge1.png" /> <img src="/img/guides/bulletproof-tests/theverge2.png" />
+</div>
 
   First one was taken when page was loading and the second one after page was ready.  
   Imagine that the first step in your script after loading a starting page is clicking on the "Login" button:  

@@ -134,3 +134,13 @@ pre {
 .emulator-table tr td:first-of-type {
 	text-align: left;
 }
+
+/* Bulletproof tests */
+.side-by-side {
+	margin-bottom: 40px;
+}
+
+.side-by-side img {
+	display: inline-block;
+	width: 40%;
+}
