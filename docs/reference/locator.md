@@ -115,5 +115,5 @@ alias: docs/references/scripting-api/locator/
   Load speed characteristics of web applications can vary from an execution to an execution so in some cases **waitUpdates()** 
   might not be inserted automatically because the page loaded fast during recording but loads slowly during some of the replays.  
   In this case **waitUpdates()** should be inserted manually.  
-  Read more about <a href="docs/guides/bulletproof-tests">making your tests bulletproof</a>.
+  Read more about <a href="/docs/guides/bulletproof-tests">making your tests bulletproof</a>.
   
