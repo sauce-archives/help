@@ -8,7 +8,7 @@ If your App requires other Apps to be installed on the device in order to test i
 
 In this tutorial you will learn how to create and install a dependecy. We will use the Twitter app as our dependecy.
 
-This tutorial assumes you already know how to create a test - if not, please first see the [Running Your First Test Tutorial](http://localhost:4000/docs/getting-started/first-test/ "Running Your First Test Tutorial").
+This tutorial assumes you already know how to create a test - if not, please first see the [Running Your First Test Tutorial](/docs/getting-started/first-test/ "Running Your First Test Tutorial").
 
 
 ### Step 1: Create a New Dependecy
