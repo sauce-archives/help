@@ -4,7 +4,7 @@ layout: en
 permalink: docs/guides/dependency/
 ---
 
-If your App requires other Apps to be installed on the device in order to test its functionality, you can install a **dependecy** app.
+If your App requires other Apps to be installed on the device in order to test its functionality,  you can install a **dependecy** app.
 
 In this tutorial you will learn how to create and install a dependecy. We will use the Twitter app as our dependecy.
 
