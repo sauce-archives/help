@@ -4,7 +4,7 @@ layout: en
 permalink: docs/guides/dependency/
 ---
 
-If your App requires other Apps to be installed on the device in order to test its' functionality, you can install a **dependecy** app.
+If your App requires other Apps to be installed on the device in order to test its functionality,  you can install a **dependecy** app.
 
 In this tutorial you will learn how to create and install a dependecy. We will use the Twitter app as our dependecy.
 
@@ -33,7 +33,7 @@ The **Install Dependency** dialog pops up. Click on the dependecy you would like
 
 <img class="center shadow" src="/img/guides/dependency/dependency-05.png">
 
-Notice that a new [Install App](/docs/api/apps/#install) step was added to the script. In the script the dependency is referenced by its' numerical id.
+Notice that a new [Install App](/docs/api/apps/#install) step was added to the script. In the script the dependency is referenced by its numerical id.
 
 <img class="center shadow" src="/img/guides/dependency/dependency-06.png">
 
