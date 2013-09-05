@@ -62,7 +62,7 @@ alias: docs/references/scripting-api/sensor/
 {% highlight js %}setGPS(52.52757966672534, 13.392462730407715, 0.0, image(15)){% endhighlight %}
 </p>
 
-<h3 id="setGPS">setGPS( latitude , longitude , elevation, speed, bearing[ recordedImage ] )</h3>
+<h3 id="setGPS">setGPS( latitude , longitude , elevation, speed, bearing, [ recordedImage ] )</h3>
 <p>change the gps position of the device</p>
 <p><ul>
 	<li>
@@ -88,7 +88,7 @@ alias: docs/references/scripting-api/sensor/
 	<li>
 		<strong>bearing</strong>
 		<div>Type: Numeric</div>
-		<em>the device movement direction in degrees</em>
+		<em>the device movement direction in degrees (Clockwise, where North is 0).</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
