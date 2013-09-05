@@ -134,3 +134,15 @@ pre {
 .emulator-table tr td:first-of-type {
 	text-align: left;
 }
+
+
+.versions-table {
+  width: 50%
+}
+
+.versions-table th,
+.versions-table td {
+  text-align: center;
+  border: none;
+}
+
