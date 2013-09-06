@@ -49,7 +49,7 @@ alias: docs/references/scripting-api/sensor/
 	<li>
 		<strong>elevation</strong>
 		<div>Type: Numeric</div>
-		<em>elevation part of the gps position (height above a fixed reference point)</em>
+		<em>elevation part of the gps position (in meters above sea level)</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
@@ -78,7 +78,7 @@ alias: docs/references/scripting-api/sensor/
 	<li>
 		<strong>elevation</strong>
 		<div>Type: Numeric</div>
-		<em>elevation part of the gps position (height above a fixed reference point)</em>
+		<em>elevation part of the gps position (in meters above sea level)</em>
 	</li>
 	<li>
 		<strong>speed</strong>

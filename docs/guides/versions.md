@@ -154,10 +154,97 @@ It passes on 4.1 and fails on 2.3.3, not surprisingly, by encountering the issue
 
 #### Option 1: Fine tune the match  
 
-A lot of 'close calls', meaning, images that look similar, but yield warnings or even errors, could be fixed  
-by [fine-tuning the match](/docs/guides/image-matching/#fine-tune-matching "Fine-tune Matching").
+A lot of 'close calls', meaning, images that look similar, but yield errors, could be fixed  
+by [fine-tuning the match](/docs/guides/image-matching/#fine-tune-matching "Fine-tune Matching").  
 
-#### Option 1: Cherry picking (using find())
+#### Option 2: Cherry picking (using find())  
+
+We will use the [find()](/docs/api/locator/#find "find()") function to allow slightly different locators to pass.  
+Briefly, [find()](/docs/api/locator/#find "find()") allows us to check if a locator exist on the screen, and store the result in a variable (as opposed to [waitAppear()](/docs/api/locator/#waitAppear "waitAppear()") which will just fail the test if the locator was not found).
+This gives us the possibility to make decisions based on the [find()](/docs/api/locator/#find "find()") result.
+
+So lets fix it
+
+For each Android version we need to add a specific find() case.  
+In our situation, we have 2 cases: one for Android 4.1 and one for Android 2.3.3.  
+#### We will start with Android 4.1.  
+
+Go to the desired test Settings: 
+
+<img class="center shadow" src="/img/guides/versions/versions-17.png">   
+
+Select Android 4.1 as the active device:  
+
+<img class="center shadow" src="/img/guides/versions/versions-13.png"> 
+
+And save: 
+
+<img class="center shadow" src="/img/guides/versions/versions-18.png"> 
+
+Go to the recorder, replay the test and stop the replay before the problematic step.  
+(You can also manually click through the app to get to the desired state).
+
+<img class="center shadow" src="/img/guides/versions/versions-19.png"> 
+
+Start the recording:
+
+<img class="center shadow" src="/img/guides/versions/versions-20.png"> 
+
+
+Click on [find()](/docs/api/locator/#find "find()") in the Operations bar (Locator -> find()):
+
+<img class="center shadow" src="/img/guides/versions/versions-21.png"> 
+
+In the find() dialog, select the locator which you want to find:
+
+<img class="center shadow" src="/img/guides/versions/versions-22.png"> 
+
+And click 'Done'.  
+Our new script now looks like this:
+
+<img class="center shadow" src="/img/guides/versions/versions-23.png"> 
+
+We can now use this find() statement to make a condition:
+
+<img class="center shadow" src="/img/guides/versions/versions-24.png"> 
+
+We can now do a similar process for our second problematic case.  
+Now our script looks something like this:  
+
+<img class="center shadow" src="/img/guides/versions/versions-25.png"> 
+
+#### Now for Android 2.3.3
+
+Let's change the active device to Android 2.3.3 (Test list -> Test settings):
+
+<img class="center shadow" src="/img/guides/versions/versions-12.png"> 
+
+Now we repeat the same process, and our final script will look like this:
+
+<img class="center shadow" src="/img/guides/versions/versions-26.png"> 
+
+
+And if we run the batch again:
+
+<img class="center shadow" src="/img/guides/versions/versions-27.png"> 
+
+### To conclude
+
+While this requires some attention to small details and a bit of work, when you get to know the common differences between versions, 
+finding and solving these issues becomes less of a problem.  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
