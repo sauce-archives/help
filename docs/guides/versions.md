@@ -4,24 +4,19 @@ layout: en
 permalink: docs/guides/versions/
 ---
 
-When creating a test, we would of course like to run it on all of our app's supported android versions.
+When creating a test, we would like to run it on all of our app's supported android versions.
 
 Sometimes, though, tests seem to fail (or display warnings) when they are replayed on a device with a different android version than the one they were recorded on.
 
+When this issue appears, it's usually when switching between newer versions (4.&#42;) and older ones (2.&#42;)
 
-[When this issue appears, it's usually when switching between newer versions (4.&#42;) and older ones (2.&#42;)]
+This guide will be in the form of problem and solution, and not step by step.
+If are you already familiar with the problem, you can just skip to the [solution](#solution).
 
-What you need:
+### Problem description 
 
-+ A recorded test with issues on different android versions - read more on how to [Running a Test on Multiple Devices](/docs/getting-started/batches/ "Running a Test on Multiple Devices")
-
-
-### Step 0: Before we look at the solution
-
-Let's understand the problem.
-
-+ Android comes with a lot of basic UI elements for the developers to use (e.g menus, popup messages, buttons, fonts, etc.),
-and naturally, these elements are sometimes redesigned or changed with the release of a new version.   
++ Android comes with a lot of basic UI elements for the developers to use (e.g menus, popup messages, buttons, fonts, etc.).
+These elements are sometimes redesigned or changed with the release of a new version.   
 A major makeover has been made between the 2.&#42; versions and 4.&#42;, and that's why the transition between these two is prone to issues.  
 
 + Sometomes, different layouts or images are displayed depending on the android version.  
@@ -100,24 +95,23 @@ as rendered in 2 different Android versions:
 In this case, the button looks quite different, 
 so this will lead to an error.  
 
---
 
+<h3 id="solution"> Solution </h3>
 
-### Step 1: Record a test
-
-This guide assumes that you are familliar with [Creating tests](/docs/getting-started/first-test/ "First test"), [Using the recorder](/docs/getting-started/recorder/ "Recorder") and [Running tests on Multiple Devices](/docs/getting-started/batches/ "Running a Test on Multiple Devices").  
+We assume that you are familliar with [Creating tests](/docs/getting-started/first-test/ "First test"), [Using the recorder](/docs/getting-started/recorder/ "Recorder") and [Running tests on Multiple Devices](/docs/getting-started/batches/ "Running a Test on Multiple Devices").  
 
 We will use the Twitter app to see how to face the issues listed above.  
+
+### Quick overview
+
+#### Upload the app
 We uploaded the app, and recorded the following simple test:  
 
 <img class="center shadow" src="/img/guides/versions/versions-11.png">  
 
+#### Create and run a batch
 
-
-### Step 2: Create a batch
-
-The batch should include more than one android versions.  
-In our example we will use Android 2.3.3 and Android 4.1:
+We created a batch which includes more than one android version.  
 
 <table class="table versions-table" align="center">
 	<tbody>
@@ -132,38 +126,30 @@ In our example we will use Android 2.3.3 and Android 4.1:
 	</tbody>
 </table>  
 
-
-### Step 3: Run the batch 
-
 We ran the batch, and got these results:  
 
 <img class="center shadow" src="/img/guides/versions/versions-14.png">  
 
 It passes on 4.1 and fails on 2.3.3, not surprisingly, by encountering the issues we mentioned above:
 
-1) A fuzzy image match because of the font:  
+1. A fuzzy image match because of the font:  <img class="center shadow" src="/img/guides/versions/versions-15.png"> 
 
-<img class="center shadow" src="/img/guides/versions/versions-15.png"> 
-
-2) An error because of the icon:  
-
-<img class="center shadow" src="/img/guides/versions/versions-16.png"> 
+2. An error because of the icon:  <img class="center shadow" src="/img/guides/versions/versions-16.png"> 
 
 
-### Step 4: Fix it
+### Fix it
 
 #### Option 1: Fine tune the match  
 
-A lot of 'close calls', meaning, images that look similar, but yield errors, could be fixed  
-by [fine-tuning the match](/docs/guides/image-matching/#fine-tune-matching "Fine-tune Matching").  
+A lot of 'close calls', i.e images that look similar but yield errors on replay, could be fixed by [fine-tuning the match](/docs/guides/image-matching/#fine-tune-matching "Fine-tune Matching").  
 
-#### Option 2: Cherry picking (using find())  
+#### Option 2: Cherry picking by using find()  
 
 We will use the [find()](/docs/api/locator/#find "find()") function to allow slightly different locators to pass.  
 Briefly, [find()](/docs/api/locator/#find "find()") allows us to check if a locator exist on the screen, and store the result in a variable (as opposed to [waitAppear()](/docs/api/locator/#waitAppear "waitAppear()") which will just fail the test if the locator was not found).
 This gives us the possibility to make decisions based on the [find()](/docs/api/locator/#find "find()") result.
 
-So lets fix it
+####So lets fix it
 
 For each Android version we need to add a specific find() case.  
 In our situation, we have 2 cases: one for Android 4.1 and one for Android 2.3.3.  
@@ -229,6 +215,13 @@ And if we run the batch again:
 <img class="center shadow" src="/img/guides/versions/versions-27.png"> 
 
 ### To conclude
+
+Different android versions sometimes display elements in a different way, e.g native element, fonts, icons, etc'.  
+To overcome this, we can:  
+
++ [fine-tune](/docs/guides/image-matching/#fine-tune-matching "Fine-tune Matching")  the match.  
++ Identify and treat each case using [find()](/docs/api/locator/#find "find()").    
+
 
 While this requires some attention to small details and a bit of work, when you get to know the common differences between versions, 
 finding and solving these issues becomes less of a problem.  
