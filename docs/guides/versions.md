@@ -20,7 +20,7 @@ These elements are sometimes redesigned or changed with the release of a new ver
 A major makeover has been made between the 2.&#42; versions and 4.&#42;, and that's why the transition between these two is prone to issues.  
 
 + Sometomes, different layouts or images are displayed depending on the android version.  
-This might and might not be considered an issue (as it could be the developer's purpose), but it's still important to take into consideration.
+This might not be considered an issue (as it could be the developer's intention), but it's still important to take into consideration.
 
 
 #### Example 1: Font difference
@@ -49,7 +49,7 @@ This will result usually with a warning:
 
 #### Example 2: Native icons difference
 
-Here we see the same 'Info' icon from the native android menu in the Twitter app,  
+Here we see the same 'About' icon from the native android menu in the Twitter app,  
 as displayed on 2 different Android versions:  
 
 <table class="table versions-table" align="center">
@@ -130,7 +130,7 @@ We ran the batch, and got these results:
 
 <img class="center shadow" src="/img/guides/versions/versions-14.png">  
 
-It passes on 4.1 and fails on 2.3.3, not surprisingly, by encountering the issues we mentioned above:
+It passes on 4.1 and fails on 2.3.3 by encountering the issues we mentioned above:
 
 1. A fuzzy image match because of the font:  <img class="center shadow" src="/img/guides/versions/versions-15.png"> 
 
@@ -146,14 +146,14 @@ A lot of 'close calls', i.e images that look similar but yield errors on replay,
 #### Option 2: Cherry picking by using find()  
 
 We will use the [find()](/docs/api/locator/#find "find()") function to allow slightly different locators to pass.  
-Briefly, [find()](/docs/api/locator/#find "find()") allows us to check if a locator exist on the screen, and store the result in a variable (as opposed to [waitAppear()](/docs/api/locator/#waitAppear "waitAppear()") which will just fail the test if the locator was not found).
+Briefly, [find()](/docs/api/locator/#find "find()") allows us to check if a locator exist on the screen, and store the result in a variable (as opposed to [waitAppear()](/docs/api/locator/#waitAppear "waitAppear()") which will just fail the test if the locator was not found).  
 This gives us the possibility to make decisions based on the [find()](/docs/api/locator/#find "find()") result.
 
 ####So lets fix it
 
 For each Android version we need to add a specific find() case.  
 In our situation, we have 2 cases: one for Android 4.1 and one for Android 2.3.3.  
-#### We will start with Android 4.1.  
+#### We'll start with Android 4.1.  
 
 Go to the desired test Settings: 
 
@@ -183,7 +183,7 @@ Click on [find()](/docs/api/locator/#find "find()") in the Operations bar (Locat
 
 In the find() dialog, select the locator which you want to find:
 
-<img class="center shadow" src="/img/guides/versions/versions-22.png"> 
+<img class="center shadow" src="/img/guides/versions/versions-22a.png"> 
 
 And click 'Done'.  
 Our new script now looks like this:
@@ -207,7 +207,13 @@ Let's change the active device to Android 2.3.3 (Test list -> Test settings):
 
 Now we repeat the same process, and our final script will look like this:
 
-<img class="center shadow" src="/img/guides/versions/versions-26.png"> 
+<img class="center shadow" src="/img/guides/versions/versions-26.png">   
+
+We added the 'else' cases to the 'if' statements, to make the script follow this simple logic:  
+
+If you find the button from Android 2.3.3, then click on it.  
+<b>Else</b>, if you find the button from Android 4.1, click on it.    
+<b>Else</b>, fail the replay.   
 
 
 And if we run the batch again:
