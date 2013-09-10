@@ -19,7 +19,7 @@ If are you already familiar with the problem, you can just skip to the [solution
 These elements are sometimes redesigned or changed with the release of a new version.   
 A major makeover has been made between the 2.&#42; versions and 4.&#42;, and that's why the transition between these two is prone to issues.  
 
-+ Sometomes, different layouts or images are displayed depending on the android version.  
++ Sometimes, different layouts or images are displayed depending on the android version.  
 This might not be considered an issue (as it could be the developer's intention), but it's still important to take into consideration.
 
 
