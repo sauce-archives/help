@@ -19,7 +19,7 @@ If you are already familiar with the problem, you can just skip to the [solution
 These elements are sometimes redesigned or changed with the release of a new version.   
 A major makeover has been made between the 2.&#42; versions and 4.&#42;, and that's why the transition between these two is prone to issues.  
 
-+ Sometimes, different layouts or images are displayed differently depending on the android version
++ Sometimes, different layouts or images are displayed differently depending on the android version they are running on.
 This might not be considered an issue (as it could be the developer's intention), but it's still important enough to take into consideration.
 
 
@@ -146,7 +146,7 @@ A lot of 'close calls', i.e images that look similar but yield errors on replay,
 #### Option 2: Cherry picking by using find()  
 
 We will use the [find()](/docs/api/locator/#find "find()") function to allow slightly different locators to pass.  
-Briefly, [find()](/docs/api/locator/#find "find()") allows us to check if a locator exist on the screen, and store the result in a variable (as opposed to [waitAppear()](/docs/api/locator/#waitAppear "waitAppear()") which will just fail the test if the locator was not found).  
+Briefly, [find()](/docs/api/locator/#find "find()") allows us to check if a locator exists on the screen and store the result in a variable (as opposed to [waitAppear()](/docs/api/locator/#waitAppear "waitAppear()") which will just fail the test if the locator was not found).  
 This gives us the possibility to make decisions based on the [find()](/docs/api/locator/#find "find()") result.
 
 ####So lets fix it
@@ -205,11 +205,11 @@ Let's change the active device to Android 2.3.3 (Test list -> Test settings):
 
 <img class="center shadow" src="/img/guides/versions/versions-12.png"> 
 
-Now we repeat the same process, and our final script will look like this:
+Now we repeat the same process and our final script will look like this:
 
 <img class="center shadow" src="/img/guides/versions/versions-26.png">   
 
-We added the 'else' cases to the 'if' statements, to make the script follow this simple logic:  
+We added the 'else' cases to the 'if' statements to make the script follow this simple logic:  
 
 If you find the button from Android 2.3.3, then click on it.  
 <b>Else</b>, if you find the button from Android 4.1, click on it.    
@@ -222,7 +222,7 @@ And if we run the batch again:
 
 ### To conclude
 
-Different android versions sometimes display elements in a different way, e.g native element, fonts, icons, etc'.  
+Different android versions sometimes display elements in a differently, e.g native elements, fonts, icons, etc'.  
 To overcome this, we can:  
 
 + [fine-tune](/docs/guides/image-matching/#fine-tune-matching "Fine-tune Matching")  the match.  
