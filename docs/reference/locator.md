@@ -16,7 +16,7 @@ alias: docs/references/scripting-api/locator/
 	<li>
 		<strong>timeout</strong>
 		<div>Type: Numeric</div>
-		<em>time in seconds to wait until the targetLocator appears, if no set timeout is by default 60 seconds</em>
+		<em>time in seconds to wait until the targetLocator appears, if not set, the default timeout of 60 seconds will be used</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
@@ -45,7 +45,7 @@ alias: docs/references/scripting-api/locator/
 	<li>
 		<strong>timeout</strong>
 		<div>Type: Numeric</div>
-		<em>time in seconds until the targetLocator must disappear, if no set timeout is by default 60 seconds</em>
+		<em>time in seconds until the targetLocator must disappear, if not set, the default timeout of 60 seconds will be used</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
@@ -69,7 +69,7 @@ alias: docs/references/scripting-api/locator/
 	<li>
 		<strong>timeout</strong>
 		<div>Type: Numeric</div>
-		<em>time in seconds until the targetLocator must appear, if no set timeout is by default 60 seconds</em>
+		<em>time in seconds until the targetLocator must appear, if not set, the default timeout of 60 seconds will be used</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
@@ -80,4 +80,18 @@ alias: docs/references/scripting-api/locator/
 <p>
 <strong>Example:</strong>
 {% highlight js %}waitAppear(image(26).after().box(129,469,221,69), 82.3, image(26)){% endhighlight %}
+</p>
+
+<h3 id="waitLoaded">waitLoaded( [timeout] )</h3>
+<p>wait until no major visual updates are recognized on the screen, continuous after timeout</p>
+<p><ul>
+	<li>
+		<strong>timeout</strong>
+		<div>Type: Numeric</div>
+		<em>time in seconds until the screen must have stopped updating, if not set, the default timeout of 60 seconds will be used</em>
+	</li>
+</ul></p>
+<p>
+<strong>Example:</strong>
+{% highlight js %}waitLoaded(10){% endhighlight %}
 </p>

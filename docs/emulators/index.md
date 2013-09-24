@@ -1,16 +1,16 @@
 ---
-title: Android devices
+title: Android Devices
 layout: en
 permalink: docs/devices/
 ---
 
 <h3 id="emulators">Emulators</h3>
-  In CONTINUOUS we rely on Android emulators to run applications.  
-  While in most cases emulators provide the same runtime environment as real devices, sometimes there are differences.  
-  Our emulators are modified versions of the ones provided by Android SDK in which we fixed issues.  
- 
-<h3 id="versions">Android versions</h3>
+In CONTINUOUS we rely on Android emulators to run applications. While in most cases emulators provide the same runtime environment as real devices, sometimes there are differences. Our emulators are modified versions of the ones provided by Android SDK in which we fixed issues.  
+
+
+<h3 id="versions">Android Versions</h3>
 The relative number of devices running a given version of the Android platform:
+
 <table class="table device-versions-table">
 	<thead>
 		<tr>
@@ -35,15 +35,15 @@ The relative number of devices running a given version of the Android platform:
 		</tr>
 	</tbody>
 </table>
-(Statistics as published in the offical <a href="http://developer.android.com/about/dashboards/index.html#Platform" target="_blank" title="Android website"> Android website</a>).  
-  
-And here is some important info about <a href="http://developer.android.com/training/basics/supporting-devices/platforms.html" target="_blank" target="Supporting Different Platform Versions"> supporting different platform versions </a>  from the <a href="http://developer.android.com/" target="_blank" target="Android developer website">Android developer website</a>. 
- 
 
+<small>(Statistics as published on the offical <a href="http://developer.android.com/about/dashboards/index.html#Platform" target="_blank" title="Android website">Android website</a>)</small>
+
+Read more about <a href="http://developer.android.com/training/basics/supporting-devices/platforms.html" target="_blank" target="Supporting Different Platform Versions"> supporting different platform versions</a> on the Android developer website. 
 
 
 <h3 id="features">Emulator Features</h3>
-These are the features that are available accross the different versions of our emulators:       
+These are the features that are available accross the different versions of our emulators:
+
 <table class="table emulator-table">
 	<thead>
 		<tr>
@@ -62,5 +62,3 @@ These are the features that are available accross the different versions of our 
 		</tr>
 	</tbody>
 </table>
-
-

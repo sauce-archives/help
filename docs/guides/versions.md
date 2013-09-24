@@ -1,7 +1,8 @@
 ---
-title: Tests on different Android versions
+title: Testing Different Android Versions
 layout: en
-permalink: docs/guides/versions/
+permalink: docs/guides/android-versions/
+alias: docs/guides/versions/
 ---
 
 When creating a test, we would like to run it on all of our app's supported android versions.
