@@ -61,11 +61,11 @@ permalink: docs/guides/bulletproof-tests/
   
 ####Wating for screen to load
 
-  Another way to make sure the screen is ready is by using **waitUpdates** function.  
-  When **waitUpdates** is called it starts monitoring changes on the application screen.  
-  When the screen is loading it always changes, when it's done - it stops updating, hence the name **waitUpdates**.
+  Another way to make sure the screen is ready is by using **waitLoaded** function.  
+  When **waitLoaded** is called it starts monitoring changes on the application screen.  
+  When the screen is loading it always changes, when it's done - it stops changing, so the screen is considered to be loaded.
 
-  <img src="/img/guides/bulletproof-tests/theverge-waitUpdates.png">
+  <img src="/img/guides/bulletproof-tests/theverge-waitLoaded.png">
  
   This approach is useful if you are not interested in any particular element but rather in general page readiness.  
   The common problem it solves is typing when a text field is not yet on the screen:   
@@ -87,26 +87,26 @@ permalink: docs/guides/bulletproof-tests/
 
   But what if the purpose of a test step is to make sure that the field already has focus?  
   In this case a test needs to wait until page is ready.
-  Inserting **waitUpdates** before typing will make sure that the page is fully loaded before typing can begin.
+  Inserting **waitLoaded** before typing will make sure that the page is fully loaded before typing can begin.
 
   <img src="/img/guides/bulletproof-tests/testobject-after.png">
 
-####When to use **waitAppear**/**waitVanish** and when **waitUpdates**?
-  **waitAppear**/**waitVanish** and **waitUpdates** can have similar purpose by ensuring that application is ready to continue to the next step.  
+####When to use **waitAppear**/**waitVanish** and when **waitLoaded**?
+  **waitAppear**/**waitVanish** and **waitLoaded** can have similar purpose by ensuring that application is ready to continue to the next step.  
   In a lot of cases thay can be used interchangeably, so when to use each one?  
-  **waitUpdates** is more generic and doesn't need any particular element to be defined, which makes it perfect for situations when the readiness of the page is defined by the lack of screen changes.  
-  This approach however makes a test execution a bit slower - when an application screen stops updating **waitUpdates** needs 
+  **waitLoaded** is more generic and doesn't need any particular element to be defined, which makes it perfect for situations when the readiness of the page is defined by the lack of screen changes.  
+  This approach however makes a test execution a bit slower - when an application screen stops updating **waitLoaded** needs 
   a couple of seconds to confirm that page is ready and it's not just a pause in loading.  
-  Another issue are applications with constant animation. If an application screen constantly changes because of a banner for example, **waitUpdates** will stop only after timeout is reached.  
-  **waitUpdates** is inserted automatically in your test during a recording when the system detects that an application took some time to get ready between steps and this approach works well in most cases.  
+  Another issue are applications with constant animation. If an application screen constantly changes because of a banner for example, **waitLoaded** will stop only after timeout is reached.  
+  **waitLoaded** is inserted automatically in your test during a recording when the system detects that an application took some time to get ready between steps and this approach works well in most cases.  
   **waitAppear**/**waitVanish** on the other hand is extremely fast as it scans an application screen constantly and goes to the next test step as soon as element appears on or vanishes from the screen.  
   This makes a test execution as fast as possible but requires manual input from the user as we can't determine which elements are actually relevant to the application.  
-  If the execution speed is essential for your test you can reduce waiting time by replacing some or all of **waitUpdates** with **waitAppear**/**waitVanish**
+  If the execution speed is essential for your test you can reduce waiting time by replacing some or all of **waitLoaded** with **waitAppear**/**waitVanish**
 
 ####Adjusting timeouts
   We use timeouts to determine how long to wait for elements to appers/vanish before executing an action.  
   Functions that look for elements on the screen fail after **60** seconds by default if the element is not on the screen.  
   Sometimes however applications need more time, for example if they include some processing or downloading big files.  
   Increasing the timeout for **click**, **waitAppear**/**waitVanish** will make sure that test will not fail just because it needed more time for execution.  
-  **waitUpdates** also has a timeout which limits the time that the system waits for an application screen to get ready. If an application needs more than **60** seconds 
+  **waitLoaded** also has a timeout which limits the time that the system waits for an application screen to get ready. If an application needs more than **60** seconds 
   the timeout can be increased to make sure the test waits long enough.
