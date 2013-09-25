@@ -34,6 +34,7 @@ alias: docs/references/scripting-api/sensor/
 </p>
 
 <h3 id="setGPS">setGPS( latitude , longitude , elevation, [ recordedImage ] )</h3>
+<a style="font-size:12px" href="/docs/FAQ#faq_1" target="_blank" target="setGPS faq">Having problems with setGPS()?</a>
 <p>change the gps position of the device</p>
 <p><ul>
 	<li>
@@ -49,20 +50,22 @@ alias: docs/references/scripting-api/sensor/
 	<li>
 		<strong>elevation</strong>
 		<div>Type: Numeric</div>
-		<em>elevation part of the gps position (height above a fixed reference point)</em>
+		<em>elevation part of the gps position (in meters above sea level)</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
 		<div>Type: Image</div>
 		<em>reference to the screenshots taken during recording</em>
 	</li>
-</ul></p>
+</ul>
+</p>
 <p>
 <strong>Example:</strong>
 {% highlight js %}setGPS(52.52757966672534, 13.392462730407715, 0.0, image(15)){% endhighlight %}
 </p>
 
-<h3 id="setGPS">setGPS( latitude , longitude , elevation, speed, bearing[ recordedImage ] )</h3>
+<h3 id="setGPS">setGPS( latitude , longitude , elevation, speed, bearing, [ recordedImage ] )</h3>
+<a style="font-size:12px" href="/docs/FAQ#faq_1" target="_blank" target="setGPS faq">Having problems with setGPS()?</a>
 <p>change the gps position of the device</p>
 <p><ul>
 	<li>
@@ -78,7 +81,7 @@ alias: docs/references/scripting-api/sensor/
 	<li>
 		<strong>elevation</strong>
 		<div>Type: Numeric</div>
-		<em>elevation part of the gps position (height above a fixed reference point)</em>
+		<em>elevation part of the gps position (in meters above sea level)</em>
 	</li>
 	<li>
 		<strong>speed</strong>
@@ -88,7 +91,7 @@ alias: docs/references/scripting-api/sensor/
 	<li>
 		<strong>bearing</strong>
 		<div>Type: Numeric</div>
-		<em>the device movement direction in degrees</em>
+		<em>the device movement direction in degrees (Clockwise, where North is 0).</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>

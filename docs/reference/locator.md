@@ -16,7 +16,7 @@ alias: docs/references/scripting-api/locator/
 	<li>
 		<strong>timeout</strong>
 		<div>Type: Numeric</div>
-		<em>time in seconds to wait until the targetLocator appears, if not set timeout is by default 60 seconds</em>
+		<em>time in seconds to wait until the targetLocator appears, if not set, the default timeout of 60 seconds will be used</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
@@ -45,7 +45,7 @@ alias: docs/references/scripting-api/locator/
 	<li>
 		<strong>timeout</strong>
 		<div>Type: Numeric</div>
-		<em>time in seconds until the targetLocator must disappear, if not set timeout is by default 60 seconds</em>
+		<em>time in seconds until the targetLocator must disappear, if not set, the default timeout of 60 seconds will be used</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
@@ -69,7 +69,7 @@ alias: docs/references/scripting-api/locator/
 	<li>
 		<strong>timeout</strong>
 		<div>Type: Numeric</div>
-		<em>time in seconds until the targetLocator must appear, if not set timeout is by default 60 seconds</em>
+		<em>time in seconds until the targetLocator must appear, if not set, the default timeout of 60 seconds will be used</em>
 	</li>
 	<li>
 		<strong>recordedImage</strong>
@@ -82,28 +82,23 @@ alias: docs/references/scripting-api/locator/
 {% highlight js %}waitAppear(image(26).after().box(129,469,221,69), 82.3, image(26)){% endhighlight %}
 </p>
 
-<h3 id="waitUpdates">waitUpdates( [timeout] , [recordedImage] )</h3>
-  wait until screen stops changing. Usually inserted automatically during recording but can be added manually to improve stability of the test.  
+<h3 id="waitLoaded">waitLoaded( [timeout] )</h3>
+<p>wait until no major visual updates are recognized on the screen, continuous after timeout</p>
 <p><ul>
 	<li>
 		<strong>timeout</strong>
 		<div>Type: Numeric</div>
-		<em>time in seconds during which screen should stop changing, if not set timeout is by default 60 seconds</em>
-	</li>
-	<li>
-		<strong>recordedImage</strong>
-		<div>Type: Image</div>
-		<em>reference to the screenshots taken during recording</em>
+		<em>time in seconds until the screen must have stopped updating, if not set, the default timeout of 60 seconds will be used</em>
 	</li>
 </ul></p>
 <p>
 <strong>Example:</strong>
-{% highlight js %}waitUpdates(60){% endhighlight %}
+{% highlight js %}waitLoaded(60){% endhighlight %}
 </p>
-  In some cases application requires some time to update the screen between actions.  
+  In some cases an application requires some time to update the screen between actions.  
   For example when a user needs to login he first needs to click on the "Login" button, then type his credentials and press the "Confirm" button.  
   If an application takes some time to load the login form then the system might start typing credentials when the screen is not ready yet.  
-  **waitUpdates()** ensures that the screen is ready before next action can be performed.  
+  **waitLoaded()** ensures that the screen is ready before next action can be performed.  
   If the screen still changes next action will not be performed until there are no more updates except for really 
   small ones to ignore blinking cursors.  
   If an application screen is supposed to change all the time because of an animation, then the timeout can be decreased.  
@@ -111,9 +106,8 @@ alias: docs/references/scripting-api/locator/
   - System starts typing when textfield is not yet on the screen.  
   - Normally the system clicks on the button as soon as it finds it on the screen. In some cases all elements on the screen have to be loaded beforehand.  
   
-  Usually **waitUpdates()** are inserted during the recording when the system detects that an action was followed by a lot of screen changes.  
-  Load speed characteristics of web applications can vary from an execution to an execution so in some cases **waitUpdates()** 
+  Usually **waitLoaded()** are inserted during the recording when the system detects that an action was followed by a lot of screen changes.  
+  Load speed characteristics of web applications can vary from an execution to an execution so in some cases **waitLoaded()** 
   might not be inserted automatically because the page loaded fast during recording but loads slowly during some of the replays.  
-  In this case **waitUpdates()** should be inserted manually.  
+  In this case **waitLoaded()** should be inserted manually.  
   Read more about <a href="/docs/guides/bulletproof-tests">making your tests bulletproof</a>.
-  

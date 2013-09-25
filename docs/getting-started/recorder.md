@@ -9,12 +9,21 @@ In this tutorial we will walk you through the different components of the CONTIN
 
 What you need:
 
-+ A web browser
-+ An app (*.apk file) - <a href="https://docs.google.com/file/d/0ByR0JcAYUAoWdS1faUNJdGxONzg/edit?usp=sharing" target="_blank" rel="nofollow">download our sample app here...</a>
-+ 15 minutes
+<ul>
+	<li>A web browser</li>
+	<li>A free <a href="http://app.testobject.com/signup" target="_blank">TestObject account</a></li>
+	<li>An app (*.apk file) - <a href="https://docs.google.com/file/d/0ByR0JcAYUAoWdS1faUNJdGxONzg/edit?usp=sharing" target="_blank" rel="nofollow">download a sample app here</a></li>
+	<li>15 minutes</li>
+</ul>
 
+
+Let's have a look at what the recorder looks like:
 
 <img src="/img/getting-started/recorder/recorder-01.png" class="center">
+
+... and now let's get started.
+
+
 
 
 <h3>Step 1: Start Recording</h3>
@@ -22,6 +31,8 @@ What you need:
 On the right above the editor you will find the recorder controls to enable the recording or replay mode. To record your first test, hit <em>Record</em>.
 
 <img src="/img/getting-started/recorder/recorder-02.png">
+
+
 
 
 <h3>Step 2: Use Your App</h3>
@@ -33,17 +44,21 @@ When recording is enabled the actions you perform on the device are recorded. Th
 If you are using our sample app, click on the 'Continue' button and notice the step that gets added to the script as a new line.
 
 
+
+
 <h3>Step 3: Adjust Locator</h3>
 
 Now try out adjusting your newly created step by clicking the settings icon in the respective script line.
 
 <img src="/img/getting-started/recorder/recorder-03.png">
 
-This will open the settings dialog. In the <em>Adjust Locator</em> tab you can modify the locator. Just enable either the <em>Move and Resize</em> or the <em>Draw New</em> mode. In order to set the precise click position use the <em>Set Offset</em> mode. This will set the click coordinates relative to the locator box. Alterntively, you can also switch the <em>click strategy</em> to <em>click on position</em> to click on an absolute position on the screen.
+This will open the settings dialog. In the <em>Adjust Locator</em> tab you can modify the locator. Just enable either the <em>Move and Resize</em> or the <em>Draw New</em> mode. In order to set the precise click position use the <em>Set Offset</em> mode. This will set the click coordinates relative to the locator box. Alternatively, you can also switch the <em>click strategy</em> to <em>click on position</em> to click on an absolute position on the screen.
 
 <img src="/img/getting-started/recorder/recorder-04.png" class="center shadow">
 
 See the recorder guide for more details about <a href="/docs/guides/recorder/action-settings#locator">adjusting locators</a>.
+
+
 
 
 <h3>Step 4: Set Timeout</h3>
@@ -55,6 +70,8 @@ In the <em>Set Timeout</em> tab you can specify how long the system should look 
 See the recorder guide for more details about <a href="/docs/guides/recorder/action-settings#timeout">setting the timeout</a>.
 
 
+
+
 <h3>Step 5: Fine-tune Matching</h3>
 
 In the <em>Fine-tune Matching</em> tab you can adjust the sensitivity of the image matcher. With a high value the locator must always look very similar and appear in the same position on the screen. With a low value both can deviate more from the original. Adjusting the matching precision is usually very handy when a warning or an error occurs during replay.
@@ -62,6 +79,8 @@ In the <em>Fine-tune Matching</em> tab you can adjust the sensitivity of the ima
 See the recorder guide for more details about <a href="/docs/guides/recorder/action-settings#matching">fine-tuning the matching</a>.
 
 Now click <em>Save</em> to close the dialog. Notice how the line has been updated in the script.
+
+
 
 
 <h3>Step 6: Add Assertions</h3>
@@ -83,6 +102,8 @@ Now click <em>Insert Assertions</em> to close the dialog. Notice the new lines t
 <img src="/img/getting-started/recorder/recorder-08.png">
 
 
+
+
 <h3>Step 7: Add Sensor Actions</h3>
 
 Input actions and assertions can also be added using the operations bar on the left side. You will then see the settings dialog from above with a screenshot of the current device screen.
@@ -93,11 +114,15 @@ The operations bar offers you additional functionalities. For example, try out t
 More details you will find in the JavaScript API reference for <a href="/docs/api/sensor">sensor methods</a>.
 
 
+
+
 <h3>Step 9: Stop Recording</h3>
 
 Leave the recording mode by hitting <em>Stop</em>.
 
 <img src="/img/getting-started/recorder/recorder-10.png">
+
+
 
 
 <h3>Step 10: Replay Your Test</h3>
@@ -111,14 +136,19 @@ You will then get a fresh device so that the replay starts in a clean state. The
 <img src="/img/getting-started/recorder/recorder-12.png">
 
 
+
+
 <h3>Step 11: View Report</h3>
 
 As soon as the replay has finished, the result is shown at the top. It includes a link to the detailed report about this replay.
 
 <img src="/img/getting-started/recorder/recorder-13.png">
 
-In the report, all executed steps are listed next to two screenshots. The first screenshot taken during the recording and the second during the replay. In such a way you can easily compare your app’s behaviour after replaying. For example while running the test on a different version of your app or another Android version.
+In the report, all steps executed during replay are listed. For each step two screenshots are shown. The first screenshot had been taken during the recording and the second when the step was replayed. This allows you to easily compare how your app's behavior has changed, for example, when running the test on a different Android version or on a newer version of your app.
+
 <img src="/img/getting-started/recorder/recorder-14.png" class="center shadow">
+
+
 
 
 <h3>Step 12: Exist Replay</h3>
@@ -126,3 +156,10 @@ In the report, all executed steps are listed next to two screenshots. The first 
 Leave the replay mode by clicking the close icon. 
 
 <img src="/img/getting-started/recorder/recorder-15.png">
+
+
+
+
+<h3 id="next">What's next?</h3>
+
+Run your test on different devices by <a href="/docs/getting-started/batches">creating a batch</a>.

@@ -144,3 +144,17 @@ pre {
 	display: inline-block;
 	width: 40%;
 }
+
+.versions-table {
+  width: 65%
+}
+
+.versions-table th,
+.versions-table td {
+  text-align: center;
+  border: none;
+}
+
+.device-versions-table {
+  width: 50%
+}
