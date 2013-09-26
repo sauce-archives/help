@@ -135,6 +135,15 @@ pre {
 	text-align: left;
 }
 
+/* Bulletproof tests */
+.side-by-side {
+	margin-bottom: 40px;
+}
+
+.side-by-side img {
+	display: inline-block;
+	width: 40%;
+}
 
 .versions-table {
   width: 65%
@@ -149,4 +158,3 @@ pre {
 .device-versions-table {
   width: 50%
 }
-
