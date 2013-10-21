@@ -29,6 +29,8 @@ alias: docs/references/scripting-api/input/
 {% highlight js %}click(image(4).before().box(129, 469, 221, 69), 60.0, image(4)){% endhighlight %}
 </p>
 
+
+
 <h3 id="click-position">click( x , y , [ recordedImage ] )</h3>
 <p>click immediately on the given position</p>
 <p><ul>
@@ -52,6 +54,8 @@ alias: docs/references/scripting-api/input/
 <strong>Example:</strong>
 {% highlight js %}click(100, 100, image(4)){% endhighlight %}
 </p>
+
+
 
 <h3 id="longPress-box">longPress( targetLocator , [ timeout ] , [ recordedImage ] )</h3>
 <p>long press on the given locator when it appears on the screen, fails if the locator doesn't appear after given timeout</p>
@@ -77,6 +81,8 @@ alias: docs/references/scripting-api/input/
 {% highlight js %}longPress(image(4).before().box(129, 469, 221, 69), 60.0, image(4)){% endhighlight %}
 </p>
 
+
+
 <h3 id"longPress-position">longPress( x , y , [ recordedImage ] )</h3>
 <p>click immediately on the given position</p>
 <p><ul>
@@ -101,6 +107,8 @@ alias: docs/references/scripting-api/input/
 {% highlight js %}longPress(100, 100, image(4)){% endhighlight %}
 </p>
 
+
+
 <h3 id="drag">drag( flow , [ recordedImage ] )</h3>
 <p>drag using the defined flow, flow is an array containing flow points</p>
 <p><ul>
@@ -119,6 +127,8 @@ alias: docs/references/scripting-api/input/
 <strong>Example:</strong>
 {% highlight js %}drag([[387, 615, 0], [450, 182, 20]], image(11)){% endhighlight %}
 </p>
+
+
 
 <h3 id="type">type( text , [ recordedImage ] )</h3>
 <p>type the given text</p>
@@ -139,7 +149,9 @@ alias: docs/references/scripting-api/input/
 {% highlight js %}type('sample text', image(12)){% endhighlight %}
 </p>
 
-<h3 id="randomInput">randomInput( config)</h3>
+
+
+<h3 id="randomInput">randomInput( config )</h3>
 <p>Sends random touch and key events to your application. Fails if an exception (e.g. NullPointerException) is thrown by your application.</p>
 <p><ul>
 	<li>
@@ -162,4 +174,3 @@ alias: docs/references/scripting-api/input/
 <strong>Example 2: execute always a different sequence of events</strong>
 {% highlight js %}randomInput({eventCount: 10000, throttle: 0, seed: Math.random() * 100}){% endhighlight %}
 </p>
-
