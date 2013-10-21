@@ -96,9 +96,9 @@ If the execution speed is essential for your test, you can reduce the waiting ti
 
 ### Adjusting Timeouts
 
-Timeouts are used to determine how long to wait for elements to appear or vanish before executing the subsequent step. The default timeout for all functions that look for elements on the screen is **60** seconds.
+Timeouts are used to determine how long to wait for elements to appear or vanish. The default timeout for all functions that look for elements on the screen is **60** seconds.
 
-Sometimes, however, applications need more time, for example, if they include some processing or downloading big files. The timeout can be increased to make sure that the system waits long enough.
+Sometimes, however, applications need more time, for example, if they include some processing or downloading of big files. The timeout can be increased to make sure that the system waits long enough.
 
 For *waitAppear* and *waitVanish* the timeout specifies the maximum amount of time to wait before the step will fail.
 
