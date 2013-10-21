@@ -23,7 +23,13 @@ Using the <em>click on position</em> strategy, the click is performed on a posit
 
 
 <h3 id="matching">Matching</h3>
-The matching value specifies how precise a matching of a locator on the screen during replay will be. Setting the value to 1 means that only an exact match will be considered valid. For a lower value, locators that are less similar to the original will be matched. Setting the value to 0 means that even very different locators will be matched. The screenshots shown as preview are taken on the current device screen when moving the slider. <a href="http://help.testobject.com/docs/guides/image-matching#fine-tune-matching">Read more...</a>
+First choose whether you would like to test the matching on the recorded screenshot or on a new screenshot taken on the current device screen.
+
+Then select if the locator should be identified by its image and/or its text. The matching value specifies how precise the matching of a locator on the screen will be during replay. Setting the value to 1 means that only an exact match will be considered valid. For a lower value, locators that are less similar to the original will be matched. Setting the value to 0 means that even very different locators will be matched.
+
+Finally, choose whether during replay the locator must appear at the same position as on the recorded screenshot.
+
+Read more on <a href="http://help.testobject.com/docs/guides/image-matching#fine-tune-matching">fine-tuning the matching...</a>
 
 
 <h3 id="timeout">Timeout</h3>
