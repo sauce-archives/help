@@ -4,7 +4,7 @@ layout: en
 permalink: docs/guides/ant-task/
 ---
 
-For a full continuous integration process automate the execution of your tests created with TestObject CONTINUOUS. This can be easily achieved by running TestObject CONTINUOUS Ant Tasks.
+For a full continuous integration process automate the execution of your tests created with TestObject. This can be easily achieved by running TestObject Ant Tasks.
 
 What you need:
 
@@ -12,7 +12,7 @@ What you need:
 + <strong>Ant</strong> (installed into a folder of your choice)
 
 
-<h3 id="AutomateyourTestExecutionusingAnt-Step1%3ADownloadandinstallTestObjectCONTINUOUSAntTasks">Step 1: Download and Install TestObject CONTINUOUS Ant Tasks</h3>
+<h3 id="AutomateyourTestExecutionusingAnt-Step1%3ADownloadandinstallTestObjectCONTINUOUSAntTasks">Step 1: Download and Install TestObject Ant Tasks</h3>
 
 + Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-2.29.7.jar">testobject-ant.jar</a>
 + Extract the content of the zip file into <em>ant_installation_folder/lib</em>
@@ -20,10 +20,10 @@ What you need:
 
 <h3 id="AutomateyourTestExecutionusingAnt-Step2%3AIncludeTestObjectAntTasksintoyourantbuildprocess">Step 2: Include the Ant Tasks Into Your Ant Build Process</h3>
 
-The following Ant tasks are currently available for TestObject CONTINUOUS:
+The following Ant tasks are currently available for TestObject:
 
 + <strong>Login</strong><br>
-Authenticate yourself against TestObject CONTINUOUS (dependency for all other tasks)
+Authenticate yourself against TestObject (dependency for all other tasks)
 + <strong>UploadVersion</strong><br>
 Upload a new .apk file and create a new version for it
 + <strong>ActivateVersion</strong><br>
