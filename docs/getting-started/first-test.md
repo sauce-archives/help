@@ -107,4 +107,4 @@ Congratulations, you have successfully recorded and replayed a test for your app
 + Learn more about some <a href="/docs/getting-started/recorder">advanced recorder functionalities</a>.
 + Run your test on different devices by <a href="/docs/getting-started/batches">creating a batch</a>.
 
-Remember: TestObject CONTINUOUS is made for **continuous integration** and will reach it's fullest potential as a continuous testing solution in the tool chain of your agile development process.
+Remember: TestObject is made for **continuous integration** and will reach it's fullest potential as a continuous testing solution in the tool chain of your agile development process.
