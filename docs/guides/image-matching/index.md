@@ -11,12 +11,12 @@ There are two most common approaches to achieve this task - API based access or 
 <strong>API based access</strong> allows applications to communicate with the system and provides direct access to elements. 
 The drawback is that the app itself has to be modified.
 
-<strong>Visual matching</strong> is a technique employed by CONTINUOUS to identify elements of application. 
+<strong>Visual matching</strong> is a technique employed by TestObject to identify elements of application. 
 Instead of element id stored in application it uses image of that element and matches it to actual screen of app during test execution.<br>
 This way application doesn't have to me modified and solution doesn't care if it's Android app or web app - image is an image.
 
 
-<h3 id="visual-matching-in-continuous">Visual Matching in CONTINUOUS</h3>
+<h3 id="visual-matching-in-continuous">Visual Matching in TestObject</h3>
 When you record a test we add a "locator" for each action that needs to identify an element on the screen.<br>
 <strong>Example:</strong> {% highlight js %}click(image(4).before().box(129, 469, 221, 69), 60.0, image(4)){% endhighlight %}
 
