@@ -5,7 +5,7 @@ permalink: docs/devices/
 ---
 
 <h3 id="emulators">Emulators</h3>
-In CONTINUOUS we rely on Android emulators to run applications. While in most cases emulators provide the same runtime environment as real devices, sometimes there are differences. Our emulators are modified versions of the ones provided by Android SDK in which we fixed issues.  
+In TestObject we rely on Android emulators to run applications. While in most cases emulators provide the same runtime environment as real devices, sometimes there are differences. Our emulators are modified versions of the ones provided by Android SDK in which we fixed issues.  
 
 
 <h3 id="versions">Android Versions</h3>
