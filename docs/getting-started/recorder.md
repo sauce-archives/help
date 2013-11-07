@@ -4,7 +4,7 @@ layout: en
 permalink: docs/getting-started/recorder/
 ---
 
-In this tutorial we will walk you through the different components of the CONTINUOUS Recorder.
+In this tutorial we will walk you through the different components of the TestObject Recorder.
 
 
 What you need:
