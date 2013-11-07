@@ -29,5 +29,5 @@ This approach has severe limitations:<br>
 - Files have to be publicly available (although it's possible to modify it to include login steps using the visual editor)<br>
 - If the files can be displayed in a browser it will not be downloaded<br>
 </p>
-<p>Please note that we are working on a way to upload files to the file system natively using the web interface of CONTINOUS. This is just a workaround.</p>
+<p>Please note that we are working on a way to upload files to the file system natively using the web interface of TestObject. This is just a workaround.</p>
 
