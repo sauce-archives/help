@@ -54,3 +54,4 @@ You can see the freshly uploaded version on your project's App page:
 
 <img class="center shadow" src="/img/guides/gradle/gradle-01.png">
 
+If you would like to see an example of a project using the TestObject Gradle Plugin - check out our [Calculator App](https://github.com/testobject/calculator) on GitHub.
