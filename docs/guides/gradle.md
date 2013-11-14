@@ -21,7 +21,7 @@ buildscript {
 
     dependencies {
         // ... your existing dependencies
-        classpath group: 'org.testobject.extras', name: 'gradle', version: '1.0'
+        classpath group: 'org.testobject.extras', name: 'gradle', version: '2+'
     }
 }
 
