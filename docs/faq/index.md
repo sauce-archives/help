@@ -24,4 +24,4 @@ To change the device's locale, add the following line to your script:
 {% highlight js %} executeShellCommand('am broadcast -a com.android.intent.action.SET_LOCALE --es com.android.intent.extra.LOCALE en') {% endhighlight %}  <small>(<a href="/docs/api/phone/#executeShellCommand" target="_blank" target="executeShellCommand() reference">more about executeShellCommand()</a>)</small>  
 
 Just replace the Locale code ('en' in the example above) with the desired Locale.  
- <a href="http://developer.android.com/reference/java/util/Locale.html#CANADA" target="_blank" target="Locale codes">a list</a> of Locale codes is available at the official Android Developer website. 
+ <a href="http://developer.android.com/reference/java/util/Locale.html#CANADA" target="_blank" target="Locale codes">A list</a> of Locale codes is available at the official Android Developer website. 
