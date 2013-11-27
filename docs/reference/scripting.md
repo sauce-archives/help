@@ -120,7 +120,7 @@ script.invokeMethodFromAnotherScript();
 <p>
 <strong>Example:</strong>
 {% highlight js %}
-var response = http( {method: 'GET', url: 'http://echo.jsontest.com/echo/testobject', data: {some: 'data'}} )
+var response = http( {method: 'POST', url: 'http://echo.jsontest.com/echo/testobject', data: {some: 'data'}} )
 print(response.status)
 print(response.headers)
 print(response.config)
