@@ -64,7 +64,7 @@ script.invokeMethodFromAnotherScript();
 {% highlight js %}print('hello'){% endhighlight %}
 </p>
 
-<h3 id="http">http( {method: 'METHOD', url: 'URL', [ data: {}] )</h3>
+<h3 id="http">http( {method: 'METHOD', url: 'URL', data: {}, [ headers: {}] )</h3>
 <p>Sends a HTTP request using a configuration JSON and returns a response</p>
 <p><ul>
 	<li>
@@ -81,6 +81,11 @@ script.invokeMethodFromAnotherScript();
 		<strong>data</strong>
 		<div>Type: JSON</div>
 		<em>A JSON that will be sent as the request's data</em>
+	</li>
+	<li>
+		<strong>headers</strong>
+		<div>Type: JSON</div>
+		<em>A JSON that contains HTTP request headers as key-value pairs</em>
 	</li>
 	<li id="http-response">
 		<strong>returns</strong>
@@ -120,7 +125,7 @@ script.invokeMethodFromAnotherScript();
 <p>
 <strong>Example:</strong>
 {% highlight js %}
-var response = http( {method: 'POST', url: 'http://echo.jsontest.com/echo/testobject', data: {some: 'data'}} )
+var response = http( {method: 'POST', url: 'http://echo.jsontest.com/echo/testobject', data: {some: 'data'}, headers: {'Content-type': 'application/json'}} )
 print(response.status)
 print(response.headers)
 print(response.config)
