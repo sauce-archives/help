@@ -25,6 +25,12 @@ alias: docs/references/scripting-api/apps/
 {% highlight js %}launchDefaultApp(){% endhighlight %}
 </p>
 
+<h3 id="launch">launchDefaultAppAndWait()</h3>
+<p>launch the default app of the current project and waits until the app is visible on the screen with a timeout of 60 seconds.</p>
+<strong>Example:</strong>
+{% highlight js %}launchDefaultAppAndWait(){% endhighlight %}
+</p>
+
 <h3 id="restart">restartDefaultApp()</h3>
 <p>restart the default app of the current project</p>
 <strong>Example:</strong>
