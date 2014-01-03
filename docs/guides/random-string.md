@@ -17,7 +17,7 @@ This script doesn't use a device and it is pure javascript, so when creating the
 ### Step 2: Import the random generator script
 
 1. Go to the test where you want to use the string generator.  
-2. <a href="docs/api/scripting/#importScript" target="_blank">import</a> the script created in step 1.  
+2. <a href="/docs/api/scripting/#importScript" target="_blank">import</a> the script created in step 1.  
 
 ### Step 3: Generate random strings
 
