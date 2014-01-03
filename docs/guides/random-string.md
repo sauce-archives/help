@@ -12,7 +12,7 @@ This script doesn't use a device and it is pure javascript, so when creating the
 
 1. Create a new test for the external script and give it a meaningful name ('string_generator' could be a good choice).  
 2. Delete any code lines from the script so that it would be completely empty.  
-3. Copy the script from <a href="https://gist.github.com/aluedeke/7100091/raw/1f57040b680c37c9f084e78b301cf579b8a4ce35/custom+chance.js" target="_blank">this link</a> and paste it to your empty script. 
+3. Copy the script from <a href="https://raw.github.com/testobject/public/master/chance.js" target="_blank">this link</a> and paste it to your empty script. 
 
 ### Step 2: Import the random generator script
 
