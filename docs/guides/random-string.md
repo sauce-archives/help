@@ -21,7 +21,7 @@ This script doesn't use a device and it is pure javascript, so when creating the
 
 ### Step 3: Generate random strings
 
-The library we included if very comprehensive and can generate all kinds of random data.  
+The library we included is very comprehensive and can generate all kinds of random data.  
 Some examples:  
 
 {% highlight groovy %}
