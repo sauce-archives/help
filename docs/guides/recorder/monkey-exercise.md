@@ -1,10 +1,10 @@
 ---
-title: Random Events
+title: Monkey Exercise
 layout: en
-permalink: docs/guides/recorder/random-events/
+permalink: docs/guides/recorder/monkey-exercise/
 ---
 
-This dialog allows you to add a [Random Input](/docs/api/input#randomInput "Random Input") step to the test script. When this step is executed it sends random touch and key events to your application, or to the browser if are testing a website. As soon as an error is detected the step will fail. The following parameters can be used to configure the step:
+This dialog allows you to add a [Monkey Exercise](/docs/api/input#monkeyExercise "Random Input") (random input events) step to the test script. When this step is executed it sends random touch and key events to your application, or to the browser if are testing a website. As soon as an error is detected the step will fail. The following parameters can be used to configure the step:
 
 **Event Count:** The number of events that will be sent.
 
