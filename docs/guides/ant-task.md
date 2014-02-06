@@ -15,7 +15,7 @@ What you need:
 <h3 id="AutomateyourTestExecutionusingAnt-Step1%3ADownloadandinstallTestObjectCONTINUOUSAntTasks">Step 1: Download and Install TestObject Ant Tasks</h3>
 
 + Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.06.01.jar">testobject-ant-3.06.01.jar</a>
-+ Extract the content of the zip file into <em>ant_installation_folder/lib</em>
++ Copy the jar file into <em>ant_installation_folder/lib</em>
 
 
 <h3 id="AutomateyourTestExecutionusingAnt-Step2%3AIncludeTestObjectAntTasksintoyourantbuildprocess">Step 2: Include the Ant Tasks Into Your Ant Build Process</h3>
