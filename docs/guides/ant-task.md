@@ -44,7 +44,7 @@ To load the TesObject CONTINUOUS Ant tasks, first include the following snippet 
 
 <taskdef resource="org/testobject/extras/ant/tasks.properties">
    	<classpath>
-       	<pathelement location="testobject-ant-2.29.7.jar"/>
+       	<pathelement location="testobject-ant-3.06.01.jar"/>
    	</classpath>
 </taskdef>
 
@@ -83,7 +83,7 @@ A full fledged version of your build.xml may look like the following file. It up
     <!-- load the testobject ant tasks -->
     <taskdef resource="org/testobject/extras/ant/tasks.properties">
             <classpath>
-                <pathelement location="testobject-ant-2.29.7.jar"/>
+                <pathelement location="testobject-ant-3.06.01.jar"/>
             </classpath> 
     </taskdef> 
  
