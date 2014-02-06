@@ -90,6 +90,7 @@ A full fledged version of your build.xml may look like the following file. It up
     <!-- properties used by all tasks to identify the correct project -->
     <property name="testobject.user" value="foobar" />
     <property name="testobject.project" value="komoot" />
+	<property name="apk.file.path" value="my.apk" />
  
     <!-- login into testobject, must be always executed before other tasks are called -->
     <target name="login">
@@ -98,7 +99,7 @@ A full fledged version of your build.xml may look like the following file. It up
  
     <!-- upload a new apk file, versionId is stored in 'new.version' property -->
     <target name="uploadVersion" depends="login">
-        <uploadVersion name="new version" file="my.apk" response="new.version" />
+        <uploadVersion name="new version" file="${apk.file.path}" response="new.version" />
     </target>
      
     <!-- set the new version as default -->
