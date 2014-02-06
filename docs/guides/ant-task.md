@@ -79,7 +79,7 @@ A full fledged version of your build.xml may look like the following file. It up
 
 {% highlight xml %}
 <?xml version="1.0"?>
-<project name="TestObjectSampleScript" default="getBatchReport" basedir=".">
+<project name="TestObjectSampleScript" default="downloadBatchReport" basedir=".">
     <!-- load the testobject ant tasks -->
     <taskdef resource="org/testobject/extras/ant/tasks.properties">
             <classpath>
