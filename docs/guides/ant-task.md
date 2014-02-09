@@ -80,28 +80,31 @@ A full fledged version of your build.xml may look like the following file. It up
 {% highlight xml %}
 <?xml version="1.0"?>
 <project name="TestObjectSampleScript" default="downloadBatchReport" basedir=".">
+ 
+    <!-- properties used by all tasks to identify the correct project -->
+	<property name="testobject.ant.lib.name" value="testobject-ant-3.06.01.jar" />
+    <property name="testobject.user" value="USERNAME" />
+    <property name="testobject.pw" value="PASSWORD" />
+    <property name="testobject.project" value="PROJECTNAME" />
+	<property name="testobject.batch.id" value="1" /> 
+ 
     <!-- load the testobject ant tasks -->
     <taskdef resource="org/testobject/extras/ant/tasks.properties">
             <classpath>
-                <pathelement location="testobject-ant-3.06.01.jar"/>
+                <pathelement location="${testobject.ant.lib.name}"/>
             </classpath> 
     </taskdef> 
  
-    <!-- properties used by all tasks to identify the correct project -->
-    <property name="testobject.user" value="foobar" />
-    <property name="testobject.project" value="komoot" />
-	<property name="apk.file.path" value="my.apk" />
- 
     <!-- login into testobject, must be always executed before other tasks are called -->
     <target name="login">
-        <login username="my_username" password="my_password" />
+        <login username="${testobject.user}" password="${testobject.pw}" />
     </target>
  
     <!-- upload a new apk file, versionId is stored in 'new.version' property -->
     <target name="uploadVersion" depends="login">
-        <uploadVersion name="new version" file="${apk.file.path}" response="new.version" />
+        <uploadVersion name="${apk.version.name}" file="${apk.path}" response="new.version" />
     </target>
-     
+	
     <!-- set the new version as default -->
     <target name="activateVersion" depends="uploadVersion">
         <activateVersion versionId="${new.version}" />
@@ -109,8 +112,8 @@ A full fledged version of your build.xml may look like the following file. It up
  
     <!-- start the batch with id 1 and store the batch report id in 'new.batch' -->
     <target name="startBatch" depends="activateVersion">
-        <startBatch batchId="1" response="new.batch"/>
-        <echo message="http://app.testobject.com/#/${testobject.user}/${testobject.project}/reports/${new.batch}"></echo>
+        <startBatch batchId="${testobject.batch.id}" response="new.batch"/>
+        <echo message="https://app.testobject.com/#/${testobject.user}/${testobject.project}/reports/${new.batch}"></echo>
     </target>
      
     <!-- download the report of the created batch and store the result -->
@@ -124,6 +127,7 @@ A full fledged version of your build.xml may look like the following file. It up
  
     <target name="fail" unless="batch.succeeded">
         <fail message="Batch Replay failed with ${batch.errors} errors" />
+		<echo message="https://app.testobject.com/#/${testobject.user}/${testobject.project}/reports/${new.batch}"></echo>
     </target>
 </project>
 {% endhighlight %}
