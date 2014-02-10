@@ -18,15 +18,14 @@ What you need:
 + Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.06.01.jar" target="_blank">testobject-ant-3.06.01.jar</a>
 + Downlaod the TestObject build.xml  <a href="https://raw2.github.com/testobject/calculator/master/testobject/build.xml" target="_blank">build.xml</a>
 
+<h3 id="step2">Step 2: Add the files to your app repository</h3>
+
 + Put the two files into <strong>your app</strong> repository. For example:
-
-<h3 id="step2">Step 2: Include the Ant Tasks Into Your Ant Build Process</h3>
-
-The following Ant tasks are currently available for TestObject:
 {% highlight xml %}
 /testobject/build.xml
 /testobject/ant/testobject-ant-3.06.01.jar
 {% endhighlight %}
+
 
 <h3 id="step3">Step 3: Configure your Jenkins Project</h3>
 
