@@ -16,7 +16,7 @@ What you need:
 <h3 id="step1">Step 1: Add the Ant Build File and Ant Plugin to your repository</h3>
 
 + Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.06.01.jar" target="_blank">testobject-ant-3.06.01.jar</a>
-+ Downlaod the TestObject build.xml  <a href="https://raw2.github.com/testobject/calculator/master/testobject/build.xml" target="_blank">build.xml</a>
++ Download the TestObject: <a href="https://raw2.github.com/testobject/calculator/master/testobject/build.xml" target="_blank">build.xml</a>
 
 <h3 id="step2">Step 2: Add the files to your app repository</h3>
 
@@ -25,7 +25,6 @@ What you need:
 /testobject/build.xml
 /testobject/ant/testobject-ant-3.06.01.jar
 {% endhighlight %}
-
 
 <h3 id="step3">Step 3: Configure your Jenkins Project</h3>
 
@@ -52,6 +51,6 @@ apk.version.name=demoApp-$BUILD_NUMBER
 
 <img class="center shadow" src="/img/guides/jenkins-ant-config.png">
 
-<strong>Click Save. Now you are done!</strong>
+<strong>Click Save. Now you are done!</strong></br></br>
 You can easily make changes to the build.xml if you want to run more batches at a time for example.
 
