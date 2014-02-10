@@ -1,5 +1,5 @@
 ---
-title: Use camera features in an UI test
+title: Use camera features in a UI test
 layout: en
 permalink: docs/guides/camera/
 ---
