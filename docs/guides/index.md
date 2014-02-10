@@ -11,3 +11,4 @@ Figure out how to make use of the full potential of TestObject. Have a look at t
 + <a href="/docs/guides/ant-task">Automated Test Execution with Ant</a>
 + <a href="/docs/guides/gradle">Upload an APK with Gradle</a>
 + <a href="/docs/guides/http">Http Requests</a>
++ <a href="/docs/guides/camera">Use camera features in an UI test</a>
