@@ -4,7 +4,7 @@ layout: en
 permalink: docs/guides/camera/
 ---
 
-To use a camera in your test we suggest to use an app called “Fakecamera”. You can get the app (apk-file) in Goole Play store (http://www.shmoula.cz/fakecamera/). 
+To use a camera in your test we suggest to use an app called “Fakecamera”. You can get the app (apk-file) in Goole Play store (<a href="http://www.shmoula.cz/fakecamera/">http://www.shmoula.cz/fakecamera/</a>). 
 
 ### Howto
 
@@ -24,5 +24,5 @@ To use a camera in your test we suggest to use an app called “Fakecamera”. Y
 **Step 7** Use the camera feature in your app by clicking it. You can now select the FakeCamera instead of the normal camera app.
 
 
-If you need custom pictures just send us some samples to support@testobject.com we are happy to add your pictures to the gallery.
+If you need custom pictures just send us some samples to <a href="mailto:support@testobject.com">support@testobject.com</a> we are happy to add your pictures to the gallery.
 
