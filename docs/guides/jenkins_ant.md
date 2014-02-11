@@ -4,7 +4,7 @@ layout: en
 permalink: docs/guides/jenkins-ant-task/
 ---
 
-For a full continuous integration process automate the execution of your tests created with TestObject. This can be easily achieved by running TestObject Ant Tasks inside of a Continuous Integration Server.
+For a full continuous integration process automate the execution of your tests created with TestObject. This can be easily achieved by running TestObject Ant Tasks within a Continuous Integration Server.
 
 What you need:
 
@@ -20,7 +20,7 @@ What you need:
 
 <h3 id="step2">Step 2: Add the files to your app repository</h3>
 
-+ Put the two files into <strong>your app</strong> repository. For example:
++ Add the two files into <strong>your app</strong> repository. For example:
 {% highlight xml %}
 /testobject/build.xml
 /testobject/ant/testobject-ant-3.06.01.jar
@@ -33,12 +33,12 @@ Login into your Jenkins server and go to the project configuration. (Configure)
 + <strong>Ant Task</strong>
 Add a new “Invoke Ant Task” (Build > Add Build Step >Invoke Ant)
 + <strong>Build File</strong>
-Add the file to your TestObject build file to this field.
+Add the TestObject build file path to the Build File field.
 {% highlight xml %}
 testobject/build.xml
 {% endhighlight %}
 + <strong>Properties</strong>
-Add the file to your TestObject build file to this field 
+Copy the following code to the Properties field and replace the variables with your username, password, project, batch id and APK path.
 {% highlight xml %}
 testobject.ant.lib.name=ant/testobject-ant-3.06.01.jar
 testobject.user=USER_NAME
