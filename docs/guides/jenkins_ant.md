@@ -37,6 +37,8 @@ Add the TestObject build file path to the Build File field.
 {% highlight xml %}
 testobject/build.xml
 {% endhighlight %}
+
+<img class="center shadow" src="/img/guides/jenkins-ant-config.png">
 + <strong>Properties</strong>
 Copy the following code to the Properties field and replace the variables with your username, password, project, batch id and APK path.
 {% highlight xml %}
@@ -49,7 +51,7 @@ apk.path=PATH_TO_YOUR_APK_BASED_ON_BUILD_XML_PATH
 apk.version.name=demoApp-$BUILD_NUMBER
 {% endhighlight %}
 
-<img class="center shadow" src="/img/guides/jenkins-ant-config.png">
+
 
 <strong>Click Save. Now you are done!</strong></br></br>
 You can easily make changes to the build.xml if you want to run more batches at a time for example.
