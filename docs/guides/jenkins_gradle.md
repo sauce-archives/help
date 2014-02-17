@@ -12,7 +12,6 @@ What you need:
 + <strong>A Jenkins Project for your app</strong>
 + <strong>Installed Jenkins Gradle Plugin</strong> With installed Gradle Version <strong>1.6</strong>
 
-
 <h3 id="step1">Step 1: Download the Gradle Build File</h3>
 
 + Download the TestObject: <a href="https://github.com/testobject/calculator/blob/master/build.gradle" target="_blank">build.gradle</a>
@@ -25,7 +24,6 @@ What you need:
 {% endhighlight %}
 
 * <strong>Or</strong> extend your existing Gradle Build File
-
 
 <h3 id="step3">Step 3: Install the Environment Injector Plugin in your Jenkins</h3>
 
@@ -51,6 +49,7 @@ testobjectactivateversion=true
 testobjectuploadversion=true
 testobjectbatches=[1,2]
 {% endhighlight %}
+
 <img class="center shadow" src="/img/guides/jenkins-gradle-env-config.png">
 
 + <strong>Add Gradle Task</strong>
@@ -58,6 +57,7 @@ Add a new “Invoke Gradle Script” (Build > Add Build Step >Invoke Gradle Scri
 
 
 + <strong>Edit Task</strong> Configure "testobjectUpload" as Gradle Task in the Tasks field.
+
 <img class="center shadow" src="/img/guides/jenkins-gradle-config.png">
 
 
