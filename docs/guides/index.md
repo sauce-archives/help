@@ -4,7 +4,7 @@ layout: en
 permalink: docs/guides/
 ---
 
-Figure out how to make use of the full potential of TestObject. Have a look at the following guides:
+Figure out how to make use of the full potential of TestObject's Custom Tests. Have a look at the following guides:
 
 + <a href="/docs/guides/recorder/">Recorder</a>
 	<ul>
