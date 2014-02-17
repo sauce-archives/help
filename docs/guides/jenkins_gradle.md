@@ -13,16 +13,18 @@ What you need:
 + <strong>Installed Jenkins Gradle Plugin</strong> With installed Gradle Version <strong>1.6</strong>
 
 
-<h3 id="step1">Step 1: Add the Gradle Build File to your repository or extend your existing Gradle Build File</h3>
+<h3 id="step1">Step 1: Download the Gradle Build File</h3>
 
 + Download the TestObject: <a href="https://github.com/testobject/calculator/blob/master/build.gradle" target="_blank">build.gradle</a>
 
-<h3 id="step2">Step 2: Add the build.gradle files</h3>
+<h3 id="step2">Step 2: Add the build.gradle file</h3>
 
 + Add the file into <strong>your app</strong> repository.
 {% highlight xml %}
 /build.gradle
 {% endhighlight %}
+
+* <strong>Or</strong> extend your existing Gradle Build File
 
 
 <h3 id="step3">Step 3: Install the Environment Injector Plugin in your Jenkins</h3>
