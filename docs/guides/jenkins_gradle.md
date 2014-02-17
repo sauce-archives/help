@@ -36,7 +36,7 @@ Wait for the installation to be finished.
 
 <h3 id="step3">Step 4: Configure your Jenkins Project</h3>
 
-+ <strong>Jenkins</strong>
++ <strong>Configure</strong>
 Go to the project configuration of your app project. (Configure)
 + <strong>Inject environment variables</strong>
 Copy the following code to the <strong>Properties Content</strong> field and replace the variables with your username, password, project, batch id and APK path.
@@ -53,7 +53,7 @@ testobjectbatches=[1,2]
 <img class="center shadow" src="/img/guides/jenkins-gradle-env-config.png">
 
 + <strong>Add Gradle Task</strong>
-Add a new “Invoke Gradle Script” (Build > Add Build Step >Invoke Gradle Script)
+Add a new “Invoke Gradle Script” (Build > Add Build Step > Invoke Gradle Script)
 
 
 + <strong>Edit Task</strong> Configure "testobjectUpload" as Gradle Task in the Tasks field.
