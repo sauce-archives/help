@@ -53,13 +53,13 @@ testobjectbatches=[1,2]
 {% endhighlight %}
 <img class="center shadow" src="/img/guides/jenkins-gradle-env-config.png">
 
-+ <strong>Gradle Task</strong>
++ <strong>Add Gradle Task</strong>
 Add a new “Invoke Gradle Script” (Build > Add Build Step >Invoke Gradle Script)
 
 
-+ <strong>Gradle Task</strong>
++ <strong>Edit Task</strong> Configure "testobjectUpload" as Gradle Task in the Tasks field.
 <img class="center shadow" src="/img/guides/jenkins-gradle-config.png">
-Configure "testobjectUpload" as Gradle Task in the Tasks field.
+
 
 <strong>Click Save. Now you are done!</strong></br></br>
 
