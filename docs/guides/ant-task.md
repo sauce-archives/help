@@ -14,7 +14,7 @@ What you need:
 
 <h3 id="AutomateyourTestExecutionusingAnt-Step1%3ADownloadandinstallTestObjectCONTINUOUSAntTasks">Step 1: Download and Install TestObject Ant Tasks</h3>
 
-+ Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.06.01.jar">testobject-ant-3.06.01.jar</a>
++ Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.08.06.jar">testobject-ant-3.08.06.jar</a>
 + Copy the jar file into <em>ant_installation_folder/lib</em>
 
 
@@ -27,11 +27,11 @@ Authenticate yourself against TestObject (dependency for all other tasks)
 + <strong>UploadVersion</strong><br>
 Upload a new .apk file and create a new version for it
 + <strong>ActivateVersion</strong><br>
-Set an already uploaded version as default version for the given projects
-+ <strong>StartBatch</strong><br>
-Execute a preconfigured batch
-+ <strong>GetBatchReport</strong><br>
-Download the results for a given batch execution
+Set an already uploaded version as default version for the given app
++ <strong>StartSuite</strong><br>
+Execute a preconfigured suite
++ <strong>GetSuiteReport</strong><br>
+Download the results for a given suite execution
 
 
 To load the TesObject CONTINUOUS Ant tasks, first include the following snippet into your build.xml:
@@ -44,7 +44,7 @@ To load the TesObject CONTINUOUS Ant tasks, first include the following snippet 
 
 <taskdef resource="org/testobject/extras/ant/tasks.properties">
    	<classpath>
-       	<pathelement location="testobject-ant-3.06.01.jar"/>
+       	<pathelement location="testobject-ant-3.08.06.jar"/>
    	</classpath>
 </taskdef>
 
@@ -75,18 +75,20 @@ After including the snippet call the predefined tasks:
 
 <h4>Sample Ant Script</h4>
 
-A full fledged version of your build.xml may look like the following file. It uploads and activates a new .apk file and starts a batch. When the results are available it distributes them to different properties.
+A full fledged version of your build.xml may look like the following file. It uploads and activates a new .apk file and starts a suite. When the results are available it distributes them to different properties.
 
 {% highlight xml %}
 <?xml version="1.0"?>
-<project name="TestObjectSampleScript" default="downloadBatchReport" basedir=".">
+<project name="TestObjectSampleScript" default="downloadSuiteReport" basedir=".">
  
-    <!-- properties used by all tasks to identify the correct project -->
+    <!-- properties used by all tasks to identify the correct app -->
 	<property name="testobject.ant.lib.name" value="testobject-ant-3.06.01.jar" />
     <property name="testobject.user" value="USERNAME" />
     <property name="testobject.pw" value="PASSWORD" />
-    <property name="testobject.project" value="PROJECTNAME" />
-	<property name="testobject.batch.id" value="1" /> 
+    <property name="testobject.app" value="APPNAME" />
+	<property name="testobject.testSuite.id" value="1" /> 
+	<property name="apk.path" value="PATH_TO_YOUR_APK" />
+	
  
     <!-- load the testobject ant tasks -->
     <taskdef resource="org/testobject/extras/ant/tasks.properties">
@@ -109,25 +111,30 @@ A full fledged version of your build.xml may look like the following file. It up
     <target name="activateVersion" depends="uploadVersion">
         <activateVersion versionId="${new.version}" />
     </target>
+
+        <!-- set the new version as default -->
+    <target name="runCheckup" depends="activateVersion">
+        <runCheckup />
+    </target>
  
-    <!-- start the batch with id 1 and store the batch report id in 'new.batch' -->
-    <target name="startBatch" depends="activateVersion">
-        <startBatch batchId="${testobject.batch.id}" response="new.batch"/>
-        <echo message="https://app.testobject.com/#/${testobject.user}/${testobject.project}/reports/${new.batch}"></echo>
+    <!-- start the test suite with id 1 and store the suite report id in 'new.testSuite' -->
+    <target name="startTestSuite" depends="activateVersion">
+        <startTestSuite testSuiteId="${testobject.testSuite.id}" response="new.testSuite"/>
+        <echo message="https://app.testobject.com/#/${testobject.user}/${testobject.app}/reports/${new.testSuite}"></echo>
     </target>
      
-    <!-- download the report of the created batch and store the result -->
-    <target name="downloadBatchReport" depends="startBatch">
-        <getBatchReport batchReportId="${new.batch}" status="batch.status" errors="batch.errors" tests="batch.tests"/>
-        <condition property="batch.succeeded">
-                <equals arg1="${batch.status}" arg2="SUCCESS" />
+    <!-- download the report of the created test suite and store the result -->
+    <target name="downloadSuiteReport" depends="startTestSuite">
+        <getSuiteReport suiteReportId="${new.testSuite}" status="testSuite.status" errors="testSuite.errors" tests="testSuite.tests"/>
+        <condition property="testSuite.succeeded">
+                <equals arg1="${testSuite.status}" arg2="SUCCESS" />
         </condition>
         <antcall target="fail" />
     </target> 
  
-    <target name="fail" unless="batch.succeeded">
-        <fail message="Batch Replay failed with ${batch.errors} errors" />
-		<echo message="https://app.testobject.com/#/${testobject.user}/${testobject.project}/reports/${new.batch}"></echo>
+    <target name="fail" unless="testSuite.succeeded">
+        <fail message="Test Suite Replay failed with ${testSuite.errors} errors" />
+		<echo message="https://app.testobject.com/#/${testobject.user}/${testobject.app}/reports/${new.testSuite}"></echo>
     </target>
 </project>
 {% endhighlight %}
