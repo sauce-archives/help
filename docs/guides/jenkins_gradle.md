@@ -39,15 +39,16 @@ Wait for the installation to be finished.
 + <strong>Configure</strong>
 Go to the project configuration of your app project. (Configure)
 + <strong>Inject environment variables</strong>
-Copy the following code to the <strong>Properties Content</strong> field and replace the variables with your username, password, project, batch id and APK path.
+Copy the following code to the <strong>Properties Content</strong> field and replace the variables with your username, password, app, suite id and APK path.
 {% highlight xml %}
 ANDROID_HOME=/var/lib/jenkins/tools/android-sdk/
 testobjectusername=USER_NAME
 testobjectpassword=TESTOBJECT_PW
-testobjectprojectname=PROJECT
+testobjectappname=APPNAME
 testobjectactivateversion=true
 testobjectuploadversion=true
-testobjectbatches=[1,2]
+testobjectruncheckup=true
+testobjectsuites=[1,2]
 {% endhighlight %}
 
 <img class="center shadow" src="/img/guides/jenkins-gradle-env-config.png">
