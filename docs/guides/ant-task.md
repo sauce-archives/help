@@ -83,7 +83,7 @@ A full fledged version of your build.xml may look like the following file. It up
  
     <!-- properties used by all tasks to identify the correct app -->
 	<property name="testobject.ant.lib.name" value="testobject-ant-3.06.01.jar" />
-    <property name="testobject.user" value="USERNAME <!-- Using your email here won't work. only your username. -->" /> 
+    <property name="testobject.user" value="USERNAME <!-- Using your email here won't work. Please only use your username. -->" /> 
     <property name="testobject.pw" value="PASSWORD" />
     <property name="testobject.app" value="APPNAME" />
 	<property name="testobject.testSuite.id" value="1" /> 
