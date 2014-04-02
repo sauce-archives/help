@@ -14,7 +14,7 @@ What you need:
 
 <h3 id="AutomateyourTestExecutionusingAnt-Step1%3ADownloadandinstallTestObjectCONTINUOUSAntTasks">Step 1: Download and Install TestObject Ant Tasks</h3>
 
-+ Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.08.06.jar">testobject-ant-3.08.06.jar</a>
++ Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.08.06.jar">testobject-ant-4.0.0.jar</a>
 + Copy the jar file into <em>ant_installation_folder/lib</em>
 
 
@@ -32,6 +32,8 @@ Set an already uploaded version as default version for the given app
 Execute a preconfigured suite
 + <strong>GetSuiteReport</strong><br>
 Download the results for a given suite execution
++ <strong>UpdateRobotium</strong><br>
+Update an existing Robotium Batch by uploading a Test Apk
 
 
 To load the TesObject CONTINUOUS Ant tasks, first include the following snippet into your build.xml:
@@ -44,7 +46,7 @@ To load the TesObject CONTINUOUS Ant tasks, first include the following snippet 
 
 <taskdef resource="org/testobject/extras/ant/tasks.properties">
    	<classpath>
-       	<pathelement location="testobject-ant-3.08.06.jar"/>
+       	<pathelement location="testobject-ant-4.0.0.jar"/>
    	</classpath>
 </taskdef>
 
@@ -82,12 +84,14 @@ A full fledged version of your build.xml may look like the following file. It up
 <project name="TestObjectSampleScript" default="downloadSuiteReport" basedir=".">
  
     <!-- properties used by all tasks to identify the correct app -->
-	<property name="testobject.ant.lib.name" value="testobject-ant-3.06.01.jar" />
+	<property name="testobject.ant.lib.name" value="testobject-ant-4.0.0.jar" />
     <property name="testobject.user" value="USERNAME <!-- Using your email here won't work. Please only use your username. -->" /> 
     <property name="testobject.pw" value="PASSWORD" />
     <property name="testobject.app" value="APPNAME" />
-	<property name="testobject.testSuite.id" value="1" /> 
-	<property name="apk.path" value="PATH_TO_YOUR_APK" />
+    <property name="testobject.testSuite.id" value="1" /> 
+    <property name="testobject.robotiumSuite.id" value="1" /> 
+    <property name="apk.path" value="PATH_TO_YOUR_APK" />
+    <property name="robotiumApk.path" value="PATH_TO_YOUR_ROBOTIUM_APK" />
 	
  
     <!-- load the testobject ant tasks -->
@@ -110,6 +114,10 @@ A full fledged version of your build.xml may look like the following file. It up
     <!-- set the new version as default -->
     <target name="activateVersion" depends="uploadVersion">
         <activateVersion versionId="${new.version}" />
+    </target>
+
+    <target name="updateRobotium" depends="login">
+        <updateRobotium robotiumSuiteId="${testobject.robotiumSuite.id}" file="${robotiumApk.path}" />
     </target>
 
         <!-- set the new version as default -->
