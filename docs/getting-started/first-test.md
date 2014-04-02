@@ -21,47 +21,33 @@ Let's get started!
 
 
 
-<h3 id="project">Step 1: Create a New Project</h3>
+<h3 id="project">Step 1: Create a New App</h3>
 
-After <a href="http://app.testobject.com/login" target="_blank">signing in</a> to your TestObject account, click the *New Project* button to create your first project.
+After <a href="http://app.testobject.com/login" target="_blank">signing in</a> to your TestObject account, click the *New App* button to create your first project.
 
-<img src="/img/getting-started/first-test/first-test-01.png">
+<img src="/img/getting-started/first-test/first-test-new-app.png">
 
-Name the project "MyProject" and click *Save*.
+Click "Native App" in the next screen.
 
-<img class="center shadow" src="/img/getting-started/first-test/first-test-02.png">
-
-Your newly created project will then be opened for you.
-
-
-
+<img class="center shadow" src="/img/getting-started/first-test/first-test-chooser.png">
 
 <h3 id="app">Step 2: Upload Your App</h3>
-
-The screen you will see now allows you to manage versions of your app. <br>
-Click the *New Version* button to add the version of your app that you would like to test.
-
-<img class="center shadow" src="/img/getting-started/first-test/first-test-03.png">
-
-Choose whether you are going to test a native Android app or a web app (website). In this tutorial we will test a native app, so choose *Native*.
-
-<img class="center shadow" src="/img/getting-started/first-test/first-test-04.png">
-
 On the next screen, click *Choose APK File* and browse for the app file you want to upload to the system. For the tutorial you can use the provided <a href="https://docs.google.com/file/d/0ByR0JcAYUAoWdS1faUNJdGxONzg/edit?usp=sharing" target="_blank" rel="nofollow">sample app</a>.<br>
-Name the app version "My App 1.0" and click *Save*.
+Name the app and the version and click *Save*.
 
-<img class="center shadow" src="/img/getting-started/first-test/first-test-05.png">
+<img class="center shadow" src="/img/getting-started/first-test/first-test-upload-app.png">
 
-You will then see the newly uploaded app in the list. It will be marked as "active". Per project you can have one active app version which is going to be used for testing.
+<img class="center shadow" src="/img/getting-started/first-test/first-test-upload-name-app.png">
 
-<img class="center shadow" src="/img/getting-started/first-test/first-test-06.png">
+We will run now the first Quality Report for your app.
+You will also see the newly uploaded app in the "App Versions" list. It will be marked as "active". Per App you can have one active app-version which is going to be used for testing.
 
-
+<img class="center shadow" src="/img/getting-started/first-test/first-test-version-list.png">
 
 
 <h3 id="record">Step 3: Record Your First Test</h3>
 
-Now switch to the *Tests* tab and click *New Test* to set up your first test.
+Now switch to the *Automated Tests* tab and click *New Test* to set up your first test.
 
 <img class="center shadow" src="/img/getting-started/first-test/first-test-07.png">
 
