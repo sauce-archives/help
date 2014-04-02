@@ -49,12 +49,12 @@ You will also see the newly uploaded app in the "App Versions" list. It will be 
 
 Now switch to the *Automated Tests* tab and click *New Test* to set up your first test.
 
-<img class="center shadow" src="/img/getting-started/first-test/first-test-07.png">
+<img class="center shadow" src="/img/getting-started/first-test/first-test-new-test.png">
 
 Name your test "My first test" and, if you like, select a label for it.<br>
 Then choose a device to record your test on and click *Continue*.
 
-<img class="center shadow" src="/img/getting-started/first-test/first-test-08.png">
+<img class="center shadow" src="/img/getting-started/first-test/first-test-new-test-title.png">
 
 You will then see the TestObject Recorder. The device that had been selected before will now be booted and your app will be installed on it.
 
