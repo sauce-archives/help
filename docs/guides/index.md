@@ -6,7 +6,7 @@ permalink: docs/guides/
 
 Figure out how to make use of the full potential of TestObject's Custom Tests. Have a look at the following guides:
 
-+ <a href="/docs/guides/recorder/">Recorder</a>
++ Recorder
 	<ul>
 		<li><a href="/docs/guides/recorder/assertion-builder">Assertion Builder</a></li>
 		<li><a href="/docs/guides/recorder/action-settings">Action Settings</a></li>
