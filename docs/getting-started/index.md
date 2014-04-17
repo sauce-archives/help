@@ -1,5 +1,5 @@
 ---
-title: Getting Started With TestObject
+title: Getting Started With TestObject Tests
 layout: en
 permalink: docs/getting-started/
 ---
