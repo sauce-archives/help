@@ -3,42 +3,16 @@ title: Android Devices
 layout: en
 permalink: docs/devices/
 ---
+<h3 id="realdevices">Real-Decices</h3>
+TestObject hosts 40+ real devices for manual and automated testing. You can find a list <a href="https://docs.google.com/a/testobject.com/spreadsheet/ccc?key=0Apa3dP8CSozwdGhVazhpaTZ5Mm9FMndnRS1fM2JpUXc&usp=drive_web#gid=0" target="_blank">here</a>.
 
 <h3 id="emulators">Emulators</h3>
-In TestObject we rely on Android emulators to run applications. While in most cases emulators provide the same runtime environment as real devices, sometimes there are differences. Our emulators are modified versions of the ones provided by Android SDK in which we fixed issues.  
+In TestObject we rely also on Android emulators to run applications. While in most cases emulators provide the same runtime environment as real devices, sometimes there are differences. Our emulators are modified versions of the ones provided by Android SDK in which we fixed issues.  
 
 
 <h3 id="versions">Android Versions</h3>
-The relative number of devices running a given version of the Android platform:
-
-<table class="table device-versions-table">
-	<thead>
-		<tr>
-			<th>Version</th><th>Name</th><th>Share</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>4.2.2 (api 17)</td><td>Jelly Bean</td><td>8.5%</td>
-		</tr>
-		<tr>
-			<td>4.1 (api 16)</td><td>Jelly Bean</td><td>36.6%</td>
-		</tr>
-		<tr>
-			<td>4.0.3 (api 15)</td><td>Ice Cream Sandwich</td><td>21.7%</td>
-		</tr>
-		<tr>
-			<td>4.0.0 (api 14)</td><td>Ice Cream Sandwich</td><td>Less than 0.1%</td>
-		</tr>
-		<tr>
-			<td>2.3.3 (api 10)</td><td>Gingerbread</td><td>30.7%</td>
-		</tr>
-	</tbody>
-</table>
-
-<small>(Statistics as published on the offical <a href="http://developer.android.com/about/dashboards/index.html#Platform" target="_blank" title="Android website">Android website</a>)</small>
-
-Read more about <a href="http://developer.android.com/training/basics/supporting-devices/platforms.html" target="_blank" target="Supporting Different Platform Versions"> supporting different platform versions</a> on the Android developer website. 
+The relative number of devices running a given version of the Android platform is published on the official <a href="http://developer.android.com/about/dashboards/index.html#Platform" target="_blank" title="Android website">Android website</a>.
+Read more about <a href="http://developer.android.com/training/basics/supporting-devices/platforms.html" target="_blank" target="Supporting Different Platform Versions"> supporting different platform versions</a> on the Android developer website.
 
 
 <h3 id="features">Emulator Features</h3>
