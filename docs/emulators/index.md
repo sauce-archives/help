@@ -3,7 +3,7 @@ title: Android Devices
 layout: en
 permalink: docs/devices/
 ---
-<h3 id="realdevices">Real-Decices</h3>
+<h3 id="realdevices">Real-Devices</h3>
 TestObject hosts 40+ real devices for manual and automated testing. You can find a list <a href="https://docs.google.com/a/testobject.com/spreadsheet/ccc?key=0Apa3dP8CSozwdGhVazhpaTZ5Mm9FMndnRS1fM2JpUXc&usp=drive_web#gid=0" target="_blank">here</a>.
 
 <h3 id="emulators">Emulators</h3>
