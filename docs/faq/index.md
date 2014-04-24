@@ -20,12 +20,7 @@ Make sure that your app has the following permission:
 Locales are used to alter the presentation of information such as numbers or dates to suit the conventions in the region they describe. <small>(<a href="http://developer.android.com/reference/java/util/Locale.html" target="_blank" target="Locale">Further reading</a>)</small>  
   
 
-To change the device's locale, add the following line to your script:  
-{% highlight js %} executeShellCommand('am broadcast -a com.android.intent.action.SET_LOCALE --es com.android.intent.extra.LOCALE en') {% endhighlight %}  <small>(<a href="/docs/api/phone/#executeShellCommand" target="_blank" target="executeShellCommand() reference">more about executeShellCommand()</a>)</small>  
-
-Just replace the Locale code ('en' in the example above) with the desired Locale.  
- <a href="http://developer.android.com/reference/java/util/Locale.html#CANADA" target="_blank" target="Locale codes">A list</a> of Locale codes is available at the official Android Developer website. 
-
+To change the device's locale, click on the 'Change Language' button under 'Device Settings' in the left toolbar. (<a href="/img/faq/change_locale.png" target="_blank" target="Locale">See Screenshot</a>)
 <hr>
 
 <h6 id="faq_3"><b>Q:</b> Is there a way to have a setUp() and a tearDown() a la xUnit, without having to duplicate this in every test?</h6>
