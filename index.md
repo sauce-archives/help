@@ -1,5 +1,5 @@
 ---
-title: Welcome to TestObject
+title: TestObject Help Center
 layout: en
 ---
 
