@@ -1,0 +1,81 @@
+.counter-layout-instashot {
+	margin-left: 75px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	text-align: center;
+}
+
+.counter-layout-continuous {
+	margin-left: 75px;
+	padding-top: 60px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.counter-layout-continuous h2 {
+	display: inline-block;
+}
+
+.counter-layout-instashot h2 {
+	display: inline-block;
+}
+
+.counter-content {
+	display: inline-block;
+	position: relative;
+	top: 65px;
+	margin: -95px 19px 0 25px;
+}
+
+.counter {
+	background: no-repeat url(../img/products/instashot/numbers_sprite.png);
+	width: 52px;
+	height: 124px;
+	float: left;
+}
+
+.counter.point {
+	background-position: -688px 0;
+	width: 15px;
+	margin: 0 3px;
+}
+
+.counter.number-1 {
+	background-position: -87px 0;
+}
+
+.counter.number-2 {
+	background-position: -155px 0;
+}
+
+.counter.number-3 {
+	background-position: -223px 0;
+}
+
+.counter.number-4 {
+	background-position: -291px 0;
+}
+
+.counter.number-5 {
+	background-position: -359px 0;
+}
+
+.counter.number-6 {
+	background-position: -427px 0;
+}
+
+.counter.number-7 {
+	background-position: -495px 0;
+}
+
+.counter.number-8 {
+	background-position: -563px 0;
+}
+
+.counter.number-9 {
+	background-position: -631px 0;
+}
+
+.counter.number-0 {
+	background-position: -19px 0;
+}
