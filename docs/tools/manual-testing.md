@@ -1,0 +1,66 @@
+---
+title: Manual Testing
+layout: en
+permalink: docs/testing-tools/manual-testing/
+---
+
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#tools-sensors-settings">Tools, Sensors and Settings</a></li>
+<li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
+<li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
+
+<h3 id="introduction">Introduction</h3>
+Manual testing is the most direct way to test your app. You can see how your app looks and feels as well as reproducing user reported bugs. At TestObject you can test your app manually without the need of buying all the devices yourself and spending a fortune on infrastructure. You can upload your app on our devices and fully remote-control them. The manual testing tool provides different features that can help you test your app. The features will be discussed in this post.
+<br>
+<img class="center shadow" src="/img/tools/manual/manual-testing.png">
+</br>
+
+<h3 id="tools-sensors-settings">Tools, Sensors and Settings</h3>
+
+You can change some of the settings and sensors of the devices. To access the features just open the left menu.
+
+<img src="/img/tools/manual/left-menu.png" width="311" height="194" style="float:left; margin-right:60px;
+  margin-bottom:10px" alt="Manual Testing Menu">
+
+<p style="margin-top:60px"><ul><li><b>Add Google Account:</b> Many apps require a Google login. We provide a one click solution that directs you to the Google login page immediately. Here you can log in to your existing Google account or create a new one.</li></ul></p>
+<p><ul><li><b>Change Language:</b> You can change the language settings of the device. Click on "Change Language" and select one of the languages from the list.</li></ul></p>	
+<p><ul><li><b>Set GPS:</b> You can set and change the GPS position of the device. We are using mock locations that allows you to generate location data without actually moving the device.</li></ul></p>
+<p><ul><li><b>Rotate Device:</b> Test if your app works correctly in portrait and in landscape mode and rotate the device.</li></ul></p>
+<p><ul><li><b>Monkey Exerciser:</b> Perform a stress test and see the monkey in action. For more information about the stress test have a look <a href="/docs/testing-tools/quality-report/#stress-test" target="_blank">here</a>.</li></ul></p>
+<p><ul><li><b>ADB Shell:</b> The Android Debug Bridge is a command line tool. It is part of the Android SDK and helps you control connected devices. At TestObject ADB can be used to send shell commands to the devices.</li></ul><br style="clear:both"></p>
+
+
+<h3 id="3rd-party-apps">Dependency: Install 3rd Party Apps</h3>
+
+<img src="/img/tools/manual/dependency-process.png" width="311" height="194" style="float:right; margin-left:60px;
+  margin-bottom:10px" alt="Manual Testing Menu">
+
+If your app requires a 3rd party app like Facebook or Twitter for login you can install these apps as dependencies.
+
+<b>I. Upload Dependency to TestObject</b>
+
+1. Login to TestObject and open the relevant project
+2. Click on the app symbol of your app in the upper main bar
+3. Click on "New Dependency" next to "New Version"
+4. Now you can upload e.g. the Facebook apk
+
+<b>II. Install Dependency on Device</b>
+
+1. Go to Manual testing and open a device
+2. Click on "Versions of Your App" in the left menu and go to "Install Dependency"
+3. Select the dependency
+4. Now the dependency app is installed on the device and ready for use
+
+<h3 id="share-device">Share your Device With Colleagues and Customers</h3>
+
+When you share a device the recipient can see the screen of the device in real time. It makes collaborative work much easier. Demonstrate clients the latest updates of the app or show your colleagues exactly where you found a problem. 
+
+1. Login and navigate to manual testing
+2. Open a device and look for "Share Device" in the left menu
+3. Create a link and send it to your customer/developer
+4. Now the recipient can see the device in real time
+
+<br>
+<img src="/img/tools/manual/share-device.png" alt="Share Device">
+</br>
+

@@ -4,7 +4,6 @@ layout: en
 permalink: docs/faq/
 alias: docs/FAQ/
 ---
-
 <h6 id="faq_1"><b>Q:</b> I'm using the <a href="/docs/references/scripting-api/sensor#setGPS" target="_blank" target="setGPS() reference">setGPS()</a> method, but my app doesn't get the location.</h6>
 
 <b>A:</b> To simulate the location, we use Android's test location providers.  
@@ -26,6 +25,8 @@ To change the device's locale, click on the 'Change Language' button under 'Devi
 <h6 id="faq_3"><b>Q:</b> Is there a way to have a setUp() and a tearDown() a la xUnit, without having to duplicate this in every test?</h6>
 
 <b>A:</b> Yes, you can setup specific tests and run them with the <a href="/docs/api/scripting" target="_blank" target="runScript() reference">runScript()</a> command. Therefore you won't have to duplicate those commands in different tests.
+
+
 
 Example:  
 {% highlight js %}

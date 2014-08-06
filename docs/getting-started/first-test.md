@@ -5,6 +5,8 @@ permalink: docs/getting-started/first-test/
 alias: [docs/guides/getting-started/, wiki/display/cf/Getting+Started+Tutorial/index.html]
 ---
 
+Hello Timo!
+
 Welcome to TestObject! Get ready to create and run your first automated mobile app test in 4 easy steps.
 
 What you need:
