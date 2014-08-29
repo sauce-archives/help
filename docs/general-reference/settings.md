@@ -14,5 +14,5 @@ At TestObject you are able to test your companies apps in parallel with other te
 <img class="center shadow" src="/img/general-reference/account-settings.png">
 2. Invite your teammates<br/>
 <img class="center shadow" src="/img/general-reference/invite-teammate.png">
-3. Wait for them to accept your invitation.
-4. <b>Ready!</b> Now they are able to see your apps and testresults.
+3. Wait for them to accept your invitation
+4. <b>Ready!</b> Now they are able to see your apps and testresults
