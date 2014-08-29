@@ -7,6 +7,7 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#tools-sensors-settings">Tools, Sensors and Settings</a></li>
 <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
+<li><a href="#google-account">Add a Google Account to the Device</a></li>
 <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
 
 <h3 id="introduction">Introduction</h3>
@@ -23,7 +24,7 @@ You can change some of the settings and sensors of the devices. To access the fe
   margin-bottom:10px" alt="Manual Testing Menu">
 
 <p style="margin-top:60px"><ul><li><b>Add Google Account:</b> Many apps require a Google login. We provide a one click solution that directs you to the Google login page immediately. Here you can log in to your existing Google account or create a new one.</li></ul></p>
-<p><ul><li><b>Change Language:</b> You can change the language settings of the device. Click on "Change Language" and select one of the languages from the list.</li></ul></p>	
+<p><ul><li><b>Change Language:</b> You can change the language settings of the device. Click on "Change Language" and select one of the languages from the list.</li></ul></p>
 <p><ul><li><b>Set GPS:</b> You can set and change the GPS position of the device. We are using mock locations that allows you to generate location data without actually moving the device.</li></ul></p>
 <p><ul><li><b>Rotate Device:</b> Test if your app works correctly in portrait and in landscape mode and rotate the device.</li></ul></p>
 <p><ul><li><b>Monkey Exerciser:</b> Perform a stress test and see the monkey in action. For more information about the stress test have a look <a href="/docs/testing-tools/quality-report/#stress-test" target="_blank">here</a>.</li></ul></p>
@@ -51,9 +52,21 @@ If your app requires a 3rd party app like Facebook or Twitter for login you can 
 3. Select the dependency
 4. Now the dependency app is installed on the device and ready for use
 
+
+<h3 id="google-account">Use your own Google-Account on our Devices</h3>
+Form some tests you need your own Google-Account on a device. We have added a feature to add your account. <b>We will delete this account of course automatically after your session is closed.</b>
+1. Go to Manual testing and open a device
+2. Click on "Add Google Accounts" in the left menu
+3. Add your Google Account to the device
+
+<br>
+<img src="/img/tools/manual/addgoogleaccount.png" alt="Add Google Account">
+</br>
+
+
 <h3 id="share-device">Share your Device With Colleagues and Customers</h3>
 
-When you share a device the recipient can see the screen of the device in real time. It makes collaborative work much easier. Demonstrate clients the latest updates of the app or show your colleagues exactly where you found a problem. 
+When you share a device the recipient can see the screen of the device in real time. It makes collaborative work much easier. Demonstrate clients the latest updates of the app or show your colleagues exactly where you found a problem.
 
 1. Login and navigate to manual testing
 2. Open a device and look for "Share Device" in the left menu
@@ -63,4 +76,3 @@ When you share a device the recipient can see the screen of the device in real t
 <br>
 <img src="/img/tools/manual/share-device.png" alt="Share Device">
 </br>
-
