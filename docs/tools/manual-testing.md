@@ -55,6 +55,7 @@ If your app requires a 3rd party app like Facebook or Twitter for login you can 
 
 <h3 id="google-account">Use your own Google-Account on our Devices</h3>
 Form some tests you need your own Google-Account on a device. We have added a feature to add your account. <b>We will delete this account of course automatically after your session is closed.</b>
+
 1. Go to Manual testing and open a device
 2. Click on "Add Google Accounts" in the left menu
 3. Add your Google Account to the device
