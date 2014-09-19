@@ -11,7 +11,7 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
 
 <h3 id="introduction">Introduction</h3>
-Manual testing is the most direct way to test your app. You can see how your app looks and feels as well as reproducing user reported bugs. At TestObject you can test your app manually without the need of buying all the devices yourself and spending a fortune on infrastructure. You can upload your app on our devices and fully remote-control them. The manual testing tool provides different features that can help you test your app. The features will be discussed in this post.
+Manual testing is the most direct way to test your app. You can see how your app looks and feels as well as reproduce reported bugs. At TestObject, you can test your app manually without the need to buy all the devices yourself and spend a fortune on infrastructure. You can upload your app on our devices and fully remote control them. The manual testing tool provides different features that can help you test your app. The features will be discussed in this post.
 <br>
 <img class="center shadow" src="/img/tools/manual/manual-testing.png">
 </br>
@@ -23,34 +23,34 @@ You can change some of the settings and sensors of the devices. To access the fe
 <img src="/img/tools/manual/left-menu.png" width="311" height="194" style="float:left; margin-right:60px;
   margin-bottom:10px" alt="Manual Testing Menu">
 
-<p style="margin-top:60px"><ul><li><b>Add Google Account:</b> Many apps require a Google login. We provide a one click solution that directs you to the Google login page immediately. Here you can log in to your existing Google account or create a new one.</li></ul></p>
+<p style="margin-top:60px"><ul><li><b>Add Google Account:</b> Many apps require a Google login. We provide a one-click solution that directs you to the Google login page immediately. Here, you can log in to your existing Google account or create a new one.</li></ul></p>
 <p><ul><li><b>Change Language:</b> You can change the language settings of the device. Click on "Change Language" and select one of the languages from the list.</li></ul></p>
-<p><ul><li><b>Set GPS:</b> You can set and change the GPS position of the device. We are using mock locations that allows you to generate location data without actually moving the device.</li></ul></p>
-<p><ul><li><b>Rotate Device:</b> Test if your app works correctly in portrait and in landscape mode and rotate the device.</li></ul></p>
-<p><ul><li><b>Monkey Exerciser:</b> Perform a stress test and see the monkey in action. For more information about the stress test have a look <a href="/docs/testing-tools/quality-report/#stress-test" target="_blank">here</a>.</li></ul></p>
-<p><ul><li><b>ADB Shell:</b> The Android Debug Bridge is a command line tool. It is part of the Android SDK and helps you control connected devices. At TestObject ADB can be used to send shell commands to the devices.</li></ul><br style="clear:both"></p>
+<p><ul><li><b>Set GPS:</b> You can set and change the GPS position of the device. We use mock locations that allows you to generate location data without actually moving the device.</li></ul></p>
+<p><ul><li><b>Rotate Device:</b> Test if your app works correctly in portrait and landscape modes and rotate the device.</li></ul></p>
+<p><ul><li><b>Monkey Exerciser:</b> We use the MonkeyExerciser from Google to stress-test your app. Start a stress test and see how the monkey performs thousands of random clicks within your app. If you want to perform a stress test on multiple devices in parallel, please have a look at our <a href="/docs/testing-tools/quality-report/#stress-test" target="_blank">Quality Report.</a>.</li></ul></p>
+<p><ul><li><b>ADB Shell:</b> The Android Debug Bridge is a command line tool. It is part of the Android SDK and helps you control connected devices. At TestObject, ADB can be used to send shell commands to the devices.</li></ul><br style="clear:both"></p>
 
 
-<h3 id="3rd-party-apps">Dependency: Install 3rd Party Apps</h3>
+<h3 id="3rd-party-apps">Dependency: Install Third-Party Party Apps</h3>
 
 <img src="/img/tools/manual/dependency-process.png" width="311" height="194" style="float:right; margin-left:60px;
   margin-bottom:10px" alt="Manual Testing Menu">
 
-If your app requires a 3rd party app like Facebook or Twitter for login you can install these apps as dependencies.
+If your app requires a third-party app, like Facebook or Twitter, for login, you can install these apps as dependencies.
 
 <b>I. Upload Dependency to TestObject</b>
 
-1. Login to TestObject and open the relevant project
-2. Click on the app symbol of your app in the upper main bar
-3. Click on "New Dependency" next to "New Version"
-4. Now you can upload e.g. the Facebook apk
+1. Log in to TestObject and open the relevant project.
+2. Click on the app symbol of your app in the upper main bar.
+3. Click on "New Dependency" next to "New Version".
+4. Now, you can upload a third-party app, such as Facebook.
 
 <b>II. Install Dependency on Device</b>
 
-1. Go to Manual testing and open a device
-2. Click on "Versions of Your App" in the left menu and go to "Install Dependency"
-3. Select the dependency
-4. Now the dependency app is installed on the device and ready for use
+1. Go to manual testing and open a device.
+2. Click on "Versions of Your App" in the left menu and go to "Install Dependency".
+3. Select the dependency.
+4. Now, the dependency app is installed on the device and ready for use.
 
 
 <h3 id="google-account">Use your own Google-Account on our Devices</h3>
@@ -65,14 +65,14 @@ Form some tests you need your own Google-Account on a device. We have added a fe
 </br>
 
 
-<h3 id="share-device">Share your Device With Colleagues and Customers</h3>
+<h3 id="share-device">Share your Device with Colleagues and Customers</h3>
 
-When you share a device the recipient can see the screen of the device in real time. It makes collaborative work much easier. Demonstrate clients the latest updates of the app or show your colleagues exactly where you found a problem.
+When you share a device, the recipient can see the screen of the device in real time. It makes collaborative work much easier. Demonstrate to clients the latest updates of the app or show your colleagues exactly where you found a problem.
 
-1. Login and navigate to manual testing
-2. Open a device and look for "Share Device" in the left menu
-3. Create a link and send it to your customer/developer
-4. Now the recipient can see the device in real time
+1. Login and navigate to manual testing.
+2. Open a device and look for "Share Device" in the left menu.
+3. Create a link and send it to your customer/developer.
+4. Now the recipient can see the device in real time.
 
 <br>
 <img src="/img/tools/manual/share-device.png" alt="Share Device">
