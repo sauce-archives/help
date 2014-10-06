@@ -26,6 +26,6 @@ We try to implement new popular devices really quickly. Usually, we can provide 
 <h3 id="device-missing">You don't have the device that I need. Can you get it for me?</h3>
 Generally, yes. If the model you are looking for is not in our pool yet you can request it. Click on the link "device request" below "Search devices" in the device selector. When the requested model aligns with our overall purchasing strategy, we'll get it for you.
 
-<h3 id="device-camera">Is it possible to test the camera behavior using your devices?</h3>
-Yes, of course it is possible to test the camera behavior on our devices. In front of our cameras are nice TestObject Logos ;-). You should see something like this through the camera:
+<h3 id="device-camera">Is it possible to test the camera behaviour using your devices?</h3>
+Yes, of course it is possible to test the camera behaviour on our devices. In front of our cameras are nice TestObject Logos ;-). You should see something like this through the camera:
 <img class="center shadow" src="/img/faq/camera_view.png">
