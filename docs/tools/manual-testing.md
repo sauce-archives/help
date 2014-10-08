@@ -9,6 +9,7 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
 <li><a href="#google-account">Add a Google Account to the Device</a></li>
 <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
+<li><a href="#toggle-connection">Use ADB to deactivate the Internet Connection</a></li>
 
 <h3 id="introduction">Introduction</h3>
 Manual testing is the most direct way to test your app. You can see how your app looks and feels as well as reproduce reported bugs. At TestObject, you can test your app manually without the need to buy all the devices yourself and spend a fortune on infrastructure. You can upload your app on our devices and fully remote control them. The manual testing tool provides different features that can help you test your app. The features will be discussed in this post.
@@ -77,3 +78,10 @@ When you share a device, the recipient can see the screen of the device in real 
 <br>
 <img src="/img/tools/manual/share-device.png" alt="Share Device">
 </br>
+
+<h3 id="share-device">Use ADB to deactivate the Internet Connection</h3>
+
+It is possible to deactivate the WIFI (Internet) Connection of our devices via ADB commands. Please use the following command:
+{% highlight xml %}
+am broadcast -a org.testobject.android.toolkit.DEVICE_MANAGER --es ACTION WIFI_DISCONNECT
+{% endhighlight %}
