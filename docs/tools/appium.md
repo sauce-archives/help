@@ -45,7 +45,7 @@ We will automatically set the capabilities platformName, deviceName and automati
 Set the following URL as the remote address of your Appium driver: https://app.testobject.com:443/api/appium/wd/hub
 
 <h4>testobject_api_key</h4>
-With this key the TestObject platform identifies your test.
+With this key the TestObject platform authenticates you.
 
 <h4>testobject_project</h4>
 Thats your app name at the TestObject platform.
