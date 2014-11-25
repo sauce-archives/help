@@ -63,7 +63,7 @@ Form some tests you need your own Google-Account on a device. We have added a fe
 
 <br>
 <img src="/img/tools/manual/addgoogleaccount.png" alt="Add Google Account">
-</br>
+<br>
 
 
 <h3 id="share-device">Share your Device with Colleagues and Customers</h3>
