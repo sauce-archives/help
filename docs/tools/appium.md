@@ -8,6 +8,7 @@ permalink: docs/testing-tools/automation/appium/
 <li><a href="#getting-started">Getting Started</a></li>
 <li><a href="#capabilities">Desired Capabilities</a></li>
 <li><a href="#capability-java">Capability Example</a></li>
+<li><a href="#example-tests">Example Tests</a></li>
 <li><a href="/docs/guides/appium-maven/">Run Appium with Maven</a></li>
 
 <h3 id="introduction">Introduction</h3>
@@ -47,9 +48,6 @@ Set the following URL as the remote address of your Appium driver: https://app.t
 <h4>testobject_api_key</h4>
 With this key the TestObject platform authenticates you.
 
-<h4>testobject_project</h4>
-Thats your app name at the TestObject platform.
-
 <h4>testobject_app_id</h4>
 Thats the id of the app version which is under test. If you are uploading an app via API the response of the upload command will be the ID of the newly uploaded app. Use it to populate the 'testobject_app_id' capability.
 
@@ -61,9 +59,12 @@ This capability specifies the device. You are able to switch the device via our 
 {% highlight java %}
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("testobject_api_key", "B50CB4047BCB49DDB750B6CB52B137F8");
-		capabilities.setCapability("testobject_project", "sixt");
 		capabilities.setCapability("testobject_app_id", "1");
 		capabilities.setCapability("testobject_device", "LG_Nexus_4_E960_real");
 
 		driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
 {% endhighlight %}
+
+<h3 id="example-tests">Example Tests</h3>
+
+We've setup some appium tests for native apps and webapps. Both testcases are written in Java. You can find the examples in our Github repository. <a href="https://github.com/testobject/appium-java-example" target="_blank">https://github.com/testobject/appium-java-example</a>
