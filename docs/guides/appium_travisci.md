@@ -8,6 +8,8 @@ For a full continuous integration process automate the execution of your tests c
 
 In this tutorial we will get you setup to run automated tests on <a href="https://travis-ci.org" target="_blank">Travis CI</a> using devices available on TestObject.
 
+You can find an example java project with Appium Tests at Github: <a href="https://github.com/testobject/appium-java-travisci-example" target="_blank">testobject/appium-java-travisci-example</a>.
+
 <h3 id="getting_started">Getting Started</h3>
 
 First, create a <strong>.travis.yml</strong> file in your repo if you don't have one yet.
