@@ -6,7 +6,9 @@ alias: docs/references/scripting-api/locator/
 ---
 
 <h3 id="find">find( targetLocator , [timeout] , [recordedImage])</h3>
-<p>rotate the device to landscape view</p>
+<p>wait until the target locator appears on the screen or until the timeout expires.<br>
+<strong>Important:</strong> this method <i>doen't</i> fail if the locator is not found, it returns the locator box (if found) or <i>null</i> (if not).  
+</p>
 <p><ul>
 	<li>
 		<strong>targetLocator</strong>
@@ -26,14 +28,17 @@ alias: docs/references/scripting-api/locator/
 	<li>
 		<strong>returns</strong>
 		<div>Type: Box</div>
-		<em>the box which contains the size and position of the target locator on the current screen</em>
+		<ul>
+			<li>the box which contains the size and position of the target locator on the current screen (if target found)</li>
+			<li>null (if target not found)</li>
+		</ul>
 	</li>
 </ul></p>
 <p>
 <strong>Example:</strong>
 {% highlight js %}find(image(25).before().box(129, 469, 221, 69), 60, image(25)){% endhighlight %}
 </p>
-
+See a <a href="/docs/guides/find-example">simple usecase</a>.
 
 
 <h3 id="waitVanish">waitVanish( targetLocator , [timeout] , [recordedImage] )</h3>

@@ -151,7 +151,7 @@ alias: docs/references/scripting-api/input/
 
 
 
-<h3 id="randomInput">randomInput( config )</h3>
+<h3 id="monkeyExercise">monkeyExercise( config )</h3>
 <p>Sends random touch and key events to your application. Fails if an exception (e.g. NullPointerException) is thrown by your application.</p>
 <p><ul>
 	<li>
@@ -161,16 +161,16 @@ alias: docs/references/scripting-api/input/
 		    <ul>
 			<li>eventCount - number of events to send to your app</li>
 			<li>throttle - delay between two events</li>
-			<li>seed - Seed value for pseudo-random number generator. If you re-run the randomInput with the same seed value, it will generate the same sequence of events.</li>
+			<li>seed - Seed value for pseudo-random number generator. If you re-run the monkeyExercise with the same seed value, it will generate the same sequence of events.</li>
 		   </ul> 	
 		</em>
 	</li>
 </ul></p>
 <p>
 <strong>Example 1: execute always the same sequence of events</strong>
-{% highlight js %}randomInput({eventCount: 10000, throttle: 0, seed: 123}){% endhighlight %}
+{% highlight js %}monkeyExercise({eventCount: 10000, throttle: 0, seed: 123}){% endhighlight %}
 </p>
 <p>
 <strong>Example 2: execute always a different sequence of events</strong>
-{% highlight js %}randomInput({eventCount: 10000, throttle: 0, seed: Math.random() * 100}){% endhighlight %}
+{% highlight js %}monkeyExercise({eventCount: 10000, throttle: 0, seed: Math.random() * 100}){% endhighlight %}
 </p>
