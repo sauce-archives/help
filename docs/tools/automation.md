@@ -4,7 +4,9 @@ layout: en
 permalink: docs/testing-tools/automation/
 ---
 
-We support multiple Open source frameworks to test your app or webapp on real mobile devices.
+Run your automated tests for your mobile app or website on real physical devices. The following open-source frameworks are supported:
 
 
 + <a href="/docs/testing-tools/automation/appium/">Appium</a>
++ Robotium
++ Espresso
