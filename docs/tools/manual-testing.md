@@ -11,11 +11,13 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
 <li><a href="#toggle-connection">Use ADB to deactivate the Internet Connection</a></li>
 
+
 <h3 id="introduction">Introduction</h3>
 Manual testing is the most direct way to test your app. You can see how your app looks and feels as well as reproduce reported bugs. At TestObject, you can test your app manually without the need to buy all the devices yourself and spend a fortune on infrastructure. You can upload your app on our devices and fully remote control them. The manual testing tool provides different features that can help you test your app. The features will be discussed in this post.
+
 <br>
-<img class="center shadow" src="/img/tools/manual/manual-testing.png">
-</br>
+<img class="center shadow" src="/img/tools/manual/screenshot-manual-testing.png">
+<br>
 
 <h3 id="tools-sensors-settings">Tools, Sensors and Settings</h3>
 
