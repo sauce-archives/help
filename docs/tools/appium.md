@@ -27,7 +27,7 @@ Your existing Appium tests will run at the TestObject platform with just some sm
 
 To get started you need:
 
-1. Create a TestObject account (<a href="https://app.testobject.com/" target="_blank">sign up here</a>)
+1. Create a TestObject account (<a href="https://app.testobject.com/signup" target="_blank">sign up here</a>)
 2. Create a new app (web or native) in your account
 3. Upload your app either via web UI or via command line with Curl
 
@@ -52,29 +52,46 @@ We will automatically set the capabilities platformName, deviceName and automati
 
 <img src="/img/tools/automation/capabilities.png" alt="Appium Capabilities">
 
+
 <h4>Appium Server URL</h4>
+
 Set the following URL as the remote address of your Appium driver:
 https://app.testobject.com:443/api/appium/wd/hub
 
+
 <h4>testobject_api_key</h4>
+
 With this key the TestObject platform authenticates you.
 
+
 <h4>testobject_app_id</h4>
+
 ID of the app version under test. If you are uploading an app via API, the response of the upload command will be the ID of the newly uploaded app. Use it to populate the 'testobject_app_id' capability.
 
+
 <h4>testobject_device</h4>
+
 Specifies the device to run the test on. Devices can be chosen on the Appium Instructions page.
 
+
 <h4>testobject_appium_version</h4>
+
 *Optional*
+
 Appium version to be used. Default is the latest Appium version. Available versions can be found on the Appium Instructions page.
 
+
 <h4>testobject_suite_name</h4>
+
 *Optional*
+
 You can set this to a name of your choice so that you can search for the test results more easily later.
 
+
 <h4>testobject_test_name</h4>
+
 *Optional*
+
 You can set this to a name of your choice so that you can search for the test results more easily later.
 
 
