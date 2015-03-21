@@ -8,54 +8,94 @@ permalink: docs/testing-tools/automation/appium/
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
 <li><a href="#capabilities">Desired Capabilities</a></li>
-<li><a href="#capability-java">Capabilities Example</a></li>
-<li><a href="#example-tests">Example Tests</a></li>
-<li><a href="/docs/guides/appium-maven/">Run Appium with Maven</a></li>
+<li><a href="#test-result-watcher">Test Result Watcher</a></li>
+<li><a href="#test-result-api">Test Result API</a></li>
+<li><a href="#automated-file-upload">Automated File Upload</a></li>
+<li><a href="#java-utilities">Java Utilities</a></li>
+<li><a href="#example-tests">Complete Example Tests</a></li>
+
+Related topic: <a href="/docs/guides/appium-maven/">Running Appium with Maven</a>
 
 
 <h3 id="introduction">Introduction</h3>
 
-Appium is an open source test automation framework for use with native, hybrid  mobile and web apps. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium should be familiar too.
+Appium is an open-source test automation framework for mobile apps - native, hybrid and web app are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium should be easy to get started with.
 
 
 <h3 id="getting-started">Getting Started</h3>
 
-Your existing Appium tests will run at the TestObject platform with just some small changes. You just need to modify the desired capabilities.
+Your existing Appium tests will run on the TestObject platform with just some small changes. You just need to modify the <a href="#capabilities">desired capabilities</a>.
 
 
 <h4>Requirements</h4>
 
-To get started you need:
+Steps to get started:
 
-1. Create a TestObject account (<a href="https://app.testobject.com/signup" target="_blank">sign up here</a>)
-2. Create a new app (web or native) in your account
-3. Upload your app either via web UI or via command line with Curl
+1. Create a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>
+2. Add a new app (web or native) to your account
+3. Upload your app either via web UI or via <a href="#automated-file-upload">command line</a>
 
 
-<h4>Test Process</h4>
+<h4>Test Execution Process</h4>
 
 The following steps will be executed to run your Appium test:
 
-1. Client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)
-2. Client session is authenticated with the API key specified in the "testobject_api_key" capability
+1. Your client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)
+2. The client session is authenticated with your API key specified in the "testobject_api_key" capability
 3. TestObject identifies the test device using the "testobject_device" capability
-4. Test executes through the API session from your client machine, connecting to our Appium Server using the standard Selenium Web Driver JSON Protocol
+4. The test is executed from your client machine through the API session, connecting to our Appium server using the standard Selenium Web Driver JSON Protocol
 
 When the RemoteWebDriver/AppiumDriver is created we allocate the specified device for you. The allocation process waits for up to 15 minutes for a device to become available.
+
 Please remember to call driver.quit() at the end of your test. Otherwise the device will remain allocated for another 60 seconds before timing out.
+
+{% highlight java %}
+private AndroidDriver driver;
+
+...
+
+@After
+public void tearDown() {
+	if(driver!=null){
+		driver.quit();
+	}
+}	
+{% endhighlight %}
 
 
 <h3 id="capabilities">Capabilities</h3>
 
 We will automatically set the capabilities platformName, deviceName and automationName. In case your test contains either of them, they will be ignored on our system.
 
+For convenience you may use our <a href="https://github.com/testobject/testobject-appium-java-api/blob/master/src/main/java/org/testobject/appium/common/TestObjectCapabilities.java">Java utility class</a>.
+
 
 <img src="/img/tools/automation/capabilities.png" alt="Appium Capabilities">
+
+
+{% highlight java %}
+
+private AndroidDriver driver;
+
+@Before
+public void setup() throws MalformedURLException {
+	DesiredCapabilities capabilities = new DesiredCapabilities();
+
+	...
+
+	capabilities.setCapability("testobject_api_key", "B50CB4047BCB49DDB750B6CB52B137F8");
+	capabilities.setCapability("testobject_app_id", "1");
+	capabilities.setCapability("testobject_device", "LG_Nexus_5_real");
+
+	driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+}		
+{% endhighlight %}
 
 
 <h4>Appium Server URL</h4>
 
 Set the following URL as the remote address of your Appium driver:
+
 https://app.testobject.com:443/api/appium/wd/hub
 
 
@@ -95,19 +135,67 @@ You can set this to a name of your choice so that you can search for the test re
 You can set this to a name of your choice so that you can search for the test results more easily later.
 
 
-<h3 id="capability-java">Capabilities Example</h3>
+<h3 id="test-result-watcher">Test Result Watcher</h3>
+
+TestObject generates detailed reports for your Appium tests run on our real devices in the cloud. These include logs, screenshots and a video capturing the device screen during the test execution. 
+
+With our <a href="https://github.com/testobject/testobject-appium-java-api/blob/master/src/main/java/org/testobject/appium/junit/TestObjectTestResultWatcher.java">test result watcher</a> your reports can be marked as successful or failed. With only two extra lines of code and a Maven dependency you're set.
 
 {% highlight java %}
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("testobject_api_key", "B50CB4047BCB49DDB750B6CB52B137F8");
-		capabilities.setCapability("testobject_app_id", "1");
-		capabilities.setCapability("testobject_device", "LG_Nexus_4_E960_real");
+@Rule
+private TestObjectTestResultWatcher watcher = new TestObjectTestResultWatcher();
 
-		driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+private AndroidDriver driver;
+
+@Before
+public void setup() throws MalformedURLException {
+	...
+
+	watcher.setAppiumDriver(driver);
+}
 {% endhighlight %}
 
 
-<h3 id="example-tests">Example Tests</h3>
+<h3 id="test-result-api">Test Result API</h3>
 
-We've set up some Appium tests for native apps and web apps. Both test cases are written in Java. You can find them in our Github repository:
+Writing your own client to set the test results is also easy. Simply make a REST call as follows:
+
+{% highlight javascript %}
+PUT https://app.testobject.com:443/api/rest/appium/session/{appium_session_id}/test
+{% endhighlight %}
+
+Request payload:
+
+{% highlight javascript %}
+{
+	passed: true|false
+}
+{% endhighlight %}
+
+The request should be made with basic authentication where the username is your TestObject Appium API key and the password is empty:
+
+{% highlight javascript %}
+username=your_api_key
+password=
+{% endhighlight %}
+
+
+<h3 id="automated-file-upload">Automated File Upload</h3>
+
+Use the following command to upload your app file. Alternatively, you can upload via UI.
+
+{% highlight javascript %}
+curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" --data-binary @your_app.apk
+{% endhighlight %}
+
+
+<h3 id="java-utilities">Java Utilities</h3>
+
+Java utility classes to provide a better experience when running Appium tests in the TestObject cloud:<br>
+<a href="https://github.com/testobject/testobject-appium-java-api" target="_blank">https://github.com/testobject/testobject-appium-java-api</a>
+
+
+<h3 id="example-tests">Complete Example Tests</h3>
+
+Example Appium tests for native apps and web apps:<br>
 <a href="https://github.com/testobject/appium-java-example" target="_blank">https://github.com/testobject/appium-java-example</a>
