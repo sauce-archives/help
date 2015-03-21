@@ -184,9 +184,11 @@ password=
 
 Use the following command to upload your app file. Alternatively, you can upload via UI.
 
-{% highlight javascript %}
+{% highlight bash %}
 curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" --data-binary @your_app.apk
 {% endhighlight %}
+
+The response of the curl upload command will be the ID of the newly uploaded app. Use it to populate the "testobject_app_id" capability.
 
 
 <h3 id="java-utilities">Java Utilities</h3>
