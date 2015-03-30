@@ -139,7 +139,7 @@ You can set this to a name of your choice so that you can search for the test re
 
 TestObject generates detailed reports for your Appium tests run on our real devices in the cloud. These include logs, screenshots and a video capturing the device screen during the test execution. 
 
-With our <a href="https://github.com/testobject/testobject-appium-java-api/blob/master/src/main/java/org/testobject/appium/junit/TestObjectTestResultWatcher.java">test result watcher</a> your reports can be marked as successful or failed. With only two extra lines of code and a Maven dependency you're set.
+With our <a href="https://github.com/testobject/testobject-appium-java-api/blob/master/src/main/java/org/testobject/appium/junit/TestObjectTestResultWatcher.java">test result watcher</a> your reports can be marked as successful or failed. With only two extra lines of code and the <a href="#java-utilities">Maven dependency</a> you're set.
 
 {% highlight java %}
 @Rule
@@ -155,6 +155,10 @@ public void setup() throws MalformedURLException {
 }
 {% endhighlight %}
 
+The TestObjectTestResultWatcher will also quit your Appium driver instance when the test has finished. So you no longer need to close it in the tear-down method.
+
+To get the result watcher via Maven, just add our <a href="#java-utilities">API utilities</a> to your pom.xml.
+
 
 <h3 id="test-result-api">Test Result API</h3>
 
@@ -164,7 +168,7 @@ Writing your own client to set the test results is also easy. Simply make a REST
 PUT https://app.testobject.com:443/api/rest/appium/session/{appium_session_id}/test
 {% endhighlight %}
 
-Request payload:
+Request body:
 
 {% highlight javascript %}
 {
@@ -195,6 +199,25 @@ The response of the curl upload command will be the ID of the newly uploaded app
 
 Java utility classes to provide a better experience when running Appium tests in the TestObject cloud:<br>
 <a href="https://github.com/testobject/testobject-appium-java-api" target="_blank">https://github.com/testobject/testobject-appium-java-api</a>
+
+To get the utilities as a Maven dependency, just add the follwoing to your pom.xml:
+
+{% highlight xml %}
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.testobject.extras.appium&lt;/groupId&gt;
+        &lt;artifactId&gt;appium-java-api&lt;/artifactId&gt;
+        &lt;version&gt;0.0.5&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+
+&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;testobject&lt;/id&gt;
+        &lt;url&gt;http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+{% endhighlight %}
 
 
 <h3 id="example-tests">Complete Example Tests</h3>
