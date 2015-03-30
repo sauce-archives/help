@@ -203,20 +203,20 @@ Java utility classes to provide a better experience when running Appium tests in
 To get the utilities as a Maven dependency, just add the follwoing to your pom.xml:
 
 {% highlight xml %}
-&lt;dependencies&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.testobject.extras.appium&lt;/groupId&gt;
-        &lt;artifactId&gt;appium-java-api&lt;/artifactId&gt;
-        &lt;version&gt;0.0.5&lt;/version&gt;
-    &lt;/dependency&gt;
-&lt;/dependencies&gt;
+<dependencies>
+    <dependency>
+        <groupId>org.testobject.extras.appium</groupId>
+        <artifactId>appium-java-api</artifactId>
+        <version>0.0.5</version>
+    </dependency>
+</dependencies>
 
-&lt;repositories&gt;
-    &lt;repository&gt;
-        &lt;id&gt;testobject&lt;/id&gt;
-        &lt;url&gt;http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/&lt;/url&gt;
-    &lt;/repository&gt;
-&lt;/repositories&gt;
+<repositories>
+    <repository>
+        <id>testobject</id>
+        <url>http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/</url>
+    </repository>
+</repositories>
 {% endhighlight %}
 
 
