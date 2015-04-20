@@ -143,7 +143,7 @@ With our <a href="https://github.com/testobject/testobject-appium-java-api/blob/
 
 {% highlight java %}
 @Rule
-private TestObjectTestResultWatcher watcher = new TestObjectTestResultWatcher();
+public TestObjectTestResultWatcher watcher = new TestObjectTestResultWatcher();
 
 private AndroidDriver driver;
 
