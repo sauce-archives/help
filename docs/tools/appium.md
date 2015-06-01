@@ -172,7 +172,7 @@ Request body:
 
 {% highlight javascript %}
 {
-	passed: true|false
+	"passed": true|false
 }
 {% endhighlight %}
 
