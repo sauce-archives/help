@@ -12,11 +12,11 @@ TestObject provides real smartphones and tablets in the cloud. You can upload an
 <h3 id="device-list">Device List</h3>
 Currently, TestObject hosts more than 150 different models of real Android and iOS devices. We constantly add more devices to our pool. To see if the devices you want to test on are available, please <b>refer to our device lab for the complete device list, including device specifications:</b>
 
-<h3>
+<h4>
 <div class="center">
 	<a href="https://devicelab.testobject.com/">devicelab.testobject.com</a></br>
 </div>
-</h3>
+</h4>
 
 <br><img class="center shadow" src="/img/general-reference/testobject-real-devices.png">
 
