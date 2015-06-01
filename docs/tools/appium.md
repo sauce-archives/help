@@ -165,7 +165,7 @@ To get the result watcher via Maven, just add our <a href="#java-utilities">API 
 Writing your own client to set the test results is also easy. Simply make a REST call as follows:
 
 {% highlight javascript %}
-PUT https://app.testobject.com:443/api/rest/appium/session/{appium_session_id}/test
+PUT https://app.testobject.com:443/api/rest/appium/v1/session/{appium_session_id}/test
 {% endhighlight %}
 
 Request body:
@@ -182,6 +182,8 @@ The request should be made with basic authentication where the username is your 
 username=your_api_key
 password=
 {% endhighlight %}
+
+The request must be sent while the Appium session is still running, that is, before quitting the Appium driver.
 
 
 <h3 id="automated-file-upload">Automated File Upload</h3>
