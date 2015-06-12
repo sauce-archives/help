@@ -164,6 +164,8 @@ We can easily improve our logInWithEmail method by adding some simple operations
 
     }
 
+The IDs you see in this last snippet belong to UI elements which are not located in the first screen that our app is showing. To get these simply navigate your app from your device while the Inspector is open until the desired UI element is in view. Now go back to the Inspector, which will still be showing the initial screen, and click the _Refresh_ button. This will update the Inspector view loading the elements which are currently shown on the screen of the device, which you can now reference.
+
 Rememeber to define a new constant in which you store the expected error message, in our case "Email address invalid." and to import org.junit.Assert.assertEquals
 
 ![IDEA IDE screenshot](img/screenshot8.png)
