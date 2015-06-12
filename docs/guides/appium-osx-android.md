@@ -1,33 +1,32 @@
-# Appium Testing on Physical Android Devices
-Appium supports Android testing on Windows, OS X and Linux. This tutorial will hopefully help you set up Appium and run your first test. As an example we will be using the Komoot app which will run on a local Android device. For the purpose of this demonstration we will be writing tests in the Java programming language.
+# Appium Testing on Physical Android Devices on OS X
+Appium supports Android testing on Windows, OS X and Linux. This tutorial will help you set up Appium and run your first test. As an example we will be using the Komoot app which will run on a local Android device. For the purpose of this demonstration we will be writing tests in the Java programming language.
 
 ## What you will need
 * Android SDK with API 17 or higher;
-* The [Eclipse IDE](https://www.eclipse.org/downloads/). The Java developer edition will suit us nicely;
-* Selenium Server and Appium Java Client JAR files.
+* The [IntelliJ IDEA IDE](https://www.jetbrains.com/idea/download/) (the free Community Edition is sufficient), or the [Eclipse IDE](https://www.eclipse.org/downloads/) (Java Developer Edition, also free) if you prefer;
+* Selenium Server and Appium Java Client JAR files;
+* An Android device connected and recognized by your machine, with [USB debugging enabled](http://developer.android.com/tools/device.html#setting-up).
 
 Once you have made sure you have everything you need, you must download and install Appium for your OS of choice, be it [OS X](https://bitbucket.org/appium/appium.app/downloads/appium-1.4.0.dmg),
 [Windows](https://github.com/appium/appium-dot-exe) or [Linux]().
 
 Once you run Appium, you should be confronted with a screen that looks more or less like this:
 
-_TODO: insert server screenshot_
+_TODO: insert screenshot1 (blank server)_
 
 What you have in front of you is the Appium server. There are still a handful of steps to take before you can start testing your mobile application.
 
 ### Testing on physical Android devices
 
-(Make sure you have an Android device connected and recognized by your machine.)
-
 First of all, you need to navigate to the Appium Android settings by clicking the icon on the top left. Don't be intimidated by the amount of options that pop up, you won't need to fill in all the forms.
 
-_TODO: insert server Android Settings screenshot_
+_TODO: insert screenshot2 (config)_
 
 The first thing you need to do is point the Appium server to the APK file that you want to test. Simply check the "Application Path" box ("App Path" in OS X) and paste the path to the APK file in the text field, or navigate to it by clicking on "Choose".
 
 Next, move a little further down the screen until you find the "Device Name" field, under "Capabilities". Check the box and insert a name for the device you want to test on. Although you can insert whatever name you like, this step is mandatory.
 
-Lastly, you will need to provide Appium the path to your Android SDK folder. In case you did not install the SDK on its own, but as a part of the Android Studio bundle, you can get the path to this folder directly in Android Studio. Just navigate to File -> Project Structure -> SDK Location and copy the displayed string. If you installed the SDK without Android Studio, you just need to remember the path in which you unpacked it, with the default folder being ... on Windows.
+Lastly, you will need to provide Appium the path to your Android SDK folder. In case you did not install the SDK on its own, but as a part of the Android Studio bundle, you can get the path to this folder directly in Android Studio. Just navigate to File -> Project Structure -> SDK Location and copy the displayed string. If you installed the SDK without Android Studio, you just need to remember the path in which you unpacked it, with the default folder being _TODO: insert default folder_ on Windows.
 
 You will need to insert the path into the field labelled as "SDK Path". On Windows, you will find this at the very bottom of this screen. You will need to check yet another checkbox, next to the label "SDK Path", and insert the path to your SDK in the text field. On OS X, you will need to navigate to the "Advanced" tab, where you will see the "Android SDK Path" field. Just check the box, insert the path and you are done.
 
@@ -43,7 +42,9 @@ Using either the Inspector or the UIAutomator you will be able to reference the 
 
 _TODO: simple example with Inspector_
 
-For our example we will be using the Komoot app. First we will click on the "Log in with email" button, and when the next screen pops up we will insert an invalid (uncorrectly formatted) email address in the email field, fill the password field with some random password and click the "Log in" button. What we will be expecting is an error message telling us the email address we have provided is invalid.
+For our example we will be using the Komoot app. You can use any other app and the testing process will follow the principles shown in this guide.
+
+First we will click on the "Log in with email" button, and when the next screen pops up we will insert an invalid (uncorrectly formatted) email address in the email field, fill the password field with some random password and click the "Log in" button. What we will be expecting is an error message telling us the email address we have provided is invalid.
 
 We start off in the Inspector (or UIAutomator) by selecting and navigating through a series of layouts until we get to select our button. Every time you select an element the program will show you a series of attributes belonging to it. We can use some of these attributes to reference this element.
 
