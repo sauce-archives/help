@@ -8,10 +8,8 @@ Appium supports Android testing on Windows, OS X and Linux. This tutorial will h
 * Android SDK with API 17 or higher;
 * The [IntelliJ IDEA IDE](https://www.jetbrains.com/idea/download/) (the free Community Edition is sufficient), or the [Eclipse IDE](https://www.eclipse.org/downloads/) (Java Developer Edition, also free) if you prefer;
 * [Selenium Standalone Server](http://www.seleniumhq.org/download/) and [Appium Java Client](https://github.com/appium/java-client) JAR files;
-* An Android device connected and recognized by your machine, with [USB debugging enabled](http://developer.android.com/tools/device.html#setting-up).
-
-Once you have made sure you have everything you need, you must download and install Appium for your OS of choice, be it [OS X](https://bitbucket.org/appium/appium.app/downloads/appium-1.4.0.dmg),
-[Windows](https://github.com/appium/appium-dot-exe) or [Linux]().
+* An Android device connected and recognized by your machine, with [USB debugging enabled](http://developer.android.com/tools/device.html#setting-up);
+* [Appium itself](https://bitbucket.org/appium/appium.app/downloads/appium-1.4.0.dmg).
 
 Once you run Appium, you should be confronted with a screen that looks more or less like this:
 
@@ -21,11 +19,11 @@ What you have in front of you is the Appium server. This piece of software will 
 
 ### Testing on physical Android devices
 
-First of all, you need to navigate to the Appium Android settings by clicking the Android icon on the top. Don't be intimidated by the amount of options that pop up, you won't need to fill in all the forms. Remember to also check the round button just below the icon to make sure you are targeting the right platform.
+First of all, you need to navigate to the Appium Android settings by clicking the ![Android icon](img/icon_android.png) icon on the top. Don't be intimidated by the amount of options that pop up, you won't need to fill in all the forms. Remember to also check the round button just below the icon to make sure you are targeting the right platform.
 
 ![Appium server screenshot](img/screenshot2.png)
 
-The first thing you need to do is point the Appium server to the APK file that you want to test. Simply check the "App Path" box and paste the path to the APK file in the text field, or navigate to it by clicking on "Choose".
+The first thing you need to do is point the Appium server to the APK file that you want to test. Simply check the "App Path" box and paste the path to the APK file in the text field, or navigate to it by clicking on ![Choose button](img/button_choose.png).
 
 Next, move a little further down the screen until you find the "Device Name" field, under "Capabilities". Check the box and insert a name for the device you want to test on. Although you can insert whatever name you like, this step is mandatory.
 
@@ -35,7 +33,7 @@ You will need to insert the path into the field labelled as "SDK Path". To do so
 
 ![Appium server screenshot](img/screenshot3.png)
 
-You are now ready to start the server. Close the Android settings screen and select the "play" button on Windows or the "Launch" button on OS X. You should see some information being printed on the Appium terminal. After a couple of seconds you can click on the button with a lens icon, which will open up the Appium Inspector. At this point the app will be installed and launched on your device.
+You are now ready to start the server. Close the Android settings screen and select the ![ALaunch button](img/button_launch.png) button. You should see some information being printed on the Appium terminal. After a couple of seconds you can click on the button with the ![Inspector icon](img/icon_inspector.png) icon, which will open up the Appium Inspector. At this point the app will be installed and launched on your device.
 
 The purpose of the Inspector is to allow you to reference the UI elements of the app you are testing so that you can interact with them.
 
@@ -124,9 +122,9 @@ Once this is done, we have all we need to write the code that will run our tests
 
     }
 
-Save the project, open up the Appium server, click on the "Launch" button (on Windows this has a symbol on it which looks like a "play" button). You should see some messages appear in the Appium server log confirming that the launch has been successful, and that the server is now on standby, ready to receive connections.
+Save the project, open up the Appium server, click on the "Launch" button. You should see some messages appear in the Appium server log confirming that the launch has been successful, and that the server is now on standby, ready to receive connections.
 
-Our connection will come from the code we have just written. Go back to Eclipse, run the project and wait for the magic to happen. If everything went as expected, you should see the app pop up on your device and the "Login with email" button being pressed.
+Our connection will come from the code we have just written. Go back to the IDE, run the project and wait for the magic to happen. If everything went as expected, you should see the app pop up on your device and the "Login with email" button being pressed.
 
 While this is not a test per-se, we are already seeing some automation.
 

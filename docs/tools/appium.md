@@ -14,6 +14,7 @@ permalink: docs/testing-tools/automation/appium/
 <li><a href="#java-utilities">Java Utilities</a></li>
 <li><a href="#example-tests">Complete Example Tests</a></li>
 
+Related topic: <a href="/docs/guides/appium-osx-android/appium-osx-android.html">Appium Android testing on OS X</a><br />
 Related topic: <a href="/docs/guides/appium-maven/">Running Appium with Maven</a>  
 Related topic: <a href="/docs/guides/creating-ipa/">Creating IPA file for Appium tests</a>
 
@@ -59,7 +60,7 @@ public void tearDown() {
 	if(driver!=null){
 		driver.quit();
 	}
-}	
+}
 {% endhighlight %}
 
 
@@ -88,7 +89,7 @@ public void setup() throws MalformedURLException {
 	capabilities.setCapability("testobject_device", "LG_Nexus_5_real");
 
 	driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
-}		
+}
 {% endhighlight %}
 
 
@@ -137,7 +138,7 @@ You can set this to a name of your choice so that you can search for the test re
 
 <h3 id="test-result-watcher">Test Result Watcher</h3>
 
-TestObject generates detailed reports for your Appium tests run on our real devices in the cloud. These include logs, screenshots and a video capturing the device screen during the test execution. 
+TestObject generates detailed reports for your Appium tests run on our real devices in the cloud. These include logs, screenshots and a video capturing the device screen during the test execution.
 
 With our <a href="https://github.com/testobject/testobject-appium-java-api/blob/master/src/main/java/org/testobject/appium/junit/TestObjectTestResultWatcher.java">test result watcher</a> your reports can be marked as successful or failed. With only two extra lines of code and the <a href="#java-utilities">Maven dependency</a> you're set.
 
