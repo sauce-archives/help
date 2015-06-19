@@ -3,7 +3,6 @@ title: Appium Testing on Physical Android Devices on OS X
 layout: en
 permalink: docs/guides/appium-osx-android/
 ---
-# Appium Testing on Physical Android Devices on OS X
 Appium supports Android testing on Windows, OS X and Linux. This tutorial will help you set up Appium on OS X and run your first test. As an example we will be using the Komoot app which will run on a local Android device. For the purpose of this demonstration we will be writing tests in the Java programming language.
 
 ## What you will need

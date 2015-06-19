@@ -14,7 +14,7 @@ permalink: docs/testing-tools/automation/appium/
 <li><a href="#java-utilities">Java Utilities</a></li>
 <li><a href="#example-tests">Complete Example Tests</a></li>
 
-Related topic: <a href="/docs/guides/appium-osx-android/appium-osx-android.html">Appium Android testing on OS X</a><br />
+Related topic: <a href="/docs/guides/appium-osx-android/">Appium Android testing on OS X</a><br />
 Related topic: <a href="/docs/guides/appium-maven/">Running Appium with Maven</a>  
 Related topic: <a href="/docs/guides/creating-ipa/">Creating IPA file for Appium tests</a>
 
