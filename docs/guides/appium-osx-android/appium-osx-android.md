@@ -20,11 +20,12 @@ What you have in front of you is the Appium server. This piece of software will 
 
 ### Testing on physical Android devices
 
-First of all, you need to navigate to the Appium Android settings by clicking the ![Android icon](img/icon_android.png) icon on the top. Don't be intimidated by the amount of options that pop up, you won't need to fill in all the forms. Remember to also check the round button just below the icon to make sure you are targeting the right platform.
+First of all, you need to navigate to the Appium Android settings by clicking the <img style="display: inline-block" src="img/icon_android.png">
+icon on the top. Don't be intimidated by the amount of options that pop up, you won't need to fill in all the forms. Remember to also check the round button just below the icon to make sure you are targeting the right platform.
 
 ![Appium server screenshot](img/screenshot2.png)
 
-The first thing you need to do is point the Appium server to the APK file that you want to test. Simply check the "App Path" box and paste the path to the APK file in the text field, or navigate to it by clicking on ![Choose button](img/button_choose.png).
+The first thing you need to do is point the Appium server to the APK file that you want to test. Simply check the "App Path" box and paste the path to the APK file in the text field, or navigate to it by clicking on the <img style="display: inline-block" src="img/button_choose.png"> button.
 
 Next, move a little further down the screen until you find the "Device Name" field, under "Capabilities". Check the box and insert a name for the device you want to test on. Although you can insert whatever name you like, this step is mandatory.
 
@@ -34,7 +35,7 @@ You will need to insert the path into the field labelled as "SDK Path". To do so
 
 ![Appium server screenshot](img/screenshot3.png)
 
-You are now ready to start the server. Close the Android settings screen and select the ![ALaunch button](img/button_launch.png) button. You should see some information being printed on the Appium terminal. After a couple of seconds you can click on the button with the ![Inspector icon](img/icon_inspector.png) icon, which will open up the Appium Inspector. At this point the app will be installed and launched on your device.
+You are now ready to start the server. Close the Android settings screen and select the <img style="display: inline-block" src="img/button_launch.png"> button. You should see some information being printed on the Appium terminal. After a couple of seconds you can click on the button with the <img style="display: inline-block" src="img/icon_inspector.png"> icon, which will open up the Appium Inspector. At this point the app will be installed and launched on your device.
 
 The purpose of the Inspector is to allow you to reference the UI elements of the app you are testing so that you can interact with them.
 
@@ -64,6 +65,7 @@ Now you must import the jars we previously downloaded into the project. To do th
 
 Once this is done, we have all we need to write the code that will run our tests. First, let's set up Appium and see it everything runs as expected. This is what a program that launches the Komoot app and clicks on the "Login with email" button looks like:
 
+    {% highlight java %}
     import io.appium.java_client.AppiumDriver;
     import io.appium.java_client.android.AndroidDriver;
 
@@ -122,6 +124,7 @@ Once this is done, we have all we need to write the code that will run our tests
         }
 
     }
+    {% endhighlight %}
 
 Save the project, open up the Appium server, click on the "Launch" button. You should see some messages appear in the Appium server log confirming that the launch has been successful, and that the server is now on standby, ready to receive connections.
 
@@ -131,6 +134,7 @@ While this is not a test per-se, we are already seeing some automation.
 
 We can easily improve our logInWithEmail method by adding some simple operations:
 
+    {% highlight java %}
     /* This is our first test! */
     @Test
     public void logInWithInvalidEmail(){
@@ -162,6 +166,7 @@ We can easily improve our logInWithEmail method by adding some simple operations
       assertEquals(errorMessage.getText(), expectedErrorMessage);
 
     }
+    {% endhighlight %}
 
 The IDs you see in this last snippet belong to UI elements which are not located in the first screen that our app is showing. To get these simply navigate your app from your device while the Inspector is open until the desired UI element is in view. Now go back to the Inspector, which will still be showing the initial screen, and click the _Refresh_ button. This will update the Inspector view loading the elements which are currently shown on the screen of the device, which you can now reference.
 
