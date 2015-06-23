@@ -3,6 +3,7 @@ title: FAQ
 layout: en
 permalink: docs/faq/
 alias: docs/FAQ/
+comments_disabled: true
 ---
 <h6 id="faq_1"><b>Q:</b> I'm using the <a href="/docs/references/scripting-api/sensor#setGPS" target="_blank" target="setGPS() reference">setGPS()</a> method, but my app doesn't get the location.</h6>
 
@@ -17,7 +18,7 @@ Make sure that your app has the following permission:
 
 <b>A:</b> <b><i>Locale</i></b> represents a language/country/variant combination.  
 Locales are used to alter the presentation of information such as numbers or dates to suit the conventions in the region they describe. <small>(<a href="http://developer.android.com/reference/java/util/Locale.html" target="_blank" target="Locale">Further reading</a>)</small>  
-  
+
 
 To change the device's locale, click on the 'Change Language' button under 'Device Settings' in the left toolbar. (<a href="/img/faq/change_locale.png" target="_blank" target="Locale">See Screenshot</a>)
 <hr>
@@ -39,7 +40,7 @@ launchDefaultApp()
 
 <h6 id="faq_4"><b>Q:</b> Can I adjust the time of the emulators?</h6>
 
-<b>A:</b> Sure, you can change the time of our emulators by adding this command to your script: 
+<b>A:</b> Sure, you can change the time of our emulators by adding this command to your script:
 
 {% highlight js %}executeShellCommand('adb shell date -s "{time}"'){% endhighlight %}
 
@@ -47,7 +48,7 @@ Where {time} is a representation of the current time in the following structure:
 
 {% highlight js %}YYYYMMDD.hhmmss{% endhighlight %}
 
-To format a given JavaScript date string just use this <a href="http://jsfiddle.net/G5kEQ/64/" target="_blank" target="JavaScript format">JavaScript format</a> 
+To format a given JavaScript date string just use this <a href="http://jsfiddle.net/G5kEQ/64/" target="_blank" target="JavaScript format">JavaScript format</a>
 
 <hr>
 

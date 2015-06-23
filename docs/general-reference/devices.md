@@ -3,6 +3,7 @@ title: Devices
 layout: en
 permalink: docs/general-reference/devices/
 alias: docs/devices/
+comments_disabled: true
 ---
 
 <li><a href="#device-list">Device List</a></li>
