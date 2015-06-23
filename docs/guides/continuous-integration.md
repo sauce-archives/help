@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration with TestObject
 layout: en
-permalink: /docs/guides/continuous-integration/
+permalink: /docs/guides/continuous-integration
 ---
 
 Figure out how to automate your testing by reading the following How-To guides.
