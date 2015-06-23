@@ -2,7 +2,6 @@
 title: Quality Report
 layout: en
 permalink: docs/testing-tools/quality-report/
-comments_disabled: true
 ---
 
 <li><a href="#introduction">Introduction</a></li>

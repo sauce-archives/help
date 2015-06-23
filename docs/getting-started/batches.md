@@ -2,7 +2,6 @@
 title: Running a Test on Multiple Devices
 layout: en
 permalink: docs/getting-started/batches/
-comments_disabled: true
 ---
 
 With a batch you can predefine a configuration and run a set of tests on a it. For each test run you will then get a report with all the details about the execution.

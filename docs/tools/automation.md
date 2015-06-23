@@ -2,7 +2,6 @@
 title: Automated Testing
 layout: en
 permalink: docs/testing-tools/automation/
-comments_disabled: true
 ---
 
 Run your automated tests for your mobile app or website on real physical devices. The following open-source frameworks are supported:
