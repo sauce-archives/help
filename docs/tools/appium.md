@@ -2,6 +2,7 @@
 title: Appium
 layout: en
 permalink: docs/testing-tools/automation/appium/
+comments_disabled: true
 ---
 
 

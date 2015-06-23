@@ -1,6 +1,7 @@
 ---
 title: TestObject Help Center
 layout: en
+comments_disabled: true
 ---
 
 TestObject is a hosted testing service for **Android** and **iOS** app developers and testers.
