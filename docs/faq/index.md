@@ -3,7 +3,6 @@ title: FAQ
 layout: en
 permalink: docs/faq/
 alias: docs/FAQ/
-comments_disabled: true
 ---
 <h6 id="faq_1"><b>Q:</b> I'm using the <a href="/docs/references/scripting-api/sensor#setGPS" target="_blank" target="setGPS() reference">setGPS()</a> method, but my app doesn't get the location.</h6>
 

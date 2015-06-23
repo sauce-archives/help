@@ -2,7 +2,6 @@
 title: Manual Testing
 layout: en
 permalink: docs/testing-tools/manual-testing/
-comments_disabled: true
 ---
 
 <li><a href="#introduction">Introduction</a></li>

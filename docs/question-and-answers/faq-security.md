@@ -2,7 +2,6 @@
 title: FAQ - Security
 layout: en
 permalink: /docs/questions-and-answers/faq-security/
-comments_disabled: true
 ---
 
 <li><a href="#data-privacy">Is my app safe in the TestObject cloud?</a></li>

@@ -3,7 +3,6 @@ title: Settings
 layout: en
 permalink: docs/general-reference/settings/
 alias: docs/settings/
-comments_disabled: true
 ---
 <li><a href="#team-accounts">Team Accounts</a></li>
 
