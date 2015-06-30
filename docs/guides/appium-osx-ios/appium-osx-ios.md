@@ -33,7 +33,7 @@ Immediately below is the UDID field. Select the checkbox and open up Xcode. Navi
 
 Next up, you will need to check the "Full reset" box. This tells Appium to reset the state of the application we are testing every time we run a test.
 
-Lastly, you will need to check if Appium knows the path to your Xcode application. Click on the "Advanced" tab and check that the path in the bottom field is correct. If there is none, just click the <img style="display: inline-block" src="img/button_change.png"> button and navigate to Xcode's location.
+Lastly, you will need to check if Appium knows the path to your Xcode application. Click on the "Advanced" tab and check that the path in the bottom field is correct. If there is none, just click the <img style="display: inline-block" src="img/button_change"> button and navigate to Xcode's location.
 
 ![Appium server screenshot](img/screenshot3.png)
 
