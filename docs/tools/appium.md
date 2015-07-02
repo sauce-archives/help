@@ -185,6 +185,37 @@ password=
 
 The request must be sent while the Appium session is still running, that is, before quitting the Appium driver.
 
+<h3 id="test-report-urls">Test Report URLs</h3>
+
+When starting an appium session we enhance the default capabilities returned by the session by two urls:  
+
+<table  class="table">
+	<thead>
+		<tr><th>Capability Param</th><th>Description</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>testobject_test_report_url</td><td>url to the final appium report (available after the test was execute)</td></tr>
+		<tr><td>testobject_test_live_view_url</td><td>url to the live view your test execution (available only while the appium session is ongoing)</td></tr>
+	</tbody>
+</table>  
+
+Example:  
+
+{% highlight java %}
+
+private AndroidDriver driver;
+
+@Before
+public void setup() throws MalformedURLException {
+	...
+	
+	AppiumDriver driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+	driver.driver.getCapabilities().getCapability("testobject_test_report_url");
+	driver.driver.getCapabilities().getCapability("testobject_test_live_view_url");
+	
+	...
+}		
+{% endhighlight %}
 
 <h3 id="automated-file-upload">Automated File Upload</h3>
 
@@ -195,6 +226,37 @@ curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/
 {% endhighlight %}
 
 The response of the curl upload command will be the ID of the newly uploaded app. Use it to populate the "testobject_app_id" capability.
+
+In addition you can send some uptional data with the upload via header params:  
+
+<table  class="table">
+	<thead>
+		<tr><th>Header Param</th><th>Description</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>App-Identifier</td><td>a custom unique identifier for your app</td></tr>
+		<tr><td>App-DisplayName</td><td>a custom display name</td></tr>
+	</tbody>
+</table>  
+
+Example:  
+{% highlight bash %}
+curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-DisplayName: yourCustomDisplayName" --data-binary @your_app.apk
+{% endhighlight %}
+
+By providing a custom identifier you can also check if an app was already uploaded and prevent duplicate uploads:
+
+Get all apps for a given MD5:  
+
+{% highlight bash %}
+curl -u "your_username:your_api_key" -X GET https://app.testobject.com:443/api/storage/app?appIdentifier=MD5_hash_of_your_app
+{% endhighlight %}
+
+If the call returns an empty json array upload the file:  
+
+{% highlight bash %}
+curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-Identifier: MD5_hash_of_your_app" --data-binary @your_app.apk
+{% endhighlight %}
 
 
 <h3 id="java-utilities">Java Utilities</h3>
