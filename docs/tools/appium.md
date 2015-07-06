@@ -104,15 +104,21 @@ https://app.testobject.com:443/api/appium/wd/hub
 
 <h4>testobject_api_key</h4>
 
+*Required*
+
 With this key the TestObject platform authenticates you.
 
 
 <h4>testobject_app_id</h4>
 
+*Required*
+
 ID of the app version under test. If you are uploading an app via API, the response of the upload command will be the ID of the newly uploaded app. Use it to populate the 'testobject_app_id' capability.
 
 
 <h4>testobject_device</h4>
+
+*Required*
 
 Specifies the device to run the test on. Devices can be chosen on the Appium Instructions page.
 
@@ -237,10 +243,14 @@ Optionally, you can send the following header parameters:
 
 <h4>App-Identifier</h4>
 
+*Optional*
+
 Your custom unique identifier for your app
 
 
 <h4>App-DisplayName</h4>
+
+*Optional*
 
 Your custom display name
 
@@ -252,13 +262,13 @@ curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/
 
 By providing a custom identifier you can also check if an app was already uploaded and prevent duplicate uploads.
 
-1. Get all apps for a given MD5:  
+First, get all apps for a given MD5:  
 
 {% highlight bash %}
 curl -u "your_username:your_api_key" -X GET https://app.testobject.com:443/api/storage/app?appIdentifier=MD5_hash_of_your_app
 {% endhighlight %}
 
-2. Only if the call returns an empty JSON array, start uploading the file:  
+Only if the call returns an empty JSON array, start uploading the file:  
 
 {% highlight bash %}
 curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-Identifier: MD5_hash_of_your_app" --data-binary @your_app.apk
