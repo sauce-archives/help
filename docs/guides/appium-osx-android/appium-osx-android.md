@@ -5,8 +5,12 @@ permalink: docs/guides/appium-osx-android/
 ---
 Appium supports Android testing on Windows, OS X and Linux. This tutorial will help you set up Appium on OS X and run your first test. As an example we will be using the Komoot app which will run on a local Android device. For the purpose of this demonstration we will be writing tests in the Java programming language.
 
+<center>
+<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/yatZBNufNVw" frameborder="0" allowfullscreen></iframe>
+</center>
+
 ## What you will need
-* Android SDK with API 17 or higher;
+* [Android SDK](https://developer.android.com/sdk/index.html#Other) with API 17 or higher;
 * The [IntelliJ IDEA IDE](https://www.jetbrains.com/idea/download/) (the free Community Edition is sufficient), or the [Eclipse IDE](https://www.eclipse.org/downloads/) (Java Developer Edition, also free) if you prefer;
 * [Selenium Standalone Server](http://www.seleniumhq.org/download/) and [Appium Java Client](https://github.com/appium/java-client) JAR files;
 * An Android device connected and recognized by your machine, with [USB debugging enabled](http://developer.android.com/tools/device.html#setting-up);
@@ -83,7 +87,7 @@ Once this is done, we have all we need to write the code that will run our tests
     public class KomootTest {
 
     	/* This is the key piece of our test, since it allows us to
-    	 * connect to the device we will be running the app onto.*/
+       * connect to the device we will be running the app onto.*/
     	private AppiumDriver driver;
 
     	private String invalidEmail = "abcdefg";
