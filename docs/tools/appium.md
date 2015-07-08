@@ -10,6 +10,7 @@ permalink: docs/testing-tools/automation/appium/
 <li><a href="#capabilities">Desired Capabilities</a></li>
 <li><a href="#test-result-watcher">Test Result Watcher</a></li>
 <li><a href="#test-result-api">Test Result API</a></li>
+<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
 <li><a href="#automated-file-upload">Automated File Upload</a></li>
 <li><a href="#java-utilities">Java Utilities</a></li>
 <li><a href="#example-tests">Complete Example Tests</a></li>
@@ -21,7 +22,7 @@ Related topic: <a href="/docs/guides/creating-ipa/">Creating IPA file for Appium
 
 <h3 id="introduction">Introduction</h3>
 
-Appium is an open-source test automation framework for mobile apps - native, hybrid and web app are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium should be easy to get started with.
+Appium is an open-source test automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium should be easy to get started with.
 
 
 <h3 id="getting-started">Getting Started</h3>
@@ -103,15 +104,21 @@ https://app.testobject.com:443/api/appium/wd/hub
 
 <h4>testobject_api_key</h4>
 
+*Required*
+
 With this key the TestObject platform authenticates you.
 
 
 <h4>testobject_app_id</h4>
 
+*Required*
+
 ID of the app version under test. If you are uploading an app via API, the response of the upload command will be the ID of the newly uploaded app. Use it to populate the 'testobject_app_id' capability.
 
 
 <h4>testobject_device</h4>
+
+*Required*
 
 Specifies the device to run the test on. Devices can be chosen on the Appium Instructions page.
 
@@ -188,6 +195,39 @@ password=
 The request must be sent while the Appium session is still running, that is, before quitting the Appium driver.
 
 
+<h3 id="live-view-and-report-urls">Live-View and Report URLs</h3>
+
+When starting an Appium session we enhance the default capabilities returned by the session by two properties:
+
+
+<h4>testobject_test_live_view_url</h4>
+
+The URL to the live-view your test execution (available only while the Appium session is ongoing)
+
+
+<h4>testobject_test_report_url</h4>
+
+The URL to the final Appium report (available after the test when the test finished executing)
+
+
+
+{% highlight java %}
+
+private AndroidDriver driver;
+
+@Before
+public void setup() throws MalformedURLException {
+	...
+
+	AppiumDriver driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+	driver.driver.getCapabilities().getCapability("testobject_test_report_url");
+	driver.driver.getCapabilities().getCapability("testobject_test_live_view_url");
+
+	...
+}
+{% endhighlight %}
+
+
 <h3 id="automated-file-upload">Automated File Upload</h3>
 
 Use the following command to upload your app file. Alternatively, you can upload via UI.
@@ -197,6 +237,42 @@ curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/
 {% endhighlight %}
 
 The response of the curl upload command will be the ID of the newly uploaded app. Use it to populate the "testobject_app_id" capability.
+
+
+Optionally, you can send the following header parameters:
+
+<h4>App-Identifier</h4>
+
+*Optional*
+
+Your custom unique identifier for your app
+
+
+<h4>App-DisplayName</h4>
+
+*Optional*
+
+Your custom display name
+
+
+{% highlight bash %}
+curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-DisplayName: yourCustomDisplayName" --data-binary @your_app.apk
+{% endhighlight %}
+
+
+By providing a custom identifier you can also check if an app was already uploaded and prevent duplicate uploads.
+
+First, get all apps for a given MD5:  
+
+{% highlight bash %}
+curl -u "your_username:your_api_key" -X GET https://app.testobject.com:443/api/storage/app?appIdentifier=MD5_hash_of_your_app
+{% endhighlight %}
+
+Only if the call returns an empty JSON array, start uploading the file:  
+
+{% highlight bash %}
+curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-Identifier: MD5_hash_of_your_app" --data-binary @your_app.apk
+{% endhighlight %}
 
 
 <h3 id="java-utilities">Java Utilities</h3>
