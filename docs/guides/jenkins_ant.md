@@ -15,7 +15,7 @@ What you need:
 
 <h3 id="step1">Step 1: Add the Ant Build File and Ant Plugin to your repository</h3>
 
-+ Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.08.06.jar" target="_blank">testobject-ant-3.08.06.jar</a>
++ Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-4.0.0.jar" target="_blank">testobject-ant-4.0.0.jar</a>
 + Download the TestObject: <a href="https://raw2.github.com/testobject/calculator/master/testobject/build.xml" target="_blank">build.xml</a>
 
 <h3 id="step2">Step 2: Add the files to your app repository</h3>
@@ -23,7 +23,7 @@ What you need:
 + Add the two files into <strong>your app</strong> repository. For example:
 {% highlight xml %}
 /testobject/build.xml
-/testobject/ant/testobject-ant-3.08.06.jar
+/testobject/ant/testobject-ant-4.0.0.jar
 {% endhighlight %}
 
 <h3 id="step3">Step 3: Configure your Jenkins Project</h3>
@@ -42,13 +42,15 @@ testobject/build.xml
 + <strong>Properties</strong>
 Copy the following code to the Properties field and replace the variables with your username, password, project, batch id and APK path.
 {% highlight xml %}
-testobject.ant.lib.name=ant/testobject-ant-3.08.06.jar
+testobject.ant.lib.name=ant/testobject-ant-4.0.0.jar
 testobject.user=USER_NAME
 testobject.pw=TESTOBJECT_PW
 testobject.app=APP
 testobject.testSuite.id=1
+testobject.robotiumSuite.id=1
 apk.path=PATH_TO_YOUR_APK_BASED_ON_BUILD_XML_PATH
 apk.version.name=demoApp-$BUILD_NUMBER
+robotiumApk.path=PATH_TO_YOUR_ROBOTIUM_APK_BASED_ON_BUILD_XML_PATH
 {% endhighlight %}
 
 

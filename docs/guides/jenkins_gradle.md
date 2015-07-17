@@ -49,6 +49,7 @@ testobjectactivateversion=true
 testobjectuploadversion=true
 testobjectruncheckup=true
 testobjectsuites=[1,2]
+testobjectrobotiumsuiteid=1
 {% endhighlight %}
 
 <img class="center shadow" src="/img/guides/jenkins-gradle-env-config.png">
