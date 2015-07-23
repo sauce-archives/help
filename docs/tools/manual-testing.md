@@ -34,7 +34,7 @@ You can change some of the settings and sensors of the devices. To access the fe
 <p><ul><li><b>ADB Shell:</b> The Android Debug Bridge is a command line tool. It is part of the Android SDK and helps you control connected devices. At TestObject, ADB can be used to send shell commands to the devices.</li></ul><br style="clear:both"></p>
 
 
-<h3 id="3rd-party-apps">Dependency: Install Third-Party Party Apps</h3>
+<h3 id="3rd-party-apps">Dependency: Install Third-Party Apps</h3>
 
 <img src="/img/tools/manual/dependency-process.png" width="311" height="194" style="float:right; margin-left:60px;
   margin-bottom:10px" alt="Manual Testing Menu">

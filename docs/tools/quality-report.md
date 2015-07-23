@@ -34,7 +34,7 @@ We simulate random user inputs until an exception is thrown. Our Stress Test is 
 
 
 <h3 id="screenshots">Screenshots</h3>
-TestObject takes screenshots of different activities within your. Using the screenhot test, you can get a quick overview on how your app looks on different devices. After the screenshots are taken, you can review them and open bugs if somethings not right.
+TestObject takes screenshots of different activities within your app. Using the screenhot test, you can get a quick overview on how your app looks on different devices. After the screenshots are taken, you can review them and open bugs if somethings not right.
 
 
 <h3 id="process-5-steps-to-sanity">Process: 5 Steps to Sanity</h3>
@@ -57,7 +57,7 @@ A: There is a long list of potential problems that can be discovered either with
 
 
 <h5> Q: What is the difference between "ERRORS" and "BUGS" in the Quality Report?</h5>
-A: "ERRORS" are problems that we found automatically while running the Install&Launch and Stress test. They're a good indicators for potential problems. "BUGS" on the other hand, can only be opened by yourself. In case we found an error, you can review it and decide if it can be ignored or if it is a real problem and open a bug for it.
+A: "ERRORS" are problems that we found automatically while running the Install&Launch and Stress test. They're good indicators for potential problems. "BUGS" on the other hand, can only be opened by yourself. In case we found an error, you can review it and decide if it can be ignored or if it is a real problem and open a bug for it.
 
 <h5>Q: My app requires a login, and the Stress Test can't get through.</h5>
 A: Currently, we don't provide a solution for this. The MonkeyRunner can't pass a login screen at the moment. If you want to perform a Stress Test anyway, you can do so in the manual testing feature. Go to manual, select a device, manually login to your app, and then select the MonkeyRunner feature in the left menu.

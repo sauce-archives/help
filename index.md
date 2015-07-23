@@ -1,16 +1,19 @@
 ---
-title: TestObject Help Center
+title: We are here to help!
 layout: en
 ---
 
-TestObject is a hosted testing service for **Android** and **iOS** app developers and testers.
+Our goal is to make app testing as easy as possible for you! To test on our <a href="https://devicelab.testobject.com">real devices</a> you can use different <a href="https://testobject.com/features">features</a> for manual and automated app testing, accessible from your web browser. 
+In our **Help Center** we offer **extensive documentation**, including **FAQs**, **Introductions** to the TestObject Device Cloud, and a number of **Tutorials** to get you started with your testing.
 
-TestObject offers a cloud infrastructure for manual and automated mobile app testing that is accessible from your web browser. TestObject allows you to easily upload your native, hybrid or web app to your personal testing account and run tests on <br> **150+ real physical devices**.
+<img class="center shadow" src="/img/first-impressions/office_communication_narrow.jpg ">
+###Contact us directly!###
 
-Our features:<br>
-<a href="https://testobject.com/features">testobject.com/features</a>
+If you don't find what you are looking for in our Help Center, don't hesitate to contact us! 
+####Email####
+Post feedback, ideas and ask questions relevant to your app to **<a href="mailto:support@testobject.com">support@testobject.com</a>**
+####Chat#####
+Get instant online support by our support crew use our **<a href="https://app.testobject.com/#/chat">Chat Tool</a>**.
+####Phone####
+Get instant offline support via phone by our support crew: **+49 3302 2097320**.
 
-Our devices:<br>
-<a href="https://devicelab.testobject.com">devicelab.testobject.com</a>
-
-<img class="center shadow" src="/img/first-impressions/devicepool-photo.jpg">
