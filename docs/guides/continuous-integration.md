@@ -2,6 +2,7 @@
 title: Continuous Integration with TestObject
 layout: en
 permalink: /docs/guides/continuous-integration
+alias:  docs/ci/
 ---
 
 Figure out how to automate your testing by reading the following How-To guides.
