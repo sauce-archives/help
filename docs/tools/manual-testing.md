@@ -9,7 +9,7 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
 <li><a href="#google-account">Add a Google Account to the Device</a></li>
 <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
-<li><a href="#toggle-connection">Use ADB to deactivate the Internet Connection</a></li>
+
 
 
 <h3 id="introduction">Introduction</h3>
@@ -81,9 +81,10 @@ When you share a device, the recipient can see the screen of the device in real 
 <img src="/img/tools/manual/share-device.png" alt="Share Device">
 </br>
 
-<h3 id="share-device">Use ADB to deactivate the Internet Connection</h3>
+<!-- old: possible within the UI 
+<h3 id="toggle-connection">Use ADB to deactivate the Internet Connection</h3>
 
 It is possible to deactivate the WIFI (Internet) Connection of our devices via ADB commands. Please use the following command:
 {% highlight xml %}
 am broadcast -a org.testobject.android.toolkit.DEVICE_MANAGER --es ACTION WIFI_DISCONNECT
-{% endhighlight %}
+{% endhighlight %} --> 
