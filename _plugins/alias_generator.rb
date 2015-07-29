@@ -46,7 +46,19 @@ module Jekyll
 
     def process_pages
       @site.pages.each do |page|
-        generate_aliases(page.destination('').gsub(/index\.(html|htm)$/, ''), page.data['alias'])
+        # generate_aliases(page.destination('').gsub(/index\.(html|htm)$/, ''), page.data['alias'])
+        
+        # patch: permalink as alias destination path (gs)
+        destination_path = page.data['permalink']
+
+        if destination_path != nil
+          if (destination_path[0] != "/")
+            destination_path = "/" + destination_path
+          end
+
+          generate_aliases(destination_path, page.data['alias'])
+        end
+        # patch end (gs)
       end
     end
 
@@ -70,12 +82,9 @@ module Jekyll
           file.write(alias_template(destination_path))
         end
 
-#        (alias_index_path.split('/').size + 1).times do |sections|
-#          @site.static_files << Jekyll::AliasFile.new(@site, @site.dest, alias_index_path.split('/')[0, sections].join('/'), '')
-#        end
-	(alias_index_path.split('/').size).times do |sections|
- 	  @site.static_files << Jekyll::AliasFile.new(@site, @site.dest, alias_index_path.split('/')[1, sections + 1].join('/'), '')
-	end
+        (alias_index_path.split('/').size + 1).times do |sections|
+          @site.static_files << Jekyll::AliasFile.new(@site, @site.dest, alias_index_path.split('/')[0, sections].join('/'), '')
+        end
       end
     end
 
