@@ -43,7 +43,8 @@ module Jekyll
     def setup_htaccess
       if File.exist?(File.join(@site.source, "_htaccess"))
         FileUtils.cp(File.join(@site.source, "_htaccess"), File.join(@site.dest, ".htaccess"))
-      else
+      end
+      if File.exist?(File.join(@site.dest, ".htaccess"))
         FileUtils.rm(File.join(@site.dest, ".htaccess"))
       end
       File.open(File.join(@site.dest, ".htaccess"), 'a') do |file|
