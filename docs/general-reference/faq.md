@@ -2,9 +2,7 @@
 title: FAQ
 layout: en
 permalink: docs/general-reference/faq/
-alias: docs/FAQ/
-alias: docs/questions-and-answers/faq-devices/
-alias: docs/questions-and-answers/faq-security/
+alias: [/docs/questions-and-answers/faq-security/, /docs/questions-and-answers/faq-devices/, /docs/FAQ/]
 ---
 <ul>
 	<li> <a href="#FAQ-Devices">Devices</a> </li>

@@ -2,7 +2,7 @@
 title: Settings
 layout: en
 permalink: docs/general-reference/settings/
-alias: docs/settings/
+alias: /docs/settings/
 ---
 <li><a href="#team-accounts">Team Accounts</a></li>
 

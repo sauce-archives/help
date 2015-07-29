@@ -2,7 +2,7 @@
 title: Devices
 layout: en
 permalink: docs/general-reference/devices/
-alias: docs/devices/
+alias: /docs/devices/
 ---
 
 <li><a href="#device-list">Device List</a></li>

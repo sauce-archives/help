@@ -1,6 +1,7 @@
 exclude: [bin, CNAME, Gemfile, Gemfile.lock, README.md]
 markdown: rdiscount
 permalink: :title
+safe: false
 relative_permalinks: false
 highlighter: true
 destination: _site/help
