@@ -14,8 +14,7 @@ permalink: docs/testing-tools/automation/
 <h3 id="Introduction">Introduction</h3>
 
 Test automation allows you to run the same tests repeatedly and execute them in parallel on the <a href="docs/general-reference/devices/">real devices</a> in the TestObject cloud.<br>
-To start your automated testing you will need to write a test, which defines the exact steps and its predicted outcomes. The test interacts with the UI elements of your app, simulating a user interaction. To write the test you refer to the UI elements and define its predicted behavior<br>
-The automation framework is an integrated system that provides the basis of test automation and simplifies the automation effort.<br>
+What you will need to provide is a number of test suites complying with the requirements of the framework of your choice. In your test you will be able to interact  with UI elements, like a user would do. This will allow you to reproduce the various use cases of your application.
 
 There are a number of frameworks available on the market for this purpose. To execute your tests on the TestObject device cloud you can choose between several open-source frameworks. 
  
