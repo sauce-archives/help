@@ -9,7 +9,7 @@ permalink: docs/testing-tools/automation/
 <li><a href="#frameworks">Test Automation Frameworks</a></li>
 <li><a href="#scripts">Execute test scripts</a></li>
 <li><a href="#reporting">Execution Reports</a></li>
-<!--<li><a href="#continuous-integration">Continuous Integration</a></li>-->
+<li><a href="#continuous-integration">Continuous Integration</a></li>
 
 <h3 id="Introduction">Introduction</h3>
 
