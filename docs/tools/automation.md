@@ -25,7 +25,7 @@ There are a number of frameworks available on the market for this purpose. To ex
 At the moment the following frameworks are supported:
 
 * <a href="/docs/testing-tools/automation/appium/">Appium</a>
-* Robotium
+* <a href="/docs/testing-tools/automation/robotium/">Robotium</a>
 * Espresso
 
 All of these frameworks are open-source and you can use them without additional costs.
