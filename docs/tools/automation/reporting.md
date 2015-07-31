@@ -25,7 +25,7 @@ Extensive reports allow you to easily browse through all the test results. Quick
 
 <h3 id="aggregated-results">Aggregated Results of an Entire Test Suite</h3>
 
-For each exection of a test suite you will get an aggregated overview of all the results. Search the results and filter them by status.
+For each execution of a test suite you will get an aggregated overview of all the results. Search the results and filter them by status.
 
 There are three representations:
 

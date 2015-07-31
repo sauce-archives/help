@@ -13,6 +13,7 @@ permalink: docs/testing-tools/automation/robotium/
 <h3 id="introduction">Introduction</h3>
 
 Robotium is an open-source test automation framework for automatic black-box UI-tests. Created as an extension of the Android test framework it only supports native and hybrid Android apps. Robotium allows you two write function, system and acceptance test scenarios and define them across Android activities.
+As Espresso it uses the <a href="http://developer.android.com/reference/android/app/Instrumentation.html">Android instrumentation</a> to inspect and interact with the activities in your test.
 
 
 <h3 id="getting-started">Getting Started</h3>
@@ -40,6 +41,5 @@ Steps to get started:
     <br>
 <img class="center shadow" src="/img/tools/automation/Robotium_Report.png" alt="Robotium Report">
 <br>
-
 
 
