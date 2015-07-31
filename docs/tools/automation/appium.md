@@ -118,7 +118,7 @@ ID of the app version under test. If you are uploading an app via API, the respo
 
 *Required*
 
-Specifies the device to run the test on. Devices can be chosen on the Appium Instructions page.
+Specifies the device to run the test on. Click on the 'Change Devices' button to see all cloud devices which are available and select your test devices.
 
 
 <h4>testobject_appium_version</h4>
