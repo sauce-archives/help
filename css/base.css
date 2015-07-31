@@ -83,25 +83,51 @@ h3 {
   color: #121214;
   text-transform: none;
   font-size: 26px;
+  line-height: 26px;
+  line-height: 36px;
   font-weight: 300;
   margin-top: 60px;
-  margin-bottom: 14px;
+  margin-bottom: 0
 }
 
 h4 {
   color: #121214;
   font-size: 20px;
+  line-height: 30px;
   font-weight: 300;
-  margin-bottom: 6px;
   margin-top: 40px;
+  margin-bottom: 0
 }
 
 h3 + h4 {
   margin-top: 20px;
 }
 
-.main p + ul {
-  margin-top: -16px;
+.main {
+  margin-bottom: 40px;
+}
+
+.main p,
+.main pre,
+.main img {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.main ul {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.main pre + p,
+.main pre + ul,
+.main pre + pre,
+.main pre + img,
+.main img + p,
+.main img + ul,
+.main img + pre,
+.main img + img {
+  margin-top: 30px;
 }
 
 .main img {
@@ -114,14 +140,21 @@ h3 + h4 {
 }
 
 .shadow {
-  border: 1px solid #f5f5f5;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-pre {
-  margin-bottom: 30px;
+.zoom {
+  zoom: 60%;
 }
+
+.user-comments {
+  margin-top: 70px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
 
 /* Emulators */
 
