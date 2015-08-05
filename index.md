@@ -13,7 +13,7 @@ If you don't find what you are looking for in our Help Center, don't hesitate to
 ####Email####
 Post feedback, ideas and ask questions relevant to your app to **<a href="mailto:support@testobject.com">support@testobject.com</a>**
 ####Chat#####
-Get instant online support by our support crew use our **<a href="https://app.testobject.com/#/chat">Chat Tool</a>**.
+Get instant online support by our support crew using our **<a href="https://app.testobject.com/#/chat">Chat Tool</a>**.
 ####Phone####
 Get instant offline support via phone by our support crew: **+49 3302 2097320**.
 
