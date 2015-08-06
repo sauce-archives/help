@@ -8,8 +8,8 @@ alias: /docs/settings/
 
 <ul>
     <li><a href="#get_started">Get Started</a></li>
-    <li><a href="#plans">Testing Plans</a></li>
     <li><a href="#settings">Account Settings</a></li>
+     <li><a href="#plans">Testing Plans</a></li>
     <!--<li><a href="#support">Support</li>-->
 </ul>
 
@@ -33,6 +33,43 @@ To be able to start to test you need to upload an app. There are several ways to
 * Test a Mobile Website by adding the Website URL and add a name and a version
 * <a href="/docs/guides/continuous-integration/">Integrate a build plugin</a>, like Ant, Maven, Jenkins etc.
 * Get your latest app versions directly from HockeyApp. Enter your <a href="https://rink.hockeyapp.net/manage/auth_tokens" target="_blank">HockeyApp token</a> and you are set.
+
+<h3 id="settings">Account Settings</h3>
+
+In the right corner of your screen you can administrate your Account Settings.
+<img class="center shadow" src="/img/general-reference/account-settings.png">
+<br>Click on the different tabs to manage your account.</br> 
+<img class="center shadow" src="/img/settings/profile.png"> <h4 id="profile">Profile</h4>
+Here you can change your information given at your sign up, like name and email adress. What you cannot change is your user name. It will remain the same to ensure to allocate your data with your account.
+
+<h4 id="team-accounts">Team Accounts</h4>
+If you have a Team plan, you will be able to test your companies apps in parallel with other teammates. Add and remove team members to your account.
+
+- Invite your teammates by adding their email address.
+- Wait for them to accept your invitation.
+- <b>Ready!</b> Now they are able to see your apps and test results
+
+<h4 id="password">Password</h4>
+To change your password enter your new password into the text field and save. Done!
+If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud. 
+
+- Enter your email adress or user name
+- You will receive a link via email
+- Follow this link and enter a new password.
+
+<h4 id="plans_tab">Plans</h4>
+This tab allows you to change your subscribed <a href="#plans">Testing Plans</a>. 
+
+See our homepage for an overview of all plans and pricing: <a href="https://testobject.com/pricing" target="_blank">https://testobject.com/pricing</a>
+
+
+<h4>Billing</h4>
+
+
+Here you see your payment data and your billing history. 
+
+Update your credit card information and check all your previous payments made to TestObject.
+
 
 <h3 id="plans">Testing Plans</h3>
 
@@ -83,44 +120,6 @@ For annual plans we also accept PayPal or direct invoicing. Please contact our s
 
 All plans are auto-renewed subscriptions and you will be charged automatically on a monthly or annual basis, depending on your plan.
 You can downgrade your plan any time before the end of a billing cycle. 
-
-
-
-<h3 id="settings">Account Settings</h3>
-
-In the right corner of your screen you can administrate your Account Settings.
-<img class="center shadow" src="/img/general-reference/account-settings.png">
-<br>Click on the different tabs to manage your account.</br> 
-<img class="center shadow" src="/img/settings/profile.png"> <h4 id="profile">Profile</h4>
-Here you can change your information given at your sign up, like name and email adress. What you cannot change is your user name. It will remain the same to ensure to allocate your data with your account.
-
-<h4 id="team-accounts">Team Accounts</h4>
-If you have a Team plan, you will be able to test your companies apps in parallel with other teammates. Add and remove team members to your account.
-
-- Invite your teammates by adding their email address.
-- Wait for them to accept your invitation.
-- <b>Ready!</b> Now they are able to see your apps and test results
-
-<h4 id="password">Password</h4>
-To change your password enter your new password into the text field and save. Done!
-If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud. 
-
-- Enter your email adress or user name
-- You will receive a link via email
-- Follow this link and enter a new password.
-
-<h4 id="plans_tab">Plans</h4>
-This tab allows you to change your subscribed plans. 
-
-<b><a href="https://testobject.com/pricing" target="_blank">Plans and Pricing Overview</a></b>
-
-
-<h4>Billing</h4>
-
-
-Here you see your payment data and your billing history. 
-
-Update your credit card information and find all your previous payments made to TestObject.
 
 
 

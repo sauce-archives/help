@@ -84,8 +84,10 @@ When you share a device, the recipient can see the screen of the device in real 
 
 <h3 id="create_issue">Create Issue</h3>
 
+Crea
+
 * General info about the app under test and the device
-* Screenshot is taken whey you create an issues
+* Screenshot is taken when you create an issues
 * Device log, which you can search, filter and download
 
 <img class="center shadow" src="/img/dashboard/manual-report.png">
