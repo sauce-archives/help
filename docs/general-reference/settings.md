@@ -123,27 +123,4 @@ Here you see your payment data and your billing history.
 Update your credit card information and find all your previous payments made to TestObject.
 
 
-<h3 id="dashboard">Dashboard</h3>
 
-On the dashboard you find all important information on a specific app brought together into one screen. 
-
-
-* Basic information about the app you are currently testing
-* The device settings you chose
-* Monitor your current activitiy (Automated tests and Quality Reports that are running at the moment)
-* Quickly get an overview and access all your <a href="docs/testing-tools/automation/reporting/reports">reports</a>
-* Direct access to <a href="/docs/testing-tools/manual-testing/">Manual Testing</a>, <a href="/docs/testing-tools/quality-report/">Quality Report</a>, <a href="/docs/testing-tools/automation/">Automated Testing</a> and your collected Issues. 
-
-<img class="center shadow" src="/img/settings/app-dashboard.png">
-
-<h4>App versions/Active Version</h4>
-<h4>Device Settings</h4>
-<h4>Issue Tracker</h4>
-Add your credentials and choose the project you want the issues to appear in. We will then automatically transfer the issue to your GitHub or JIRA account. Done!
-To view the details of your issue, you will find a  link in JIRA/GitHub. Click on the link to have a closer look at the screenshots, logs and device specifications generated on TestObject.
-<h4>Testing Tools</h4>
-Direct access to <a href="/docs/testing-tools/manual-testing/">Manual Testing</a>, <a href="/docs/testing-tools/quality-report/">Quality Report</a>, <a href="/docs/testing-tools/automation/">Automated Testing</a> and your collected Issues. 
-<h4>Issues</h4>
-<h4>Activities</h4>
-
-<!--<h3 id="activity-stream">Activity Stream</h3>-->
