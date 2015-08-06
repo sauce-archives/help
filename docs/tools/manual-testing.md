@@ -9,6 +9,7 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
 <li><a href="#google-account">Add a Google Account to the Device</a></li>
 <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
+<li><a href="#create_issue">Create an Issue</a> </li>
 
 
 
@@ -80,6 +81,14 @@ When you share a device, the recipient can see the screen of the device in real 
 <br>
 <img src="/img/tools/manual/share-device.png" alt="Share Device">
 </br>
+
+<h3 id="create_issue">Create Issue</h3>
+
+* General info about the app under test and the device
+* Screenshot is taken whey you create an issues
+* Device log, which you can search, filter and download
+
+<img class="center shadow" src="/img/dashboard/manual-report.png">
 
 <!-- old: possible within the UI 
 <h3 id="toggle-connection">Use ADB to deactivate the Internet Connection</h3>
