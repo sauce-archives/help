@@ -1,5 +1,5 @@
 ---
-title: Set up Account
+title: Account
 layout: en
 permalink: docs/general-reference/settings/
 alias: /docs/settings/
@@ -30,7 +30,7 @@ To be able to start to test you need to upload an app. There are several ways to
 <br>
 
 * Upload your native Android or iOS app directly from your system
-* Test a Mobile Website by adding the Website URL and add a name and a version
+* Test a Mobile Website by adding the Website URL, a name and the version number
 * <a href="/docs/guides/continuous-integration/">Integrate a build plugin</a>, like Ant, Maven, Jenkins etc.
 * Get your latest app versions directly from HockeyApp. Enter your <a href="https://rink.hockeyapp.net/manage/auth_tokens" target="_blank">HockeyApp token</a> and you are set.
 
@@ -60,7 +60,7 @@ If you made a typo or forgot what you chose as a password, you can always <a hre
 <h4 id="plans_tab">Plans</h4>
 This tab allows you to change your subscribed <a href="#plans">Testing Plans</a>. 
 
-See our homepage for an overview of all plans and pricing: <a href="https://testobject.com/pricing" target="_blank">https://testobject.com/pricing</a>
+See our homepage for an overview of all plans and our pricing: <a href="https://testobject.com/pricing" target="_blank">https://testobject.com/pricing</a>
 
 
 <h4>Billing</h4>
@@ -76,10 +76,13 @@ Update your credit card information and check all your previous payments made to
 After the signup you will start with a <b>free plan</b>. You will be able to upload your app and try out most of the features on the platform. It's not a trial, so you will be able to stay on the free plan unlimited in time. The free plan allows you to access a selection of free Nexus devices.
 <img class="center shadow" src="/img/settings/free_devices.png"><br>
 
-The <b>professional plans</b> allow you test on all of the hundreds of real devices and enjoy additional support services, like direct live support through our <a href="https://app.testobject.com/#/chat" target="_blank">Chat Tool</a> while testing. <br>
+The <b>professional plans</b> allow you test on all of the hundreds of real devices and enjoy additional support services, e.g. direct live support through our <a href="https://app.testobject.com/#/chat" target="_blank">Chat Tool</a> while testing. <br>
 TestObject offers two distinct types of plans for Manual and Automated testing. Manual and Automated plans need to be purchased separately. This allows you to choose the best individual solution for your app testing.
 
 To change your plan go to your <a href="#settings">Account Settings</a> and select the plans tab from the menu. Upgrade and downgrade your plans from there.
+
+All standard plans underly a <b>fair use</b> policy. To ensure that no single user blocks devices permanently for other TestObject users, we reserve the right to limit the daily usage time, depending on the purchased plan.<br>
+It is an average specification. Your testing won't be terminated automatically if you exceeded your time limit during an intense testing phase. If the daily average device time is exceeded regularly we will recommend to upgrade your plan. 
 
 
 <h4>Manual Testing Plans</h4>
