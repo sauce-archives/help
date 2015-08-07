@@ -113,7 +113,8 @@ If your app requires a third-party app, like Facebook or Twitter, for login, you
 <li><b>Monkey Exerciser:</b> We use the MonkeyExerciser from Google to stress-test your app. Start a stress test and see how the monkey performs thousands of random clicks within your app. If you want to perform a stress test on multiple devices in parallel, please have a look at our <a href="/docs/testing-tools/quality-report/#stress-test" target="_blank">Quality Report.</a>.</li></p>
 
 <p><li><b>ADB Shell:</b> The Android Debug Bridge is a command line tool. It is part of the Android SDK and helps you control connected devices. At TestObject, ADB can be used to send shell commands to the devices.</li></p>
-<li><b>Upload file:</b></li>
+<!-- <li><b>Upload file:</b></li>
+<li><b>Paste Content</b></li>-->
 <br style="clear:both">
 
 <h3 id="sensors">Sensors</h3>
@@ -135,8 +136,8 @@ If your app requires a third-party app, like Facebook or Twitter, for login, you
 <p style="margin-top:40px">
 
 <p>
-<li><b>Toggle WiFi:</b></li>
-<li><b>Toggle Animations:</b></li>
+<!--<li><b>Toggle WiFi:</b></li>
+<li><b>Toggle Animations:</b></li>-->
 <li><b>Change Language:</b> You can change the language settings of the device. Click on "Change Language" and select one of the languages from the list.</li></p>
 <li><b>Add Google Account:</b> Many apps require a Google login. We provide a one-click solution that directs you to the Google login page immediately. Here, you can log in to your existing Google account or create a new one.</li></p>
 
@@ -161,4 +162,10 @@ Form some tests you need your own Google-Account on a device. We have added a fe
 * Device log, which you can search, filter and download
 
 <img class="center shadow" src="/img/dashboard/manual-report.png">
+<!--
+<h3 id="screenshot">Make a Screenshot>
 
+<h3 id="logs">Logs</h3>
+
+
+-->
