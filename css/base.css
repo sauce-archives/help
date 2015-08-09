@@ -73,6 +73,10 @@ header nav ul.nav-main {
 
 /* Main */
 
+p {
+  color: #666;
+}
+
 h2 {
   font-size: 36px;
   line-height: 36px;
@@ -103,15 +107,28 @@ h3 + h4 {
   margin-top: 20px;
 }
 
+h5 {
+  color: #444;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 0
+}
+
 .main {
   margin-bottom: 40px;
 }
 
 .main p,
-.main pre,
+.main .highlight,
 .main img {
   margin-top: 16px;
   margin-bottom: 0;
+}
+
+.main h5 + p {
+  margin-top: 6px;
 }
 
 .main ul {
@@ -119,13 +136,14 @@ h3 + h4 {
   margin-bottom: 0;
 }
 
-.main pre + p,
-.main pre + ul,
-.main pre + pre,
-.main pre + img,
+/*.main p + .highlight,*/
+.main .highlight + p,
+.main .highlight + ul,
+.main .highlight + .highlight,
+.main .highlight + img,
 .main img + p,
 .main img + ul,
-.main img + pre,
+.main img + .highlight,
 .main img + img {
   margin-top: 30px;
 }
