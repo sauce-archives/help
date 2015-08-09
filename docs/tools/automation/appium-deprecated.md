@@ -47,7 +47,7 @@ The following steps will be executed to run your Appium test:
 1. Your client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)
 2. The client session is authenticated with your API key specified in the "testobject_api_key" capability
 3. TestObject identifies the test device using the "testobject_device" capability
-4. The test is executed from your client machine through the API session, connecting to our Appium server using the standard Selenium WebDriver JSON Protocol
+4. The test is executed from your client machine through the API session, connecting to our Appium server using the standard Selenium WebDriver JSON Wire Protocol
 
 When the RemoteWebDriver/AppiumDriver is created we allocate the specified device for you. The allocation process waits for up to 15 minutes for a device to become available.
 

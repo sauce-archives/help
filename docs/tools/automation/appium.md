@@ -6,6 +6,7 @@ permalink: docs/testing-tools/automation/appium/
 
 <!--links will go to tutorials-->
 <li><a href="#introduction">Introduction</a></li>
+<li><a href="#reporting">Reporting</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
 
 <li><a href="#run-with-java">Run with Java</a></li>
@@ -31,6 +32,15 @@ Looking for the old version? Check out the <a href="/docs/testing-tools/automati
 Appium is an open-source test automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium should be easy to get started with.
 
 
+<h3 id="reporting">Reporting</h3>
+
+You will get detailed reports for each of your test runs which are structured as follows:
+
+* <strong>Suite Report</strong>: Gives you an overview of all the results when executing a suite.
+* <strong>Test Report</strong>: Presents all the details of an individual test run including logs, screenshots, etc.
+
+Read more about our <a href="/docs/testing-tools/automation/reporting">reporting for automated tests</a>.
+
 
 <h3 id="getting-started">Getting Started</h3>
 
@@ -43,7 +53,7 @@ Steps for you to get started:
 
 1. Create a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>
 2. Log into your account and add a new app (native, hybrid or web). This is where you first upload your app file or enter the URL to your website. You can change them later.
-3. Go to Automated Testing -> Appium and create a new Appium Suite. This is where you first choose the devices you want to test on. You can change them later.
+3. Go to Automated Testing -> Appium and create a new Appium Suite. This is where you first choose the devices you want to test on. You can change them later. A Suite holds all the preferences for your test executions: app version, testing devices, etc.
 
 
 <h4>Test Execution Process</h4>
@@ -54,7 +64,7 @@ How the test execution works:
 2. For each test run your client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)
 3. The client session is authenticated with your API key specified in the "testobject_api_key" capability
 4. TestObject identifies the testing device and the test report for this specific test run using the "testobject_report_id" capability
-5. The test is executed from your client machine through the API session, connecting to our Appium server using the standard Selenium WebDriver JSON Protocol. When the RemoteWebDriver/AppiumDriver is created we allocate the specified device for you. The allocation process waits for up to 15 minutes for a device to become available.
+5. The test is executed from your client machine through the API session, connecting to our Appium server using the standard Selenium WebDriver JSON Wire Protocol. When the RemoteWebDriver/AppiumDriver is created we allocate the specified device for you. The allocation process waits for up to 15 minutes for a device to become available.
 6. With a final REST call the status (passed or failed) is set for the test run. You can now view the completed Test Report.
 
 
@@ -91,7 +101,7 @@ To get the utilities as a Maven dependency, just add the following to your pom.x
 
 
 
-<h3 id="java-utilities">Java Test Setup</h3>
+<h3 id="java-test-setup">Java Test Setup</h3>
 
 With the API client from above the setup with Java is extra simple.
 
@@ -204,7 +214,7 @@ Response:
 
 <h4>Finish Suite Report</h4>
 
-Use this method to mark all test reports contained in this suite as finished.
+Use this method to mark all test reports contained in this suite report as finished.
 
 {% highlight javascript %}
 PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/{suite_report_id}/finish
@@ -229,7 +239,7 @@ Response:
 
 <h4>Finish Test Report</h4>
 
-Use this method to set the status of a specific test report.
+Use this method to set the status of a specific test report and mark it as finished.
 
 {% highlight javascript %}
 PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/{suite_report_id}/results/{test_report_id}/finish
