@@ -32,7 +32,7 @@ Change some of the settings and manipulate the device's sensors. To access all a
 
 The left menu is partitioned into several areas (from top):
 
-<li><a href="#device-management">Device Control</a> </li>
+<li><a href="#device-management">Device Managment</a> </li>
 <li><a href="#app-management">App Management</a> </li>
 <li><a href="#tools">Tools</a></li>
 <li><a href="#sensors">Sensors</a></li>
