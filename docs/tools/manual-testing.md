@@ -181,7 +181,7 @@ Form some tests you need your own Google-Account on a device. We have added a fe
 2. Click on "Add Google Accounts" in the left menu
 3. Add your Google Account to the device
 <br style="clear:both">
-
+</div>
 <h3 id="create-issue">Create an Issue</h3>
 
 Testing is only useful if you can document your findings. The best way to do so with Manual Testing is to create a 'New Issue'. <br>
@@ -200,7 +200,7 @@ You also have the option to intgrate this report with your favorite <a href="/do
 <img class="center shadow" src="/img/tools/manual/issue.png" alt="Issue Creation">
 
 
-</div>
+
 <br style="clear:both">
 
 
