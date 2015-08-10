@@ -71,7 +71,8 @@ Clicking "All Versions" gives you an overview about all the previously uploaded 
 
 <h4>Add Dependency</h4>
 Below this list of uploaded app versions, you find a button to upload a new dependancy.<br>
-Every time you test your app the dependancy gets installed on the devices along with the app version you want to test. This allows you to connect your app to another application like e.g. facebook, even if it is not standardly installed on the devices.<br>
+This allows you to connect your app to another application like e.g. facebook, even if it is not standardly installed on the devices.<br>
+
 So far this feature is only available for Android.
 
 <img class="center shadow" src="/img/dashboard/dependancy.png">

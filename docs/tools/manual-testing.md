@@ -19,14 +19,14 @@ permalink: docs/testing-tools/manual-testing/
 
 
 <h3 id="introduction">Introduction</h3>
-Manual testing is the most direct way to test your app. It is particularly suitable for the reproduction of reported bugs and see how your app looks and feels. Access one of the <a href="https://devicelab.testobject.com/" target="_blank" >available devices</a> from the cloud and fully remote control it. To control the device use Mouse and Keyboard.
+Manual testing is the most direct way to test your app. It is particularly suitable for the reproduction of reported bugs and to see how your app looks and feels. Access one of the <a href="https://devicelab.testobject.com/" target="_blank" >available devices</a> from the cloud and fully remote control it. To control the device you can use your Mouse and Keyboard.
 
-Every time you start a device a preparation and installation protocol will be run automatically. This takes a couple of seconds and guarantees a fresh, standard device for every new user.
+A preparation and installation protocol will be executed automatically every time a device gets started. This takes a couple of seconds and guarantees a fresh, standard device for every new user. After a testing session was ended the previous app and all data gets cleaned from the device.
 
 
-You can change some of the settings and sensors of the devices. To access the features just open the left menu. The entire spectrum of options is only available for Android so far. For iOS some of the features are not available yet, but will be implemented step by step.
+Inside the tool you can directly change some of the settings and manipulate the device's sensors. To access all avialable features open the left menu. The entire spectrum of options is only available for Android so far. The features will be implemented step by step for iOS, too.
 
-The Control Menu is partitioned into several areas (from top):
+The left menu is partitioned into several areas (from top):
 
 <li><a href="#device-control">Device Control</a> </li>
 <li><a href="#app-control">App Control</a> </li>
@@ -45,10 +45,10 @@ The Control Menu is partitioned into several areas (from top):
 <ul>
 <p style="margin-top:40px">
 
-<li><b>Stop Session:</b> Will terminate your session.</li>
-<li><b>Switch Device:</b> Starts a different device</.li>
+<li><b>Stop Session:</b> Will terminate your session and you will return to the dashboard.</li>
+<li><b>Switch Device:</b> See the list with all available devices and continue your test right away on a different device</.li>
 <li><b>Share Device:</b> Generates a unique link to watch a live feed of your session. 
-<li><b>Report Problem:</b> Opens a ticket for our developers.</li></p>
+<li><b>Report Problem:</b> You experienced technical problem with our devices? Help us, so it won't happen again! Describe the problem you experienced and open a ticket for our developers to fix it asap.</li></p>
 </ul>
 
 <br style="clear:both">
@@ -74,7 +74,7 @@ When you share a device, the recipient can see the screen of the device in real 
 
 <p style="margin-top:40px">
 <ul>
-<li><b>Restart App:</b> Closes and starts the app again.</li>
+<li><b>Restart App:</b> Closes and starts the app again without a full reinstallation.</li>
 <li><b>Switch App:</b> Select a different version of your app</li>
 <li><b>Install Dependancy:</b> Install an additional app to interact with. 
 </p>
