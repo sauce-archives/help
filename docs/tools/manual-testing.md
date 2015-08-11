@@ -17,7 +17,7 @@ permalink: docs/testing-tools/manual-testing/
     <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
     <li><a href="#google-account">Add a Google Account to the Device</a></li>
     <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
-    <li><a href="#create_issue">Create an Issue</a> </li>
+    <li><a href="#create-issue">Create an Issue</a> </li>
 </ul>
 
 

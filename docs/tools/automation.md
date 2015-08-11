@@ -10,7 +10,11 @@ permalink: docs/testing-tools/automation/
 <li><a href="#scripts">Executing Test Scripts</a></li>
 <li><a href="#reporting">Execution Reports</a></li>
 <li><a href="#continuous-integration">Continuous Integration</a></li>
-
+<ul><li><a href="/docs/guides/appium-travisci/">Run Appium Tests with Travis CI</a></li>
+        <li><a href="/docs/guides/jenkins-ant-task/">Ant: Jenkins Integration with Ant</a></li>
+        <li><a href="/docs/guides/jenkins-gradle-task/">Gradle: Jenkins Integration with Gradle</a></li>
+        <li><a href="/docs/guides/ant-task">Automated Test Execution with Ant</a></li>
+        </ul>
 
 <h3 id="introduction">Introduction</h3>
 

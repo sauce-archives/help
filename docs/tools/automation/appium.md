@@ -20,7 +20,8 @@ permalink: docs/testing-tools/automation/appium/
 
 <h3 id="introduction">Introduction</h3>
 
-Appium is an open-source test automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium should be easy to get started with.
+Appium is an open-source test automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium should be easy to get started with.<br>
+If not have a look at our <a href="/docs/guides/appium-ser/">Appium Tutorial Series</a>, where we help you to set up Appium on your system.
 
 
 <h3 id="getting-started">Getting Started</h3>
