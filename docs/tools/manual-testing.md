@@ -20,6 +20,11 @@ permalink: docs/testing-tools/manual-testing/
     <li><a href="#create-issue">Create an Issue</a> </li>
 </ul>
 
+<br>
+
+<center>
+<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/XsGcDMdkoB0" frameborder="0" allowfullscreen></iframe>
+</center>
 
 <h3 id="introduction">Introduction</h3>
 Manual testing is the most direct way to test your app. It is particularly suitable for the reproduction of reported bugs and to see how your app looks and feels. Access one of the <a href="https://devicelab.testobject.com/" target="_blank" >available devices</a> from the cloud and fully remote control it. To control the device you can use your Mouse and Keyboard.
