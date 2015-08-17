@@ -267,6 +267,43 @@ Response:
 {% endhighlight %}
 
 
+<h4>Update Suite</h4>
+
+Use this method to update the properties of a suite. Set frameworkVersion to "LATEST" if you want to use the latest available version.
+
+{% highlight javascript %}
+PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}
+{% endhighlight %}
+
+Request body:
+
+{% highlight javascript %}
+{
+	"id": 1,
+	"title": "My new suite title",
+	"appVersionId": 1,
+	"frameworkVersion": "1.3.7",
+	"deviceIds": [
+		"Fairphone_real"
+	]
+}
+{% endhighlight %}
+
+Response:
+
+{% highlight javascript %}
+{
+	"id": 1,
+	"title": "My new suite title",
+	"appVersionId": 1,
+	"frameworkVersion": "1.3.7",
+	"deviceIds": [
+		"Fairphone_real"
+	]
+}
+{% endhighlight %}
+
+
 
 <h3 id="general-test-setup">General Test Setup</h3>
 
@@ -377,7 +414,7 @@ Use the following command to upload your app file. Alternatively, you can upload
 curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" --data-binary @your_app.apk
 {% endhighlight %}
 
-The response of the curl upload command will be the ID of the newly uploaded app.
+The response of the curl upload command will be the ID of the newly uploaded app. Use it to <a href="#rest-api">update the appVersionId</a> of your suite.
 
 
 Optionally, you can send the following header parameters:
