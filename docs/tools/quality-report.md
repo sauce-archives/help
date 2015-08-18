@@ -11,6 +11,12 @@ permalink: docs/testing-tools/quality-report/
 <li><a href="#process-5-steps-to-sanity">Process: 5 Steps to Sanity</a></li>
 <li><a href="#faq">Quality Report - FAQ</a></li>
 
+<br>
+
+<center>
+<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/tpaaURK9LEk" frameborder="0" allowfullscreen></iframe>
+</center>
+
 <h3 id="introduction">Introduction</h3>
 We know mobile app testing can be complex and time consuming. This is why we provide a simple and fast solution to check the functionality of your app, called the Quality Report. The Quality Report automatically runs multiple tests of your app and displays the results clearly on the dashboard. You can also share the results via a link or download the files. Tests included in the Quality Report are:
 
