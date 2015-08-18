@@ -13,5 +13,4 @@ Appium has a lot of potential as an open-source framwork for test automation. To
 <li><a href="/docs/guides/appium-osx-android/">Appium Android testing on OS X</a><br /></li>
 <li><a href="/docs/guides/appium-osx-ios/">Appium iOS testing on OS X</a><br /></li>
 <li><a href="/docs/guides/appium-maven/">Running Appium with Maven</a></li>  
-<li><a href="/docs/guides/creating-ipa/">Creating IPA file for Appium tests</a></li>
 </ul>

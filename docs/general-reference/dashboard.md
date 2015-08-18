@@ -46,6 +46,13 @@ For automated testing you will find attached a full <a href="/docs/testing-tools
 
 Ensure optimal bug fixing processes by connecting your TestObject account with your favorite issue tracker. So far <strong>Jira and GitHub</strong> are supported.
 
+<h4>Connect Jira</h4>
+
+
+
+<h4>Connect GitHub</h4>
+
+
 To set up your issue tracker add your credentials and choose the project you want the issues to appear in. You are ready to go! 
 When you create an issue it will be transferred automatically to your Jira or GitHub account. 
 
