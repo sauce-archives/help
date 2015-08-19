@@ -177,6 +177,23 @@ password=
 {% endhighlight %}
 
 
+<h4>Read Devices</h4>
+
+Use this method to read the IDs of the devices which you had selected for the specified suite.
+
+{% highlight javascript %}
+GET https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/devices
+{% endhighlight %}
+
+Response:
+
+{% highlight javascript %}
+[
+	"Fairphone_real"
+]
+{% endhighlight %}
+
+
 <h4>Start Suite Report</h4>
 
 Use this method create a new suite report including its test reports.
