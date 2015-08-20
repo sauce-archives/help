@@ -1,7 +1,7 @@
 ---
-title: Jenkins Configuration with Gradle
+title: Running Appium tests through Jenkins
 layout: en
-permalink: docs/guides/jenkins-gradle-task/
+permalink: docs/guides/appium-jenkins-gradle/
 ---
 
 To get the most out of your tests, automate their execution within your continuous integration environment. This can be easily achieved by running TestObject Gradle tasks within a Continuous Integration server like Jenkins. This guide will provide a working example that covers a basic scenario: the one in which you need to run an Appium test you are hosting on GitHub against an app you have uploaded on TestObject.
