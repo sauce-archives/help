@@ -24,7 +24,7 @@ What you have in front of you is the Appium server. This piece of software will 
 
 ### Testing on physical Android devices
 
-First of all, you need to navigate to the Appium Android settings by clicking the <img style="display: inline-block; vertical-align: middle;" src="/img/guides/appium-osx-android/icon_android.png">
+First of all, you need to navigate to the Appium Android settings by clicking the <img style="display: inline-block; vertical-align: absmiddle;" src="/img/guides/appium-osx-android/icon_android.png">
 icon on the top. Don't be intimidated by the amount of options that pop up, you won't need to fill in all the forms. Remember to also check the round button just below the icon to make sure you are targeting the right platform.
 
 ![Appium server screenshot](/img/guides/appium-osx-android/screenshot2.png)
