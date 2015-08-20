@@ -4,65 +4,50 @@ layout: en
 permalink: docs/guides/jenkins-gradle-task/
 ---
 
-For a full continuous integration process automate the execution of your tests created with TestObject. This can be easily achieved by running TestObject Gradle Tasks within a Continuous Integration Server like Jenkins.
+To get the most out of your tests, automate their execution within your continuous integration environment. This can be easily achieved by running TestObject Gradle tasks within a Continuous Integration server like Jenkins. This guide will provide a working example that covers a basic scenario: the one in which you need to run an Appium test you are hosting on GitHub against an app you have uploaded on TestObject.
 
-What you need:
+What you will need:
 
-+ <strong>A Running Jenkins Installation</strong>
-+ <strong>A Jenkins Project for your app</strong>
-+ <strong>Installed Jenkins Gradle Plugin</strong> With installed Gradle Version <strong>1.6</strong>
++ <strong>Administrator access to a running Jenkins installation</strong>
++ <strong>A series of plugins:</strong>
+    * The Github Jenkins plugin, for accessing the test code directly from GitHub
+    * The Environment Injector Plugin to inject environment variables which will provide our test setup with the needed capabilities
+    * The JUnit Jenkins plugin, for displaying test results
 
-<h3 id="step1">Step 1: Download the Gradle Build File</h3>
+<h3 id="step1">Step 1: adapt your test setup</h3>
 
-+ Download the TestObject: <a href="https://github.com/testobject/calculator/blob/master/build.gradle" target="_blank">build.gradle</a>
+First of all, you will need to modify your existing setup so that it retrieves the TESTOBJECT_API_KEY, TESTOBJECT_APP_ID and TESTOBJECT_DEVICE capabilities from its runtime environment. This will allow you to easily change their values from Jenkins at every execution, instead of being forced to modify the actual code. For example, in a Java setup you would have something that looks like this:
 
-<h3 id="step2">Step 2: Add the build.gradle file</h3>
-
-+ Add the file into <strong>your app</strong> repository.
-{% highlight xml %}
-/build.gradle
+{% highlight java %}
+    String apiKey = System.getenv("TESTOBJECT_API_KEY");
+    int appId = Integer.parseInt(System.getenv("TESTOBJECT_APP_ID"));
+    String deviceId = System.getenv("TESTOBJECT_DEVICE");
 {% endhighlight %}
 
-* <strong>Or</strong> extend your existing Gradle Build File
+These values would the be sent through the appropriate DesiredCapabilities object:
 
-<h3 id="step3">Step 3: Install the Environment Injector Plugin in your Jenkins</h3>
-
-+ <strong>Jenkins</strong>
-Login into your Jenkins server and go to Manage Jenkins > Manage Plugins > Available > Search for Environment Injector Plugin.
-+ <strong>Install</strong>
-Click on "Download now and install after restart".
-+ <strong>Wait</strong>
-Wait for the installation to be finished.
-
-<h3 id="step3">Step 4: Configure your Jenkins Project</h3>
-
-+ <strong>Configure</strong>
-Go to the project configuration of your app project. (Configure)
-+ <strong>Inject environment variables</strong>
-Copy the following code to the <strong>Properties Content</strong> field and replace the variables with your username, password, app, suite id and APK path.
-{% highlight xml %}
-ANDROID_HOME=/var/lib/jenkins/tools/android-sdk/
-testobjectusername=USER_NAME
-testobjectpassword=TESTOBJECT_PW
-testobjectappname=APPNAME
-testobjectactivateversion=true
-testobjectuploadversion=true
-testobjectruncheckup=true
-testobjectsuites=[1,2]
+{% highlight java %}
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, apiKey);                                             
+    capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_TEST_REPORT_ID, testReportId); 
 {% endhighlight %}
 
-<img class="center shadow" src="/img/guides/jenkins-gradle-env-config.png">
+<h3 id="step2">Step 2: create a Jenkins job</h3>
 
-+ <strong>Add Gradle Task</strong>
-Add a new “Invoke Gradle Script” (Build > Add Build Step > Invoke Gradle Script)
+Select "new item" in your main Jenkins screen (you will only see this option if you have administrator priviledges).
+Select new freestyle Jenkins project and insert a title of your choice, then proceed. Scroll down to the "Source code management" section, select "Git" and enter the URL of the repository where your test is being hosted.
 
+Next, scroll down to the "Build" section, click "Add build step" and select "Invoke Gradle script". Here select the "Use Gradle Wrapper" option and make sure the boxes next to "Make gradlew executable" are checked and "From Root Build Script Dir" are checked. The last step would be to insert the "clean" and "test" tasks into the dedicated field (as a single string, so "clean test"). This way your tests will be executed from a clean start every time. If you need to run only some of the tests in your project, modify your build.gradle file to exclude the excess ones or specify all those that should be included.
+An example of this would be:
 
-+ <strong>Edit Task</strong> Configure "testobjectUpload" as Gradle Task in the Tasks field.
+{% highlight java %}
+test {
+    exclude 'your/package/name/TestToIgnore.class'
+}
+{% endhighlight %}
 
-<img class="center shadow" src="/img/guides/jenkins-gradle-config.png">
+You can find more information on how to do this on the official [Gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html).
 
+Once this is done, scroll down to the "Post-build Actions" section and, from the "Add post-build action" menu, select "Publish JUnit test result report". This way you will have access to the results of your tests not only on TestObject, but also directly from Jenkins.
 
-<strong>Click Save. Now you are done!</strong></br></br>
-
-You can easily make changes to the build.gradle file if you want to execute other build steps also.
-
+<h3 id="step3">Step 3: run your tests!</h3>
