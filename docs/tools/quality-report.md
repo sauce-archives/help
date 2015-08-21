@@ -14,7 +14,7 @@ permalink: docs/testing-tools/quality-report/
 <br>
 
 <center>
-<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/tpaaURK9LEk" frameborder="0" allowfullscreen></iframe>
+<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/j06spPKaRy4" frameborder="0" allowfullscreen></iframe>
 </center>
 
 <h3 id="introduction">Introduction</h3>

@@ -9,7 +9,7 @@ The dashboard provides all important <b>information and settings on a specific a
     <li><a href="#tool-access">Access Testing Tools</a></li>
     <li><a href="#issues">Manage Issues</a></li>
     <li><a href="#issue-tracker">Connect Issue Tracker</a></li>
-    <li><a href="#activities">Control Activities</a></li>
+    <li><a href="#activities">Keep Track of Your Activities</a></li>
     <li><a href="#app-versions">Manage Active App Version</a></li>
     <li><a href="#device-settings">Edit Device Settings</a></li>
 </ul>
@@ -61,7 +61,7 @@ To view the details of your issue, you will find a  link in JIRA/GitHub.
 Click on the link to have a closer look at the screenshots, logs and device specifications generated on TestObject.
 <img class="center shadow" src="/img/dashboard/jira-github.png">
 
-<h3 id="activities">Control Activities</h3>
+<h3 id="activities">Keep Track of Your Activities</h3>
 
 When you start a <a href="/docs/testing-tools/quality-report/">Quality Report</a> or execute <a href="/docs/testing-tools/automation/">Automated Tests</a> it appears in the activity area.<br>
 Each currently executing entry displays its progress, so you will be able to monitor its progress. Once an item is done processing it moves into the “Recent Activity” section where it is stored for future review. Each of the items is clickable. Quickly navigate between the results and review them.

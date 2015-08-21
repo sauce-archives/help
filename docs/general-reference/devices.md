@@ -19,7 +19,7 @@ A user accessing a device means that this phone is exclusively assigned to this 
 
 Every time a session starts the app gets installed freshly on the respective phone and the chosen settings are applied. At the end of every session the device gets set back to its default settings, the phone is getting cleaned completely. <strong>None of your data remains on the phone.</strong>
 
-Every user will be able to use a fresh, standard phone that is not modified. This guarantess reliabele, realistic test runs for every user and application.
+Every user will be able to use a <strong>fresh, standard phone that is not modified</strong>. This guarantess reliabele, realistic test runs for every user and application.
 
 
 

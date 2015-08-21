@@ -18,13 +18,20 @@ alias: /docs/settings/
 
 <h3 id="get_started">Get Started</h3>
 
+<h4>Sign up</h4>
+
 Start testing your app on the TestObject cloud within less than a minute. 
-Go to the <a href="https://app.testobject.com/#/signup">sign up</a> page and enter your basic information.
+Go to the <a href="https://app.testobject.com/#/signup">sign up page</a> and enter your basic information.
 <img class="center shadow" src="/img/settings/Signup_form.png">
 <br>
-You will receive an email with a confirmation link which you have to follow.<br>
-Now you are registered as a user with TestObject and are able to sign in with your previously set password.<br>
-To be able to start to test you need to upload an app. There are several ways to do that:
+After you agree to the <a href="https://testobject.com/terms" target="_blank">Terms of Services</a>, you will receive an email with a confirmation link which you have to follow. That completes the registration process.
+<br>
+Now you are <strong>registered as a free user</strong> with TestObject. As a free user you are enabled to test on our <a href="#plans">free devices</a>. To access all of the available devices, you need to upgrade your plan within your <a href="#settings">Account Settings</a>.<br>
+Sign in with your previously set password.
+
+<h4>Upload an App</h4>
+
+In order to carry out your first test, you need to <strong>upload an app</strong>. There are several ways to do that:
 <br>
 <img class="center shadow" src="/img/settings/upload_app.png">
 <br>
@@ -50,7 +57,7 @@ If you have a Team plan, you will be able to test your companies apps in paralle
 - <b>Ready!</b> Now they are able to see your apps and test results
 
 <h4 id="password">Password</h4>
-To change your password enter your new password into the text field and save. Done!
+To change your password enter your new password into the text field and save. Done!<br>
 If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud. 
 
 - Enter your email adress or user name
