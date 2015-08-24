@@ -87,7 +87,7 @@ To get the utilities as a Maven dependency, just add the following to your pom.x
     <dependency>
         <groupId>org.testobject.extras.appium</groupId>
         <artifactId>appium-java-api</artifactId>
-        <version>0.0.5</version>
+        <version>0.0.6</version>
     </dependency>
 </dependencies>
 
@@ -196,7 +196,7 @@ Response:
 
 <h4>Start Suite Report</h4>
 
-Use this method create a new suite report including its test reports.
+Use this method to create a new suite report including its test reports.
 
 {% highlight javascript %}
 POST https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/start
