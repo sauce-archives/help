@@ -23,7 +23,7 @@ permalink: docs/testing-tools/manual-testing/
 <br>
 
 <center>
-<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/XsGcDMdkoB0" frameborder="0" allowfullscreen></iframe>
+<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/_Jj3zPIq96E" frameborder="0" allowfullscreen></iframe>
 </center>
 
 <h3 id="introduction">Introduction</h3>
