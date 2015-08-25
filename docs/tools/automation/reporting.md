@@ -15,6 +15,12 @@ permalink: docs/testing-tools/automation/reporting/
 <li><a href="#individual-execution">Individual Test Execution Results</a></li>
 <li><a href="#issue-tracking">Issue Tracking</a></li>
 
+<br>
+
+<center>
+<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/TEMs3DtyQxg" frameborder="0" allowfullscreen></iframe>
+</center>
+
 
 
 <h3 id="introduction">Introduction</h3>
