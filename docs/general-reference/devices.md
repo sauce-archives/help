@@ -9,7 +9,7 @@ alias: /docs/devices/
 <li><a href="#device-list">Device List</a></li>
 
 <h3 id="real-devices-how-it-works">Real Devices: How It Works</h3>
-TestObject hosts hundreds of real <strong>real smartphones and tablets in the cloud</strong> for manual and automated testing. You can remotely control all devices directly from your browser. 
+TestObject hosts hundreds of <strong>real smartphones and tablets in the cloud</strong> for manual and automated testing. You can remotely control all devices directly from your browser. 
 
 The devices are located at TestObjects' data center in Germany, connected to servers. TestObject uses a virtual networking computer (VNC) to transmit mouse and keyboard events on a device. The VNC client on the device relays back the graphical screen, and you can control it remotely. It is almost like holding the device in your hands.
 

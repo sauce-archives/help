@@ -157,7 +157,7 @@ public class CalculatorTest {
 
 <h3 id="run-with-any-language">Run with Any Language</h3>
 
-Run your Appium tests on TestObject no matter what language you're using. Just connect to our <a href="#rest-api">REST API</a> and add <a href="general-test-setup">two extra capabilities</a> to your test.
+Run your Appium tests on TestObject no matter what language you're using. Just connect to our <a href="#rest-api">REST API</a> and add <a href="#general-test-setup">two extra capabilities</a> to your test.
 
 
 
