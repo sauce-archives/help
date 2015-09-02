@@ -20,12 +20,12 @@ Once you run Appium, you should be confronted with a screen that looks more or l
 What you have in front of you is the Appium server. This piece of software will allow us to communicate with our device, be it local or remote (in our case the device is sitting right next to our machine).
 
 ### Testing on physical iOS devices
-First of all, you need to navigate to the Appium iOS settings by clicking the <img style="display: inline-block" src="/img/guides/appium-osx-ios/icon_ios.png">
+First of all, you need to navigate to the Appium iOS settings by clicking the <img id="inline-icon" src="/img/guides/appium-osx-ios/icon_ios.png">
 icon on the top. Don't be intimidated by the amount of options that pop up, you won't need to fill in all the forms. Remember to also check the round button just below the icon to make sure you are targeting the right platform.
 
 ![Appium server screenshot](/img/guides/appium-osx-ios/screenshot2.png)
 
-The first thing you need to do is point the Appium server to the IPA file that you want to test. Simply check the "App Path" box and paste the path to the IPA file in the text field, or navigate to it by clicking on the <img style="display: inline-block" src="/img/guides/appium-osx-ios/button_choose.png"> button.
+The first thing you need to do is point the Appium server to the IPA file that you want to test. Simply check the "App Path" box and paste the path to the IPA file in the text field, or navigate to it by clicking on the <img id="inline-icon" src="/img/guides/appium-osx-ios/button_choose.png"> button.
 
 Next, move a little further down the screen until you find the "Force Device" field, under "Device Settings". Check the box and select the device you want to test on. Although in the end you can insert whatever text string you like, this step is mandatory.
 
@@ -33,11 +33,11 @@ Immediately below is the UDID field. Select the checkbox and open up Xcode. Navi
 
 Next up, you will need to check the "Full reset" box. This tells Appium to reset the state of the application we are testing every time we run a test.
 
-Lastly, you will need to check if Appium knows the path to your Xcode application. Click on the "Advanced" tab and check that the path in the bottom field is correct. If there is none, just click the <img style="display: inline-block" src="/img/guides/appium-osx-ios/button_change.png"> button and navigate to Xcode's location.
+Lastly, you will need to check if Appium knows the path to your Xcode application. Click on the "Advanced" tab and check that the path in the bottom field is correct. If there is none, just click the <img id="inline-icon" src="/img/guides/appium-osx-ios/button_change.png"> button and navigate to Xcode's location.
 
 ![Appium server screenshot](/img/guides/appium-osx-ios/screenshot3.png)
 
-You are now ready to start the server. Close the iOS settings screen and select the <img style="display: inline-block" src="/img/guides/appium-osx-ios/button_launch.png"> button. You should see some information being printed on the Appium terminal. After a couple of seconds you can click on the button with the <img style="display: inline-block" src="/img/guides/appium-osx-ios/icon_inspector.png"> icon, which will open up the Appium Inspector. At this point the app will be installed and launched on your device.
+You are now ready to start the server. Close the iOS settings screen and select the <img id="inline-icon" src="/img/guides/appium-osx-ios/button_launch.png"> button. You should see some information being printed on the Appium terminal. After a couple of seconds you can click on the button with the <img id="inline-icon" src="/img/guides/appium-osx-ios/icon_inspector.png"> icon, which will open up the Appium Inspector. At this point the app will be installed and launched on your device.
 
 The purpose of the Inspector is to allow you to reference the UI elements of the app you are testing so that you can interact with them.
 
@@ -134,7 +134,7 @@ public class MyKomootTest {
 }
 {% endhighlight %}
 
-Save the project, open up the Appium server, click on the <img style="display: inline-block" src="/img/guides/appium-osx-ios/button_launch.png"> button. You should see some messages appear in the Appium server log confirming that the launch has been successful, and that the server is now on standby, ready to receive connections.
+Save the project, open up the Appium server, click on the <img id="inline-icon" src="/img/guides/appium-osx-ios/button_launch.png"> button. You should see some messages appear in the Appium server log confirming that the launch has been successful, and that the server is now on standby, ready to receive connections.
 
 Our connection will come from the code we have just written. Go back to the IDE, run the project and wait for the magic to happen. If everything went as expected, you should see the app pop up on your device and the "Login with email" button being pressed.
 
