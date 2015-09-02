@@ -153,6 +153,38 @@ public class CalculatorTest {
 }
 {% endhighlight %}
 
+<h4>Java Test Setup with Continuous Integration</h4>
+
+Running test suites with TestObject from your CI platform is easy. Our Java client allows you to define the values of the parameters you have to provide the TestObject platform through environment variables. Specifically, you can provide the following environment variables:
+
+* {% highlight java %}TESTOBJECT_API_ENDPOINT{% endhighlight %}, which is by default https://app.testobject.com:443/api, so pointing to our platform;
+* {% highlight java %}TESTOBJECT_API_KEY{% endhighlight %}, which you always have to provide as it identifies the app you want to run your tests on;
+* {% highlight java %}TESTOBJECT_SUITE_ID{% endhighlight %}, which is also mandatory as it tells our platform in which suite it should store the test results;
+* {% highlight java %}TESTOBJECT_DEVICE_IDS{% endhighlight %}, which can be used to override the device selection you usually do through our web UI;
+* {% highlight java %}TESTOBJECT_TIMEOUT{% endhighlight %}, which controls the maximum duration of the test suite.
+
+You can set the value of these environment variables through your CI server (<a href="/docs/guides/continuous/appium-jenkins-gradle">for example Jenkins</a>) and have a better, more flexible Appium testing experience!
+
+<h4>Running tests locally</h4>
+If you need to quickly switch to testing on a local device, just set the "testLocally" flag to true through the TestObject annotation, or set the environment variable "TESTOBJECT_TEST_LOCALLY" to true.
+
+
+
+<h4>Java Test Setup with Continuous Integration</h4>
+
+Running test suites with TestObject from your CI platform is easy. Our Java client allows you to define the values of the parameters you have to provide the TestObject platform through environment variables. Specifically, you can provide the following environment variables:
+
+* {% highlight java %}TESTOBJECT_API_ENDPOINT{% endhighlight %}, which is by default https://app.testobject.com:443/api, so pointing to our platform;
+* {% highlight java %}TESTOBJECT_API_KEY{% endhighlight %}, which you always have to provide as it identifies the app you want to run your tests on;
+* {% highlight java %}TESTOBJECT_SUITE_ID{% endhighlight %}, which is also mandatory as it tells our platform in which suite it should store the test results;
+* {% highlight java %}TESTOBJECT_DEVICE_IDS{% endhighlight %}, which can be used to override the device selection you usually do through our web UI;
+* {% highlight java %}TESTOBJECT_TIMEOUT{% endhighlight %}, which controls the maximum duration of the test suite.
+
+You can set the value of these environment variables through your CI server (<a href="/docs/guides/continuous/appium-jenkins-gradle">for example Jenkins</a>) and have a better, more flexible Appium testing experience!
+
+<h4>Running tests locally</h4>
+If you need to quickly switch to testing on a local device, just set the "testLocally" flag to true through the TestObject annotation, or set the environment variable "TESTOBJECT_TEST_LOCALLY" to true.
+
 
 
 <h3 id="run-with-any-language">Run with Any Language</h3>
