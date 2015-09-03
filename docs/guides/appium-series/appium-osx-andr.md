@@ -6,7 +6,7 @@ permalink: docs/guides/appium-osx-android/
 Appium supports Android testing on Windows, OS X and Linux. This tutorial will help you set up Appium on OS X and run your first test. As an example we will be using the Komoot app which will run on a local Android device. For the purpose of this demonstration we will be writing tests in the Java programming language.
 
 <center>
-<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/yatZBNufNVw" frameborder="0" allowfullscreen></iframe>
+<iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/watch?v=PfdH4BNK-Xk" frameborder="0" allowfullscreen></iframe>
 </center>
 
 ## What you will need
