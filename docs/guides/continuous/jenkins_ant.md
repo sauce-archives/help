@@ -1,10 +1,10 @@
 ---
-title: Jenkins Configuration with Ant
+title: Running Robotium and Espresso through Jenkins with Ant
 layout: en
-permalink: docs/guides/jenkins-ant-task/
+permalink: docs/guides/robotium-espresso-jenkins-ant/
 ---
 
-For a full continuous integration process automate the execution of your tests created with TestObject. This can be easily achieved by running TestObject Ant Tasks within a Continuous Integration Server.
+To get the most out of your tests, automate their execution within your continuous integration environment. This can be easily achieved by running TestObject aNT tasks within a Continuous Integration server like Jenkins.
 
 What you need:
 
@@ -16,7 +16,7 @@ What you need:
 <h3 id="step1">Step 1: Add the Ant Build File and Ant Plugin to your repository</h3>
 
 + Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.08.06.jar" target="_blank">testobject-ant-3.08.06.jar</a>
-+ Download the TestObject: <a href="https://raw2.github.com/testobject/calculator/master/testobject/build.xml" target="_blank">build.xml</a>
++ Download the TestObject: <a href="https://github.com/testobject/calculator/build.xml" target="_blank">build.xml</a>
 
 <h3 id="step2">Step 2: Add the files to your app repository</h3>
 
@@ -51,8 +51,5 @@ apk.path=PATH_TO_YOUR_APK_BASED_ON_BUILD_XML_PATH
 apk.version.name=demoApp-$BUILD_NUMBER
 {% endhighlight %}
 
-
-
 <strong>Click Save. Now you are done!</strong></br></br>
 You can easily make changes to the build.xml if you want to run more batches at a time for example.
-
