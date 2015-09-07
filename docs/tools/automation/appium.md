@@ -109,7 +109,7 @@ With the API client from above the setup with Java is extra simple.
 Add the following to your existing Appium Test:
 
 1. Add @TestObject and @RunWith class annotations
-2. Add the TestObjectTestResultWatcher annotated with @Rule 
+2. Add the TestObjectTestResultWatcher annotated with @Rule
 3. Set TESTOBJECT_API_KEY and TESTOBJECT_TEST_REPORT_ID capabilities
 4. Pass the Appium driver to the watcher using setAppiumDriver
 
@@ -152,6 +152,102 @@ public class CalculatorTest {
 
 }
 {% endhighlight %}
+
+# Running your Appium tests on TestObject
+
+There are several ways of running your Appium tests on our platform. Here we go through them in increasing order of complexity and refinement.
+
+## The basic, 5 minutes setup
+
+Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic setup for testing a simple calculator app could look like this:
+
+public class BasicTestSetup {
+
+    /* This is the key piece of our test, since it allows us to
+   * connect to the device we will be running the app onto.*/
+    private AppiumDriver driver;
+
+    /* This is the setup that will be run before the test. */
+    @Before
+    public void setUp() throws Exception {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        /* These are the capabilities we must provide to run our test on TestObject */
+        capabilities.setCapability("testobject_api_key", "YOUR_API_KEY");
+        capabilities.setCapability("testobject_app_id", "1");
+        capabilities.setCapability("testobject_device", "Motorola_Moto_G_2nd_gen_real");
+
+        /* The driver will take care of establishing the connection, so we must provide
+        * it with the correct endpoint and the requested capabilities. */
+        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+
+    }
+
+    /* We disable the driver after EACH test has been executed. */
+    @After
+    public void tearDown(){
+        driver.quit();
+    }
+
+    @Test
+    public void twoPlusTwoOperation() {
+        /* Your test. */
+    }
+
+}
+
+The only needed dependencies for running such a test would be the Appium Java Client and the Selenium Standalone Server.
+
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential. Your tests will run on the device you have chosen, and you will be able to access a number of information regarding them, but the results of the tests won't be registered in the test reports on the platform.
+
+This problem can be easily fixed by upgrading to a more powerful setup:
+
+public class BasicTestSetup {
+
+    /* This is the key piece of our test, since it allows us to
+   * connect to the device we will be running the app onto.*/
+    private AppiumDriver driver;
+
+    /* Sets the test name to the name of the test method. */
+    @Rule
+    public TestName testName = new TestName();
+
+    /* Takes care of sending the result of the tests over to TestObject. */
+    @Rule
+    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
+
+    /* This is the setup that will be run before the test. */
+    @Before
+    public void setUp() throws Exception {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setCapability("testobject_api_key", "YOUR_API_KEY");
+        capabilities.setCapability("testobject_app_id", "1");
+        capabilities.setCapability("testobject_device", "Motorola_Moto_G_2nd_gen_real");
+
+        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+
+        /* IMPORTANT! We need to provide the Watcher with our initialized AppiumDriver */
+        resultWatcher.setAppiumDriver(driver);
+
+    }
+
+    /* IMPORTANT! driver.quit() is not called anymore, as the Watcher is not
+       taking care of this. You can get rid of the tearDown method. */
+
+    @Test
+    public void twoPlusTwoOperation() {
+        /* Your test. */
+    }
+
+}
+
+
+
+ADD REPOSITORY
+
 
 <h4>Java Test Setup with Continuous Integration</h4>
 
