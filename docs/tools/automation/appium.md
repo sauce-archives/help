@@ -197,13 +197,20 @@ public class BasicTestSetup {
 
 }
 
+Along with the mandatory capabilities we have specified, you can send over some optional ones to customize your test runs:
+
+* testobject_appium_version, if you want to run your tests against an Appium version other than the default one (1.3.5)
+* testobject_test_name, if you want to specify a name for your test that will be displayed in place of the default one
+* testobject_suite_name, if you want to apply a label to your tests so that they are easier to group / find later on
+
 The only needed dependencies for running such a test would be the Appium Java Client and the Selenium Standalone Server.
 
 With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential. Your tests will run on the device you have chosen, and you will be able to access a number of information regarding them, but the results of the tests won't be registered in the test reports on the platform.
 
+## The intermediate setup (watcher without suites)
 This problem can be easily fixed by upgrading to a more powerful setup:
 
-public class BasicTestSetup {
+public class MyTest {
 
     /* This is the key piece of our test, since it allows us to
    * connect to the device we will be running the app onto.*/
@@ -244,10 +251,64 @@ public class BasicTestSetup {
 
 }
 
+This setup allows you to register your test results on TestObject. If you are running many tests, it would probably make sense to organize them in suites. Read on to find out how.
+
+## The complete setup (watcher and suites)
+To make sure you can distinguish and access your test results more efficiently, it is highly recommended that you use test suites. It doesn't take much to upgrade your setup to be able to run these:
+
+/* You must add these two annotations on top of your test class.*/
+@TestObject(testObjectApiKey = "YOUR_API_KEY", testObjectSuiteId = YOUR_SUITE_NUMBER)
+@RunWith(TestObjectAppiumSuite.class)
+public class BasicTestSetup {
+
+    private static final String EXPECTED_RESULT_FOUR = "4";
+    private static final String EXPECTED_RESULT_ERROR = "Error";
+
+    /* This is the key piece of our test, since it allows us to
+   * connect to the device we will be running the app onto.*/
+    private AppiumDriver driver;
+
+    @Rule
+    public TestName testName = new TestName();
+
+    @Rule
+    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
+
+    /* This is the setup that will be run before the test. */
+    @Before
+    public void setUp() throws Exception {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
+        capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
+//        capabilities.setCapability("testobject_app_id", "1");
+
+        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+
+        resultWatcher.setAppiumDriver(driver);
+
+    }
+
+    /* We disable the driver after EACH test has been executed. */
+    @After
+    public void tearDown(){
+//        driver.quit();
+    }
+
+    /* A simple addition, it expects the correct result to appear in the result field. */
+    @Test
+    public void twoPlusTwoOperation() {
+
+    }
+
+}
+
+
+
 
 
 ADD REPOSITORY
-
 
 <h4>Java Test Setup with Continuous Integration</h4>
 
@@ -568,13 +629,13 @@ curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/
 
 By providing a custom identifier you can also check if an app was already uploaded and prevent duplicate uploads.
 
-First, get all apps for a given MD5:  
+First, get all apps for a given MD5:
 
 {% highlight bash %}
 curl -u "your_username:your_api_key" -X GET https://app.testobject.com:443/api/storage/app?appIdentifier=MD5_hash_of_your_app
 {% endhighlight %}
 
-Only if the call returns an empty JSON array, start uploading the file:  
+Only if the call returns an empty JSON array, start uploading the file:
 
 {% highlight bash %}
 curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-Identifier: MD5_hash_of_your_app" --data-binary @your_app.apk
