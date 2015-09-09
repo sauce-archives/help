@@ -4,6 +4,8 @@ header {
   border-top: none;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   background: white;
+  height: 63px;
+  overflow: hidden;
 }
 
 header .logo {
@@ -40,6 +42,10 @@ header nav {
 
 header nav ul.nav-main {
   margin-bottom: 0;
+}
+
+.nav-link {
+  cursor: default;
 }
 
 

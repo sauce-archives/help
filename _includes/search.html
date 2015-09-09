@@ -1,0 +1,19 @@
+<div class="search-container">
+	<section class="search-bar__wrapper" id="search-bar-wrapper">
+		<input class="search-bar__input" id="search-input" type="text" name="q" placeholder="Search" autocomplete="off">
+
+		<div class="search-bar__clear-button" id="search-clear-button">×</div>
+	</section>
+
+	<section class="search-results__wrapper" id="search-results-wrapper">
+		<div id="search-entries"></div>
+	</section>
+</div>
+
+{% raw %}
+<script id="search-entry-template" type="text/mustache">
+  {{#entries}}
+  	<a class="search-results__link" href="{{url}}">{{title}}</a>
+  {{/entries}}
+</script>
+{% endraw %}
