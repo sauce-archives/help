@@ -1,5 +1,5 @@
 ---
-title: Manual Testing
+title: Get to know Manual Testing
 layout: en
 permalink: docs/testing-tools/manual-testing/
 ---
@@ -13,12 +13,12 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#create-issue">Create an Issue</a> </li>
 <li><a href="#screenshots">Make a Screenshot</a> </li>
 <li><a href="#logs">Device Log</a> </li>
-<ul>
-    <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
+ <!--<ul>
+   <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
     <li><a href="#google-account">Add a Google Account to the Device</a></li>
     <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
     <li><a href="#create-issue">Create an Issue</a> </li>
-</ul>
+</ul>-->
 
 <br>
 
