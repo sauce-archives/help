@@ -1,7 +1,7 @@
 ---
-title: Appium
+title: Setting up your Tests
 layout: en
-permalink: docs/testing-tools/automation/appium/
+permalink: docs/testing-tools/appium/setup/
 ---
 
 
