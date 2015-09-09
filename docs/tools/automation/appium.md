@@ -100,59 +100,6 @@ To get the utilities as a Maven dependency, just add the following to your pom.x
 </repositories>
 {% endhighlight %}
 
-
-
-<h3 id="java-test-setup">Java Test Setup</h3>
-
-With the API client from above the setup with Java is extra simple.
-
-Add the following to your existing Appium Test:
-
-1. Add @TestObject and @RunWith class annotations
-2. Add the TestObjectTestResultWatcher annotated with @Rule
-3. Set TESTOBJECT_API_KEY and TESTOBJECT_TEST_REPORT_ID capabilities
-4. Pass the Appium driver to the watcher using setAppiumDriver
-
-The watcher will also quit your Appium driver instance when the test has finished. Do not close it in the tear-down method.
-
-This is an example of how your test could look like:
-
-{% highlight java %}
-@TestObject(testObjectApiKey = "E8DD63C22A3841FD90ED87DCB6D31127", testObjectSuiteId = 1)
-@RunWith(TestObjectAppiumSuite.class)
-public class CalculatorTest {
-
-	@Rule
-	public TestObjectTestResultWatcher watcher = new TestObjectTestResultWatcher();
-
-	private AndroidDriver driver;
-
-	@Before
-	public void setup() throws MalformedURLException {
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-
-		...
-
-		capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, watcher.getApiKey());
-		capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_TEST_REPORT_ID, watcher.getTestReportId());
-
-		driver = new AndroidDriver(TestObjectCapabilities.TESTOBJECT_APPIUM_ENDPOINT, capabilities);
-		watcher.setAppiumDriver(driver);
-	}
-
-	@After
-	public void tearDown() {
-		// Do not quit the driver here. The watcher will take care of it.
-	}
-
-	@Test
-	public void yourTestCase() {
-		...
-	}
-
-}
-{% endhighlight %}
-
 # Running your Appium tests on TestObject
 
 There are several ways of running your Appium tests on our platform. Here we go through them in increasing order of complexity and refinement.
@@ -161,6 +108,7 @@ There are several ways of running your Appium tests on our platform. Here we go 
 
 Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic setup for testing a simple calculator app could look like this:
 
+{% highlight java %}
 public class BasicTestSetup {
 
     private AppiumDriver driver;
@@ -193,6 +141,7 @@ public class BasicTestSetup {
     }
 
 }
+{% endhighlight %}
 
 Along with the mandatory capabilities we have specified, you can send over some optional ones to customize your test runs:
 
@@ -202,6 +151,7 @@ Along with the mandatory capabilities we have specified, you can send over some 
 
 The only needed dependencies for running such a test would be the Appium Java Client and the Selenium Standalone Server. In case you are building your project with Gradle, your dependencies in your build.gradle file should look something like this:
 
+{% highlight gradle %}
   dependencies {
       testCompile group: 'junit', name: 'junit', version: '4.11'
 
@@ -209,12 +159,14 @@ The only needed dependencies for running such a test would be the Appium Java Cl
       testCompile 'org.seleniumhq.selenium:selenium-server:2.25.0'
 
   }
+{% endhighlight %}
 
 With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential. Your tests will run on the device you have chosen, and you will be able to access a number of information regarding them, but the results of the tests won't be registered in the test reports on the platform.
 
 ## The intermediate setup (watcher without suites)
 This problem can be easily fixed by upgrading to a more powerful setup:
 
+{% highlight java %}
 public class IntermediateTestSetup {
 
     /* This is the key piece of our test, since it allows us to
@@ -255,22 +207,28 @@ public class IntermediateTestSetup {
     }
 
 }
+{% endhighlight %}
 
 This setup will also need the latest TestObject Appium Java Api, so you will have to add this line to your build.gradle file:
 
+{% highlight gradle %}
   compile 'org.testobject.extras.appium:appium-java-api:0.0.9'
+{% endhighlight %}
 
 and this repository in the "repository" section:
 
+{% highlight gradle %}
   maven {
     url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
   }
+{% endhighlight %}
 
 This setup allows you to register your test results on TestObject. If you are running many tests, it would probably make sense to organize them in suites. Read on to find out how.
 
 ## The complete setup (watcher and suites)
 To make sure you can distinguish and access your test results more efficiently, it is highly recommended that you use test suites. It doesn't take much to upgrade your setup to be able to run these:
 
+{% highlight java %}
 /* You must add these two annotations on top of your test class. */
 @TestObject(testObjectApiKey = "YOUR_API_KEY", testObjectSuiteId = YOUR_SUITE_NUMBER)
 @RunWith(TestObjectAppiumSuite.class)
@@ -310,6 +268,7 @@ public class CompleteTestSetup {
     }
 
 }
+{% endhighlight %}
 
 If you are not completely sure how to write Appium tests, you might be interested in our [Appium tutorials](https://help.testobject.com/docs/guides/appium-ser/).
 
