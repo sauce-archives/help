@@ -1,15 +1,10 @@
 ---
-title: Intergrate Robotium/Espresso into your CI Process
+title: Running Robotium and Espresso through Jenkins with Ant
 layout: en
 permalink: docs/guides/robotium-espresso-jenkins-ant/
 ---
-<ul>
-<li><a href="#jenkins-ant">Running Robotium and Espresso through Jenkins with Ant</a> </li>
-</ul>
 
-<h3 id="jenkins-ant">Running Robotium and Espresso through Jenkins with Ant</h3>
-
-To get the most out of your tests, automate their execution within your continuous integration environment. This can be easily achieved by running TestObject ANT tasks within a Continuous Integration server like Jenkins.
+To get the most out of your tests, automate their execution within your continuous integration environment. This can be easily achieved by running TestObject aNT tasks within a Continuous Integration server like Jenkins.
 
 What you need:
 
@@ -18,12 +13,12 @@ What you need:
 + <strong>Installed Jenkins Ant Plugin</strong> If not make sure to install Ant, see: ( <a href="http://www.vogella.com/tutorials/Jenkins/article.html#jenkinsconfiguration" target="_blank">http://www.vogella.com/tutorials/Jenkins/article.html#jenkinsconfiguration</a> )
 
 
-<h4 id="step1">Step 1: Add the Ant Build File and Ant Plugin to your repository</h4>
+<h3 id="step1">Step 1: Add the Ant Build File and Ant Plugin to your repository</h3>
 
 + Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.08.06.jar" target="_blank">testobject-ant-3.08.06.jar</a>
 + Download the TestObject: <a href="https://github.com/testobject/calculator/build.xml" target="_blank">build.xml</a>
 
-<h4 id="step2">Step 2: Add the files to your app repository</h4>
+<h3 id="step2">Step 2: Add the files to your app repository</h3>
 
 + Add the two files into <strong>your app</strong> repository. For example:
 {% highlight xml %}
@@ -31,7 +26,7 @@ What you need:
 /testobject/ant/testobject-ant-3.08.06.jar
 {% endhighlight %}
 
-<h4 id="step3">Step 3: Configure your Jenkins Project</h4>
+<h3 id="step3">Step 3: Configure your Jenkins Project</h3>
 
 + <strong>Jenkins</strong>
 Login into your Jenkins server and go to the project configuration. (Configure)
