@@ -151,7 +151,7 @@ Along with the mandatory capabilities we have specified, you can send over some 
 
 The only needed dependencies for running such a test would be the Appium Java Client and the Selenium Standalone Server. In case you are building your project with Gradle, your dependencies in your build.gradle file should look something like this:
 
-{% highlight gradle %}
+{% highlight bash %}
   dependencies {
       testCompile group: 'junit', name: 'junit', version: '4.11'
 
@@ -211,13 +211,13 @@ public class IntermediateTestSetup {
 
 This setup will also need the latest TestObject Appium Java Api, so you will have to add this line to your build.gradle file:
 
-{% highlight gradle %}
+{% highlight bash %}
   compile 'org.testobject.extras.appium:appium-java-api:0.0.9'
 {% endhighlight %}
 
 and this repository in the "repository" section:
 
-{% highlight gradle %}
+{% highlight bash %}
   maven {
     url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
   }
