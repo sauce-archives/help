@@ -100,58 +100,177 @@ To get the utilities as a Maven dependency, just add the following to your pom.x
 </repositories>
 {% endhighlight %}
 
+# Running your Appium tests on TestObject
 
+There are several ways of running your Appium tests on our platform. Here we go through them in increasing order of complexity and refinement.
 
-<h3 id="java-test-setup">Java Test Setup</h3>
+## The basic, 5 minutes setup
 
-With the API client from above the setup with Java is extra simple.
-
-Add the following to your existing Appium Test:
-
-1. Add @TestObject and @RunWith class annotations
-2. Add the TestObjectTestResultWatcher annotated with @Rule 
-3. Set TESTOBJECT_API_KEY and TESTOBJECT_TEST_REPORT_ID capabilities
-4. Pass the Appium driver to the watcher using setAppiumDriver
-
-The watcher will also quit your Appium driver instance when the test has finished. Do not close it in the tear-down method.
-
-This is an example of how your test could look like:
+Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic setup for testing a simple calculator app could look like this:
 
 {% highlight java %}
-@TestObject(testObjectApiKey = "E8DD63C22A3841FD90ED87DCB6D31127", testObjectSuiteId = 1)
-@RunWith(TestObjectAppiumSuite.class)
-public class CalculatorTest {
+public class BasicTestSetup {
 
-	@Rule
-	public TestObjectTestResultWatcher watcher = new TestObjectTestResultWatcher();
+    private AppiumDriver driver;
 
-	private AndroidDriver driver;
+    @Before
+    public void setUp() throws Exception {
 
-	@Before
-	public void setup() throws MalformedURLException {
-		DesiredCapabilities capabilities = new DesiredCapabilities();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-		...
+        /* These are the capabilities we must provide to run our test on TestObject */
+        capabilities.setCapability("testobject_api_key", "YOUR_API_KEY");
+        capabilities.setCapability("testobject_app_id", "1");
+        capabilities.setCapability("testobject_device", "Motorola_Moto_G_2nd_gen_real");
 
-		capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, watcher.getApiKey());
-		capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_TEST_REPORT_ID, watcher.getTestReportId());
+        /* The driver will take care of establishing the connection, so we must provide
+        * it with the correct endpoint and the requested capabilities. */
+        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
 
-		driver = new AndroidDriver(TestObjectCapabilities.TESTOBJECT_APPIUM_ENDPOINT, capabilities);
-		watcher.setAppiumDriver(driver);
-	}
+    }
 
-	@After
-	public void tearDown() {
-		// Do not quit the driver here. The watcher will take care of it.
-	}
+    /* We disable the driver after EACH test has been executed. */
+    @After
+    public void tearDown(){
+        driver.quit();
+    }
 
-	@Test
-	public void yourTestCase() {
-		...
-	}
+    @Test
+    public void twoPlusTwoOperation() {
+        /* Your test. */
+    }
 
 }
 {% endhighlight %}
+
+Along with the mandatory capabilities we have specified, you can send over some optional ones to customize your test runs:
+
+* testobject_appium_version, if you want to run your tests against an Appium version other than the default one (1.3.5)
+* testobject_test_name, if you want to specify a name for your test that will be displayed in place of the default one
+* testobject_suite_name, if you want to apply a label to your tests so that they are easier to group / find later on
+
+The only needed dependencies for running such a test would be the Appium Java Client and the Selenium Standalone Server. In case you are building your project with Gradle, your dependencies in your build.gradle file should look something like this:
+
+{% highlight gradle %}
+  dependencies {
+      testCompile group: 'junit', name: 'junit', version: '4.11'
+
+      testCompile 'io.appium:java-client:3.1.0'
+      testCompile 'org.seleniumhq.selenium:selenium-server:2.25.0'
+
+  }
+{% endhighlight %}
+
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential. Your tests will run on the device you have chosen, and you will be able to access a number of information regarding them, but the results of the tests won't be registered in the test reports on the platform.
+
+## The intermediate setup (watcher without suites)
+This problem can be easily fixed by upgrading to a more powerful setup:
+
+{% highlight java %}
+public class IntermediateTestSetup {
+
+    /* This is the key piece of our test, since it allows us to
+   * connect to the device we will be running the app onto.*/
+    private AppiumDriver driver;
+
+    /* Sets the test name to the name of the test method. */
+    @Rule
+    public TestName testName = new TestName();
+
+    /* Takes care of sending the result of the tests over to TestObject. */
+    @Rule
+    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
+
+    /* This is the setup that will be run before the test. */
+    @Before
+    public void setUp() throws Exception {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setCapability("testobject_api_key", "YOUR_API_KEY");
+        capabilities.setCapability("testobject_app_id", "1");
+        capabilities.setCapability("testobject_device", "Motorola_Moto_G_2nd_gen_real");
+
+        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+
+        /* IMPORTANT! We need to provide the Watcher with our initialized AppiumDriver */
+        resultWatcher.setAppiumDriver(driver);
+
+    }
+
+    /* IMPORTANT! driver.quit() is not called anymore, as the Watcher is not
+       taking care of this. You can get rid of the tearDown method. */
+
+    @Test
+    public void twoPlusTwoOperation() {
+        /* Your test. */
+    }
+
+}
+{% endhighlight %}
+
+This setup will also need the latest TestObject Appium Java Api, so you will have to add this line to your build.gradle file:
+
+{% highlight gradle %}
+  compile 'org.testobject.extras.appium:appium-java-api:0.0.9'
+{% endhighlight %}
+
+and this repository in the "repository" section:
+
+{% highlight gradle %}
+  maven {
+    url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
+  }
+{% endhighlight %}
+
+This setup allows you to register your test results on TestObject. If you are running many tests, it would probably make sense to organize them in suites. Read on to find out how.
+
+## The complete setup (watcher and suites)
+To make sure you can distinguish and access your test results more efficiently, it is highly recommended that you use test suites. It doesn't take much to upgrade your setup to be able to run these:
+
+{% highlight java %}
+/* You must add these two annotations on top of your test class. */
+@TestObject(testObjectApiKey = "YOUR_API_KEY", testObjectSuiteId = YOUR_SUITE_NUMBER)
+@RunWith(TestObjectAppiumSuite.class)
+public class CompleteTestSetup {
+
+    private AppiumDriver driver;
+
+    @Rule
+    public TestName testName = new TestName();
+
+    @Rule
+    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
+
+    @Before
+    public void setUp() throws Exception {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
+        capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
+
+        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+
+        resultWatcher.setAppiumDriver(driver);
+
+    }
+
+    /* We disable the driver after EACH test has been executed. */
+    @After
+    public void tearDown(){
+        driver.quit();
+    }
+
+    @Test
+    public void twoPlusTwoOperation() {
+        /* Your test. */
+    }
+
+}
+{% endhighlight %}
+
+If you are not completely sure how to write Appium tests, you might be interested in our [Appium tutorials](https://help.testobject.com/docs/guides/appium-ser/).
 
 <h4>Java Test Setup with Continuous Integration</h4>
 
@@ -472,13 +591,13 @@ curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/
 
 By providing a custom identifier you can also check if an app was already uploaded and prevent duplicate uploads.
 
-First, get all apps for a given MD5:  
+First, get all apps for a given MD5:
 
 {% highlight bash %}
 curl -u "your_username:your_api_key" -X GET https://app.testobject.com:443/api/storage/app?appIdentifier=MD5_hash_of_your_app
 {% endhighlight %}
 
-Only if the call returns an empty JSON array, start uploading the file:  
+Only if the call returns an empty JSON array, start uploading the file:
 
 {% highlight bash %}
 curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-Identifier: MD5_hash_of_your_app" --data-binary @your_app.apk
