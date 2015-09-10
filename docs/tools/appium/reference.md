@@ -4,28 +4,29 @@ layout: en
 permalink: docs/testing-tools/appium/reference/
 
 ---
+<h3>Java Test Setup with Continuous Integration</h3>
 
+Running test suites with TestObject from your CI platform is easy. Our Java client allows you to define the values of the parameters you have to provide the TestObject platform through environment variables. Specifically, you can provide the following environment variables:
 
+* TESTOBJECT_API_ENDPOINT, which is by default https://app.testobject.com:443/api, so pointing to our platform;
+* TESTOBJECT_API_KEY, which you always have to provide as it identifies the app you want to run your tests on;
+* TESTOBJECT_SUITE_ID, which is also mandatory as it tells our platform in which suite it should store the test results;
+* TESTOBJECT_DEVICE_IDS, which can be used to override the device selection you usually do through our web UI;
+* TESTOBJECT_TIMEOUT, which controls the maximum duration of the test suite.
 
-<li><a href="#run-with-any-language">Run with Any Language</a></li>
-<li><a href="#rest-api">REST API</a></li>
-<li><a href="#general-test-setup">General Test Setup</a></li>
-<li><a href="#example-tests">Complete Example Tests</a></li>
+You can set the value of these environment variables through your CI server (<a href="/docs/guides/continuous/appium-jenkins-gradle">for example Jenkins</a>) and have a better, more flexible Appium testing experience!
 
-<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
-<li><a href="#automated-file-upload">Automated File Upload</a></li>
-
+<h4>Running tests locally</h4>
+If you need to quickly switch to testing on a local device, just set the "testLocally" flag to true through the TestObject annotation, or set the environment variable "TESTOBJECT_TEST_LOCALLY" to true.
 
 
 <h3 id="run-with-any-language">Run with Any Language</h3>
 
 Run your Appium tests on TestObject no matter what language you're using. Just connect to our <a href="#rest-api">REST API</a> and add <a href="#general-test-setup">two extra capabilities</a> to your test.
 
-
-
 <h3 id="rest-api">REST API</h3>
 
-Writing your own client to organize your test results is easy. Simply make a couple of a REST calls to our API:
+Writing your own client to organize your test results is easy. Simply make a couple of REST calls to our API:
 
 Please note: The requests must be sent while the Appium session is still running, that is, before quitting the Appium driver.
 
@@ -193,8 +194,7 @@ We will automatically set the capabilities platformName, deviceName and automati
 
 <h5>testobject_api_key</h5>
 
-With this key TestObject authenticates you.
-
+This is the key TestObject uses to authenticate you.
 
 <h5>testobject_test_report_id</h5>
 
@@ -210,37 +210,6 @@ https://app.testobject.com:443/api/appium/wd/hub
 <h4>Quitting the Driver</h4>
 
 If you're not using the <a href="#java-test-setup">TestObjectResultWatcher</a>, please remember to call driver.quit() at the end of your test. Otherwise the device will remain allocated for another 60 seconds before timing out.
-
-This is an example of how your test could look like:
-
-{% highlight java %}
-
-private AndroidDriver driver;
-
-@Before
-public void setup() throws MalformedURLException {
-	DesiredCapabilities capabilities = new DesiredCapabilities();
-
-	...
-
-	capabilities.setCapability("testobject_api_key", "B50CB4047BCB49DDB750B6CB52B137F8");
-	capabilities.setCapability("testobject_test_report_id", "1");
-
-	driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
-}
-
-@After
-public void tearDown() {
-	if (driver != null){
-		driver.quit();
-	}
-}
-
-@Test
-public void yourTestCase() {
-	...
-}
-{% endhighlight %}
 
 
 
