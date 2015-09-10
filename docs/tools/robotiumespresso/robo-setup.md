@@ -1,7 +1,7 @@
 ---
 title: Run your Espresso/Robotium tests
 layout: en
-permalink: docs/testing-tools/robotium/setup/
+permalink: docs/testing-tools/robotium-espresso/setup/
 ---
 
 

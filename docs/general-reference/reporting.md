@@ -1,5 +1,5 @@
 ---
-title: Reporting
+title: Execution Reports
 layout: en
 permalink: docs/testing-tools/automation/reporting/
 ---

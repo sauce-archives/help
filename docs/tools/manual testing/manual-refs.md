@@ -1,8 +1,8 @@
-
 ---
-title: Additional options in Manual Testing
+title: Use Additional Options in Manual Testing
 layout: en
 permalink: docs/testing-tools/manual-refs/
+---
 
 <ul>
     <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
@@ -13,7 +13,7 @@ permalink: docs/testing-tools/manual-refs/
 
 
 
-<h4 id="3rd-party-apps">Dependency: Install Third-Party Apps</h4>
+<h3 id="3rd-party-apps">Dependency: Install Third-Party Apps</h3>
 
 If your app requires a third-party app, like Facebook or Twitter, for login, you can install these apps as dependencies.<br>
 <b>I. Upload Dependency to TestObject</b>
@@ -30,17 +30,26 @@ If your app requires a third-party app, like Facebook or Twitter, for login, you
 <li>Select the dependency.</li>
 <li>Now, the dependency app is installed on the device and ready for use.</li>
 </ol>
-</div>
-<br style="clear:both">
 
-<h4 id="google-account">Use your own Google-Account on our Devices</h4>
+
+<h3 id="google-account">Use your own Google-Account on our Devices</h3>
 Form some tests you need your own Google-Account on a device. We have added a feature to add your account. <b>We will delete this account of course automatically after your session is closed.</b>
 
 1. Go to Manual testing and open a device
 2. Click on "Add Google Accounts" in the left menu
 3. Add your Google Account to the device
-<br style="clear:both">
-</div>
+
+<h3 id="share-device">Share your Device with Colleagues and Customers</h3>
+<img src="/img/tools/manual/share-device.png" alt="Share Device">
+<br>
+When you share a device, the recipient can see the screen of the device in real time. It makes collaborative work much easier. Demonstrate to clients the latest updates of the app or show your colleagues exactly where you found a problem.
+<ol>
+<li> Login and navigate to manual testing.</li>
+<li> Open a device and look for "Share Device" in the left menu.</li>
+<li> Create a link and send it to your customer/developer.</li>
+<li> Now the recipient can see the device in real time.</li>
+</ol>
+
 <h3 id="create-issue">Create an Issue</h3>
 
 Testing is only useful if you can document your findings. The best way to do so with Manual Testing is to create a 'New Issue'. <br>
@@ -59,5 +68,3 @@ You also have the option to intgrate this report with your favorite <a href="/do
 <img class="center shadow" src="/img/tools/manual/issue.png" alt="Issue Creation">
 
 
-
-<br style="clear:both">

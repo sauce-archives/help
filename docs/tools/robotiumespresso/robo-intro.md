@@ -1,7 +1,7 @@
 ---
 title: Introducing Espresso and Robotium
 layout: en
-permalink: docs/testing-tools/robotium/introduction/
+permalink: docs/testing-tools/robotium-espresso/introduction/
 ---
 
 
@@ -24,7 +24,10 @@ To set up Espresso on your computer see the <a href="https://developer.android.c
 Robotium is an open-source test automation framework for automatic black-box UI-tests. Created as an extension of the Android test framework it only supports native and hybrid Android apps. Robotium allows you two write function, system and acceptance test scenarios and define them across Android activities.
 Espresso and Robotium both use the <a href="http://developer.android.com/reference/android/app/Instrumentation.html">Android instrumentation</a> to inspect and interact with the activities in your test.
 
-<!-- <a href="http://robotium.com/products/robotium-recorder">Robotium Recorder</a> 
+<!--
+Robotium is charging a fee to use its <a href="http://robotium.com/">Robotium Recorder</a>. Here's a blog on <a href="https://testobject.com/de/blog/2014/05/how-to-record-your-android-tests-with-robotium-recorder.html" target="_blank">"How to record your Android tests with Robotium Recorder"</a>.
+
+<a href="http://robotium.com/products/robotium-recorder">Robotium Recorder</a> 
 
 see the <a href="https://github.com/RobotiumTech/robotium/wiki/Getting-Started">Robotium GitHub page</a>  for some documentation on how to setup Robotium 
 -->

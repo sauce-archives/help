@@ -1,5 +1,5 @@
 ---
-title: Running Appium test with Maven
+title: Running Appium tests with Maven
 layout: en
 permalink: docs/guides/appium-maven/
 ---  

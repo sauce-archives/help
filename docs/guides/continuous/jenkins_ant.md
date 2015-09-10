@@ -1,5 +1,5 @@
 ---
-title: Intergrate Robotium/Espresso into your CI Process
+title: Integrate Robotium/Espresso into your CI Process
 layout: en
 permalink: docs/guides/robotium-espresso-jenkins-ant/
 ---
