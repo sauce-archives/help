@@ -15,7 +15,7 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#logs">Device Log</a> </li>
  
 
-<br>  
+<br> 
 
 <center>
 <iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/_Jj3zPIq96E" frameborder="0" allowfullscreen></iframe>
