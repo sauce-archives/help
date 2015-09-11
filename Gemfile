@@ -7,4 +7,5 @@ source 'https://rubygems.org'
 
 gem "jekyll"
 gem "rdiscount"
-gem "therubyracer" # for jekyll_lunr_js_search plugin
+gem "therubyracer", :platform => :ruby  # for jekyll_lunr_js_search plugin
+gem "libv8" # for jekyll_lunr_js_search plugin
