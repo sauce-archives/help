@@ -1,10 +1,10 @@
 ---
 title: Quality Report - FAQ
 layout: en
-permalink: docs/testing-tools/quality-report/
+permalink: docs/testing-tools/qr-faq/
 ---
 
-Wea re 
+<h3 id="faq">Questions asked...</h3>
 
 <br>
 <h5> Q: What kind of bugs will I find?</h5>
