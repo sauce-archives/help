@@ -4,7 +4,7 @@ layout: en
 permalink: docs/testing-tools/manual-testing/
 ---
 
-<li><a href="#whatis">What is Manual ?esting?</a></li>
+<li><a href="#whatis">What is Manual Testing?</a></li>
 <li><a href="#device-management">Device Management</a> </li>
 <li><a href="#app-management">App Management</a> </li>
 <li><a href="#tools">Tools</a></li>
