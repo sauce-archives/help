@@ -4,11 +4,6 @@ layout: en
 permalink: docs/testing-tools/robotium-espresso/introduction/
 ---
 
-
-<li><a href="#Espresso">Espresso</a></li>
-<li><a href="#Robotium">Robotium</a></li>
-
-
 <h3 id="Espresso">Espresso</h3>
 
 Espresso is a test automation framework for Android applications developed by Google. It enables you to do automatic black-box UI tests.  Therefor it uses the <a href="http://developer.android.com/reference/android/app/Instrumentation.html" target="_blank">Android instrumentation</a> to inspect and interact with the activities you are testing. To locate the UI elements it draws back on <a href="https://github.com/hamcrest" target="_blank">hamcrest matchers.</a>
