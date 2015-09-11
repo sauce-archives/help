@@ -5,7 +5,6 @@ end
 
 source 'https://rubygems.org'
 
-gem "jekyll"
-gem "rdiscount"
-gem "therubyracer", :platform => :ruby  # for jekyll_lunr_js_search plugin
-gem "libv8" # for jekyll_lunr_js_search plugin
+gem 'jekyll', '2.5.3', 
+gem 'rdiscount', '2.1.8'
+gem 'jekyll-lunr-js-search', '0.3.0'
