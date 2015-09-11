@@ -4,7 +4,7 @@ layout: en
 permalink: docs/testing-tools/automation/appium/
 ---
 
-<!--links will go to tutorials-->
+
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#reporting">Reporting</a></li>
 <li><a href="#getting-started">Getting Started</a></li>

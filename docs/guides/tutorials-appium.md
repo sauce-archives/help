@@ -1,7 +1,7 @@
 ---
 title: Appium Series
 layout: en
-permalink: docs/guides/appium-ser/
+permalink: docs/guides/tutorials-appium/
 ---
 
 

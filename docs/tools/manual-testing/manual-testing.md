@@ -1,10 +1,10 @@
 ---
-title: Manual Testing
+title: Get to know Manual Testing
 layout: en
 permalink: docs/testing-tools/manual-testing/
 ---
 
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#whatis">What is Manual ?esting?</a></li>
 <li><a href="#device-management">Device Management</a> </li>
 <li><a href="#app-management">App Management</a> </li>
 <li><a href="#tools">Tools</a></li>
@@ -13,20 +13,15 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#create-issue">Create an Issue</a> </li>
 <li><a href="#screenshots">Make a Screenshot</a> </li>
 <li><a href="#logs">Device Log</a> </li>
-<ul>
-    <li><a href="#3rd-party-apps">Install 3rd Party Apps and Accounts</a></li>
-    <li><a href="#google-account">Add a Google Account to the Device</a></li>
-    <li><a href="#share-device">Share your Device With Colleagues and Customers</a></li>
-    <li><a href="#create-issue">Create an Issue</a> </li>
-</ul>
+ 
 
-<br>
+<br> 
 
 <center>
 <iframe width="750" height="422" style="margin-bottom: 20px" src="https://www.youtube.com/embed/_Jj3zPIq96E" frameborder="0" allowfullscreen></iframe>
 </center>
 
-<h3 id="introduction">Introduction</h3>
+<h3 id="whatis">Introduction</h3>
 Manual testing is the most direct way to test your app. It is particularly suitable for the reproduction of reported bugs and to see how your app looks and feels. Access one of the <a href="https://devicelab.testobject.com/" target="_blank" >available devices</a> from the cloud and fully remote control it. To control the device you can use your Mouse and Keyboard.
 
 A preparation and installation protocol will be executed automatically every time a device gets started. This takes a couple of seconds and guarantees a fresh, standard device for every new user. After a testing session was ended the previous app and all data gets cleaned from the device.
@@ -62,19 +57,6 @@ The left menu is partitioned into several areas (from top):
 
 <br style="clear:both">
 
-<div style="padding-left:40px">
-<h4 id="share-device">Share your Device with Colleagues and Customers</h4>
-<img src="/img/tools/manual/share-device.png" alt="Share Device">
-<br>
-When you share a device, the recipient can see the screen of the device in real time. It makes collaborative work much easier. Demonstrate to clients the latest updates of the app or show your colleagues exactly where you found a problem.
-<ol>
-<li> Login and navigate to manual testing.</li>
-<li> Open a device and look for "Share Device" in the left menu.</li>
-<li> Create a link and send it to your customer/developer.</li>
-<li> Now the recipient can see the device in real time.</li>
-</ol>
-</div>
-<br style="clear:both">
 
 <h3 id="app-management">App Management</h3>
 
@@ -91,26 +73,6 @@ When you share a device, the recipient can see the screen of the device in real 
 
 <br style="clear:both">
 
-<div style="padding-left:40px">
-<h4 id="3rd-party-apps">Dependency: Install Third-Party Apps</h4>
-
-If your app requires a third-party app, like Facebook or Twitter, for login, you can install these apps as dependencies.<br>
-<b>I. Upload Dependency to TestObject</b>
-<ol>
-<li>Log in to TestObject and open the relevant project.</li>
-<li>On the <a href="/docs/general-reference/dashboard/">Dashboard</a> click on "All Versions" in the Active Version segment.</li>
-<li>Click on "New Dependency" below the list of your uploaded app versions.</li>
-<li>Now, you can upload a third-party app, such as Facebook.</li>
-</ol>
-<b>II. Install Dependency on Device</b>
-<ol>
-<li>Go to manual testing and open a device.</li>
-<li>Click on "Versions of Your App" in the left menu and go to "Install Dependency".</li>
-<li>Select the dependency.</li>
-<li>Now, the dependency app is installed on the device and ready for use.</li>
-</ol>
-</div>
-<br style="clear:both">
 
 <h3 id="tools">Tools</h3>
 
@@ -178,15 +140,6 @@ If you change the seed you change the whole sequence.<br>
 
 <br style="clear:both">
 
-<div style="padding-left:40px">
-<h4 id="google-account">Use your own Google-Account on our Devices</h4>
-Form some tests you need your own Google-Account on a device. We have added a feature to add your account. <b>We will delete this account of course automatically after your session is closed.</b>
-
-1. Go to Manual testing and open a device
-2. Click on "Add Google Accounts" in the left menu
-3. Add your Google Account to the device
-<br style="clear:both">
-</div>
 <h3 id="create-issue">Create an Issue</h3>
 
 Testing is only useful if you can document your findings. The best way to do so with Manual Testing is to create a 'New Issue'. <br>

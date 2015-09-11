@@ -1,7 +1,7 @@
 ---
 title: Automated Testing
 layout: en
-permalink: docs/testing-tools/automation/
+permalink: docs/general-reference/automation/
 ---
 
 
@@ -10,11 +10,10 @@ permalink: docs/testing-tools/automation/
 <li><a href="#scripts">Executing Test Scripts</a></li>
 <li><a href="#reporting">Execution Reports</a></li>
 <li><a href="#continuous-integration">Continuous Integration</a></li>
-<ul><li><a href="/docs/guides/appium-travisci/">Run Appium Tests with Travis CI</a></li>
-        <li><a href="/docs/guides/jenkins-ant-task/">Ant: Jenkins Integration with Ant</a></li>
-        <li><a href="/docs/guides/jenkins-gradle-task/">Gradle: Jenkins Integration with Gradle</a></li>
-        <li><a href="/docs/guides/ant-task">Automated Test Execution with Ant</a></li>
-        </ul>
+<ul>    <li><a href="/docs/guides/appium-travisci/">Run Appium Tests with Travis CI</a></li>
+        <li><a href="/docs/guides/robotium-espresso-jenkins-ant/">Running Robotium and Espresso through Jenkins with Ant</a></li>
+        <li><a href="/docs/guides/appium-jenkins-gradle/">Running Appium tests through Jenkins</a></li>
+</ul>
 
 <h3 id="introduction">Introduction</h3>
 
@@ -26,14 +25,13 @@ There are a number of frameworks available on the market for this purpose. To ex
 
 <h3 id="frameworks">Test Automation Frameworks</h3>
 
-At the moment the following frameworks are supported:
+At the moment the following frameworks are supported, which are all available free of charge:
 
-* <a href="/docs/testing-tools/automation/appium/">Appium</a>
-* <a href="/docs/testing-tools/automation/robotium/">Robotium</a>
-* <a href="/docs/testing-tools/automation/espresso/">Espresso</a>
+* <a href="/docs/testing-tools/appium/introduction/">Appium</a>
+* <a href="/docs/testing-tools/robotium-espresso/introduction/#Robotium">Robotium</a>
+* <a href="/docs/testing-tools/robotium-espresso/introduction/#Espresso">Espresso</a>
 
-All of these frameworks are free of charge. 
-Robotium is charging a fee to use its <a href="http://robotium.com/">Robotium Recorder</a>. Here's a blog on <a href="https://testobject.com/de/blog/2014/05/how-to-record-your-android-tests-with-robotium-recorder.html" target="_blank">"How to record your Android tests with Robotium Recorder"</a>.
+
 
 <br> To write tests for native Android applications, you can use any of these three frameworks.
 <br> Appium is a cross-platform framework, which allows you to test native Android and iOS applications, as well as hybrid or web apps.
@@ -46,9 +44,9 @@ To set up Appium on your system check out our <a href="/docs/guides/appium-ser/"
 <h3 id="scripts">Executing Test Scripts</h3>
 
 If you have created tests for one of the supported frameworks you will be able to use them on the TestObject devices. 
-For <a href="/docs/testing-tools/automation/espresso/">Espresso</a> and <a href="/docs/testing-tool/automation/robotium">Robotium</a> you upload your test apk to our platform and execute your test suite from there. Your test apk will be installed together with the app you want to test. Your tests will then be executed automatically on the selected devices.<br>
+For <a href="/docs/testing-tools/robotium-espresso/introduction/#Espresso">Espresso</a> and <a href="/docs/testing-tools/robotium-espresso/introduction/#Robotium">Robotium</a> you upload your test apk to our platform and execute your test suite from there. Your test apk will be installed together with the app you want to test. Your tests will then be executed automatically on the selected devices.<br>
 
-For Appium it works a bit differently. Therefor you will have to <a href="/docs/testing-tools/automation/appium/">set some capabalities</a> in your Appium driver first to be able to execute them on our devices.<br>
+For Appium it works a bit differently. Therefor you will have to <a href="/docs/testing-tools/appium/setup/">set some capabalities</a> in your Appium driver first to be able to execute them on our devices.<br>
 
 <img class="center shadow" src="/img/tools/automation/Upload_Robotium_test.png" alt="Upload Robotium Test">
 
@@ -63,9 +61,8 @@ For every test run you will get a detailed <a href="/docs/testing-tools/automati
 <h3 id="continuous-integration">Continuous Integration</h3>
 
 Automated testing is a perfect match for your continuous integration process. To ensure the basic functionality of your app automate your most important test cases and run tests regularly. The test runs are triggered right from your CI-Server.<br>
-Use our tutorials to <a href="/docs/guides/continuous-integration/">set up your Continuous Integration</a> with TestObject:
+Use our tutorials to set up your Continuous Integration with TestObject:
 
 + <a href="/docs/guides/appium-travisci/">Run Appium Tests with Travis CI</a>
-+ <a href="/docs/guides/jenkins-ant-task/">Ant: Jenkins Integration with Ant</a>
-+ <a href="/docs/guides/jenkins-gradle-task/">Gradle: Jenkins Integration with Gradle</a>
-+ <a href="/docs/guides/ant-task">Automated Test Execution with Ant</a>
++ <a href="/docs/guides/robotium-espresso-jenkins-ant/">Running Robotium and Espresso through Jenkins with Ant</a>
++ <a href="/docs/guides/appium-jenkins-gradle/">Running Appium tests through Jenkins</a>
