@@ -4,10 +4,6 @@ layout: en
 permalink: docs/tools/appium/introduction/
 ---
 
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#reporting">Reporting</a></li>
-<li><a href="#getting-started">Getting Started</a></li>
-
 <h3 id="introduction">Introduction</h3>
 
 Appium is an open-source test automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium will definitely be easy to get started with.<br>
@@ -20,11 +16,11 @@ When running Appium tests on TestObject, you will be able to browse your test re
 * <strong>Test Report</strong>: Presents all the details of an individual test run including logs, screenshots and video.
 * <strong>Suite Report</strong>: Gives you an overview of all the results when executing a suite.
 
-Read more about our <a href="/docs/automation/reporting">reporting for automated tests</a>.
+Read more about our <a href="/docs/general-reference/automation/reporting">reporting for automated tests</a>.
 
 <h3 id="getting-started">Getting Started</h3>
 
-Your existing Appium tests will run on the TestObject platform with just some small changes. Enjoy our special <a href="#run-with-java">goodies for Java</a> or get started in <a href="run-with-any-language">any language</a>.
+Your existing Appium tests will run on the TestObject platform with just some small changes.
 
 <h4>How to get up and running in 10 minutes:</h4>
 

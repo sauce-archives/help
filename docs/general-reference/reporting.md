@@ -1,7 +1,7 @@
 ---
 title: Execution Reports
 layout: en
-permalink: docs/tools/automation/reporting/
+permalink: docs/general-reference/automation/reporting/
 ---
 
 

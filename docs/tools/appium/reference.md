@@ -1,7 +1,7 @@
 ---
 title: Reference
 layout: en
-permalink: docs/testing-tools/appium/reference/
+permalink: docs/tools/appium/reference/
 
 ---
 <h3>Java Test Setup with Continuous Integration</h3>
@@ -14,7 +14,7 @@ Running test suites with TestObject from your CI platform is easy. Our Java clie
 * TESTOBJECT_DEVICE_IDS, which can be used to override the device selection you usually do through our web UI;
 * TESTOBJECT_TIMEOUT, which controls the maximum duration of the test suite.
 
-You can set the value of these environment variables through your CI server (<a href="/docs/guides/continuous/appium-jenkins-gradle">for example Jenkins</a>) and have a better, more flexible Appium testing experience!
+You can set the value of these environment variables through your CI server (<a href="/docs/continuous-integration/appium-jenkins-gradle/">for example Jenkins</a>) and have a better, more flexible Appium testing experience!
 
 <h4>Running tests locally</h4>
 If you need to quickly switch to testing on a local device, just set the "testLocally" flag to true through the TestObject annotation, or set the environment variable "TESTOBJECT_TEST_LOCALLY" to true.
@@ -209,7 +209,7 @@ https://app.testobject.com:443/api/appium/wd/hub
 
 <h4>Quitting the Driver</h4>
 
-If you're not using the <a href="#java-test-setup">TestObjectResultWatcher</a>, please remember to call driver.quit() at the end of your test. Otherwise the device will remain allocated for another 60 seconds before timing out.
+If you're not using the <a href="/docs/tools/appium/setup/">TestObjectResultWatcher</a>, please remember to call driver.quit() at the end of your test. Otherwise the device will remain allocated for another 60 seconds before timing out.
 
 
 

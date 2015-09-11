@@ -53,7 +53,7 @@ Along with the mandatory capabilities we have specified, you can send over some 
 * testobject_test_name, if you want to specify a name for your test that will be displayed in place of the default one
 * testobject_suite_name, if you want to apply a label to your tests so that they are easier to group / find later on
 
-The only needed dependencies for running such a test would be the Appium Java Client and the Selenium Standalone Server. In case you are building your project with Gradle, your dependencies in your build.gradle file should look something like this:
+The only needed dependencies for running such a test would be the [Appium Java Client](https://github.com/appium/java-client) and the [Selenium Standalone Server](http://www.seleniumhq.org/download/). In case you are building your project with Gradle, your dependencies in your build.gradle file should look something like this:
 
 {% highlight bash %}
   dependencies {
@@ -113,7 +113,7 @@ public class IntermediateTestSetup {
 }
 {% endhighlight %}
 
-This setup will also need the latest TestObject Appium Java Api, so you will have to add this line to your build.gradle file:
+This setup will also need the latest [TestObject Appium Java Api](https://github.com/testobject/testobject-appium-java-api), so you will have to add this line to your build.gradle file:
 
 {% highlight bash %}
   compile 'org.testobject.extras.appium:appium-java-api:0.0.9'
@@ -174,4 +174,4 @@ public class CompleteTestSetup {
 }
 {% endhighlight %}
 
-If you are not completely sure how to write Appium tests, you might be interested in our [Appium tutorials](https://help.testobject.com/docs/guides/appium-ser/).
+If you are not completely sure how to write Appium tests, you might be interested in our [Appium tutorials](/docs/guides/tutorials-appium/).

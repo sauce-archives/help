@@ -1,7 +1,7 @@
 ---
 title: Automated Testing
 layout: en
-permalink: docs/testing-tools/automation/
+permalink: docs/general-reference/automation/
 ---
 
 
