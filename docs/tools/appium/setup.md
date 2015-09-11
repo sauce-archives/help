@@ -1,7 +1,7 @@
 ---
 title: Setting up your Tests
 layout: en
-permalink: docs/testing-tools/appium/setup/
+permalink: docs/tools/appium/setup/
 ---
 
 <h3>Running your Appium tests on TestObject with Java</h3>
