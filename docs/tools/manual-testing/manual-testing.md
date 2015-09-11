@@ -24,11 +24,13 @@ permalink: docs/testing-tools/manual-testing/
 <h3 id="whatis">Introduction</h3>
 Manual testing is the most direct way to test your app. It is particularly suitable for the reproduction of reported bugs and to see how your app looks and feels. Access one of the <a href="https://devicelab.testobject.com/" target="_blank" >available devices</a> from the cloud and fully remote control it. To control the device you can use your Mouse and Keyboard.
 
+Testing manually throught TestObject only requires you to upload the .apk or .ipa file so your application can be run on the device you are interested in. If you are unsure how to create an .ipa file, check out this <a href="/docs/guides/creating-ipa/">short guide</a>.
+
 A preparation and installation protocol will be executed automatically every time a device gets started. This takes a couple of seconds and guarantees a fresh, standard device for every new user. After a testing session was ended the previous app and all data gets cleaned from the device.
 
 To document your test results you can go to the right side of the Manual Testing view. Document the issues you've found, make screenshots throughout the test, and have a look on the extensive log data provided.
 
-Change some of the settings and manipulate the device's sensors. To access all avialable features open the left menu. The entire spectrum of options is only available for Android so far. The features will be implemented step by step for iOS, too.
+Change some of the settings and manipulate the device's sensors. To access all available features, open the left menu. The entire spectrum of options is only available for Android so far. The features will be implemented step by step for iOS, too.
 
 The left menu is partitioned into several areas (from top):
 
@@ -88,29 +90,6 @@ The left menu is partitioned into several areas (from top):
 <li><b>Upload file:</b> Select a file from your system and upload it to the device storage.</li>
 
 <br style="clear:both">
-
-
-<div style="padding-left:40px">
-<h4 id="Monkey-Exerciser">Monkey Exerciser: Stress Test Your App</h4>
-
-Stress test your app by performing thousands of random clicks within your app. To perform  a stress test on multiple devices in parallel, have a look at our <a href="/docs/testing-tools/quality-report/#stress-test" target="_blank">Quality Report</a>.</li></p>
-
-The Monkey Exerciser allows to adjust three variables:
-
-* Event Count: the number of inputs performed after the stress test was started
-* Delay Between Events: Time in milliseconds between every input
-* Random Seed: Monkey Exerciser executes the same set of 'random' events which is derived from the 'seed' value.
-The events are predetermined, so if you provide the same seed monkey will execute the same commands.
-If you change the seed you change the whole sequence.<br>
-
-
-
-
-<img src="/img/tools/manual/monkey-exerciser.png" alt="configure Monkey-Exerciser">
-
-</div>
-<br style="clear:both">
-
 
 <h3 id="sensors">Sensors</h3>
 

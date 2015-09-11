@@ -25,7 +25,7 @@ Your existing Appium tests will run on the TestObject platform with just some sm
 <h4>How to get up and running in 10 minutes:</h4>
 
 1. Create a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>
-2. Log into your account and upload the app you want to test. You can do this by providing the app file (.apk for Android, <a href="/docs/general-reference/faq#export-ipa">.ipa for iOS</a>), or you can take advantage of our HockeyApp integration!
+2. Log into your account and upload the app you want to test. You can do this by providing the app file (.apk for Android, <a href="/docs/guides/creating-ipa/">.ipa for iOS</a>), or you can take advantage of our HockeyApp integration!
 3. Navigate to Automated Testing -> Appium and create a new Appium Suite. This is where you first choose the devices you want to test on. You can change them at any time. A Suite holds all the preferences for your test executions: app version, testing devices, etc.
 
 <h4>Test Execution Process</h4>
