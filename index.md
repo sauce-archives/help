@@ -1,6 +1,7 @@
 ---
 title: We are here to help!
 layout: en
+comments: false
 ---
 
 Our goal is to make app testing for you as easy as possible! To test on our <a href="https://devicelab.testobject.com" target="_blank">real devices</a> you can use different <a href="https://testobject.com/features" target="_blank">features</a> for both manual and automated app testing, accessible from your web browser. 
