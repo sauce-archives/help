@@ -102,7 +102,7 @@ public class IntermediateTestSetup {
 
     }
 
-    /* IMPORTANT! driver.quit() is not called anymore, as the Watcher is not
+    /* IMPORTANT! driver.quit() is not called anymore, as the Watcher is now
        taking care of this. You can get rid of the tearDown method. */
 
     @Test
@@ -158,12 +158,6 @@ public class CompleteTestSetup {
 
         resultWatcher.setAppiumDriver(driver);
 
-    }
-
-    /* We disable the driver after EACH test has been executed. */
-    @After
-    public void tearDown(){
-        driver.quit();
     }
 
     @Test
