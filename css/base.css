@@ -137,7 +137,8 @@ h5 {
   margin-top: 6px;
 }
 
-.main ul {
+.main ul,
+.main ol {
   margin-top: 10px;
   margin-bottom: 0;
 }

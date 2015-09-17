@@ -8,7 +8,7 @@ permalink: docs/tools/appium/setup/
 
 There are several ways of running your Appium tests on our platform. Here we go through them in increasing order of complexity and refinement.
 
-<h4 id="basic-setup">The basic, 5 minutes setup</h4>
+<h4 id="basic-setup">The basic, 5-minutes setup</h4>
 
 Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic setup for testing a simple calculator app could look like this:
 

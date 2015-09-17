@@ -1,8 +1,8 @@
 ---
-title: Creating IPA file
+title: Creating an IPA File
 layout: en
 permalink: docs/guides/creating-ipa/
----  
+---
 
 1. Open your project in Xcode  
 2. Clean the project just in case by selecting 'Product -> Clean' from the menu  

@@ -2,12 +2,15 @@
 title: Introduction
 layout: en
 permalink: docs/tools/appium/introduction/
+alias: /docs/testing-tools/automation/appium/
 ---
 
-<h3 id="introduction">Introduction</h3>
 
-Appium is an open-source test automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium will definitely be easy to get started with.<br>
+<h3 id="about-appium">About Appium</h3>
+
+Appium is an open-source test-automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using the WebDriver <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">JSON wire protocol</a>. Selenium also uses the JSON wire protocol. If you are familiar with Selenium for web testing, Appium will definitely be easy to get started with.<br>
 If you have any doubts, have a look at our <a href="/docs/guides/tutorials-appium/">Appium Tutorial Series</a>, where we help you set up Appium on your system and run your first test.
+
 
 <h3 id="reporting">Reporting</h3>
 
@@ -18,19 +21,19 @@ When running Appium tests on TestObject, you will be able to browse your test re
 
 Read more about our <a href="/docs/general-reference/automation/reporting">reporting for automated tests</a>.
 
+
 <h3 id="getting-started">Getting Started</h3>
 
 Your existing Appium tests will run on the TestObject platform with just some small changes.
 
-<h4>How to get up and running in 10 minutes:</h4>
+<h4>How to get up and running in 10 minutes</h4>
 
 1. Create a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>
 2. Log into your account and upload the app you want to test. You can do this by providing the app file (.apk for Android, <a href="/docs/guides/creating-ipa/">.ipa for iOS</a>), or you can take advantage of our HockeyApp integration!
 3. Navigate to Automated Testing -> Appium and create a new Appium Suite. This is where you first choose the devices you want to test on. You can change them at any time. A Suite holds all the preferences for your test executions: app version, testing devices, etc.
 
-<h4>Test Execution Process</h4>
 
-How the test execution works:
+<h4>How the test execution works</h4>
 
 1. A new Suite Report including Test Reports for each individual test run is created via REST API. You will be able to monitor the progress of the Suite Report in the UI.
 2. For each test run your client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)
