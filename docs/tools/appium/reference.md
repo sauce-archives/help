@@ -258,7 +258,7 @@ Response:
 
 <h4 id="update-suite">Update Suite</h4>
 
-Use this method to update the properties of a suite. Set frameworkVersion to "LATEST" if you want to use the latest available version.
+Use this method to update the properties of a suite.
 
 {% highlight javascript %}
 PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}
