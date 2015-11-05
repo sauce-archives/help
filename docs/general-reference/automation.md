@@ -27,11 +27,9 @@ There are a number of frameworks available on the market for this purpose. To ex
 
 At the moment the following frameworks are supported, which are all available free of charge:
 
-* <a href="/docs/testing-tools/appium/introduction/">Appium</a>
+* <a href="/docs/tools/appium/introduction/">Appium</a>
 * <a href="/docs/testing-tools/robotium-espresso/introduction/#Robotium">Robotium</a>
 * <a href="/docs/testing-tools/robotium-espresso/introduction/#Espresso">Espresso</a>
-
-
 
 <br> To write tests for native Android applications, you can use any of these three frameworks.
 <br> Appium is a cross-platform framework, which allows you to test native Android and iOS applications, as well as hybrid or web apps.
