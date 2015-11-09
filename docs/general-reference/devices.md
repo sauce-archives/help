@@ -66,7 +66,7 @@ Response:
 {% endhighlight %}
 
 
-<h4 id="read-device-descriptors">Read Available Devices</h4>
+<h4 id="read-available-devices">Read Available Devices</h4>
 
 Use this method to read the IDs of devices which are currently available.
 
