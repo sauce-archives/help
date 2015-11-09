@@ -62,5 +62,19 @@ That's neat, but this approach is giving us one further advantage that is not to
 
 How should you structure your project? As with everything, you should explore different solutions to find the one that is best suited to what you are actually doing. For the purpose of this tutorial we will be giving you a sneak peek of how we do things at TestObject, in particular how we write Appium tests for our customers.
 
-<h4 id="project-structure">AbstractTest</h4>
-At the center of the project lies the AbstractTest class. 
+<h4 id="abstract-test">AbstractTest</h4>
+At the center of the project lies the AbstractTest class. Here we define our setup method, which will be executed before every test is run. Here we do three things:
+
+* we take care of initializing the driver responsible for the connection to the Appium server;
+* we instantiate the App class which will allow us to access the single screens of the application we want to test;
+* we set the TestObjectResultWatcher for the driver we just initialized.
+
+[code]
+
+<h4 id="application-class">Application class</h4>
+Another central class in your test will be the Application class (we simply name it with the name of the application we are testing). The function of this class is to provide the screens (as we were saying before, the Page objects) to the methods that will need to access their functionalities (our test methods).
+
+[show code]
+
+<h4 id="application-class">AstractScreen</h4>
+
