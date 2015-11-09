@@ -7,8 +7,12 @@ alias: /docs/devices/
 
 <li><a href="#real-devices-how-it-works">Real Devices: How it Works</a></li>
 <li><a href="#device-list">Device List</a></li>
+<li><a href="#rest-api">REST API</a></li>
+
+
 
 <h3 id="real-devices-how-it-works">Real Devices: How It Works</h3>
+
 TestObject hosts hundreds of <strong>real smartphones and tablets in the cloud</strong> for manual and automated testing. You can remotely control all devices directly from your browser. 
 
 The devices are located at TestObjects' data center in Germany, connected to servers. TestObject uses a virtual networking computer (VNC) to transmit mouse and keyboard events on a device. The VNC client on the device relays back the graphical screen, and you can control it remotely. It is almost like holding the device in your hands.
@@ -24,6 +28,7 @@ Every user will be able to use a <strong>fresh, standard phone that is not modif
 
 
 <h3 id="device-list">Device List</h3>
+
 Currently, TestObject hosts <strong>more than 150 different models of real Android and iOS devices </strong>. We constantly add more devices to our pool. To see if the devices you want to test on are available, please refer to our <a href="https://devicelab.testobject.com/">Device Lab</a> for the complete device list, including device specifications.</b>
 
 <div class="center">
@@ -34,3 +39,46 @@ Currently, TestObject hosts <strong>more than 150 different models of real Andro
 
 <img class="center shadow" src="/img/first-impressions/devicepool-photo2.jpg">
 
+
+
+<h3 id="rest-api">REST API</h3>
+
+
+<h4 id="read-device-descriptors">Read Device Descriptors</h4>
+
+Use this method to read all device descriptors.
+
+{% highlight javascript %}
+GET https://app.testobject.com:443/api/rest/descriptors
+{% endhighlight %}
+
+Response:
+
+{% highlight javascript %}
+[
+	{
+		id: "Fairphone_real",
+		name: "Fairphone",
+		...
+	},
+	...
+]
+{% endhighlight %}
+
+
+<h4 id="read-device-descriptors">Read Available Devices</h4>
+
+Use this method to read the IDs of devices which are currently available.
+
+{% highlight javascript %}
+GET https://app.testobject.com:443/api/rest/descriptors/availableDescriptors
+{% endhighlight %}
+
+Response:
+
+{% highlight javascript %}
+[
+	"Fairphone_real",
+	...
+]
+{% endhighlight %}
