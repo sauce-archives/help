@@ -154,7 +154,7 @@ password=
 Use this method to read the IDs of the devices which you had selected for the specified suite.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/devices
+GET https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/deviceIds
 {% endhighlight %}
 
 Response:
