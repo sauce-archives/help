@@ -1,4 +1,5 @@
 .bundle
+.jekyll-metadata
 .DS_Store
 .rvmrc
 _site

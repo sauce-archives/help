@@ -148,6 +148,19 @@ username=your_api_key
 password=
 {% endhighlight %}
 
+<h4>Working with test suites</h4>  
+Test Suites allow you to group your tests and manage their configuration through our UI.
+Once you have them set up you don't have to modify your CI configuration when you want to change application,  
+devices on which tests will be run, or an Appium version - you can do it through UI.  
+It works in the following way:  
+1. Request list of devices configured for your test suite using suite ID.  
+2. Create a matrix of devices x tests you are about to execute.  
+3. Send the matrix of tests you are about to execute to our API - we will create a suite report and test reports for each test.  
+4. Each test report already has all the information needed to execute a test (app id, Appium version, device),
+so when you create an Appium session the only capability you have to set is `testobject_test_report_id`,
+the rest is already on our server.  
+5. After each test is finished you send us it's result (whether it's passed or not.)  
+
 
 <h4 id="read-devices">Read Devices</h4>
 
