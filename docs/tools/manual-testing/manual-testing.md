@@ -11,9 +11,9 @@ permalink: docs/testing-tools/manual-testing/
 <li><a href="#sensors">Sensors</a></li>
 <li><a href="#device-settings">Device Settings</a> </li>
 <li><a href="#create-issue">Create an Issue</a> </li>
-<li><a href="#screenshots">Make a Screenshot</a> </li>
+<li><a href="#screenshots">Take a Screenshot</a> </li>
 <li><a href="#logs">Device Log</a> </li>
- 
+
 
 <br> 
 
@@ -28,7 +28,7 @@ Testing manually throught TestObject only requires you to upload the .apk or .ip
 
 A preparation and installation protocol will be executed automatically every time a device gets started. This takes a couple of seconds and guarantees a fresh, standard device for every new user. After a testing session was ended the previous app and all data gets cleaned from the device.
 
-To document your test results you can go to the right side of the Manual Testing view. Document the issues you've found, make screenshots throughout the test, and have a look on the extensive log data provided.
+To document your test results you can go to the right side of the Manual Testing view. Document the issues you've found, take screenshots throughout the test, and have a look on the extensive log data provided.
 
 Change some of the settings and manipulate the device's sensors. To access all available features, open the left menu. The entire spectrum of options is only available for Android so far. The features will be implemented step by step for iOS, too.
 
@@ -141,7 +141,7 @@ You also have the option to intgrate this report with your favorite <a href="/do
 <br style="clear:both">
 
 
-<h3 id="screenshot">Make a Screenshot</h3>
+<h3 id="screenshots">Take a Screenshot</h3>
 
 <img src="/img/tools/manual/screenshot2.png" width="311" style="float:left; margin-right:60px;
   margin-bottom:10px" alt="Sample Screenshot">
