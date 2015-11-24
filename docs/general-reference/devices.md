@@ -49,7 +49,7 @@ Currently, TestObject hosts <strong>more than 150 different models of real Andro
 Use this method to read all device descriptors.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/descriptors
+GET https://app.testobject.com:443/api/rest/devices/v1/devices
 {% endhighlight %}
 
 Response:
@@ -71,7 +71,7 @@ Response:
 Use this method to read the IDs of devices which are currently available.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/descriptors/available
+GET https://app.testobject.com:443/api/rest/devices/v1/devices/available
 {% endhighlight %}
 
 Response:
