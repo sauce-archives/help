@@ -69,6 +69,91 @@ At the center of the project lies the AbstractTest class. Here we define our set
 * we instantiate the App class which will allow us to access the single screens of the application we want to test;
 * we set the TestObjectResultWatcher for the driver we just initialized.
 
+{% highlight java %}
+	public abstract class AbstractTest {
+
+		  /* Grab the test name. */
+		  @Rule
+		  public TestName testName = new TestName();
+
+		  /* Set the test result watcher to send test results to TestObject. */
+		  @Rule
+		  public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
+
+		  private AppiumDriver driver;
+		  protected Calculator app;
+
+		  /* Establish a connection to TestObject, or to a local device test is local. */
+		  @Before
+		  public void connect() throws MalformedURLException {
+
+		      this.driver = AppiumDriverBuilder.forAndroid()
+		                  .withApiKey(resultWatcher.getApiKey())
+		                  .withTestReportId(resultWatcher.getTestReportId())
+		                  .withEndpoint(resultWatcher.getTestObjectOrLocalAppiumEndpointURL())
+		                  .build();
+
+		      resultWatcher.setAppiumDriver(driver);
+		      app = new Calculator(driver);
+
+		  }
+
+	}
+{% endhighlight %}
+
+<h4 id="driver-builder">AppiumDriverBuilder</h4>
+	public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
+
+		protected String apiKey;
+		protected String testReportId;
+
+		public static AndroidDriverBuilder forAndroid() {
+			return new AndroidDriverBuilder();
+		}
+
+		public static class AndroidDriverBuilder extends AppiumDriverBuilder<AndroidDriverBuilder, AndroidDriver> {
+
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+
+			public AndroidDriver build() {
+
+				capabilities.setCapability(TESTOBJECT_API_KEY, apiKey);
+				capabilities.setCapability(TESTOBJECT_TEST_REPORT_ID, testReportId);
+
+				capabilities.setCapability("deviceName", "testDevice");
+
+				return new AndroidDriver(endpoint, capabilities);
+
+			}
+
+		}
+
+		protected URL endpoint;
+
+		public SELF withEndpoint(URL endpoint) {
+			this.endpoint = endpoint;
+
+			return (SELF) this;
+		}
+
+		public SELF withApiKey(String apiKey) {
+			this.apiKey = apiKey;
+
+			return (SELF) this;
+		}
+
+		public SELF withTestReportId(String testReportId) {
+			this.testReportId = testReportId;
+
+			return (SELF) this;
+		}
+
+		public abstract DRIVER build();
+
+	}
+{% endhighlight %}
+
+
 [code]
 
 <h4 id="application-class">Application class</h4>
@@ -76,5 +161,16 @@ Another central class in your test will be the Application class (we simply name
 
 [show code]
 
-<h4 id="application-class">AstractScreen</h4>
+<h4 id="abstract-screen">AstractScreen class</h4>
+Your AbstractScreen class will contain all the methods that are shared between your Screen objects. These may be general purpose methods that perform gestures needed to interact with your app in multiple points (swiping, scrolling), wrappers that hide some more convoluted code to increase the readability of your test methods, synchronization methods and more.
+
+[code, point at PageFactory.initElements]
+
+<h4 id="screen">Screen classes</h4>
+Your screen classes represent the screens of your app. Here you will fetch the UI elements and interact with them in methods that represent possible interactions with the user interface, like opening a menu and selecting an item, filling in some fields and pressing a submit button, scrolling down a list and selecting the right element etc. This way your test methods will be just a sequence of user interactions on different screens. This will keep your tests easily maintenable and extendable.
+
+[code]
+
+<h4 id="test">Test class</h4>
+
 
