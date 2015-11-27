@@ -8,6 +8,7 @@ alias: [/docs/questions-and-answers/faq-security/, /docs/questions-and-answers/f
 	<li> <a href="#FAQ-Devices">Devices</a> </li>
 	<li> <a href="#FAQ-Security">Security</a> </li>
 	<li> <a href="#FAQ-Pricing">Pricing</a> </li>
+    <li> <a href="#FAQ-Technical">Technical</a></li>
 </ul>
 
 <h3 id="FAQ-Devices">FAQ-Devices</h3>
@@ -96,5 +97,7 @@ Yes, you will receive an invoice for every payment via email. You also can acces
 
 <h4 id="export-ipa">How do I export an IPA file?</h4>
 Check out this <a href="/docs/guides/creating-ipa/">short guide</a> on how to do it!
-  
+
+<h4 id="Whitelisting">My app is only available within our internal network. Can I use TestObject devices for my testing?</h4>
+  Yes. Sometimes apps are designed to be run on internal networks, or on networks that can be accessed only from specific IP addresses. In this case, you can add an exception for TestObject to your network's whitelist for the IP address <bold>37.44.7.110</bold>. All TestObject devices access the internet via this IP.
   
