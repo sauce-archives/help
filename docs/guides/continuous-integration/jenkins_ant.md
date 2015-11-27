@@ -1,11 +1,8 @@
 ---
-title: Integrate Robotium/Espresso into your CI Process
+title: Running Robotium and Espresso through Jenkins with Ant
 layout: en
 permalink: docs/guides/robotium-espresso-jenkins-ant/
 ---
-<ul>
-<li><a href="#jenkins-ant">Running Robotium and Espresso through Jenkins with Ant</a> </li>
-</ul>
 
 <h3 id="jenkins-ant">Running Robotium and Espresso through Jenkins with Ant</h3>
 
