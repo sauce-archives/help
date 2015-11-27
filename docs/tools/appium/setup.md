@@ -168,4 +168,9 @@ public class CompleteTestSetup {
 }
 {% endhighlight %}
 
-If you are not completely sure how to write Appium tests, you might be interested in our [Appium tutorials](/docs/guides/tutorials-appium/).
+When you feel comfortable writing tests using this last setup, it would probably make sense for you to have a look at our [PageObject setup](/docs/tools/appium/advanced), which is basically just a way to write better structured, more readable and more easily maintanable tests.
+
+<h4 id="parallelized-setup">Appendix: parallelized setup (watcher and multiple devices without suites)</h4>
+If you want to run your tests on multiple devices, but for some reason cannot take advantage of the Suite setup, then you can still achieve a similar result with parameterized tests. The downside to this approach is that, when testing on TestObject, your test results won't be aggregated in suites. This is because you are basically just running several "single" tests without providing any way for the system to tell they are part of a single group. you can find an example of advanced setup that uses this approach [here](https://github.com/testobject/calculator-test-gradle/tree/parallelized_setup).
+
+
