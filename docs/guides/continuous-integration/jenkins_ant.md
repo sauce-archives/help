@@ -21,7 +21,7 @@ What you need:
 <h4 id="step1">Step 1: Add the Ant Build File and Ant Plugin to your repository</h4>
 
 + Download TestObject Ant Tasks: <a href="/attachments/guide/ant-task/testobject-ant-3.08.06.jar" target="_blank">testobject-ant-3.08.06.jar</a>
-+ Download the TestObject: <a href="https://github.com/testobject/calculator/build.xml" target="_blank">build.xml</a>
++ Download the TestObject: <a href="https://github.com/testobject/calculator/blob/master/build.xml" target="_blank">build.xml</a>
 
 <h4 id="step2">Step 2: Add the files to your app repository</h4>
 
