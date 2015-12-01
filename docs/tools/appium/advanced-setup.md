@@ -4,7 +4,16 @@ layout: en
 permalink: docs/tools/appium/advanced/
 ---
 
-A good test setup is not just a working setup, it must be a tidy setup. Sure, nothing prevents you from [writing all your code in a single class](/docs/tools/appium/setup). Your tests will still run, but maintaining the existing ones and adding new ones will become a pain very quickly! To prevent unnecessary headaches and enable you to write your tests more efficiently, we suggest you follow the PageObject pattern.
+* [The PageObject pattern](#pageobject-pattern)
+* [Project structure](#project-structure)
+	- [AbstractTest](#abstract-test)
+	- [AppiumDriverBuilder](#driver-builder)
+	- [the Application class](#application-class)
+	- [AbstractScreen](#abstract-screen)
+	- [the Screen classes](#screen)
+	- [the Test classes](#test)
+
+A good test setup is not just a working setup, it must be a tidy setup. Sure, nothing prevents you from [writing all your code in a single class](/docs/tools/appium/setup). Your tests will still run, but maintaining the existing ones and adding new ones will become a pain very quickly! To prevent unnecessary headaches and enable you to write your tests more efficiently, we suggest you write your tests using a more advanced setup based on the PageObject pattern. This tutorial will guide your through the creation of such a setup.
 
 <h3 id="pageobject-pattern">The PageObject pattern</h3>
 Following the PageObject pattern means organizing the code you write in a certain way. This would involve transforming our older "twoPlusTwoOperation" method from this:
@@ -51,9 +60,16 @@ By wrapping the low-level operations in dedicated methods, we now have test meth
 
 This approach is giving us one further advantage that is not to be underestimated: by hiding the technical complexity of the single utility methods, the PageObject pattern makes the flow of the user interaction evident. This is especially useful in the case of longer, more complicated tests, and kind of transforms the whole way we write tests. Once you have implemented the basic interactions for the screens of your application, writing a test method is basically just reproducing the use case by calling methods that do exactly what their name says. This is why you should make an effort to choose the best possible names for them.
 
-<h3 id="project-structure">The project structure</h3>
+<h3 id="project-structure">Project structure</h3>
 
-How should you structure your project? As with everything, you should explore different solutions to find the one that is best suited to what you are actually doing. For the purpose of this tutorial we will be giving you a sneak peek of how we do things at TestObject, in particular how we structure Appium test suites for our customers.
+How should you structure your project? As with everything, you should explore different solutions to find the one that is best suited to what you are actually doing. For the purpose of this tutorial we will be giving you a sneak peek of how we do things at TestObject, in particular how we structure Appium test suites for our customers. The core components of the setup will be the following classes:
+
+* [AbstractTest](#abstract-test), in which we take care of the setup phase;
+* [AppiumDriverBuilder](#driver-builder), which sets the needed capabilitis and instantiates the driver;
+* [the Application class](#application-class), which we invoke to access our Screen objects;
+* [AbstractScreen](#abstract-screen), containing all the shared methods between your Screen objects;
+* [the Screen classes](#screen), which contain methods representing user interactions with the app being tested;
+* [the Test classes](#test), which contain one or more tests written as a sequence of screen method calls.
 
 <h4 id="abstract-test">AbstractTest</h4>
 At the center of the project lies the AbstractTest class. Here we define our setup method, which will be executed before every test is run. Here we do three very important things:
