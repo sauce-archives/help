@@ -65,7 +65,7 @@ This approach is giving us one further advantage that is not to be underestimate
 How should you structure your project? As with everything, you should explore different solutions to find the one that is best suited to what you are actually doing. For the purpose of this tutorial we will be giving you a sneak peek of how we do things at TestObject, in particular how we structure Appium test suites for our customers. The core components of the setup will be the following classes:
 
 * [AbstractTest](#abstract-test), in which we take care of the setup phase;
-* [AppiumDriverBuilder](#driver-builder), which sets the needed capabilitis and instantiates the driver;
+* [AppiumDriverBuilder](#driver-builder), which sets the needed capabilities and instantiates the driver;
 * [the Application class](#application-class), which we invoke to access our Screen objects;
 * [AbstractScreen](#abstract-screen), containing all the shared methods between your Screen objects;
 * [the Screen classes](#screen), which contain methods representing user interactions with the app being tested;
@@ -107,7 +107,7 @@ public abstract class AbstractTest {
 {% endhighlight %}
 
 <h4 id="driver-builder">AppiumDriverBuilder</h4>
-Our AppiumDriverBuilder does what the name says: it is basically a support class that takes care of configuring and istantiating the Appium driver.
+Our AppiumDriverBuilder does what the name says: it is basically a support class that takes care of configuring and instantiating the Appium driver.
 
 {% highlight java %}
 public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
@@ -237,7 +237,7 @@ public abstract class AbstractScreen {
 Notice the {% highlight java %}PageFactory.initElements(new AppiumFieldDecorator(driver), this);{% endhighlight %} instruction. This is what allows you to use annotations to grab UI elements, so don't forget to include it in your setup!
 
 <h4 id="screen">Screen classes</h4>
-Your screen classes represent the screens of your app. Here you will fetch the UI elements and interact with them in methods that represent possible interactions with the user interface, like opening a menu and selecting an item, filling in some fields and pressing a submit button, scrolling down a list and selecting the right element etc. This way your test methods will be just a sequence of user interactions on different screens. This will keep your tests easily maintenable and extendable.
+Your screen classes represent the screens of your app. Here you will fetch the UI elements and interact with them in methods that represent possible interactions with the user interface, like opening a menu and selecting an item, filling in some fields and pressing a submit button, scrolling down a list and selecting the right element etc. This way your test methods will be just a sequence of user interactions on different screens. This will keep your tests easily maintainable and extendable.
 
 {% highlight java %}
 public class CalculatorScreen extends AbstractScreen {
@@ -312,7 +312,7 @@ public class OperationTests extends AbstractTest {
 }
 {% endhighlight %}
 
-On the top of the class signature you can see that in this case the tests are being run using the TestObject runner, and are annotated with the cusotm TestObject annotation. This is because we are using what is called the TestObject Suite setup.
+On the top of the class signature you can see that in this case the tests are being run using the TestObject runner, and are annotated with the custom TestObject annotation. This is because we are using what is called the TestObject Suite setup.
 
 What you see here is a very simple application of the PageObject pattern. It might seem like a lot of work for very little gain, so let's set the calculator example aside for a moment, and jump into a real-world example:
 
@@ -350,7 +350,7 @@ public class ChatTest extends AbstractTest {
 }
 {% endhighlight %}
 
-As you can see, when multiple screens are involved the purpose of this pattern becomes clear, as does its conveniency. We are now navigating through a series of screens we have never seen, and yet we can already get a general idea of what is going on in our test. If we had a look at the implementation of the screen methods we are calling, we would get a even more precise idea of what's happening. The fact that we can already gather some information without doing so is one of the benefits of writing tests with PageObject.
+As you can see, when multiple screens are involved, the purpose of this pattern becomes clear, as does its convenience. We are now navigating through a series of screens we have never seen, and yet we can already get a general idea of what is going on in our test. If we had a look at the implementation of the screen methods we are calling, we would get a even more precise idea of what's happening. The fact that we can already gather some information without doing so is one of the benefits of writing tests with PageObject.
 
 Should a small change in the UI occur, we will probably not need to touch our test methods at all: the change is going to take place in one of our screen methods. In an agile environment, in which these kind of changes are frequent, this addition to the robustness of our test script is particularly welcome.
 
@@ -416,6 +416,6 @@ public class CreateDocumentationWithSuggestionTest extends AbstractTest {
 }
 {% endhighlight %}
 
-You should keep your test methods short enough so that you are able to tell what they do at a glance, while not packing everything into a single screen method, if possible. Finding the balance is the key to writing a good, maintanable test suite.
+You should keep your test methods short enough so that you are able to tell what they do at a glance, while not packing everything into a single screen method, if possible. Finding the balance is the key to writing a good, maintainable test suite.
 
 For reference, the complete code for our Calculator example is available [here](https://github.com/testobject/calculator-test-gradle/tree/calculator_simpler).
