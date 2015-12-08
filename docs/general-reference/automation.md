@@ -66,4 +66,4 @@ Use our tutorials to set up your Continuous Integration with TestObject:
 + <a href="/docs/guides/appium-travisci/">Run Appium Tests with Travis CI</a>
 + <a href="/docs/guides/robotium-espresso-jenkins-ant/">Running Robotium and Espresso through Jenkins with Ant</a>
 + <a href="/docs/guides/appium-jenkins-gradle/">Running Appium tests through Jenkins</a>
-+ <a href="docs/guides/gradle-plugin/">Execute your tests with Gradle plugin</a>
++ <a href="/docs/guides/gradle-plugin/">Execute your tests with Gradle plugin</a>
