@@ -28,19 +28,19 @@ If you encounter any problems during the setup process don't hesitate to contact
 
 <h4 id="credentials">Credentials</h4>
 
-Every TestObject Box has its own set of credentials which will be sent to you individually. As soon as you have received those credentials you will be able to start setting up your individual testing pool. 
+Every TestObject Box has its own set of credentials which will be sent to you individually. As soon as you have received those credentials you will be able to start setting up your own personal on-premise solution. 
  
 
 <h4 id="architecture">System Architecture</h4>
 
-To be able to use TestObject OnPremise you need to install at least one TestObject App instance and one TestObject Device Pool instance. 
-Both instances depend on <a href="#mongo">MongoDB</a>. Depending on the setup they can use the same MongoDB instance or two dedicated ones.
+To be able to use TestObject on-premise you need to install at least one TestObject App instance and one TestObject Device Pool instance. 
+Both instances need to be connected to the <a href="#mongo">MongoDB</a> database. Depending on the setup they can use the same MongoDB instance or two dedicated ones.
 
 The <strong>App</strong> instance is responsible for hosting the TestObject Web UI. It provides user management, App management and remote controls the TestObject device pool(s).
 
 The <strong>Pool</strong> instance is responsible for talking to the different mobile phones. One device pool instance can manage only one type of mobile operating system like either iOS or Android devices. Thus if you want to test on both platforms you need to install two device pool instances with different configurations.
 
-For this example we use a setup with two host machines, one is running the App instance and the second host machine runs the two Pool intances: one for Android and one for iOS.
+For this example we use a setup with two host machines, one is running the App instance and the second host machine runs the two Pool instances: one for Android and one for iOS.
 
 <h4>Depiction of the Setup</h4>
 
@@ -52,9 +52,9 @@ add a graphic with the setup
 
 <h4 id="sak">TestObject SAK</h4>
 
-For the configuration of the TestObject app instance, as well as for the TestObject pool instance, we provide a tool called Swiss Army Knife (SAK). The SAK tool is also provided as a docker image. 
+For the configuration of the TestObject app instance, as well as for the TestObject pool instance, we provide a tool called Swiss Army Knife (SAK). The SAK tool is provided as a <a href="#docker">docker image</a>. 
 
-This tools facilitates the configuration and allows some customization of the setup and minimizes the overhead. Alternatively, you are able to all default configuration into a docker run command.
+This tools facilitates the configuration and allows some customization of the setup and minimizes the overhead. Alternatively, you need to write all default configuration into a docker run command.
 
 <h3 id=installation>Installation</h3>
 
@@ -63,11 +63,12 @@ This tools facilitates the configuration and allows some customization of the se
 <li><a href="#mongo">MongoDB Installation</a></li>
 <li><a href="#android-install">Android Pool Installation</a></li>
 <li><a href="#ios-install">IOS Pool Installation</a></li>
+<li><a href="#app-install">App Installation</li>
 
 
 <h4 id="docker">Docker Installation</h4>
 
-For the installation TestObject use a software called <strong>Docker Version 1.8.x or higher</a></strong> <a href="https://www.docker.com" target="_blank">(https://www.docker.com)</a>.
+For the installation TestObject uses a software called <strong>Docker (Version 1.8.x or higher)</a></strong> <a href="https://www.docker.com" target="_blank">https://www.docker.com</a>.
 To draw on Docker simplifies the process of downloading new releases and its installation on a host.
 
 <p>To download the docker images access our TestObject docker registry hosted at <a href="https://quay.io/" target="_blank">https://quay.io</a>. <br>
@@ -89,20 +90,18 @@ As stated in the log output the credentials will be stored on the host, so that 
 <h4 id="mongo">MongoDB Installation</h4>
 
 
-We will install two different MongoDB instances, since we will run our App on one host machine, while the Android and iOS pools share a second machine.
+Every host machine needs to install its own MongoDB instance. As stated above in our <a href="#architecture">system architecture</a>our standard example will have two Mongo DB instances running. One will be connected to our <a href="#app-install">App machine</a>, the second one will be running on the device pool machine hosting the <a href="#android-install">Android</a> and <a href="#ios-install">iOS</a> pool distributions. 
 
-Theoretically the <a href="#architecture">system architecture</a> for every specific setup can look different depending on your individual use case.
-
-Run the <a href="#sak">TestObject SAK</a> to create a MongoDB container with some default configuration. Most importantly the container will store all MongoDB data in the /data/mongo folder of the host system:
+Firstly, we run the <a href="#sak">TestObject SAK</a> to create a MongoDB container with some default configuration. Most importantly the container will store all MongoDB data in the /data/mongo folder of the host system:
 
     sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock quay.io/testobject/sak mongo -c create 
     pulling image mongo:3.0.6 
     
-After the MongoDB installation is finished, which might take a while, you will see this output:
+Executing this command usually takes a  couple of minutes. This command creates a new docker container which will run the MongoDB. After the installation is finished you will see this output:
 
-    created container with name testobjectmongo and id  7b2c11a7545192f09fc671e86f66154d2fe47720d4ca5e0d8e035f91a1637299
+    created container with name testobjectmongo and id  [7b2c11a7545192f09fc671e86f66154d2fe47720d4ca5e0d8e035f91a1637299]
 
-This command creates a new docker container which will run the MongoDB. The next step is to start the container:
+The next step is to start the container:
 
     sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock quay.io/testobject/sak mongo -c start
 
@@ -110,19 +109,19 @@ or a bit simpler:
 
     sudo docker start testobject-mongo
     
-To check if the container is really running run:
+To check if the container is really running:
 
     sudo docker ps
     
     CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                      NAMES
     7b2c11a75451        mongo:3.0.6         "/entrypoint.sh mongo"   2 minutes ago       Up 6 seconds        0.0.0.0:27017->27017/tcp   testobject-mongo
 
-Don't forget to repeat the installation for additional host machines.
+Don't forget to repeat the installation for all host machines!
 
 
 <h4 id=android-install>Android Pool Installation</h4>
 
-Now we can get started to setup the TestObject instances. Let's start with an Android device pool. 
+Now we can get started to set up the TestObject instances. Let's start with an Android device pool. 
 
 <h5>Install the Android SDK</h5>
 
@@ -133,6 +132,7 @@ This command will create the container, download the Android SDK and run it:
 
     sudo docker run —name=testobject-android-sdk quay.io/testobject/android-sdk-linux
     
+    
 <h5 id="appium-install">Install the Desired Appium Version</h5>
 
 The second optional dependency is Appium. To allow you to use the Appium version you need you can download them separately. They are also provided as volume images which need to be executed only once:
@@ -142,7 +142,6 @@ Select appium versions to download:
 
 <a href="https://quay.io/repository/testobject/appium?tag=latest&tab=tags">https://quay.io/repository/testobject/appium?tag=latest&tab=tags</a>
 
-<--! credentials or other link: Repository not found! -->
 
 Download the image for the desired appium version and run it once:
 
@@ -166,8 +165,8 @@ This command needs the following parameters:
  </ul>
 
     sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock quay.io/testobject/sak android -c create \
-    -poolName pool-android-1 -poolHostname 10.253.0.131 \
-    -vmliteLicense K2394E8382N9498L9243E \
+    -poolName pool-[your pool] -poolHostname [host ip] \
+    -vmliteLicense [licence key] \
     -appiumVersions appium-1.3.7 appium-1.4.8
 
 <h5>Start the Android Pool Container</h5>
@@ -176,43 +175,37 @@ This command needs the following parameters:
     
 <h5>Connect Devices</h5>
 
-To connect a device ...
+<--! device connection needs more details -->
+
 Now its time to setup the devices you would like to connect to the Android Device Pool.
 
-<--! link and make an indenpendent device setup description -->
-
-
-Sync Device Descriptors from Production:
-<--! our production? --> they don't have their "own descriptors?" -->
+Sync device descriptors from production:
 
     sudo docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak \ populateDeviceDescriptors
 
-Add a Device to the Pool:
+Add a device to the Pool:
 
-    sudo docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak device -c create -poolId pool-android-1 -deviceDescriptorId HTC_One_M8_real -phoneId FA43MWM01768 -wifiName TestObject -wifiPassword 1234qwer -playAccount abc@gmail.com -playAccountPassword 1234qwer
+    sudo docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak device -c create -poolId pool-[your pool name] -deviceDescriptorId [android_phone] -phoneId [ABC12345] -wifiName [your wifi] -wifiPassword [1234qwer] -playAccount [abc@gmail.com] -playAccountPassword [1234qwer]
 
 Sync udev rules:
-<--! what is this and why? -->
     
     sudo docker run --rm --link testobject-pool-android -v /var/run/docker.sock:/var/run/docker.sock quay.io/testobject/sak prepareUdevRules | sudo bash -s
 
-Before you continue with the next steps, please restart the host.
+Before you continue with the next steps, please restart the host!
 
 
-<h5>Populate Pool Database</h5>
-
-<--! with what? --> <--! other position??? -->
+Populate Pool Database
 
     sudo docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak populateDevicePoolDatabase  
     
+
 <h4><a id="ios-install">IOS Pool Installation</a></h4>
 
-The workflow to setup an iOS pool is a bit different. The first step here is to generate ssh keys
+Now we will set up the iOS pool, as well. Therefor we will need to generate ssh keys first.
 
 <h5>SSH Connection</h5>
 
-    ssh-keygen -t rsa -C "abc" 
-<--! abc is form credentials, user can chosse freely, username..? -->
+    ssh-keygen -t rsa -C "[abc]" 
 
 You receive both a public and a private key, which need to be saved in a folder on the host e.g. /home/testobject/ios-config
 
@@ -235,14 +228,17 @@ we need to specify some parameters while doing this:
  </ul>
 </p> 
     sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock quay.io/testobject/sak ios -c create 
-    -poolName pool-ios-1 
-    -poolHostname 10.253.0.131 
-    -provisioningProfile /home/testobject/ios-config/abc.mobileprovision 
-    -signingCertificate /home/testobject/ios-config/abc.p12 
+    -poolName pool-[your ios pool] 
+    -poolHostname [host ip] 
+    -provisioningProfile /home/testobject/ios-config/[abc.mobileprovision] 
+    -signingCertificate /home/testobject/ios-config/[abc.p12] 
     -sshKeyPrivate /home/testobject/ios-config/id_rsa 
     -sshKeyPublic /home/testobject/ios-config/id_rsa.pub 
     -appiumVersions appium-1.3.7 appium-1.4.8
 
+<h4 id="app-install">App Installation</h4>
+
+Now we are switching host machines to install the TestObject Web UI. Therefor we have to repeat the first steps as with our first host machine: <a href="#docker">docker installation</a> and setup of a <a href="#mongodb">MongoDB instance</a>, before we may continue.
 
 
 <h5>Create the App Container</h5>
@@ -262,20 +258,19 @@ Your iOS devices ... -->setup
 
 
 Sync Device Descriptors from Production:
-<--! our production? --> they don't have their "own descriptors?" -->
 
     sudo docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak \ populateDeviceDescriptors
--->
+
 
 Let us add a device to the pool now 
     
-    sudo docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak device -c create -poolId pool-ios-1 -deviceDescriptorId iPad_Air_2_16GB_real -phoneId 4318933069f2b028a3a6c5b4766eb515a1a0f6f8 -wifiName TestObject -wifiPassword 1234qwer -osxHost 10.253.0.132 -osxSSHPort 22 -osxUser ios -osxAppiumPort 14000
+    sudo docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak device -c create -poolId pool-[your pool name] -deviceDescriptorId [your ios device] -phoneId [phone Identifier] -wifiName [your wifi] -wifiPassword [1234qwer] -osxHost [host ip] -osxSSHPort 22 -osxUser ios -osxAppiumPort 14000
 
 
 
 <h5>Create your first user</h5>
 
-sudo docker run --rm --link testobject-mongo:mongo --link testobject-app:app quay.io/testobject/sak user -c create -username admin -password abcd1234 -email john.doe@gmail.com -firstName John -lastName Doe
+sudo docker run --rm --link testobject-mongo:mongo --link testobject-app:app quay.io/testobject/sak user -c create -username admin -password abcd1234 -email [your@email.com] -firstName [John] -lastName [Doe]
 
 
 <h5></h5>
