@@ -78,6 +78,31 @@ Response:
 Once you created a device session you can use the following methods to interact with the device.
 
 
+<h4 id="read-session-descriptor">Read Session Descriptor</h4>
+
+Returns the device session descriptor containing the device properties required to render the device.
+
+{% highlight javascript %}
+GET https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}
+{% endhighlight %}
+
+Response:
+
+{% highlight javascript %}
+{
+	status: "SUCCESS" | "ERROR",
+	error: "DEVICE_SESSION_NOT_FOUND",
+	deviceSessionDescriptor: {
+		resolutionWidth: 540,
+		resolutionHeight 960,
+		orientation: "PORTRAIT" | "LANDSCAPE",
+		hasOnScreenButtons: true | false
+		viewOnly: true | false
+	}
+}
+{% endhighlight %}
+
+
 <h4 id="close-device">Close Device</h4>
 
 Ends the device session.
