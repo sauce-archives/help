@@ -87,6 +87,7 @@ POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSession
 {% endhighlight %}
 
 
+<!-- 
 <h4 id="install-app">Install App</h4>
 
 Installs a previously uploaded app.
@@ -112,6 +113,7 @@ Pushes a previously uploaded file to the device.
 {% highlight javascript %}
 POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/files/{:fileId}/push
 {% endhighlight %}
+-->
 
 
 <h4 id="open-url">Open URL</h4>
@@ -129,6 +131,7 @@ https://testobject.com
 {% endhighlight %}
 
 
+<!-- 
 <h4 id="paste-content">Paste Content</h4>
 
 Pastes the given text into the device.
@@ -142,6 +145,7 @@ Request body:
 {% highlight javascript %}
 This is the text I wish to paste into the device.
 {% endhighlight %}
+-->
 
 
 <h4 id="get-orientation">Get Orientation</h4>
@@ -180,6 +184,7 @@ PORTRAIT | LANDSCAPE
 {% endhighlight %}
 
 
+<!--
 <h4 id="set-gps-coordinates">Set GPS Coordinates</h4>
 
 Sets the GPS coordinates.
@@ -294,3 +299,4 @@ Convenience method to open the Google Account settings.
 {% highlight javascript %}
 POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/googleAccount
 {% endhighlight %}
+-->
