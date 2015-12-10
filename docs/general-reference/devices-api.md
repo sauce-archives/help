@@ -11,6 +11,12 @@ Base URL:
 https://app.testobject.com:443/api/rest/devices/v1
 {% endhighlight %}
 
+Request headers:
+
+{% highlight javascript %}
+Content-Type: application/json
+{% endhighlight %}
+
 
 <h3 id="devices">Devices</h3>
 
