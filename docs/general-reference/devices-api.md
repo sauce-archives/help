@@ -101,7 +101,7 @@ Response:
 	error: "DEVICE_SESSION_NOT_FOUND",
 	deviceSessionDescriptor: {
 		resolutionWidth: 540,
-		resolutionHeight 960,
+		resolutionHeight: 960,
 		orientation: "PORTRAIT" | "LANDSCAPE",
 		hasOnScreenButtons: true | false
 		viewOnly: true | false
