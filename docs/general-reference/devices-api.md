@@ -5,6 +5,13 @@ permalink: docs/general-reference/devices/api
 ---
 
 
+Base URL:
+
+{% highlight javascript %}
+https://app.testobject.com:443/api/rest/devices/v1
+{% endhighlight %}
+
+
 <h3 id="devices">Devices</h3>
 
 <h4 id="read-device-descriptors">Read Device Descriptors</h4>
@@ -12,7 +19,7 @@ permalink: docs/general-reference/devices/api
 Returns all device descriptors.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/devices
+GET /devices
 {% endhighlight %}
 
 Response:
@@ -34,7 +41,7 @@ Response:
 Returns the IDs of the devices which are currently available.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/devices/available
+GET /devices/available
 {% endhighlight %}
 
 Response:
@@ -52,7 +59,7 @@ Response:
 Allocates a device with the given ID and creates a new device session. This request has to be made with basic authentication where the username is your username and the password is your API key.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/devices/open?id={:deviceId}
+POST /devices/open?id={:deviceId}
 {% endhighlight %}
 
 Basic auth:
@@ -83,7 +90,7 @@ Once you created a device session you can use the following methods to interact 
 Returns the device session descriptor containing the device properties required to render the device.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}
+GET /sessions/{:deviceSessionId}
 {% endhighlight %}
 
 Response:
@@ -108,7 +115,7 @@ Response:
 Ends the device session.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/close
+POST /sessions/{:deviceSessionId}/close
 {% endhighlight %}
 
 
@@ -118,7 +125,7 @@ POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSession
 Installs a previously uploaded app.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/apps/{:externalAppVersionId}/install
+POST /sessions/{:deviceSessionId}/apps/{:externalAppVersionId}/install
 {% endhighlight %}
 
 
@@ -127,7 +134,7 @@ POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSession
 Restarts the app with the given ID.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/apps/{:externalAppVersionId}/restart
+POST /sessions/{:deviceSessionId}/apps/{:externalAppVersionId}/restart
 {% endhighlight %}
 
 
@@ -136,7 +143,7 @@ POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSession
 Pushes a previously uploaded file to the device.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/files/{:fileId}/push
+POST /sessions/{:deviceSessionId}/files/{:fileId}/push
 {% endhighlight %}
 -->
 
@@ -146,7 +153,7 @@ POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSession
 Convenience method to open the Chrome browser with the given URL.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/openUrl 
+POST /sessions/{:deviceSessionId}/openUrl 
 {% endhighlight %}
 
 Request body:
@@ -162,7 +169,7 @@ https://testobject.com
 Pastes the given text into the device.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/paste
+POST /sessions/{:deviceSessionId}/paste
 {% endhighlight %}
 
 Request body:
@@ -178,7 +185,7 @@ This is the text I wish to paste into the device.
 Returns the current orientation of the device.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/orientation
+GET /sessions/{:deviceSessionId}/orientation
 {% endhighlight %}
 
 Response:
@@ -193,7 +200,7 @@ PORTRAIT | LANDSCAPE
 Rotates the device to the given orientation.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/orientation
+POST /sessions/{:deviceSessionId}/orientation
 {% endhighlight %}
 
 Request body:
@@ -215,7 +222,7 @@ PORTRAIT | LANDSCAPE
 Sets the GPS coordinates.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/gps/coordinates
+POST /sessions/{:deviceSessionId}/gps/coordinates
 {% endhighlight %}
 
 Request body:
@@ -242,7 +249,7 @@ Response:
 Executes the given ADB command. "adb shell" will automatically be prepended. Send "input text 'abc'" to execute the command "adb shell input text 'abc'".
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/adb
+POST /sessions/{:deviceSessionId}/adb
 {% endhighlight %}
 
 Request body:
@@ -257,7 +264,7 @@ input text 'abc'
 Returns all locales of the device.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/locales
+GET /sessions/{:deviceSessionId}/locales
 {% endhighlight %}
 
 Response:
@@ -279,7 +286,7 @@ Response:
 Sets the given locale.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/locales/{:locale}/set
+POST /sessions/{:deviceSessionId}/locales/{:locale}/set
 {% endhighlight %}
 
 Request body:
@@ -304,7 +311,7 @@ Response:
 Disables animations.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/animations/disable
+POST /sessions/{:deviceSessionId}/animations/disable
 {% endhighlight %}
 
 
@@ -313,7 +320,7 @@ POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSession
 Enables animations.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/animations/enable
+POST /sessions/{:deviceSessionId}/animations/enable
 {% endhighlight %}
 
 
@@ -322,6 +329,6 @@ POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSession
 Convenience method to open the Google Account settings.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/devices/v1/sessions/{:deviceSessionId}/googleAccount
+POST /sessions/{:deviceSessionId}/googleAccount
 {% endhighlight %}
 -->
