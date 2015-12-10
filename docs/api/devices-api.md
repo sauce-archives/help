@@ -71,7 +71,7 @@ POST /devices/open?id={:deviceId}
 Basic auth:
 
 {% highlight javascript %}
-username={:yourUserName}
+username={:yourUsername}
 password={:yourApiKey}
 {% endhighlight %}
 
@@ -125,22 +125,40 @@ POST /sessions/{:deviceSessionId}/close
 {% endhighlight %}
 
 
-<!-- 
+<!--  
 <h4 id="install-app">Install App</h4>
 
 Installs a previously uploaded app.
 
 {% highlight javascript %}
-POST /sessions/{:deviceSessionId}/apps/{:externalAppVersionId}/install
+POST /sessions/{:deviceSessionId}/apps/{:appVersionId}/install
+{% endhighlight %}
+ -->
+
+
+<h4 id="install-and-launch-app">Install and Launch App</h4>
+
+Installs and launches a previously uploaded app. This request has to be made with basic authentication where the username is your username and the password is your API key.
+
+{% highlight javascript %}
+POST /sessions/{:deviceSessionId}/apps/{:appVersionId}/install
+{% endhighlight %}
+
+Basic auth:
+
+{% highlight javascript %}
+username={:yourUsername}
+password={:yourApiKey}
 {% endhighlight %}
 
 
+<!--
 <h4 id="restart-app">Restart App</h4>
 
 Restarts the app with the given ID.
 
 {% highlight javascript %}
-POST /sessions/{:deviceSessionId}/apps/{:externalAppVersionId}/restart
+POST /sessions/{:deviceSessionId}/apps/{:appVersionId}/restart
 {% endhighlight %}
 
 
