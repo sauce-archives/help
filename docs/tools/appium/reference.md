@@ -11,6 +11,7 @@ permalink: docs/tools/appium/reference/
 	<li><a href="#basic-setup">Basic Test Setup</a></li>
 	<li><a href="#suite-setup">Complete Test Setup &mdash; Organize your Results in Suites</a></li>
 	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
+	<li><a href="#working-with-suites">Working With Test Suites</a></li>
 	<li><a href="#rest-api">REST API</a></li>
 	<li><a href="#automated-file-upload">Automated File Upload</a></li>
 </ul>
@@ -34,7 +35,7 @@ If you need to quickly switch to testing on a local device, just set the "testLo
 
 <h3 id="run-with-any-language">Run with Any Language</h3>
 
-Run your Appium tests on TestObject no matter what language you're using. Just add some extra <a href="#general-test-setup">capabilities</a> to your test. For more control you can optionally connect to our <a href="#rest-api">REST API</a>.
+Run your Appium tests on TestObject no matter what language you're using. Just add some extra <a href="#general-test-setup">capabilities</a> to your test. For more control you can optionally connect to our <a href="/docs/api/appium">REST API</a>.
 
 
 <h3 id="basic-setup">Basic Test Setup</h3>
@@ -95,7 +96,7 @@ https://app.testobject.com:443/api/appium/wd/hub
 
 <h4>REST Calls</h4>
 
-In order to organize your test results in suites, you will need to make a couple of calls to our <a href="#rest-api">REST API</a>.
+In order to organize your test results in suites, you will need to make a couple of calls to our <a href="/docs/api/appium">Appium REST API</a>.
 
 
 <h3>Live-View and Report URLs</h3>
@@ -132,222 +133,24 @@ public void setup() throws MalformedURLException {
 {% endhighlight %}
 
 
+<h3 id="working-with-suites">Working With Test Suites</h3>
+
+Test suites allow you to group your tests and manage their configuration through our UI. Once you have them set up you don't have to modify your CI configuration when you want to change the app, the devices on which tests will be run or the Appium version &ndash; you can do it via UI.
+
+It works in the following way:
+
+1. Request list of devices configured for your test suite using suite ID.
+2. Create a matrix of devices-x-tests you are about to execute.
+3. Send the matrix of tests you are about to execute to our <a href="/docs/api/appium">Appium API</a> &ndash; we will create a suite report and test reports for each test.
+4. Each test report already has all the information needed to execute a test (app ID, Appium version, device ID), so once you create an Appium session the only capability you have to set is `testobject_test_report_id`, the rest is already on our server.
+5. After each test is finished send us its result (whether it's passed or not).
+
+
 <h3 id="rest-api">REST API</h3>
 
-Prefer to be flexible? Just write your own client to organize your test results. Simply make a couple of REST calls to our API.
-
-Please note: The requests must be sent while the Appium session is still running, that is, before quitting the Appium driver.
-
-
-<h4 id="authentication">Authentication</h4>
-
-All requests should be made with basic authentication where the username is your TestObject API key and the password is empty:
-
-{% highlight javascript %}
-username=your_api_key
-password=
-{% endhighlight %}
-
-<h4>Working with test suites</h4>  
-Test Suites allow you to group your tests and manage their configuration through our UI.
-Once you have them set up you don't have to modify your CI configuration when you want to change application,  
-devices on which tests will be run, or an Appium version - you can do it through UI.  
-It works in the following way:  
-1. Request list of devices configured for your test suite using suite ID.  
-2. Create a matrix of devices x tests you are about to execute.  
-3. Send the matrix of tests you are about to execute to our API - we will create a suite report and test reports for each test.  
-4. Each test report already has all the information needed to execute a test (app id, Appium version, device),
-so when you create an Appium session the only capability you have to set is `testobject_test_report_id`,
-the rest is already on our server.  
-5. After each test is finished you send us it's result (whether it's passed or not.)  
-
-
-<h4 id="read-devices">Read Devices</h4>
-
-Use this method to read the IDs of the devices which you had selected for the specified suite.
-
-{% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/deviceIds
-{% endhighlight %}
-
-Response:
-
-{% highlight javascript %}
-[
-	"Fairphone_real"
-]
-{% endhighlight %}
-
-
-<h4 id="start-suite-report">Start Suite Report</h4>
-
-Use this method to create a new suite report including its test reports.
-
-{% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/start
-{% endhighlight %}
-
-Request body:
-
-{% highlight javascript %}
-[{
-	"className": "com.myapp.mytestclass",
-	"methodName": "myTestMethod",
-	"deviceId": "Fairphone_real"
-}]
-{% endhighlight %}
-
-Response:
-
-{% highlight javascript %}
-[{
-	id: 1,
-	testReports: {
-		id: 1,
-		test: {
-			"className": "com.myapp.mytestclass",
-			"methodName": "myTestMethod",
-			"deviceId": "Fairphone_real"
-		}
-	}
-}]
-{% endhighlight %}
-
-
-<h4 id="finish-suite-report">Finish Suite Report</h4>
-
-Use this method to mark all test reports contained in this suite report as finished.
-
-{% highlight javascript %}
-PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/{suite_report_id}/finish
-{% endhighlight %}
-
-Response:
-
-{% highlight javascript %}
-[{
-	id: 1,
-	testReports: {
-		id: 1,
-		test: {
-			"className": "com.myapp.mytestclass",
-			"methodName": "myTestMethod",
-			"deviceId": "Fairphone_real"
-		}
-	}
-}]
-{% endhighlight %}
-
-
-<h4 id="finish-test-report">Finish Test Report</h4>
-
-Use this method to set the status of a specific test report and mark it as finished.
-
-{% highlight javascript %}
-PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/{suite_report_id}/results/{test_report_id}/finish
-{% endhighlight %}
-
-Request body:
-
-{% highlight javascript %}
-{
-	"passed": true|false
-}
-{% endhighlight %}
-
-Response:
-
-{% highlight javascript %}
-{
-	id: 1,
-	test: {
-		"className": "com.myapp.mytestclass",
-		"methodName": "myTestMethod",
-		"deviceId": "Fairphone_real"
-	}
-}
-{% endhighlight %}
-
-
-<h4 id="update-suite">Update Suite</h4>
-
-Use this method to update the properties of a suite.
-
-{% highlight javascript %}
-PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}
-{% endhighlight %}
-
-Request body:
-
-{% highlight javascript %}
-{
-	"id": 1,
-	"title": "My new suite title",
-	"appVersionId": 1,
-	"frameworkVersion": "1.3.7",
-	"deviceIds": [
-		"Fairphone_real"
-	]
-}
-{% endhighlight %}
-
-Response:
-
-{% highlight javascript %}
-{
-	"id": 1,
-	"title": "My new suite title",
-	"appVersionId": 1,
-	"frameworkVersion": "1.3.7",
-	"deviceIds": [
-		"Fairphone_real"
-	]
-}
-{% endhighlight %}
+Prefer to be flexible? Just write your own client to organize your test results. Simply make a couple of calls to our <a href="/docs/api/appium">Appium API</a>.
 
 
 <h3 id="automated-file-upload">Automated File Upload</h3>
 
-Use the following command to upload your app file. Alternatively, you can upload via UI.
-
-{% highlight bash %}
-curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" --data-binary @your_app.apk
-{% endhighlight %}
-
-The response of the curl upload command will be the ID of the newly uploaded app. Use it to <a href="#rest-api">update the appVersionId</a> of your suite.
-
-
-Optionally, you can send the following header parameters:
-
-<h5>App-Identifier</h5>
-
-*Optional*
-
-Your custom unique identifier for your app
-
-
-<h5>App-DisplayName</h5>
-
-*Optional*
-
-Your custom display name
-
-
-{% highlight bash %}
-curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-DisplayName: yourCustomDisplayName" --data-binary @your_app.apk
-{% endhighlight %}
-
-
-By providing a custom identifier you can also check if an app was already uploaded and prevent duplicate uploads.
-
-First, get all apps for a given MD5:
-
-{% highlight bash %}
-curl -u "your_username:your_api_key" -X GET https://app.testobject.com:443/api/storage/app?appIdentifier=MD5_hash_of_your_app
-{% endhighlight %}
-
-Only if the call returns an empty JSON array, start uploading the file:
-
-{% highlight bash %}
-curl -u "your_username:your_api_key" -X POST https://app.testobject.com:443/api/storage/upload -H "Content-Type: application/octet-stream" -H "App-Identifier: MD5_hash_of_your_app" --data-binary @your_app.apk
-{% endhighlight %}
+You can upload via UI or use our <a href="/docs/api/storage">Storage API</a> to automate your file uploads.

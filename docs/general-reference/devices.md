@@ -43,42 +43,4 @@ Currently, TestObject hosts <strong>more than 150 different models of real Andro
 
 <h3 id="rest-api">REST API</h3>
 
-
-<h4 id="read-device-descriptors">Read Device Descriptors</h4>
-
-Use this method to read all device descriptors.
-
-{% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/devices
-{% endhighlight %}
-
-Response:
-
-{% highlight javascript %}
-[
-	{
-		id: "Fairphone_real",
-		name: "Fairphone",
-		...
-	},
-	...
-]
-{% endhighlight %}
-
-
-<h4 id="read-available-devices">Read Available Devices</h4>
-
-Use this method to read the IDs of devices which are currently available.
-
-{% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/devices/v1/devices/available
-{% endhighlight %}
-
-Response:
-
-{% highlight javascript %}
-[
-	"Fairphone_real",
-	...
-]
-{% endhighlight %}
+See our <a href="/docs/general-reference/devices/api">Devices API</a>.
