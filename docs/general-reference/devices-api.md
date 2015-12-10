@@ -156,16 +156,16 @@ POST /sessions/{:deviceSessionId}/files/{:fileId}/push
 
 <h4 id="open-url">Open URL</h4>
 
-Convenience method to open the Chrome browser with the given URL.
+Convenience method to open the given URL. This requires the Chrome browser to be installed on the device. 
 
 {% highlight javascript %}
-POST /sessions/{:deviceSessionId}/openUrl 
+POST /sessions/{:deviceSessionId}/openUrl
 {% endhighlight %}
 
 Request body:
 
 {% highlight javascript %}
-https://testobject.com
+https://domain-to-open.com
 {% endhighlight %}
 
 
