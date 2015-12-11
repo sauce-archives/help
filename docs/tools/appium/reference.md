@@ -11,7 +11,6 @@ permalink: docs/tools/appium/reference/
 	<li><a href="#basic-setup">Basic Test Setup</a></li>
 	<li><a href="#suite-setup">Complete Test Setup &mdash; Organize your Results in Suites</a></li>
 	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
-	<li><a href="#working-with-suites">Working With Test Suites</a></li>
 	<li><a href="#rest-api">REST API</a></li>
 	<li><a href="#automated-file-upload">Automated File Upload</a></li>
 </ul>
@@ -73,6 +72,17 @@ If you're not using the <a href="/docs/tools/appium/setup">TestObjectResultWatch
 
 <h3 id="suite-setup">Complete Test Setup &mdash; Organize your Results in Suites</h3>
 
+Test suites allow you to group your tests and manage their configuration through our UI. Once you have them set up you don't have to modify your CI configuration when you want to change the app, the devices on which tests will be run or the Appium version &ndash; you can do it via UI.
+
+It works in the following way:
+
+1. Request list of devices configured for your test suite using suite ID.
+2. Create a matrix of devices-x-tests you are about to execute.
+3. Send the matrix of tests you are about to execute to our <a href="/docs/api/appium">Appium API</a> &ndash; we will create a suite report and test reports for each test.
+4. Each test report already has all the information needed to execute a test (app ID, Appium version, device ID), so once you create an Appium session the only capability you have to set is `testobject_test_report_id`, the rest is already on our server.
+5. After each test is finished send us its result (whether it's passed or not).
+
+
 <h4>Capabilities</h4>
 
 We will automatically set the capabilities platformName, deviceName and automationName. In case your test contains either of them, they will be ignored on our system.
@@ -131,19 +141,6 @@ public void setup() throws MalformedURLException {
 	...
 }
 {% endhighlight %}
-
-
-<h3 id="working-with-suites">Working With Test Suites</h3>
-
-Test suites allow you to group your tests and manage their configuration through our UI. Once you have them set up you don't have to modify your CI configuration when you want to change the app, the devices on which tests will be run or the Appium version &ndash; you can do it via UI.
-
-It works in the following way:
-
-1. Request list of devices configured for your test suite using suite ID.
-2. Create a matrix of devices-x-tests you are about to execute.
-3. Send the matrix of tests you are about to execute to our <a href="/docs/api/appium">Appium API</a> &ndash; we will create a suite report and test reports for each test.
-4. Each test report already has all the information needed to execute a test (app ID, Appium version, device ID), so once you create an Appium session the only capability you have to set is `testobject_test_report_id`, the rest is already on our server.
-5. After each test is finished send us its result (whether it's passed or not).
 
 
 <h3 id="rest-api">REST API</h3>
