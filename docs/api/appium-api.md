@@ -10,6 +10,12 @@ Base URL:
 https://app.testobject.com:443/api/rest/appium/v1
 {% endhighlight %}
 
+Request headers:
+
+{% highlight javascript %}
+Content-Type: application/json
+{% endhighlight %}
+
 All requests should be made with basic authentication where the username is your API key and the password is empty:
 
 {% highlight javascript %}
