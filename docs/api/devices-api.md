@@ -151,6 +151,16 @@ username={:yourUsername}
 password={:yourApiKey}
 {% endhighlight %}
 
+Response:
+
+{% highlight javascript %}
+{
+	status: "SUCCESS" | "ERROR",
+	error: "APP_INSTALLATION_FAILED" | "APP_LAUNCH_FAILED",
+	errorMessage: "Something went wrong"
+}
+{% endhighlight %}
+
 
 <!--
 <h4 id="restart-app">Restart App</h4>
