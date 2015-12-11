@@ -4,11 +4,16 @@ layout: en
 permalink: docs/api/appium
 ---
 
-
-All requests should be made with basic authentication where the username is your TestObject API key and the password is empty:
+Base URL:
 
 {% highlight javascript %}
-username=your_api_key
+https://app.testobject.com:443/api/rest/appium/v1
+{% endhighlight %}
+
+All requests should be made with basic authentication where the username is your API key and the password is empty:
+
+{% highlight javascript %}
+username={:yourApiKey}
 password=
 {% endhighlight %}
 
@@ -17,10 +22,10 @@ Please note: The requests must be sent while the Appium session is still running
 
 <h4 id="read-devices">Read Devices</h4>
 
-Use this method to read the IDs of the devices which you had selected for the specified suite.
+Returns the IDs of the devices which you had selected for the specified suite.
 
 {% highlight javascript %}
-GET https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/deviceIds
+GET /suites/{:suiteId}/deviceIds
 {% endhighlight %}
 
 Response:
@@ -34,10 +39,10 @@ Response:
 
 <h4 id="start-suite-report">Start Suite Report</h4>
 
-Use this method to create a new suite report including its test reports.
+Create a new suite report including its test reports.
 
 {% highlight javascript %}
-POST https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/start
+POST /suites/{:suiteId}/reports/start
 {% endhighlight %}
 
 Request body:
@@ -69,10 +74,10 @@ Response:
 
 <h4 id="finish-suite-report">Finish Suite Report</h4>
 
-Use this method to mark all test reports contained in this suite report as finished.
+Marks all test reports contained in the specified suite report as finished.
 
 {% highlight javascript %}
-PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/{suite_report_id}/finish
+PUT /suites/{:suiteId}/reports/{:suiteReportId}/finish
 {% endhighlight %}
 
 Response:
@@ -94,10 +99,10 @@ Response:
 
 <h4 id="finish-test-report">Finish Test Report</h4>
 
-Use this method to set the status of a specific test report and mark it as finished.
+Sets the status of the specific test report and marks it as finished.
 
 {% highlight javascript %}
-PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}/reports/{suite_report_id}/results/{test_report_id}/finish
+PUT /suites/{:suiteId}/reports/{:suiteReportId}/results/{:testReportId}/finish
 {% endhighlight %}
 
 Request body:
@@ -124,10 +129,10 @@ Response:
 
 <h4 id="update-suite">Update Suite</h4>
 
-Use this method to update the properties of a suite.
+Update the properties of a suite.
 
 {% highlight javascript %}
-PUT https://app.testobject.com:443/api/rest/appium/v1/suites/{suite_id}
+PUT /suites/{:suiteId}
 {% endhighlight %}
 
 Request body:
