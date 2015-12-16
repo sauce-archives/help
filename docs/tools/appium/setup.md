@@ -59,7 +59,7 @@ The only needed dependencies for running such a test would be the [Appium Java C
   dependencies {
       testCompile group: 'junit', name: 'junit', version: '4.11'
 
-      testCompile 'io.appium:java-client:3.1.0'
+      testCompile 'io.appium:java-client:3.2.0'
       testCompile 'org.seleniumhq.selenium:selenium-server:2.25.0'
 
   }
@@ -116,7 +116,7 @@ public class IntermediateTestSetup {
 This setup will also need the latest [TestObject Appium Java Api](https://github.com/testobject/testobject-appium-java-api), so you will have to add this line to your build.gradle file:
 
 {% highlight bash %}
-  compile 'org.testobject.extras.appium:appium-java-api:0.0.9'
+  compile 'org.testobject.extras.appium:appium-java-api:0.0.11'
 {% endhighlight %}
 
 and this repository in the "repository" section:
