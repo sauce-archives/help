@@ -9,7 +9,6 @@ permalink: docs/tools/appium/setup/
     <li><a href="#intermediate-setup">Intermediate Setup</a></li>
     <li><a href="#suite-setup">Suite Setup</a></li>
     <li><a href="#parallelized-setup">Appendix: Parallelized Setup</a></li>
-    <li><a href="#ios-alerts">Appendix: iOS Permission Alerts</a></li>
 </ul>
 
 <h3>Running your Appium tests on TestObject with Java</h3>
@@ -182,10 +181,3 @@ When you feel comfortable writing tests using this last setup, it would probably
 
 <h4 id="parallelized-setup">Appendix: Parallelized Setup (watcher and multiple devices without suites)</h4>
 If you want to run your tests on multiple devices, but for some reason cannot take advantage of the Suite setup, then you can still achieve a similar result with parameterized tests. The downside to this approach is that, when testing on TestObject, your test results won't be aggregated in suites. This is because you are basically just running several "single" tests without providing any way for the system to tell they are part of a single group. you can find an example of advanced setup that uses this approach [here](https://github.com/testobject/calculator-test-gradle/tree/parallelized_setup).
-
-
-<h4 id="ios-alerts">Appendix: Testing with iOS Permission Alerts</h4>
-<p>When testing an iOS app that triggers a permission popup immediately (e.g. notification or location services), the popup can appear before Appium has time to initialize, which can cause tests to time out at the beginning, due to a race condition between Appium and iOS. You can read more about this on <a href="https://testobject.com/?p=8580">our blog post on the issue</a>.</p>
-
-<p>To mitigate this issue, please add a wait of 5-8 seconds before your app requests permissions, to allow time for Appium to initialize and you'll be able to interact with
-these alerts.</p>
