@@ -5,6 +5,10 @@ permalink: docs/guides/appium-osx-ios/
 ---
 This tutorial will help you set up Appium on OS X and run your first iOS test. Keep in mind that Appium supports iOS testing on OS X only.
 
+<center>
+<iframe width="750" height="422" src="https://www.youtube.com/embed/meU4TzI3KNM" frameborder="0" allowfullscreen></iframe>
+</center>
+
 ## What you will need
 * OS X 10.7 or higher;
 * [Xcode](https://developer.apple.com/xcode/) 5.1 or higher along with the iOS SDK (usually included);
