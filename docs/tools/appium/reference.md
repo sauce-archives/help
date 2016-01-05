@@ -13,6 +13,7 @@ permalink: docs/tools/appium/reference/
 	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
 	<li><a href="#rest-api">REST API</a></li>
 	<li><a href="#automated-file-upload">Automated File Upload</a></li>
+	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
 </ul>
 
 
@@ -151,3 +152,35 @@ Prefer to be flexible? Just write your own client to organize your test results.
 <h3 id="automated-file-upload">Automated File Upload</h3>
 
 You can upload via UI or use our <a href="/docs/api/storage">Storage API</a> to automate your file uploads.
+
+
+<h3 id="accessing-testobject-via-proxy">Accessing TestObject Via Proxy</h3>
+
+If you're running your tests in a network that requires a proxy to communicate with TestObject, there is some configuration
+necessary if you're using the [TestObject Appium API](https://github.com/testobject/testobject-appium-java-api).
+
+<h4>Proxy Configuration</h4>
+
+To communicate with your proxy, you must provide the address and credentials (if necessary) for it. This can be done using
+the following system properties:
+
+* `https.proxyHost` - e.g. www.example.com
+* `https.proxyPort` - e.g. 8888; default is 8080
+* `https.proxyUser`
+* `https.proxyPassword`
+
+If your proxy has no authentication, you don't need to set `proxyUser` and `proxyPassword`.
+
+<h4>Setting System Properties</h4>
+
+[System properties](https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html) can be set in code, or
+passed in via the command line.
+
+To set properties in code, use `System.getProperties().put()` such as this:
+
+* `System.getProperties().put("http.proxyHost", proxyHost);`
+
+Or, to set them via the command line, which may be more useful if you are triggering your tests via a CI such as Jenkins,
+prepend the system property with -D, for example:
+
+* `-Dhttps.proxyHost=www.example.com -Dhttps.proxyPort=8888`
