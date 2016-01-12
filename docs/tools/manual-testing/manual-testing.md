@@ -26,7 +26,7 @@ Manual testing is the most direct way to test your app. It is particularly suita
 
 Testing manually throught TestObject only requires you to upload the .apk or .ipa file so your application can be run on the device you are interested in. If you are unsure how to create an .ipa file, check out this <a href="/docs/guides/creating-ipa/">short guide</a>.
 
-A preparation and installation protocol will be executed automatically every time a device gets started. This takes a couple of seconds and guarantees a fresh, standard device for every new user. After a testing session was ended the previous app and all data gets cleaned from the device.
+A preparation and installation protocol will be executed automatically every time a device gets started. This takes a couple of seconds and guarantees a fresh, standard device for every new user. After a testing session was ended the previous app and all data gets cleaned from the device. For Android 6.0 devices or higher we currently grant all runtime permissions automatically.
 
 To document your test results you can go to the right side of the Manual Testing view. Document the issues you've found, take screenshots throughout the test, and have a look on the extensive log data provided.
 

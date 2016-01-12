@@ -36,7 +36,7 @@ In order to carry out your first test, you need to <strong>upload an app</strong
 <img class="center shadow" src="/img/settings/upload_app.png">
 <br>
 
-* Upload your native Android or iOS app directly from your system
+* Upload your native Android or iOS app directly from your system. For iOS applications make sure that you <a href="/docs/guides/creating-ipa/">exported your IPA file</a>  with an Ad Hoc Deployment Configuration to test on our platform.
 * Test a Mobile Website by adding the Website URL, a name and the version number
 * <a href="/docs/guides/continuous-integration/">Integrate a build plugin</a>, like Ant, Maven, Jenkins etc.
 * Get your latest app versions directly from HockeyApp. Enter your <a href="https://rink.hockeyapp.net/manage/auth_tokens" target="_blank">HockeyApp token</a> and you are set.

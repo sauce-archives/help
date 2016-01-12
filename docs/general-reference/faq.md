@@ -95,9 +95,12 @@ Yes, you will receive an invoice for every payment via email. You also can acces
 
 <h3 id="FAQ-Technical">FAQ-Technical</h3>
 
-<h4 id="export-ipa">How do I export an IPA file?</h4>
-Check out this <a href="/docs/guides/creating-ipa/">short guide</a> on how to do it!
+<h4 id="export-ipa">What kind of IPA file do I need to export?</h4>
+To test your iOS application on our platform you have to export your IPA file as an Ad Hoc Deployment. Check out this <a href="/docs/guides/creating-ipa/">short guide</a> on how to do it!
 
 <h4 id="Whitelisting">My app is only available within our internal network. Can I use TestObject devices for my testing?</h4>
   Yes. Sometimes apps are designed to be run on internal networks, or on networks that can be accessed only from specific IP addresses. In this case, you can add an exception for TestObject to your network's whitelist for the IP address <bold>37.44.7.110</bold>. All TestObject devices access the internet via this IP.
   
+<!-- <h4 id="permissions"></h4>
+For Android
+For iOS --> 
