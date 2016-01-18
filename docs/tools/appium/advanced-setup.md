@@ -125,8 +125,8 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
 		public AndroidDriver build() {
 
-			capabilities.setCapability(TESTOBJECT_API_KEY, apiKey);
-			capabilities.setCapability(TESTOBJECT_TEST_REPORT_ID, testReportId);
+			capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, apiKey);
+			capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_TEST_REPORT_ID, testReportId);
 
 			capabilities.setCapability("deviceName", "testDevice");
 
@@ -169,7 +169,7 @@ public static class IOSDriverBuilder extends AppiumDriverBuilder<IOSDriverBuilde
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 
     public IOSDriver build() {
-    
+
 			capabilities.setCapability(TESTOBJECT_API_KEY, apiKey);
 			capabilities.setCapability(TESTOBJECT_TEST_REPORT_ID, testReportId);
 
@@ -330,7 +330,7 @@ public class ChatTest extends AbstractTest {
 
 		    app.chatScreen().sendChatMessage(TEST_MESSAGE);
 		    app.chatScreen().navigateToHistoryScreen();
-		    
+
 		    assertTrue(app.historyScreen().containsMessage(TEST_MESSAGE));
 
 		}
@@ -340,13 +340,13 @@ public class ChatTest extends AbstractTest {
 		public void sendAndDeleteMessageThenCheckHistoryTest() {
 
 			...
-		
+
 		}		
-		
+
 			.
 			.
 			.
-		
+
 }
 {% endhighlight %}
 
@@ -363,16 +363,16 @@ public void sendMessageAndCheckHistoryTest() {
     login(Credentials.VALID_USER_CREDENTIALS);
 
     app.mainScreen().navigateToUserSelection();
-    
+
     app.userSelectionScreen().selectUser(TEST_USERNAME);
-    
+
     app.userProfileScreen().startChat();
 
     app.chatScreen().sendChatMessage(TEST_MESSAGE);
     app.chatScreen().navigateToMainScreen();
-    
+
     app.mainScreen().navigateToHistoryScreen();
-		
+
     assertTrue(app.historyScreen().containsMessage(TEST_MESSAGE));
 
 }
