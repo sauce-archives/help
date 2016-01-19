@@ -170,12 +170,12 @@ public static class IOSDriverBuilder extends AppiumDriverBuilder<IOSDriverBuilde
 
     public IOSDriver build() {
 
-			capabilities.setCapability(TESTOBJECT_API_KEY, apiKey);
-			capabilities.setCapability(TESTOBJECT_TEST_REPORT_ID, testReportId);
+			capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, apiKey);
+			capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_TEST_REPORT_ID, testReportId);
 
 			capabilities.setCapability("deviceName", "testDevice");
 
-      return new IOSDriver(toURL(endpoint), capabilities);
+      			return new IOSDriver(endpoint, capabilities);
 
 		}
 
