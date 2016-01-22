@@ -1,7 +1,8 @@
 ---
 title: Advanced Appium test setup
 layout: en
-permalink: docs/tools/appium/advanced/
+permalink: docs/guides/appium-advanced-setup/
+alias: /docs/tools/appium/advanced/
 ---
 
 * [The PageObject pattern](#pageobject-pattern)
@@ -73,7 +74,7 @@ How should you structure your project? As with everything, you should explore di
 
 To clarify the project structure even more, you can organize these classes into packages. In a utility package you can include your AppiumDriverBuilder class as well as other utility classes you create. You can also put the AbstractScreen class and the other Screen classes within a screen package.
 
-<img src="/img/tools/automation/page-object-package-structure.png" width="230" alt="Package structure screenshot">
+<img src="/img/guides/appium-advanced-setup/page-object-package-structure.png" width="230" alt="Package structure screenshot">
 
 <h4 id="abstract-test">AbstractTest</h4>
 At the center of the project lies the AbstractTest class. Here we define our setup method, which will be executed before every test is run. Here we do three very important things:
