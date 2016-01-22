@@ -20,7 +20,7 @@
 #     title: "How I Keep Limited Pressing Running"
 #     alias: [/first-alias/index.html, /second-alias/index.html]
 #   ---
-# 
+#
 # Rename the existing ".htaccess" to "_htaccess" in your source/sites folder.
 #
 # Author: Jan Stevens
@@ -60,7 +60,7 @@ module Jekyll
 
     def process_pages
       @site.pages.each do |page|
-        generate_aliases(page.destination('').gsub(/index\.(html|htm)$/, ''), page.data['alias'])
+        generate_aliases(page.url.gsub(/index\.(html|htm)$/, ''), page.data['alias'])
       end
     end
 
