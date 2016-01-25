@@ -14,7 +14,7 @@ You can find an example java project with Appium Tests at Github: <a href="https
 
 First, create a <strong>.travis.yml</strong> file in your repo if you don't have one yet.
 
-You can learn more about setting up Travis for your project's programming language here<a href="http://docs.travis-ci.com/user/getting-started/#Getting-started" target="_blank">here</a>.
+You can learn more about setting up Travis for your project's programming language <a href="http://docs.travis-ci.com/user/getting-started/#Getting-started" target="_blank">here</a>.
 
 <h3 id="step1">Securely use your TestObject credentials on Travis CI</h3>
 
