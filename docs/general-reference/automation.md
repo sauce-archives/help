@@ -46,7 +46,7 @@ To set up Appium on your system check out our <a href="/docs/guides/appium-ser/"
 If you have created tests for one of the supported frameworks you will be able to use them on the TestObject devices. 
 For <a href="/docs/testing-tools/robotium-espresso/introduction/#Espresso">Espresso</a> and <a href="/docs/testing-tools/robotium-espresso/introduction/#Robotium">Robotium</a> you upload your test apk to our platform and execute your test suite from there. Your test apk will be installed together with the app you want to test. Your tests will then be executed automatically on the selected devices.<br>
 
-For Appium it works a bit differently. Therefor you will have to <a href="/docs/testing-tools/appium/setup/">set some capabalities</a> in your Appium driver first to be able to execute them on our devices.<br>
+For Appium it works a bit differently. Therefore you will have to <a href="/docs/testing-tools/appium/setup/">set some capabilities</a> in your Appium driver first to be able to execute them on our devices.<br>
 
 <img class="center shadow" src="/img/tools/automation/Upload_Robotium_test.png" alt="Upload Robotium Test">
 
