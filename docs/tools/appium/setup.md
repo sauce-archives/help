@@ -190,7 +190,7 @@ If you want to run your tests on multiple devices, but for some reason cannot ta
 
 <h3 id="testng">TestNG</h3>
 <h4 id="testng-basic-setup">Basic Setup</h4>
-It is also possible to use TestNG to run Appium tests on our platform. The setup is similar to the basic setup described above:
+It is also possible to use TestNG to run Appium tests on our platform. A basic setup for testing with TestNG could look like this:
 {% highlight java %}
 public class BasicTestSetup {
 
