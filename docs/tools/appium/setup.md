@@ -5,6 +5,7 @@ permalink: docs/tools/appium/setup/
 ---
 
 <ul>
+  <li><a href="#java">Java</a><ul>
     <li><a href="#junit">JUnit</a><ul>
       <li><a href="#basic-setup">Basic Setup</a></li>
       <li><a href="#intermediate-setup">Intermediate Setup</a></li>
@@ -14,9 +15,15 @@ permalink: docs/tools/appium/setup/
     <li><a href="#testng">TestNG</a><ul>
       <li><a href="#testng-basic-setup">Basic Setup</a></li>
     </ul></li>
+  </ul></li>
+  <li><a href="#ruby">Ruby</a><ul>
+    <li><a href="#test-unit">Test-Unit</a><ul>
+      <li><a href="#ruby-basic-setup">Basic Setup</a></li>
+    </ul></li>
+  </ul></li>
 </ul>
 
-<h3>Running your Appium tests on TestObject with Java</h3>
+<h3 id="#java">Running your Appium tests on TestObject with Java</h3>
 
 There are several ways of running your Appium tests on our platform. Here we go through them in increasing order of complexity and refinement.
 
@@ -246,4 +253,49 @@ Depending on your environment, you may also need a testng.xml file to run your t
         </classes>
     </test>
 </suite>
+{% endhighlight %}
+
+<h3 id="ruby">Running your Appium tests on TestObject with Ruby</h3>
+Appium supports a wide number of languages, allowing you to automate testing with the language you prefer. Here we go through how to run your Appium tests on our platform using Ruby.
+<h3 id="test-unit">Test-Unit</h3>
+<h4 id="ruby-basic-setup">Basic Setup</h4>
+To begin testing on our platform with Ruby, you need to install the ruby library supporting Appium and also test-unit, a testing framework for Ruby. Install the dependencies by running:
+{% highlight bash %}
+gem install appium_lib
+gem install test-unit
+{% endhighlight %}
+
+With the dependencies installed, you can begin testing on TestObject with the following setup:
+{% highlight ruby %}
+require 'appium_lib'
+require 'test/unit'
+
+class BasicTestSetup < Test::Unit::TestCase
+  def setup
+    desired_capabilities = {
+        caps:       {
+            testobject_api_key: 'YOUR_API_KEY',
+            testobject_app_id: '1',
+            testobject_device: 'Motorola_Moto_G_2nd_gen_real'
+        },
+        appium_lib: {
+            server_url: 'https://app.testobject.com:443/api/appium/wd/hub',
+            wait: 10
+        }
+    }
+
+    # Start the driver
+    @driver = Appium::Driver.new(desired_capabilities).start_driver
+  end
+
+  # test method names must start with "test_"
+  # to be recognized by the test-unit framework
+  def test_login
+    # Your test
+  end
+
+  def teardown
+    @driver.quit
+  end
+end
 {% endhighlight %}
