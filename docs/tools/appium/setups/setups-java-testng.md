@@ -4,7 +4,6 @@ layout: en
 permalink: docs/tools/appium/setups/testng/
 ---
 
-<h3 id="testng">TestNG</h3>
 <h4 id="basic-setup">Basic Setup</h4>
 The basic setup is the quickest way to get testing on TestObject. Here is what it looks like with testNG.
 
@@ -29,15 +28,15 @@ public class BasicTestSetup {
 
     }
 
+    @Test
+    public void testMethod() {
+        /* Your test. */
+    }
+
     /* We disable the driver after EACH test has been executed. */
     @AfterMethod
     public void tearDown(){
         driver.quit();
-    }
-
-    @Test
-    public void twoPlusTwoOperation() {
-        /* Your test. */
     }
 
 }
@@ -96,7 +95,7 @@ public class IntermediateSetupTestTestNG implements AppiumDriverProvider {
     }
 
     @Test
-    public void twoPlusTwoOperation() {
+    public void testMethod() {
         /* Your test. */
     }
 

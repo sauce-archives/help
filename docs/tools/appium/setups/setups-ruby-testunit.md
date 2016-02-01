@@ -3,7 +3,6 @@ title: Testing on TestObject using Test::Unit
 layout: en
 permalink: docs/tools/appium/setups/testunit/
 ---
-<h3 id="test-unit">Test-Unit</h3>
 <h4 id="basic-setup">Basic Setup</h4>
 To begin testing on our platform with Ruby, you need to install the ruby library supporting Appium and also test-unit, a testing framework for Ruby. Install the dependencies by running:
 {% highlight bash %}

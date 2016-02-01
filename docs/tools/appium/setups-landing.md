@@ -4,7 +4,6 @@ layout: en
 permalink: docs/tools/appium/setups/
 alias: /docs/tools/appium/setup/
 ---
-
 <h3>Running your Appium tests on TestObject</h3>
 
 It is possible to run Appium tests on TestObject using different languages, testing frameworks and approaches. Here you can find a list of sample test setups we recommend to our customers. For every language/framework, they are listed in order of growing complexity, with a more complex setup usually granting more advanced functionality.

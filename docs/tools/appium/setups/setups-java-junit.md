@@ -3,11 +3,9 @@ title: Testing on TestObject using JUnit
 layout: en
 permalink: docs/tools/appium/setups/junit/
 ---
-
-<h3 id="junit">JUnit</h3>
 <h4 id="basic-setup">The basic, 5-minutes setup</h4>
 
-Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic setup for testing a simple calculator app could look like this:
+Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic test setup could look like this:
 
 {% highlight java %}
 public class BasicTestSetup {
@@ -37,7 +35,7 @@ public class BasicTestSetup {
     }
 
     @Test
-    public void twoPlusTwoOperation() {
+    public void testMethod() {
         /* Your test. */
     }
 
@@ -103,7 +101,7 @@ public class IntermediateTestSetup {
        taking care of this. You can get rid of the tearDown method. */
 
     @Test
-    public void twoPlusTwoOperation() {
+    public void testMethod() {
         /* Your test. */
     }
 
@@ -158,7 +156,7 @@ public class CompleteTestSetup {
     }
 
     @Test
-    public void twoPlusTwoOperation() {
+    public void testMethod() {
         /* Your test. */
     }
 
