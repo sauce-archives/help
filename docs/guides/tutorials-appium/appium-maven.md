@@ -11,15 +11,15 @@ Add this as a dependency to pom.xml
     <dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
-	    <version>2.42.2</version>
+	    <version>2.50.1</version>
     </dependency>
     <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>1.6.2</version>
+            <version>3.3.0</version>
     </dependency>
 
-Also replace jUnit version with the '4.11'.  
+Also replace jUnit version with '4.11'.  
 
 Create AppiumTest file in `test` folder:  
 
