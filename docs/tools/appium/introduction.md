@@ -28,12 +28,17 @@ Your existing Appium tests will run on the TestObject platform with just some sm
 
 <h4>How to get up and running in 10 minutes</h4>
 
-1. Create a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>
-2. Log into your account and upload the app you want to test. You can do this by providing the app file (.apk for Android, <a href="/docs/guides/creating-ipa/">.ipa for iOS</a>), or you can take advantage of our HockeyApp integration!
-3. Navigate to Automated Testing -> Appium and create a new Appium Suite. This is where you first choose the devices you want to test on. You can change them at any time. A Suite holds all the preferences for your test executions: app version, testing devices, etc.
-
+1. Create and activate a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>;
+2. Log into your account and upload the app you want to test. You can do this by providing the app file (.apk for Android, <a href="/docs/guides/creating-ipa/">.ipa for iOS</a>), or by providing a URL if you are trying to test a mobile website;
+3. Check out one of our <a href="/docs/tools/appium/setups/">basic setups</a> (depending on which language / testing framework you are using) to see how to quickly run a test on our platform;
+4. Navigate to Automated Testing -> Appium -> Setup Instructions -> Change Devices to select the device you want to test on, then paste the id in the appropriate capability in you test setup;
+5. Run the tests on your machine and see them being recorded on our platform in the project you have just created.
 
 <h4>How the test execution works</h4>
+
+<h5></h5>
+
+<h5>Suites setup</h5>
 
 1. A new Suite Report including Test Reports for each individual test run is created via REST API. You will be able to monitor the progress of the Suite Report in the UI.
 2. For each test run your client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)

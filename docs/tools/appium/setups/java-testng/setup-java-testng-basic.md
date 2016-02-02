@@ -1,7 +1,7 @@
 ---
-title: Testing on TestObject using TestNG
+title: Basic Setup on TestObject using TestNG
 layout: en
-permalink: docs/tools/appium/setups/testng/
+permalink: docs/tools/appium/setups/testng/basic/
 ---
 
 <h4 id="basic-setup">Basic Setup</h4>
@@ -71,58 +71,3 @@ Depending on your environment, you may also need to import TestNG as a dependenc
 {% endhighlight %}
 
 With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential. Your tests will run on the device you have chosen, and you will be able to access a number of information regarding them, but the results of the tests won't be registered in the test reports on the platform.
-
-<h4 id="intermediate-setup">Intermediate Setup</h4>
-This problem can be easily fixed by upgrading to a more powerful setup:
-
-{% highlight java %}
-@Listeners({ TestObjectTestNGResultWatcher.class })
-public class IntermediateSetupTestTestNG implements AppiumDriverProvider {
-
-    private AppiumDriver driver;
-
-    @BeforeMethod
-    public void beforeTest() throws MalformedURLException {
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        capabilities.setCapability("testobject_api_key", "YOUR_API_KEY");
-        capabilities.setCapability("testobject_app_id", "1");
-        capabilities.setCapability("testobject_device", "YOUR_DEVICE");
-
-        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
-
-    }
-
-    @Test
-    public void testMethod() {
-        /* Your test. */
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
-
-    @Override
-    public AppiumDriver getAppiumDriver() {
-        return this.driver;
-    }
-}
-{% endhighlight %}
-
-This setup will also need the latest [TestObject Appium Java Api](https://github.com/testobject/testobject-appium-java-api), so you will have to add this line to your build.gradle file:
-
-{% highlight bash %}
-  compile 'org.testobject.extras.appium:appium-java-api:0.0.13'
-{% endhighlight %}
-
-and this repository in the "repository" section:
-
-{% highlight bash %}
-  maven {
-    url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
-  }
-{% endhighlight %}
-
-This setup allows you to register your test results on TestObject.
