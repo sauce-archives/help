@@ -70,4 +70,4 @@ Depending on your environment, you may also need to import TestNG as a dependenc
 </suite>
 {% endhighlight %}
 
-With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential. Your tests will run on the device you have chosen, and you will be able to access a number of information regarding them, but the results of the tests won't be registered in the test reports on the platform.
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! All you need to do is upgrade to a <a href="/docs/tools/appium/setups/testng/watcher/">Watcher setup</a>.

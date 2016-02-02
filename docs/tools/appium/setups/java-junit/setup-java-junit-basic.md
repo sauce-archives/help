@@ -61,4 +61,4 @@ The only needed dependencies for running such a test would be the [Appium Java C
   }
 {% endhighlight %}
 
-With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject.
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! All you need to do is upgrade to a <a href="docs/tools/appium/setups/junit/watcher/">Watcher setup</a>.
