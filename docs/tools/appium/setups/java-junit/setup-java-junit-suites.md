@@ -55,7 +55,3 @@ When you feel comfortable writing tests using this last setup, it would probably
 4. TestObject identifies the testing device and the test report for this specific test run using the "testobject_report_id" capability
 5. The test is executed from your client machine through the API session, connecting to our Appium server using the standard Selenium WebDriver JSON Wire Protocol. When the RemoteWebDriver/AppiumDriver is created we allocate the specified device for you. The allocation process waits for up to 15 minutes for a device to become available.
 6. With a final REST call the status (passed or failed) is set for the test run. You can now view the completed Test Report.
-
-
-<h4 id="parallelized-setup">Appendix: Parallelized Setup (watcher and multiple devices without suites)</h4>
-If you want to run your tests on multiple devices, but for some reason cannot take advantage of the Suite setup, then you can still achieve a similar result with parameterized tests. The downside to this approach is that, when testing on TestObject, your test results won't be aggregated in suites. This is because you are basically just running several "single" tests without providing any way for the system to tell they are part of a single group. you can find an example of advanced setup that uses this approach [here](https://github.com/testobject/calculator-test-gradle/tree/parallelized_setup).

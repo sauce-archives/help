@@ -16,8 +16,9 @@ Java is the first language we chose to support for running tests on our platform
       <li><a href="junit/basic#basic-setup">Basic Setup</a></li>
       <li><a href="junit/watcher#watcher-setup">Watcher Setup</a></li>
       <li><a href="junit/suites#suite-setup">Suite Setup</a></li>
-      <li><a href="junit/suites#parallelized-setup">Appendix: Parallelized Setup</a></li>
     </ul></li>
+</ul>
+<ul>
     <li>TestNG<ul>
       <li><a href="testng/basic#basic-setup">Basic Setup</a></li>
       <li><a href="testng/watcher#watcher-setup">Watcher Setup</a></li>
