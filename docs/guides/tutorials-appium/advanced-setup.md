@@ -1,5 +1,5 @@
 ---
-title: Advanced Appium test setup
+title: Advanced Appium Test Setup with PageObject
 layout: en
 permalink: docs/guides/appium-advanced-setup/
 alias: /docs/tools/appium/advanced/
@@ -322,7 +322,7 @@ On the top of the class signature you can see that in this case the tests are be
 What you see here is a very simple application of the PageObject pattern. It might seem like a lot of work for very little gain, so let's set the calculator example aside for a moment, and jump into a real-world example:
 
 {% highlight java %}
-@TestObject(testObjectApiKey = TestObjectConfig.API_KEY, testObjectSuiteId = TestObjectConfig.DOCUMENTATION_SUGGESTIONS_SUITE_ID)
+@TestObject(testLocally = true, testObjectApiKey = "YOUR_API_KEY", testObjectSuiteId = 123)
 @RunWith(TestObjectAppiumSuite.class)
 public class ChatTest extends AbstractTest {
 
