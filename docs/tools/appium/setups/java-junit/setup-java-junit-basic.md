@@ -4,9 +4,7 @@ layout: en
 permalink: docs/tools/appium/setups/junit/basic/
 ---
 
-<h4 id="basic-setup">The basic, 5-minutes setup</h4>
-
-Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic test setup could look like this:
+Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic test setup with JUnit could look like this:
 
 {% highlight java %}
 public class BasicTestSetup {

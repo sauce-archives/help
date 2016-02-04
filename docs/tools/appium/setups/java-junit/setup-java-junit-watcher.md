@@ -4,8 +4,7 @@ layout: en
 permalink: docs/tools/appium/setups/junit/watcher/
 ---
 
-<h4 id="watcher-setup">The Watcher Setup</h4>
-This problem can be easily fixed by upgrading to a more powerful setup:
+If you want to register your test result on TestObject, you will need to use our result watcher. This is what a simple Watcher setup with JUnit looks like:
 
 {% highlight java %}
 public class WatcherTestSetup {
@@ -50,20 +49,22 @@ public class WatcherTestSetup {
 }
 {% endhighlight %}
 
-This setup will also need the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add this line to your build.gradle file:
+<h4>Dependencies</h4>
+This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add two things to your build.gradle file:
 
+...the instruction to compile our dependency:
 {% highlight bash %}
   compile 'org.testobject.extras.appium:appium-java-api:0.0.13'
 {% endhighlight %}
 
-and this repository in the "repository" section:
-
+...and a link to our repository in the "repository" section:
 {% highlight bash %}
   maven {
     url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
   }
 {% endhighlight %}
 
+<h4>Why use it</h4>
 This setup allows you to register your test results on TestObject. If you are running many tests, it would probably make sense to organize them in suites. This can be achieved using the <a href="/docs/tools/appium/setups/junit/suites/">Suites Setup</a>.
 
 <h4 id="parallelized-setup">Running the Watcher Setup on Multiple Devices in Parallel</h4>

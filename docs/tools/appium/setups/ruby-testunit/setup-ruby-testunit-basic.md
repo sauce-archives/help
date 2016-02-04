@@ -4,6 +4,8 @@ layout: en
 permalink: docs/tools/appium/setups/testunit/basic/
 ---
 
+The basic setup is the quickest way to get testing on TestObject. Here is what it looks like with Test::Unit.
+
 <h4 id="basic-setup">Basic Setup</h4>
 To begin testing on our platform with Ruby, you need to install the ruby library supporting Appium and also test-unit, a testing framework for Ruby. Install the dependencies by running:
 {% highlight bash %}

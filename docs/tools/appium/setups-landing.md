@@ -13,15 +13,15 @@ Java is the first language we chose to support for running tests on our platform
 
 <ul>
     <li>JUnit<ul>
-      <li><a href="junit/basic#basic-setup">Basic Setup</a></li>
-      <li><a href="junit/watcher#watcher-setup">Watcher Setup</a></li>
-      <li><a href="junit/suites#suite-setup">Suite Setup</a></li>
+      <li><a href="junit/basic">Basic Setup</a></li>
+      <li><a href="junit/watcher">Watcher Setup</a></li>
+      <li><a href="junit/suites">Suite Setup</a></li>
     </ul></li>
 </ul>
 <ul>
     <li>TestNG<ul>
-      <li><a href="testng/basic#basic-setup">Basic Setup</a></li>
-      <li><a href="testng/watcher#watcher-setup">Watcher Setup</a></li>
+      <li><a href="testng/basic">Basic Setup</a></li>
+      <li><a href="testng/watcher">Watcher Setup</a></li>
     </ul></li>
 </ul>
 
@@ -30,6 +30,6 @@ Ruby is our most recent addition as for supported languages for Appium tests. As
 
 <ul>
     <li>Test::Unit<ul>
-      <li><a href="testunit/basic#basic-setup">Basic Setup</a></li>
+      <li><a href="testunit/basic">Basic Setup</a></li>
     </ul></li>
 </ul>
