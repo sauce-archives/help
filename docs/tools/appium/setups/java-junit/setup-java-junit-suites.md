@@ -4,7 +4,6 @@ layout: en
 permalink: docs/tools/appium/setups/junit/suites/
 ---
 
-<h4 id="suite-setup">The Suites Setup</h4>
 To make sure you can distinguish and access your test results more efficiently, it is highly recommended that you use test suites. It doesn't take much to upgrade your setup to be able to run these:
 
 {% highlight java %}
@@ -43,11 +42,27 @@ public class CompleteTestSetup {
 }
 {% endhighlight %}
 
+<h4>Dependencies</h4>
+This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add two things to your build.gradle file:
+
+...the instruction to compile our dependency:
+{% highlight bash %}
+  compile 'org.testobject.extras.appium:appium-java-api:0.0.13'
+{% endhighlight %}
+
+...and a link to our repository in the "repository" section:
+{% highlight bash %}
+  maven {
+    url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
+  }
+{% endhighlight %}
+
+<h4>Why use it</h4>
 One of the advantages of using test suites on TestObject is that the number of capabilities you need to send over is reduced, as you will now be able to specify things like the Appium version you want to run your tests with and the version of the app you want to test directly from the suite's UI. The same is also true for the devices, which get selected through our device picker. This means that the "testobject_app_id", "testobject_device", "testobject_test_name", "testobject_suite_name" and "testobject_appium_version" capabilities will be ignored in the context of this setup.
 
 When you feel comfortable writing tests using this last setup, it would probably make sense for you to have a look at our [PageObject setup](/docs/tools/appium/advanced), which is basically just a way to write better structured, more readable and more easily maintanable tests.
 
-<h5 id="how-it-works">How the setup works</h5>
+<h4 id="how-it-works">How it works</h4>
 
 1. A new Suite Report including Test Reports for each individual test run is created via REST API. You will be able to monitor the progress of the Suite Report in the UI.
 2. For each test run your client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)
