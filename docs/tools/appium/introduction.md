@@ -11,6 +11,11 @@ Appium is an open-source test-automation framework for mobile apps &ndash; nativ
 If you have any doubts, or want to get a first taste of what it is like to automate tests using Appium, have a look at our <a href="/docs/guides/tutorials-appium/">Appium Tutorial Series</a>, where we help you set up Appium on your system and run your first test.
 
 
+<h3 id="testing">Running Appium Tests on TestObject</h3>
+
+Running tests on TestObject with Appium is easy! Just check out our variety of <a href="/docs/tools/appium/setups/">pre-written test setups</a>, find out which one suits you best, and start testing either by running Appium scripts on your machine or through a CI server! We provide our own <a href="/docs/tools/appium/appium-java-api/">convenience library</a> to allow our customers to record their test results on our platform, and in some cases even organize them in suites. We try to support as many languages and testing frameworks as possible, with the intention of covering all the major combinations Appium itself supports.
+
+
 <h3 id="reporting">Reporting</h3>
 
 When running Appium tests on TestObject, you will be able to browse your test results one by one or by conveniently organizing them in suites:

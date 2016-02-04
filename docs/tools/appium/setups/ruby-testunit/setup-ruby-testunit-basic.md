@@ -45,3 +45,11 @@ class BasicTestSetup < Test::Unit::TestCase
   end
 end
 {% endhighlight %}
+
+Along with the mandatory capabilities we have specified, you can send over some optional ones to customize your test runs:
+
+* testobject_appium_version, if you want to run your tests against an Appium version other than the default one (1.3.5)
+* testobject_test_name, if you want to specify a name for your test that will be displayed in place of the default one
+* testobject_suite_name, if you want to apply a label to your tests so that they are easier to group / find later ons
+
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! We are working on a Test::Unit Watcher setup that will allow you to do just that.

@@ -43,7 +43,7 @@ public class IntermediateSetupTestTestNG implements AppiumDriverProvider {
 }
 {% endhighlight %}
 
-This setup will also need the latest [TestObject Appium Java Api](https://github.com/testobject/testobject-appium-java-api), so you will have to add this line to your build.gradle file:
+This setup will also need the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add this line to your build.gradle file:
 
 {% highlight bash %}
   compile 'org.testobject.extras.appium:appium-java-api:0.0.13'
