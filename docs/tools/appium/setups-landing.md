@@ -31,5 +31,6 @@ Ruby is our most recent addition as for supported languages for Appium tests. As
 <ul>
     <li>Test::Unit<ul>
       <li><a href="testunit/basic">Basic Setup</a></li>
+      <li><a href="testunit/watcher">Watcher Setup</li>
     </ul></li>
 </ul>
