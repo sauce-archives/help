@@ -116,6 +116,15 @@ Response:
 {% endhighlight %}
 
 
+<h4 id="close-device">Extend Device Session</h4>
+
+Extends the device session explicitly. The session is implicitly extended once a user input event is received. The session timeout is 15 min.
+
+{% highlight javascript %}
+POST /sessions/{:deviceSessionId}/keepAlive
+{% endhighlight %}
+
+
 <h4 id="close-device">Close Device</h4>
 
 Ends the device session.
