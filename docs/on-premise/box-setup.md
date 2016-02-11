@@ -7,12 +7,11 @@ permalink: docs/on-premise/
 
 <li><a href="#prerequisite">Prerequisite</a></li>
 <li><a href="#installation">Installation</a></li>
-<li><a href="#first-test">Get ready for your first test</a></li>
 
-The TestObject Box <!--Is it TestObject box or On-Premise? If it's TestObject Box, then we should change the tutorial name.--> is the perfect solution, if you don't want to dispense with your own device infrastructure.
+TestObject On-Premise is the perfect solution, if you don't want to dispense with your own device infrastructure.
 With the local distribution of our software, not one bit of you app's data will leave your company, while enjoying the full range of <a href="/docs/testing-tools/manual-testing/">Manual testing</a>, as well as automated testing tools, such as <a href="/docs/tools/appium/introduction/">Appium</a>, <a href="/docs/testing-tools/robotium-espresso/introduction/">Espresso or Robotium</a>.
 
-For further information on your own TestObject Box, please contact <a href="mailto:timo@testobject.eu">Timo Euteneuer</a>.
+For further information on your own TestObject On-Premise solution, please contact <a href="mailto:sales@testobject.com">Timo Euteneuer</a>.
 
 If you encounter any problems during the setup process don't hesitate to contact your personal support contact.
 
@@ -22,9 +21,6 @@ If you encounter any problems during the setup process don't hesitate to contact
 
 <li><a href="#credentials">Credentials</a></li>
 <li><a href="#architecture">System Architecture</a></li>
-<li><a href="#depiction">Depiction of the Setup</a></li>
-<li><a href="#sak">TestObject SAK</a></li>
-
 
 <h4 id="credentials">Credentials</h4>
 
@@ -33,23 +29,15 @@ Every TestObject Box has its own set of credentials which will be sent to you in
 
 <h4 id="architecture">System Architecture</h4>
 
-To be able to use TestObject on-premise you need to install at a TestObject App instance, a TestObject Monitoring Instance, and at least one TestObject Device Pool instance. You will also need to install a MongoDB and several dependencies depending on your desired testing setup.
+To be able to use TestObject On-Premise you need to install a TestObject App instance, a TestObject Monitoring Instance, and at least one TestObject Device Pool instance. You will also need to install a MongoDB and several dependencies depending on your desired testing setup.
 
 The <strong>App</strong> instance is responsible for hosting the TestObject Web UI. It provides user management, App management and remote controls the TestObject device pool(s).
 
-The <strong>Monitoring</strong> instance
+The <strong>Monitoring</strong> instance tracks device health and works to keep devices ready for testing.
 
 The <strong>Pool</strong> instance is responsible for talking to the different mobile phones. One device pool instance can manage only one type of mobile operating system like either iOS or Android devices. Thus if you want to test on both platforms you need to install two device pool instances.
 
-For this example we use a setup with two host machines, one is running the App instance and the second host machine runs the two Pool instances: one for Android and one for iOS. Additionally, the iOS pool will need to communicate with an OS X Host. <!--Clarify this paragraph, where does mongo run, diagram?, monitoring?-->
-
-<h4>Depiction of the Setup</h4>
-
-Here we see how our standard setup looks like:
-<!--
-add a graphic with the setup
--- more explanantion necessary??
--->
+For this example we use a setup with two host machines, one is running the App instance and the second host machine runs the two Pool instances: one for Android and one for iOS. Additionally, the iOS pool will need to communicate with an OS X Host.
 
 <h3 id=installation>Installation</h3>
 
@@ -69,7 +57,7 @@ Docker simplifies installation and downloading new releases.
 Use the <a href="#credentials">TestObject credentials</a> you received to <strong>log in to the registry</strong>:
 </p>
 
-    testobject@testobject-onpremise-pool:~$ sudo docker login quay.io
+    testobject@testobject-onpremise-pool:~$ docker login quay.io
     Username: testobject+[youruser]
     Password: [your token]
     Email:
@@ -79,17 +67,19 @@ Use the <a href="#credentials">TestObject credentials</a> you received to <stron
 
 As stated in the log output the credentials will be stored on the host, so that this step is a <strong>one time action per host</strong>.
 
+To simplify the installation process, we will provide you with configuration files for creating docker containers. These configuration files will be read by a tool called Docker Compose.
+
 <h4 id="sak">TestObject SAK</h4>
 
-For the configuration of the TestObject app instance, as well as for the TestObject pool instance, we provide a tool called Swiss Army Knife (SAK). The SAK tool is provided as a <a href="#docker">docker image</a>.
+For the configuration of the TestObject app instance, as well as for the TestObject pool instance, we provide a tool called Swiss Army Knife (SAK). The SAK tool is provided as a docker image.
 
 This tool facilitates the configuration, allows some customization of the setup, and minimizes the overhead.
 
 <h4 id="mongo">MongoDB Installation</h4>
 
-Firstly, we create a MongoDB container with some default configuration. Most importantly the container will store all MongoDB data in the /data/mongo folder of the host system. Move into the On-Premise/Mongo and execute:
+Firstly, we create a MongoDB container with some default configuration. Most importantly the container will store all MongoDB data in the /data/mongo folder of the host system. Move into your Mongo configuration folder and execute:
 
-  docker-compose up -d
+    docker-compose up -d
 
 This will pull the docker image from a remote repository and start a docker container called testobject-mongo.
 
@@ -113,8 +103,6 @@ The Android device pool needs an Android SDK to function properly. This gets ins
 This command will create the container, download the Android SDK and run it:
 
     docker run —name=testobject-android-sdk -d quay.io/testobject/android-sdk-linux
-    <!-- is -d in the right place?-->
-
 
 <h5 id="appium-install">Install the Desired Appium Version</h5>
 
@@ -137,7 +125,7 @@ Repeat this step to add additional Appium versions:
 
 Now all required and optional dependencies are in place. It is time to create and run the Android pool container.
 
-Move into On-Premise/testobject-android-pool and open docker-compose.yml in your text editor. You will need to modify the following fields:
+Move into your Android pool configuration folder and open docker-compose.yml in your text editor. You will need to modify the following fields:
 
 <ul>
     <li>server.id<ul>
@@ -158,7 +146,7 @@ Move into On-Premise/testobject-android-pool and open docker-compose.yml in your
       </ul></li>
  </ul>
 
-Now with docker-compose.yml properly configured, you can start the Android pool container. Make sure you are in On-Premise/testobject-android-pool and run:
+Now with docker-compose.yml properly configured, you can start the Android pool container. Make sure you are in your Android pool configuration folder and run:
 
     docker-compose up -d
 
@@ -196,11 +184,11 @@ Next, connect to the Play Store.
 
 Install <a href=" http://www.vmlite.com/vncserver/VMLiteVNCServer-license.apk">vmlite</a> via adb. Android 2.2 needs the version from the Play Store.
 
-Now we need to find the device ID using adb:
+Now we need to find the device ID using adb. Plug your device into a computer with Android Studio and run:
 
     adb devices
 
-Save the device ID you recieve because you will need it in the following step.
+Save the device ID you receive because you will need it in the following step.
 
 Now with the device properly configured, you can insert device information into the database using the TestObject SAK tool. First we insert standard device information into the database:
 
@@ -210,11 +198,9 @@ Now add your device's information into the database:
 
     docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak device -c create -poolId pool-[your pool name] -deviceDescriptorId [android_phone] -phoneId [ABC12345] -wifiName [your wifi] -wifiPassword [1234qwer] -playAccount [abc@gmail.com] -playAccountPassword [1234qwer]
 
-The poolId can be found in your On-Premise/testobject-pool-android/docker-compose.yml file. It is under the server.id field. The phoneId is the device ID you found earlier using adb.
-    <!-- deviceDescriptorId must match a device sescriptor already in the database. Should we detail how to find the correct device descriptor? -->
+The poolId can be found in your Android pool's docker-compose.yml file. It is under the server.id field. The phoneId is the device ID you found earlier using adb.
 
 Before you continue with the next steps, please restart the host!
-<!-- Do you really need to do this? -->
 
 
 Populate Pool Database
@@ -227,10 +213,8 @@ Populate Pool Database
 Now we will set up the iOS pool, as well. The iOS pool will need to communicate with a properly configured OS X host.
 
 <h5>Configure OS X Host</h5>
-<!--got this from https://github.com/testobject/product/wiki/ios-mac-mini-->
 
 On your OS X Host, create a user called iOS. Install the following dependencies:
-<!-- Are these all necessary? How can we simplify this? -->
 
 Install Homebrew:
 
@@ -255,7 +239,7 @@ Install libvncserver library:
 
 Install ios debug proxy:
 
-    (Do we really need the modified version? If so, maybe we should simplify its installation)
+    brew install ios-debug-proxy
 
 Install ideviceinstaller:
 
@@ -280,10 +264,8 @@ Remove apps that hijack usb connection:
 
 Install XCode
 
-
-Now that the OS X host is configured, move to your iOS pool host. First we will generate ssh keys on the iOS pool host.<!--How should we refer to iOS pool host vs. OS X host? This is maybe confusing.-->
-
 <h5>SSH Connection</h5>
+Now that the OS X host is configured, move to your iOS pool host. First we will generate ssh keys on the iOS pool host:
 
     ssh-keygen -t rsa -C "[abc]"
 
@@ -291,16 +273,18 @@ You receive both a public and a private key, which need to be saved in /root/ios
 
 Copy the ssh public key to your OS X Host:
 
-    ssh-copy-id -i /root/ios-config/id_rsa.pub ios@192.168.1.182 (make clear where to get this ip address)
+    ssh-copy-id -i /root/ios-config/id_rsa.pub ios@<OS X Host ip address>
+
+
 
 <h5>Apple Certifications</h5>
-Here document creating testobject.mobileprovision file and certificate.p12 file. Both of these files must be saved in /root/ios-config.
+On the <a href="https://developer.apple.com/" target="_blank">Apple Developer site</a> generate your certificates. For the iOS pool you must save testobject.mobileprovision file and certificate.p12 files in /root/ios-config on the iOS pool host.
 
 <h5>Create and Start the iOS Pool Container</h5>
 
 Now that the iOS pool host and the OS X host are properly configured, you can start the iOS pool container.
 
-Move into On-Premise/testobject-ios-pool and open the docker-compose.yml in your text editor. You will need to modify the following fields:
+Move into your iOS pool configuration folder and open the docker-compose.yml in your text editor. You will need to modify the following fields:
 
 <ul>
   <li>server.id<ul>
@@ -319,7 +303,7 @@ Move into On-Premise/testobject-ios-pool and open the docker-compose.yml in your
 
 Ensure that your /root/ios-config folder contains id_rsa.pub, id_rsa, certificate.p12, and testobject.mobileprovision files. These will be needed to start the iOS pool.
 
-Now in the On-Premise/testobject-ios-pool folder start the ios pool container:
+Now in your iOS pool configuration folder start the iOS pool container:
 
     docker-compose up -d
 
@@ -327,7 +311,6 @@ Now in the On-Premise/testobject-ios-pool folder start the ios pool container:
 
 We can now add device information into the database using the TestObject SAK tool. If you haven't already done this for the Android pool, run the following command to insert standard device information to the database:
 
-    <!-- Does these SAK commands need to be run on the mongo host? -->
     docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak \ populateDeviceDescriptors
 
 
@@ -343,7 +326,7 @@ Now we are switching host machines to install the TestObject Web UI. Therefore w
 
 <h5>Create the App Container</h5>
 
-Navigate to On-Premise/testobject-app and open docker-compose.yml in your text editor. You will need to modify the following fields:
+Navigate to App configuration folder and open docker-compose.yml in your text editor. You will need to modify the following fields:
 
 <ul>
   <li>env.host.name<ul>
@@ -351,20 +334,19 @@ Navigate to On-Premise/testobject-app and open docker-compose.yml in your text e
     </ul></li>
   <li>web.baseurl<ul>
     <li>This is url where the webapp will be reached.</li>
-    <!-- How exactly do you get this value? -->
     </ul></li>
   <li>mongo.hostname<ul>
     <li>This is the domain name or ip of the mongo host.</li>
     </ul></li>
 </ul>
 
-Now with docker-compose.yml properly configured, you can start the App container. Make sure you are in On-Premise/testobject-android-pool and run:
+Now with docker-compose.yml properly configured, you can start the App container. Make sure you are in your App configuration folder and run:
 
     docker-compose up -d
 
 <h5>Create the Monitoring Container</h5>
 
-Navigate to On-Premise/testobject-monitoring and open docker-compose.yml in your text editor. You will need to modify the following fields:
+Navigate to your Monitoring configuration folder and open docker-compose.yml in your text editor. You will need to modify the following fields:
 
 <ul>
   <li>mongo.hostname<ul>
@@ -372,16 +354,17 @@ Navigate to On-Premise/testobject-monitoring and open docker-compose.yml in your
     </ul></li>
 </ul>
 
-Now with docker-compose.yml properly configured, you can start the Monitoring container. Make sure you are in On-Premise/monitoring and run:
+Now with docker-compose.yml properly configured, you can start the Monitoring container. Make sure you are in your Monitoring configuration folder and run:
 
     docker-compose up -d
 
-<!-- What does this portion do-->
 <h5>Populate App database</h5>
 
     docker run --rm --link testobject-mongo:mongo quay.io/testobject/sak populateAppDatabase
 
-<!-- Can't they just do this on through the UI? -->
 <h5>Create your first user</h5>
 
-docker run --rm --link testobject-mongo:mongo --link testobject-app:app quay.io/testobject/sak user -c create -username admin -password [your password] -email [your@email.com] -firstName [John] -lastName [Doe]
+    docker run --rm --link testobject-mongo:mongo --link testobject-app:app quay.io/testobject/sak user -c create -username admin -password [your password] -email [your@email.com] -firstName [John] -lastName [Doe]
+
+<h4>Begin Testing</h4>
+Your On-Premise setup is now accessible, and you're ready to begin testing! Open your browser and enter the app host's ip address. You should see the TestObject login.

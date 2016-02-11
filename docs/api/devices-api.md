@@ -1,7 +1,7 @@
 ---
 title: Devices REST API
 layout: en
-permalink: docs/api/devices
+permalink: docs/api/devices/
 ---
 
 
@@ -193,7 +193,7 @@ POST /sessions/{:deviceSessionId}/files/{:fileId}/push
 
 <h4 id="open-url">Open URL</h4>
 
-Convenience method to open the given URL. This requires the Chrome browser to be installed on the device. 
+Convenience method to open the given URL. This requires the Chrome browser to be installed on the device.
 
 {% highlight javascript %}
 POST /sessions/{:deviceSessionId}/openUrl
@@ -206,7 +206,7 @@ https://domain-to-open.com
 {% endhighlight %}
 
 
-<!-- 
+<!--
 <h4 id="paste-content">Paste Content</h4>
 
 Pastes the given text into the device.

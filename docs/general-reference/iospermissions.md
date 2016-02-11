@@ -1,7 +1,7 @@
 ---
 title: iOS Permissions
 layout: en
-permalink: docs/general-reference/iospermissions
+permalink: docs/general-reference/iospermissions/
 ---
 
 <h3>Handling Early iOS Alerts</h3>
