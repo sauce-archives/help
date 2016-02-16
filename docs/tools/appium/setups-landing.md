@@ -31,6 +31,11 @@ Ruby is our most recent addition as for supported languages for Appium tests. As
 <ul>
     <li>Test::Unit<ul>
       <li><a href="testunit/basic">Basic Setup</a></li>
-      <li><a href="testunit/watcher">Watcher Setup</li>
+      <li><a href="testunit/watcher">Watcher Setup</a></li>
     </ul></li>
 </ul>
+
+<h4 id="python">Python</h4>
+You can write your Appium tests using Python also. When setting up your tests, your Appium URL should be set to:
+
+    http://appium.testobject.com:80/api/appium/wd/hub
