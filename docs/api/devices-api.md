@@ -1,7 +1,7 @@
 ---
 title: Devices REST API
 layout: en
-permalink: docs/api/devices/
+permalink: docs/api/devices
 ---
 
 
