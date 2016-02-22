@@ -1,7 +1,7 @@
 ---
 title: Storage REST API
 layout: en
-permalink: docs/api/storage
+permalink: docs/api/storage/
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: Appium REST API
 layout: en
-permalink: docs/api/appium
+permalink: docs/api/appium/
 ---
 
 Base URL:

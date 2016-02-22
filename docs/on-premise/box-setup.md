@@ -1,7 +1,7 @@
 ---
 title: Setting up your On-Premise Pool
 layout: en
-permalink: docs/on-premise
+permalink: docs/on-premise/
 ---
 
 
