@@ -54,6 +54,14 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
     
     ...
 
+    <repositories>
+        ...
+        <repository>
+            <id>testobject</id>
+            <url>http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         
         ...
@@ -74,9 +82,9 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
 
 LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-ruby-api"><strong>0.0.0</strong></a>
 
-You can find this on [rubygems.org](https://rubygems.org/gems/test_object_test_result_watcher)!
-
 * Test::Unit Basic and Watcher setups
+
+You can find this on [rubygems.org](https://rubygems.org/gems/test_object_test_result_watcher)!
 
 <h4>Changelog</h4>
 
