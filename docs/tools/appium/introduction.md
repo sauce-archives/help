@@ -37,3 +37,5 @@ Your existing Appium tests will run on the TestObject platform with just some sm
 3. Check out one of our <a href="/docs/tools/appium/setups/">basic setups</a> (depending on which language / testing framework you are using) to see how to quickly run a test on our platform;
 4. Navigate to Automated Testing -> Appium -> Setup Instructions -> Change Devices to select the device you want to test on, then paste the id in the appropriate capability in you test setup;
 5. Run the tests on your machine and see them being recorded on our platform in the project you have just created.
+
+When you are done, don't forget to check out <a href="/docs/tools/appium/setups/">more advanced setups</a> to have an even better testing experience on TestObject!
