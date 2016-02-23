@@ -42,7 +42,7 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
 
     dependencies {
         ...
-        testCompile 'org.testobject.extras.appium:appium-java-api:0.0.9'
+        testCompile 'org.testobject.extras.appium:appium-java-api:0.0.13'
     }
 
     ...
@@ -83,3 +83,9 @@ You can find this on [rubygems.org](https://rubygems.org/gems/test_object_test_r
 <strong>v0.0.0</strong>
 
 * now suppports Test::Unit Basic and Watcher setups
+
+<h4>How to get it</h4>
+Run the command:
+{% highlight bash %}
+gem install test_object_test_result_watcher
+{% endhighlight %}

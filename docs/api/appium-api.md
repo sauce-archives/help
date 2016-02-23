@@ -4,6 +4,14 @@ layout: en
 permalink: docs/api/appium/
 ---
 
+<ul>
+    <li><a href="#read-devices">Read Devices</a></li>
+    <li><a href="#start-suite-report">Start Suite Report</a></li>
+    <li><a href="#finish-suite-report">Finish Suite Report</a></li>
+    <li><a href="#finish-test-report">Finish Test Report</a></li>
+    <li><a href="#update-suite">Update Suite</a></li>
+</ul>
+
 Base URL:
 
 {% highlight javascript %}

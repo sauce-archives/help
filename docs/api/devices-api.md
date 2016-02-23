@@ -4,6 +4,25 @@ layout: en
 permalink: docs/api/devices/
 ---
 
+<li><a href="#devices">Devices</a></li>
+<ul>
+    <li><a href="#read-device-descriptors">Read Device Descriptors</a></li>
+    <li><a href="#read-available-devices">Read Available Devices</a></li>
+    <li><a href="#open-device">Open Device</a></li>
+</ul>
+<li><a href="#device-sessions">Device Sessions</a></li>
+<ul>    <li><a href="#read-session-descriptor">Read Session Descriptor</a></li>
+        <li><a href="#extend-device-session">Extend Device Session</a></li>
+        <li><a href="#close-device">Close Device</a></li>
+        <li><a href="#install-and-launch-app">Install and Launch App</a></li>
+        <li><a href="#open-url">Open URL</a></li>
+        <li><a href="#get-orientation">Get Orientation</a></li>
+        <li><a href="#set-orientation">Set Orientation</a></li>
+</ul>
+<li><a href="#usage-examples">Usage examples</a></li>
+<ul>
+    <li><a href="#run-on-available-devices">Read Device Descriptors</a></li>
+</ul>
 
 Base URL:
 
@@ -86,7 +105,7 @@ Response:
 {% endhighlight %}
 
 
-<h3 id="devices">Device Sessions</h3>
+<h3 id="device-sessions">Device Sessions</h3>
 
 Once you created a device session you can use the following methods to interact with the device.
 
@@ -375,3 +394,7 @@ Convenience method to open the Google Account settings.
 POST /sessions/{:deviceSessionId}/googleAccount
 {% endhighlight %}
 -->
+
+<h4 id="usage-examples">Usage Examples</h4>
+Here you can find sample test setups making use of our Devices REST API:
+<li><a href="https://github.com/testobject/appium-rest-example">Run on all available devices</a></li>
