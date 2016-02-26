@@ -47,11 +47,10 @@ For this example we use a setup with one host machine for the app, monitoring, a
 
 <h4 id="docker">Docker Installation</h4>
 
-To simplify the installation of TestObject On-Premise, we'll be making use of a tool called Docker, as well as Docker compose. Before continuing with your On-Premise installation, install both <a href="https://docs.docker.com/engine/installation/" target="_blank">Docker</a> and <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>.
+To simplify the installation of TestObject On-Premise, we'll be making use of a tool called Docker, as well as Docker compose. Before continuing with your On-Premise installation, install both <a href="https://docs.docker.com/engine/installation/" target="_blank">Docker</a> and <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a> on your On-Premise host.
 
-All of the components of your On-Premise setup will run as Docker containers. These containers will be created from Docker images which are hosted on our TestObject registry. The configuration needed to create the containers will be read from a configuration file by Docker Compose. Download the configuration file: <a href="/attachments/on-premise/on-premise-configuration.zip" target="_blank">On-Premise Configuration</a>
+All of the components of your On-Premise setup will run as Docker containers. These containers will be created from Docker images which are hosted on our TestObject registry. The configuration needed to create the containers will be read from a configuration file by Docker Compose.
 
-To download the Docker images access our TestObject docker registry hosted at <a href="https://quay.io/" target="_blank">quay.io</a>.</br></br>
 Use the <a href="#credentials">TestObject credentials</a> you received to <strong>log in to the registry</strong>:
 
 
@@ -63,9 +62,9 @@ Use the <a href="#credentials">TestObject credentials</a> you received to <stron
     Login Succeeded
 
 
-As stated in the log, output the credentials will be stored on the host so that this step is a <strong>one time action per host</strong>.
+As stated in the log output, the credentials will be stored on the host so that this step is a <strong>one time action per host</strong>.
 
-<h4><a id="ios-install">IOS Pool Installation</a></h4>
+<h4 id="ios-install">IOS Pool Installation</h4>
 
 If you are setting up your On-Premise solution to include an iOS pool, you will need to first prepare the iOS pool. The iOS pool container will need to connect to an OS X host.
 
