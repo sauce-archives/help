@@ -93,9 +93,9 @@ Install libvncserver library:
     brew tap false-git/local
     brew install libvncserver
 
-Install ios debug proxy:
+Install ios webkit debug proxy:
 
-    brew install ios-debug-proxy
+    brew install ios-webkit-debug-proxy
 
 Install ideviceinstaller:
 
