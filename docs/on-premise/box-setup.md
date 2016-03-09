@@ -86,7 +86,7 @@ Install git:
 
 Create a work folder:
 
-    mkdir -p /Users/ios/.testobject_devices/work (Is this step needed?)
+    mkdir -p /Users/ios/.testobject_devices/work
 
 Install libvncserver library:
 
