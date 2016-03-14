@@ -7,7 +7,7 @@ permalink: docs/tools/appium/setups/testng/watcher/
 If you want to register your test result on TestObject, you will need to use our result watcher. This is what a simple Watcher setup with testNG looks like:
 
 {% highlight java %}
-@Listeners({ TestObjectTestNGResultWatcher.class })
+@Listeners({ TestObjectTestNGTestResultWatcher.class })
 public class IntermediateSetupTestTestNG implements AppiumDriverProvider {
 
     private AppiumDriver driver;
