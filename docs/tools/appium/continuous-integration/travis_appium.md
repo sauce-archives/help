@@ -1,7 +1,7 @@
 ---
 title: Run Appium Tests with Travis CI
 layout: en
-permalink: docs/guides/appium-travisci/
+permalink: docs/tools/appium/continuous-integration/travis-ci/
 ---
 
 For a full continuous integration process automate the execution of your tests created with TestObject. This can be easily achieved by running Appium Tests on Travis CI.

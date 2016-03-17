@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration with Appium and TestObject
 layout: en
-permalink: /docs/tools/appium/continuous-integration-landing
+permalink: docs/tools/appium/continuous-integration-landing/
 ---
 
 <ul>
