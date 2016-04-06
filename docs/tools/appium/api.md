@@ -13,12 +13,17 @@ We are constantly improving our libraries, so we recommend our users to check th
 
 <h4>Current status</h4>
 
-LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-api"><strong>0.0.13</strong></a>
+LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-api"><strong>0.0.16</strong></a>
 
 * Supports JUnit Basic, Watcher and Suites setups
 * Supports TestNG Basic and Watcher setups
 
 <h4>Changelog</h4>
+
+<strong>v0.0.16</strong>
+
+* changed package name;
+* it is now possible to override the active app version for suite setup through environment variable / annotation
 
 <strong>v0.0.13</strong>
 
@@ -32,17 +37,14 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
     ...
 
     repositories {
-        ...
-        maven {
-            url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
-        }
+        mavenCentral()
     }
     
     ...
 
     dependencies {
         ...
-        testCompile 'org.testobject.extras.appium:appium-java-api:0.0.13'
+        testCompile 'org.testobject:testobject-appium-java-api:0.0.16'
     }
 
     ...

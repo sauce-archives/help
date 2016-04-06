@@ -5,12 +5,6 @@ permalink: docs/general-reference/devices/
 alias: /docs/devices/
 ---
 
-<li><a href="#real-devices-how-it-works">Real Devices: How it Works</a></li>
-<li><a href="#device-list">Device List</a></li>
-<li><a href="#rest-api">REST API</a></li>
-
-
-
 <h3 id="real-devices-how-it-works">Real Devices: How It Works</h3>
 
 TestObject hosts hundreds of <strong>real smartphones and tablets in the cloud</strong> for manual and automated testing. You can remotely control all devices directly from your browser. 
@@ -25,11 +19,9 @@ Every time a session starts the app gets installed freshly on the respective pho
 
 Every user will be able to use a <strong>fresh, standard phone that is not modified</strong>. This guarantees reliable, realistic test runs for every user and application.
 
-
-
 <h3 id="device-list">Device List</h3>
 
-Currently, TestObject hosts <strong>more than 150 different models of real Android and iOS devices </strong>. We constantly add more devices to our pool. To see if the devices you want to test on are available, please refer to our <a href="https://devicelab.testobject.com/">Device Lab</a> for the complete device list, including device specifications.</b>
+Currently, TestObject hosts <strong>more than 190 different models of real Android and iOS devices </strong>. We constantly add more devices to our pool. To see if the devices you want to test on are available, please refer to our <a href="https://devicelab.testobject.com/">Device Lab</a> for the complete device list, including device specifications.</b>
 
 <div class="center">
 	<h4><a href="https://devicelab.testobject.com/">devicelab.testobject.com</a></h4>
@@ -38,9 +30,3 @@ Currently, TestObject hosts <strong>more than 150 different models of real Andro
 <br>
 
 <img class="center shadow" src="/img/first-impressions/devicepool-photo2.jpg">
-
-
-
-<h3 id="rest-api">REST API</h3>
-
-See our <a href="/docs/general-reference/devices/api">Devices API</a>.

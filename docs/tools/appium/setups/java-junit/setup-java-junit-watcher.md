@@ -50,18 +50,9 @@ public class WatcherTestSetup {
 {% endhighlight %}
 
 <h4>Dependencies</h4>
-This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add two things to your build.gradle file:
-
-...the instruction to compile our dependency:
+This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
 {% highlight bash %}
-  compile 'org.testobject.extras.appium:appium-java-api:0.0.13'
-{% endhighlight %}
-
-...and a link to our repository in the "repository" section:
-{% highlight bash %}
-  maven {
-    url "http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo/"
-  }
+  testCompile 'org.testobject:testobject-appium-java-api:0.0.16'
 {% endhighlight %}
 
 <h4>Why use it</h4>

@@ -38,7 +38,7 @@ In order to carry out your first test, you need to <strong>upload an app</strong
 
 * Upload your native Android or iOS app directly from your system. For iOS applications make sure that you <a href="/docs/guides/creating-ipa/">exported your IPA file</a>  with an Ad Hoc Deployment Configuration to test on our platform.
 * Test a Mobile Website by adding the Website URL, a name and the version number
-* <a href="/docs/guides/continuous-integration/">Integrate a build plugin</a>, like Ant, Maven, Jenkins etc.
+* Integrate a build plugin, like Ant, Maven, Jenkins etc.
 * Get your latest app versions directly from HockeyApp. Enter your <a href="https://rink.hockeyapp.net/manage/auth_tokens" target="_blank">HockeyApp token</a> and you are set.
 
 <h3 id="settings">Account Settings</h3>
@@ -60,7 +60,7 @@ If you have a Team plan, you will be able to test your companies apps in paralle
 To change your password enter your new password into the text field and save. Done!<br>
 If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud. 
 
-- Enter your email adress or user name
+- Enter your email address or user name
 - You will receive a link via email
 - Follow this link and enter a new password.
 
@@ -80,7 +80,7 @@ Update your credit card information and check all your previous payments made to
 
 <h3 id="plans">Testing Plans</h3>
 
-After the signup you will start with a <b>free plan</b>. You will be able to upload your app and try out most of the features on the platform. It's not a trial, so you will be able to stay on the free plan unlimited in time. The free plan allows you to access a selection of free Nexus devices.
+After the signup you will start with a <b>free plan</b>. You will be able to upload your app and try out most of the features on the platform. This is not a trial, so you will be able to stay on the free plan for as long as you like. The free plan allows you to access a selection of free Nexus devices.
 <img class="center shadow" src="/img/settings/free_devices.png"><br>
 
 The <b>professional plans</b> allow you test on all of the hundreds of real devices and enjoy additional support services, e.g. direct live support through our <a href="https://app.testobject.com/#/chat" target="_blank">Chat Tool</a> while testing. <br>
@@ -89,7 +89,7 @@ TestObject offers two distinct types of plans for Manual and Automated testing. 
 To change your plan go to your <a href="#settings">Account Settings</a> and select the plans tab from the menu. Upgrade and downgrade your plans from there.
 
 All standard plans underly a <b>fair use</b> policy. To ensure that no single user blocks devices permanently for other TestObject users, we reserve the right to limit the daily usage time, depending on the purchased plan.<br>
-It is an average specification. Your testing won't be terminated automatically if you exceeded your time limit during an intense testing phase. If the daily average device time is exceeded regularly we will recommend to upgrade your plan. 
+This is an average specification. Your testing won't be terminated automatically if you exceeded your time limit during an intense testing phase. If the daily average device time is exceeded regularly we will recommend to upgrade your plan. 
 
 
 <h4>Manual Testing Plans</h4>
@@ -99,8 +99,7 @@ You will have the choice between a <b>Single Plan</b> or a <b>Team Plan</b>.
 
 The plans differ in the number of users, parallel sessions and the available device time a day.
 
-For more information see the overview for all plans on our homepage: <a href="https://testobject.com/pricing" target="_blank">https://testobject.com/pricing</a>.
-
+For more information see the <a href="https://testobject.com/pricing" target="_blank">overview for all plans</a> on our homepage.
 
 
 <h4>Automated Testing plans</h4>
@@ -108,9 +107,9 @@ For more information see the overview for all plans on our homepage: <a href="ht
 
 For automated testing you can purchase the <b>Starter Plan</b> or the <b>Advanced plan</b>.
 
-Both plans are accesible for all users of your <a href="#team-accounts">team</a>. They differ in the number of possible concurrent test runs, the available device time and the priority of the test execution.
+Both plans are accessible for all users of your <a href="#team-accounts">team</a>. They differ in the number of possible concurrent test runs, the available device time and the priority of the test execution.
 
-For more information see the overview for all plans on our homepage: <a href="https://testobject.com/pricing" target="_blank">https://testobject.com/pricing</a>.
+For more information see the <a href="https://testobject.com/pricing" target="_blank">overview for all plans</a> on our homepage.
 
 <h4>Enterprise Plans</h4>
 Additionally to our standard plans we offer flexible, individual solutions for our customers. 
