@@ -13,7 +13,7 @@ If the authenticated user is the owner of the account, he will receive all sessi
 
 
  {% highlight javascript %}
-    https://app.testobject.com/rest/v1/users/{:userId}/session/reports
+    https://app.testobject.com/api/rest/v1/users/{:userId}/session/reports
  {% endhighlight %}
 
 <h5>Parameters:</h5>
