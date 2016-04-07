@@ -76,7 +76,7 @@ password={:yourPassword}
 You can try the API using the following command:
 
 {% highlight bash %}
-curl --user {yourUsername}:{yourPassword} -i -H "Accept: application/json" -X GET https://app.testobject.com/rest/v1/users/{yourUsername}/session/reports?offset=1&limit=50&lastDays=30
+curl --user {yourUsername}:{yourPassword} -i -H "Accept: application/json" -X GET https://app.testobject.com/api/rest/v1/users/{yourUsername}/session/reports?offset=1&limit=50&lastDays=30
 {% endhighlight %}
 
 <h5>Sample output:</h5>
