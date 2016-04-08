@@ -14,7 +14,7 @@ alias: /docs/tools/appium/advanced/
 	- [the Screen classes](#screen)
 	- [the Test classes](#test)
 
-A good test setup is not just a working setup, it must be a tidy setup. Sure, nothing prevents you from [writing all your code in a single class](/docs/tools/appium/setup). Your tests will still run, but maintaining the existing ones and adding new ones will become a pain very quickly! To prevent unnecessary headaches and enable you to write your tests more efficiently, we suggest you write your tests using a more advanced setup based on the PageObject pattern. This tutorial will guide your through the creation of such a setup.
+A good test setup is not just a working setup, it must be a tidy setup. Sure, nothing prevents you from [writing all your code in a single class](/docs/tools/appium/setups/junit/basic/). Your tests will still run, but maintaining the existing ones and adding new ones will become a pain very quickly! To prevent unnecessary headaches and enable you to write your tests more efficiently, we suggest you write your tests using a more advanced setup based on the PageObject pattern. This tutorial will guide your through the creation of such a setup.
 
 <h3 id="pageobject-pattern">The PageObject pattern</h3>
 Following the PageObject pattern means organizing the code you write in a certain way. This would involve transforming our older "twoPlusTwoOperation" method from this:

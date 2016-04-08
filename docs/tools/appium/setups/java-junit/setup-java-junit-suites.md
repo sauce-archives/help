@@ -62,7 +62,7 @@ If you need to quickly switch to testing on a local device, just set the "testLo
 <h4>Why use it</h4>
 One of the advantages of using test suites on TestObject is that the number of capabilities you need to send over is reduced, as you will now be able to specify things like the Appium version you want to run your tests with and the version of the app you want to test directly from the suite's UI. The same is also true for the devices, which get selected through our device picker. This means that the "testobject_app_id", "testobject_device", "testobject_test_name", "testobject_suite_name" and "testobject_appium_version" capabilities will be ignored in the context of this setup.
 
-When you feel comfortable writing tests using this last setup, it would probably make sense for you to have a look at our [PageObject setup](/docs/tools/appium/advanced), which is basically just a way to write better structured, more readable and more easily maintanable tests.
+When you feel comfortable writing tests using this last setup, it would probably make sense for you to have a look at our [PageObject setup](/docs/guides/appium-advanced-setup/), which is basically just a way to write better structured, more readable and more easily maintanable tests.
 
 <h4 id="how-it-works">How it works</h4>
 
