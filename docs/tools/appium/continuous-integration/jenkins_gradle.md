@@ -16,7 +16,7 @@ What you will need:
 
 <h3 id="step1">Step 1: adapt your test setup</h3>
 
-First of all, you will need to modify your existing setup so that it retrieves the TESTOBJECT_API_KEY, TESTOBJECT_APP_ID and TESTOBJECT_DEVICE capabilities from its runtime environment. This will allow you to easily change their values from Jenkins at every execution, instead of being forced to modify the actual code. For example, in a Java setup you would have something that looks like this:
+First of all, you will need to modify your existing setup so that it retrieves the information needed to initialise the test run on Testobject via environment variables. These can be different depending on the kind of test setup you are using. For example, if you are running a watcher setup, you will need to send over your TestObject API key, an id pointing to the version of your app you want to test and a device id, specifying which device your test should run on. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
 
 {% highlight java %}
     String apiKey = System.getenv("TESTOBJECT_API_KEY");
@@ -24,13 +24,16 @@ First of all, you will need to modify your existing setup so that it retrieves t
     String deviceId = System.getenv("TESTOBJECT_DEVICE");
 {% endhighlight %}
 
-These values would the be sent through the appropriate DesiredCapabilities object:
+These values would then be sent through the appropriate DesiredCapabilities object:
 
 {% highlight java %}
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, apiKey);
-    capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_TEST_REPORT_ID, testReportId); 
+    capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_APP_ID, appId);
+    capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_DEVICE, deviceId);
 {% endhighlight %}
+
+We will be injecting the required values as environment variables using the Jenkins Environment Injector Plugin.
 
 <h3 id="step2">Step 2: set up a Jenkins job</h3>
 

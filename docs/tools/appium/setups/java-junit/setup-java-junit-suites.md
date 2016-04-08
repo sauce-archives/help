@@ -50,17 +50,20 @@ This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appi
 
 <h4>Environment variables</h4>
 You can overwrite the following parameters in your setup through environment variables:
+
 * TESTOBJECT_API_ENDPOINT, which is by default https://app.testobject.com:443/api, so pointing to our platform;
 * TESTOBJECT_API_KEY, which you always have to provide as it identifies the app you want to run your tests on;
 * TESTOBJECT_SUITE_ID, which is also mandatory as it tells our platform in which suite it should store the test results;
 * TESTOBJECT_DEVICE_IDS, which can be used to override the device selection you usually do through our web UI;
+* TESTOBJECT_APP_ID, which can be used to override the app version you have selected through your suite UI;
 * TESTOBJECT_TIMEOUT, which controls the maximum duration of the test suite.
+
 You can set the value of these environment variables through your CI server (for example Jenkins) and have a better, more flexible Appium testing experience!
 
 If you need to quickly switch to testing on a local device, just set the "testLocally" flag to true through the TestObject annotation, or set the environment variable "TESTOBJECT_TEST_LOCALLY" to true.
 
 <h4>Why use it</h4>
-One of the advantages of using test suites on TestObject is that the number of capabilities you need to send over is reduced, as you will now be able to specify things like the Appium version you want to run your tests with and the version of the app you want to test directly from the suite's UI. The same is also true for the devices, which get selected through our device picker. This means that the "testobject_app_id", "testobject_device", "testobject_test_name", "testobject_suite_name" and "testobject_appium_version" capabilities will be ignored in the context of this setup.
+One of the advantages of using test suites on TestObject is that the number of capabilities you need to send over is reduced, as you will now be able to specify things like the Appium version you want to run your tests with and the version of the app you want to test directly from the suite's UI. The same is also true for the devices, which get selected through our device picker. This means that the "testobject_device", "testobject_test_name", "testobject_suite_name" and "testobject_appium_version" capabilities will be ignored in the context of this setup.
 
 When you feel comfortable writing tests using this last setup, it would probably make sense for you to have a look at our [PageObject setup](/docs/guides/appium-advanced-setup/), which is basically just a way to write better structured, more readable and more easily maintanable tests.
 

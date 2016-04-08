@@ -79,4 +79,3 @@ Upgrades of your APK/testAPK will be pushed automatically by your Gradle
 When the tests are finished, you will find a JUnit xml file in the “testobject” folder within the build folder. This xml file holds the information about every test run and can be integrated with a CI server like Jenkins to see the progress reports and statistics.
 
 <img src="/img/guides/gradle/gradle-test-results.png" alt="Test result statistics">
-
