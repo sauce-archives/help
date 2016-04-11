@@ -2,6 +2,7 @@
 title: Watcher Setup on TestObject using JUnit
 layout: en
 permalink: docs/tools/appium/setups/junit/watcher/
+alias: /docs/tools/appium/setup/
 ---
 
 If you want to register your test result on TestObject, you will need to use our result watcher. This is what a simple Watcher setup with JUnit looks like:
