@@ -60,8 +60,8 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
         ...
         
         <dependency>
-            <groupId>org.testobject.extras.appium</groupId>
-            <artifactId>appium-java-api</artifactId>
+            <groupId>org.testobject</groupId>
+            <artifactId>testobject-appium-java-api</artifactId>
             <version>0.0.18</version>
         </dependency>
     </dependencies>
