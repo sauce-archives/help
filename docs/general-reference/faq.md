@@ -39,7 +39,7 @@ Generally, yes. If the model you are looking for is not in our pool yet you can 
 Yes, of course it is possible to test the camera behaviour on our devices. In front of our cameras are nice TestObject Logos ;-). You should see something like this through the camera:
 <img class="center shadow" src="/img/faq/camera_view.png">
 
-<h3 id="FAQ-Security">FAQ-Security</h3> 
+<h3 id="FAQ-Security">FAQ-Security</h3>
 <li><a href="#data-privacy">Is my app safe in the TestObject cloud?</a></li>
 <li><a href="#data-protection">Can other users acces my data?</a></li>
 
@@ -84,12 +84,12 @@ You can upgrade your plan at any time and it will start immediately. Charges wil
 
 <h4 id="auto-renewed">Are all plans auto-renewed?</h4>
 Yes, all TestObject plans - monthly and annual - are auto-renewal subscriptions. To cancel your subscription you have to actively downgrade to the "free" plan. This will not delete your TestObject account and you can re-subscribe to a paid plan at any time.
-					
+
 <h4 id="payment-methods">Which payment methods do you accept?</h4>
 We accept credit card payments (Visa, MasterCard, Maestro).
 When you've subscribed to a monthly plan, your credit card will be charged monthly. When you've subscribed to an annual plan, the full amount for 12 months will be charged once at the beginning of the billing cycle.
 For annual plans we also accept PayPal or direct invoicing. Please contact our sales team for further information: <a href="mailto:sales@testobject.com" style="vertical-align: baseline">sales@testobject.com</a>.
-			
+
 <h4 id="invoice">Will I receive an invoice?</h4>
 Yes, you will receive an invoice for every payment via email. You also can access your billing history from your account settings.
 
@@ -99,8 +99,10 @@ Yes, you will receive an invoice for every payment via email. You also can acces
 To test your iOS application on our platform you have to export your IPA file as an Ad Hoc Deployment. Check out this <a href="/docs/guides/creating-ipa/">short guide</a> on how to do it!
 
 <h4 id="Whitelisting">My app is only available within our internal network. Can I use TestObject devices for my testing?</h4>
-  Yes. Sometimes apps are designed to be run on internal networks, or on networks that can be accessed only from specific IP addresses. In this case, you can add an exception for TestObject to your network's whitelist for the IP address <bold>37.44.7.110</bold>. All TestObject devices access the internet via this IP.
-  
+Yes. All TestObject devices access the internet through the IP address **37.44.7.110**.
+
+Sometimes apps are designed to be run on internal networks, or on networks that can be accessed only from specific IP addresses. In this case, you can add an exception for TestObject to your network's whitelist for the IP address **37.44.7.110**.
+
 <!-- <h4 id="permissions"></h4>
 For Android
-For iOS --> 
+For iOS -->
