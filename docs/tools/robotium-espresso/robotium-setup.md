@@ -26,7 +26,7 @@ Steps to get started:
 </li>
 <li> You are now ready to <b>run the test</b>!
 </li>
-<li> Watch the progress of the test while it gets executed or wait till it is completed and have a look at the detailed <a href="/docs/testing-tools/automation/reporting/">Execution Report</a>. <br>
+<li> Watch the progress of the test while it gets executed or wait till it is completed and have a look at the detailed <a href="/docs/general-reference/automation/reporting/">Execution Report</a>. <br>
 Included are settings, all logs, screenshots and a video capturing the device screen during the test execution. <br>
     <img class="center shadow" src="/img/tools/automation/Robotium_Report.png" alt="Robotium Report">
 <br>
