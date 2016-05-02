@@ -13,24 +13,10 @@ We are constantly improving our libraries, so we recommend our users to check th
 
 <h4>Current status</h4>
 
-LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-api"><strong>0.0.18</strong></a>
+LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-api"><strong>0.0.19</strong></a>
 
 * Supports JUnit Basic, Watcher and Suites setups
 * Supports TestNG Basic and Watcher setups
-
-<h4>Changelog</h4>
-
-<strong>v0.0.18</strong>
-
-* changed package name;
-* it is now possible to override the active app version for suite setup through environment variable / annotation;
-* moved to Maven Central.
-
-<strong>v0.0.13</strong>
-
-* now supports TestNG Watcher setup through TestObjectTestNGTestResultWatcher;
-* our result watchers can now be set for any RemoteWebDriver, not just for AppiumDriver;
-* capabilities TESTOBJECT_APP_ID, TESTOBJECT_DEVICE, TESTOBJECT_SUITE_NAME, TESTOBJECT_TEST_NAME and TESTOBJECT_APPIUM_VERSION are no longer deprecated.
 
 <h4>How to get it</h4>
 <h5>Gradle</h5>
@@ -45,7 +31,7 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
 
     dependencies {
         ...
-        testCompile 'org.testobject:testobject-appium-java-api:0.0.18'
+        testCompile 'org.testobject:testobject-appium-java-api:0.0.19'
     }
 
     ...
@@ -62,7 +48,7 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
         <dependency>
             <groupId>org.testobject</groupId>
             <artifactId>testobject-appium-java-api</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.19</version>
         </dependency>
     </dependencies>
 

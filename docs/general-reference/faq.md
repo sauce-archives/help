@@ -44,7 +44,7 @@ Yes, of course it is possible to test the camera behaviour on our devices. In fr
 <li><a href="#data-protection">Can other users acces my data?</a></li>
 
 <h4 id="data-privacy">Is my app safe in the TestObject cloud?</h4>
-The TestObject servers are located in Germany at certified data centers. The communication is SSL secured. We try to ensure as much safety as a cloud service can provide. TestObject will never abuse your data, and we respect your data privacy at all times. You can find more information about this here: <a href="http://testobject.com/privacy" target="_blank">Data Privacy</a>. For very high security requirements we also provide a private cloud solution. Please find more information about this here: <a href="http://testobject.com/enterprise" target="_blank">Enterprise</a>.
+The TestObject servers are located in Germany at certified data centers. The communication is SSL secured. We try to ensure as much safety as a cloud service can provide. TestObject will never abuse your data, and we <a href="http://testobject.com/privacy" target="_blank">respect your data privacy</a> at all times. For very high security requirements we also provide a <a href="http://testobject.com/enterprise" target="_blank">private cloud solution</a>.
 
 <h4 id="data-protection">Can other users acces my data?</h4>
 It is of great importance for us to make sure that no other user can see or access your data. This is why we clean up the devices after each session. In detail we:
@@ -52,7 +52,7 @@ It is of great importance for us to make sure that no other user can see or acce
 <li>Uninstall all user apps</li>
 <li>Delete browser data</li>
 <li>Clear the SD card</li>
-<li>Clear all accounts (e.g., Google Play, Twitter, etc.)</li>
+<li>Clear all accounts whenever allowed by the OS (e.g., Google Play, Twitter, etc.)</li>
 <li>Finally, we automatically check if the clean-up was successful and block the device for other users if data has not been removed properly.</li>
 </ul>
 
