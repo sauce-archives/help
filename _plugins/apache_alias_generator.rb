@@ -1,3 +1,5 @@
+# Source: https://github.com/JanStevens/Octopress-Apache-Alias-Generator/blob/d8b07a6a2c04cab6816f0fb98d6213af585a71f3/_plugins/apache_alias_generator.rb
+
 # Alias Apache Generator for Posts/Pages.
 #
 # Generates redirect pages for posts with aliases set in the YAML Front Matter.
@@ -41,11 +43,11 @@ module Jekyll
     end
 
     def setup_htaccess
-      if File.exist?(File.join(@site.source, "_htaccess"))
-        FileUtils.cp(File.join(@site.source, "_htaccess"), File.join(@site.dest, ".htaccess"))
-      end
       if File.exist?(File.join(@site.dest, ".htaccess"))
         FileUtils.rm(File.join(@site.dest, ".htaccess"))
+      end
+      if File.exist?(File.join(@site.source, "_htaccess"))
+        FileUtils.cp(File.join(@site.source, "_htaccess"), File.join(@site.dest, ".htaccess"))
       end
       File.open(File.join(@site.dest, ".htaccess"), 'a') do |file|
           file.write(alias_header())
@@ -60,7 +62,7 @@ module Jekyll
 
     def process_pages
       @site.pages.each do |page|
-        generate_aliases(page.url.gsub(/index\.(html|htm)$/, ''), page.data['alias'])
+        generate_aliases(page.destination('').gsub(/index\.(html|htm)$/, ''), page.data['alias'])
       end
     end
 
