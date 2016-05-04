@@ -143,7 +143,7 @@ Response:
 
 <h4 id="update-suite">Update Suite</h4>
 
-Update the properties of a suite.
+Updates the properties of a suite.
 
 {% highlight javascript %}
 PUT /suites/{:suiteId}
