@@ -25,7 +25,7 @@ When the tests are finished, you will find a JUnit xml file in the “testobject
 
 <h5>1. <a href="/docs/testing-tools/robotium-espresso/setup/">Setup your first Espresso/Robotium test</a> through our UI.</h5>
 
-<h5>2. Get all necessary account settings to prepare your <a href="#build.gradlde">build.grade config file</a> </h5>
+<h5>2. Get all necessary account settings to prepare your <a href="#build.gradle">build.grade config file</a> </h5>
 
 Additionally to your user name and password you put
 +1. a team name (not compulsary)
