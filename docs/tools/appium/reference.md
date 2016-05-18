@@ -6,18 +6,28 @@ permalink: docs/tools/appium/reference/
 
 <ul>
 	<li><a href="#run-with-any-language">Run with Any Language</a></li>
-	<li><a href="#suite-setup">Complete Test Setup &mdash; Organize your Results in Suites</a></li>
 	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
 	<li><a href="#rest-api">REST API</a></li>
-	<li><a href="#automated-file-upload">Automated File Upload</a></li>
 	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
 </ul>
+
+<h3 id="appium-capabilities">Appium Capabilities</h3>
+When you are running an Appium test on TestObject, the Appium server on TestObject's side receives all the capabilities you set on the client side. This means you can theoretically set all the capabilities allowed by the Appium version you are running against. Due to the nature of our service though, setting some capabilities may produce a different outcome than you would expect from just running an Appium server locally. For example:
+
+- all the emulator-only capabilities will not work on TestObject, as we only provide access to real devices;
+- the 'app' capability is always overwritten to point the server to the app file you uploaded to our system;
+- the 'platformName' capability is overwritten because we select the platform your test will run on based on the kind of project you are pointing to with your API key;
+- all the 'reset' capabilities will be ineffective on our public cloud, since we are always cleaning the phones after the session has ended (this means your app will not remain installed on the device even if you use 'noReset');
+- for test suite runs, the 'testobject_suite_name' and "testobject_test_name' capabilities are ignored;
+- the 'deviceName' capability is always overwritten.
+
+Different setups might have slightly different ways of handling capabilities and/or different requirements. Please make sure you also check the guide relative to your <a href="/docs/tools/appium/setups/junit/suites">specific setup</a> to make sure you are providing everything that is required.
 
 <h3 id="run-with-any-language">Run with Any Language</h3>
 
 Run your Appium tests on TestObject no matter what language you're using. Just add some extra <a href="#general-test-setup">capabilities</a> to your test. For more control you can optionally connect to our <a href="/docs/api/appium">REST API</a>.
 
-<h3>Live-View and Report URLs</h3>
+<h3 id="live-view-and-report-urls">Live-View and Report URLs</h3>
 
 When starting an Appium session we enhance the default capabilities returned by the session by two properties:
 
@@ -49,10 +59,6 @@ public void setup() throws MalformedURLException {
 	...
 }
 {% endhighlight %}
-
-<h3 id="rest-api">REST API</h3>
-
-Prefer to be flexible? Just write your own client to organize your test results. Simply make a couple of calls to our <a href="/docs/api/appium">Appium API</a>.
 
 <h3 id="accessing-testobject-via-proxy">Accessing TestObject Via Proxy</h3>
 
