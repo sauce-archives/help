@@ -111,6 +111,10 @@ Install Java:
 
     sudo installer -pkg /Volumes/JDK\ 8\ Update\ 45/JDK\ 8\ Update\ 45.pkg -target /
 
+Install libimobiledevice
+
+    brew install libimobiledevice
+
 Remove apps that hijack usb connection:
 
     rm -rf /Applications/iTunes.app
