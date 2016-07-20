@@ -6,9 +6,9 @@ permalink: docs/tools/robotium-espresso/gradle-plugin/
 
 <h3 id="gradle-plugin">TestObject Gradle Plugin</h3>
 
-Use this plugin to upload your APK, as well as test APK (Espresso/Robotium tests) to the TestObject platform. 
+Use this plugin to upload your APK, as well as test APK (Espresso/Robotium tests) to the TestObject platform.
 
-The TestObject Gradle plugin improves your build process and lets you enjoy statistics and seamless usage of custom runners. 
+The TestObject Gradle plugin improves your build process and lets you enjoy statistics and seamless usage of custom runners.
 
 For users with a custom runner doing internal filtering this feature is recommended. It enables you to run your test cases as a package.
 
@@ -19,7 +19,7 @@ For users with a custom runner doing internal filtering this feature is recommen
 
 <h5>1. <a href="/docs/testing-tools/robotium-espresso/setup/">Setup your first Espresso/Robotium test</a> through our UI.</h5>
 
-<h5>2. Get the needed specifications</h5> 
+<h5>2. Get the needed specifications</h5>
 
 To setup your <a href="#build.gradle">build.grade config</a> file you will need to put some specifications. Additionally to your user name and password you find all the relevant data on the screen after you uploaded your test APK and before you select your devices for your test.
 
@@ -42,7 +42,7 @@ buildscript {
                 mavenCentral()
                 maven { url 'http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo' }
         }
- 
+
         dependencies {
                 classpath 'com.android.tools.build:gradle:0.12+'
                 classpath group: 'org.testobject', name: 'testobject-gradle-plugin', version: '0.0.35'
@@ -57,14 +57,34 @@ android {
 }
 
 testobject {
-	username "your-username" // testobject username (not your email)
-	password "your-password" // your password for testobject login
-	team "a-team-name" //the name of your team (if existing), see nr. 1 in screenshot
-	app "your-app-name" // name of your app, see nr. 2 in screenshot
-	testSuite 17 // id of your test suite, see nr. 3 in screenshot
-	runAsPackage true // Recommended for usage of custom runners and doing internal filterings (if not this option can be deleted or set as false)
+  username "your-username"
+  password "your-password"
+  team "a-team-name"
+  app "your-app-name"
+  testSuite 17
+  runAsPackage true
+  failOnUnknown
+  classes = ["com.testobject.foobar.Test1","com.testobject.foobar.Test2"]
+  tests = ["com.testobject.foobar.Test1#test"]
+  annotations = ["com.testobject.annotation.Test"]
+  sizes = ["small","medium","large"]
 }
 ```
+
+<h5>The fields should be used as follows:</h5>
+
+- username: The username you use for login into testobject, not your email.
+- password: The password you use for login into testobject.
+- team: the name of the team the user belongs to (optional, if the user is not part of a team). The team is indicated by nr. 1 in the screenshot above.
+- app: Name of your app. See nr. 2 in screenshot above.
+- testSuite: Id of your test suite, see nr. 3 in screenshot above.
+- runAsPackage: If you are using custom runners and doing internal filterings we recommend you to use it like this. If not this option can be deleted or set as false.
+- failOnUnkown: If you want your test to fail when one of the devices in the test suite is unavailable, set this property to true.
+- classes: This property can be set to run only some test methods.
+- tests: This property can be set to run only some test methods.
+- annotations: This property can be set if you want to only run tests that has this annotation. If the annotation is set on the class then the methods will also inherit it and will be run
+- sizes: This property can be set if you just want to run tests that have @SmallTest, @MediumTest and @LargeTest annotations. Like annotations, class annotations will again be inherited by the methods
+
 
 <h5>4. Run the subsequent tests from command line</h5>
 
