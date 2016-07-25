@@ -63,11 +63,12 @@ testobject {
   app "your-app-name"
   testSuite 17
   runAsPackage true
-  failOnUnknown
+  failOnUnknown true
   classes = ["com.testobject.foobar.Test1","com.testobject.foobar.Test2"]
   tests = ["com.testobject.foobar.Test1#test"]
   annotations = ["com.testobject.annotation.Test"]
   sizes = ["small","medium","large"]
+  testTimeout = 60
 }
 ```
 
@@ -84,6 +85,7 @@ testobject {
 - tests: This property can be set to run only some test methods.
 - annotations: This property can be set if you want to only run tests that has this annotation. If the annotation is set on the class then the methods will also inherit it and will be run
 - sizes: This property can be set if you just want to run tests that have @SmallTest, @MediumTest and @LargeTest annotations. Like annotations, class annotations will again be inherited by the methods
+- testTimeout: This property can be set if you expect your test suite to take longer than 60 mins. The default value is 60 mins
 
 
 <h5>4. Run the subsequent tests from command line</h5>
