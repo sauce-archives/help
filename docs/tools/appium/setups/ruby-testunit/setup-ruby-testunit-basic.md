@@ -26,7 +26,7 @@ class BasicTestSetup < Test::Unit::TestCase
             testobject_device: 'Motorola_Moto_G_2nd_gen_real'
         },
         appium_lib: {
-            server_url: 'https://app.testobject.com:443/api/appium/wd/hub',
+            server_url: 'http://appium.testobject.com/wd/hub',
             wait: 10
         }
     }

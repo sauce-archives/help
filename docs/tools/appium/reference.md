@@ -52,7 +52,7 @@ private AndroidDriver driver;
 public void setup() throws MalformedURLException {
 	...
 
-	AppiumDriver driver = new AppiumDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+	AppiumDriver driver = new AppiumDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
 	driver.getCapabilities().getCapability("testobject_test_report_url");
 	driver.getCapabilities().getCapability("testobject_test_live_view_url");
 

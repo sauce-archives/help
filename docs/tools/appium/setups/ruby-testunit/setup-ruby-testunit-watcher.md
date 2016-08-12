@@ -30,7 +30,7 @@ class BasicTestSetup < Test::Unit::TestCase
             testobject_report_results: true
         },
         appium_lib: {
-            server_url: 'https://app.testobject.com:443/api/appium/wd/hub',
+            server_url: 'http://appium.testobject.com/wd/hub',
             wait: 10
         }
     }

@@ -52,7 +52,7 @@ public class AppiumTest {
 		desiredCapabilities.setCapability("testobject_app_id", System.getenv("TESTOBJECT_APP_ID"));
 		desiredCapabilities.setCapability("testobject_device", System.getenv("TESTOBJECT_DEVICE"));		
 
-		URL url = new URL("https://app.testobject.com:443/api/appium/wd/hub");
+		URL url = new URL("http://appium.testobject.com/wd/hub");
 		driver = new AppiumDriver(url, desiredCapabilities);		
 	}
 	

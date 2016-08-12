@@ -28,7 +28,7 @@ public class CompleteTestSetup {
         capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
         capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
 
-        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+        driver = new AndroidDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
 
         resultWatcher.setAppiumDriver(driver);
 
@@ -70,7 +70,7 @@ When you feel comfortable writing tests using this last setup, it would probably
 <h4 id="how-it-works">How it works</h4>
 
 1. A new Suite Report including Test Reports for each individual test run is created via REST API. You will be able to monitor the progress of the Suite Report in the UI.
-2. For each test run your client-side code establishes a connection to our Appium server (https://app.testobject.com:443/api/appium/wd/hub)
+2. For each test run your client-side code establishes a connection to our Appium server (http://appium.testobject.com/wd/hub)
 3. The client session is authenticated with your API key specified in the "testobject_api_key" capability
 4. TestObject identifies the testing device and the test report for this specific test run using the "testobject_report_id" capability
 5. The test is executed from your client machine through the API session, connecting to our Appium server using the standard Selenium WebDriver JSON Wire Protocol. When the RemoteWebDriver/AppiumDriver is created we allocate the specified device for you. The allocation process waits for up to 15 minutes for a device to become available.

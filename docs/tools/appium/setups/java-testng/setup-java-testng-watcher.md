@@ -21,7 +21,7 @@ public class IntermediateSetupTestTestNG implements AppiumDriverProvider {
         capabilities.setCapability("testobject_app_id", "1");
         capabilities.setCapability("testobject_device", "YOUR_DEVICE");
 
-        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+        driver = new AndroidDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
 
     }
 

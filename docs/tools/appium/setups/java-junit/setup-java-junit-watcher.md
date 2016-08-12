@@ -32,7 +32,7 @@ public class WatcherTestSetup {
         capabilities.setCapability("testobject_app_id", "1");
         capabilities.setCapability("testobject_device", "Motorola_Moto_G_2nd_gen_real");
 
-        driver = new AndroidDriver(new URL("https://app.testobject.com:443/api/appium/wd/hub"), capabilities);
+        driver = new AndroidDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
 
         /* IMPORTANT! We need to provide the Watcher with our initialized AppiumDriver */
         resultWatcher.setAppiumDriver(driver);
