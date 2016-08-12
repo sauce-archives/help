@@ -13,7 +13,7 @@ We are constantly improving our libraries, so we recommend our users to check th
 
 <h4>Current status</h4>
 
-LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-api"><strong>0.0.19</strong></a>
+LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-api"><strong>0.0.24</strong></a>
 
 * Supports JUnit Basic, Watcher and Suites setups
 * Supports TestNG Basic and Watcher setups
@@ -31,7 +31,7 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
 
     dependencies {
         ...
-        testCompile 'org.testobject:testobject-appium-java-api:0.0.19'
+        testCompile 'org.testobject:testobject-appium-java-api:0.0.24'
     }
 
     ...
@@ -48,7 +48,7 @@ LATEST VERSION is <a href="https://github.com/testobject/testobject-appium-java-
         <dependency>
             <groupId>org.testobject</groupId>
             <artifactId>testobject-appium-java-api</artifactId>
-            <version>0.0.19</version>
+            <version>0.0.24</version>
         </dependency>
     </dependencies>
 
