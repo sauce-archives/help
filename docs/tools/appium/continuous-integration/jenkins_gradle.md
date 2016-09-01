@@ -21,14 +21,13 @@ But before we start, are you looking for a [Basic Setup](#basic) or for a [Suite
 ***
 ***
 
-<h2 id="basic">  Basic setup</h2>
+<h2 id="basic">Basic setup</h2>
 <h3 id="step1">Step 1: adapt your test setup</h3>
 
-First of all, you will need to modify your existing setup so that it retrieves the information needed to initialise the test run on Testobject via environment variables. These can be different depending on the kind of test setup you are using. For example, if you are running a watcher setup, you will need to send over your TestObject API key, an id pointing to the version of your app you want to test and a device id, specifying which device your test should run on. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
+First of all, you will need to modify your existing setup so that it retrieves the information needed to initialise the test run on TestObject via environment variables. These can be different depending on the kind of test setup you are using. For example, if you are running a watcher setup, you will need to send over your TestObject API key and an id specifying which device your test should run on. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
 
 {% highlight java %}
     String apiKey = System.getenv("TESTOBJECT_API_KEY");
-    int appId = Integer.parseInt(System.getenv("TESTOBJECT_APP_ID"));
     String deviceId = System.getenv("TESTOBJECT_DEVICE");
 {% endhighlight %}
 
@@ -37,11 +36,10 @@ These values would then be sent through the appropriate DesiredCapabilities obje
 {% highlight java %}
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, apiKey);
-    capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_APP_ID, appId);
     capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_DEVICE, deviceId);
 {% endhighlight %}
 
-We will be injecting the required values as environment variables using the Jenkins Environment Injector Plugin.
+We will be injecting the required values as environment variables using the [Jenkins Environment Injector Plugin](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin).
 
 <h3 id="step2">Step 2: set up a Jenkins job</h3>
 
@@ -54,16 +52,16 @@ Select new freestyle Jenkins project and insert a title of your choice, then pro
 
 The first thing you will have to do is check the box next to the "This build is parameterized" label. A new button, "Add label", will appear. Select it and click on the option that reads "String parameter". This will be the field in which you input the value of your TestObject API key when you launch your test through Jenkins, so you will have to name it "TESTOBJECT_API_KEY" (or whatever other name you have specified in step 1) and give it the API key of the app you want to test as a value.
 
-You will have to repeat this step for the other two capabilities as well. The second one will have "TESTOBJECT_APP_ID" as a name and the ID of the app version you want to test as a value, while the third one will be named "TESTOBJECT_DEVICE" and will have the name of the device(s) you want to test on as a value.
+You will have to repeat this step for the "TESTOBJECT_DEVICE" capability, which will contain the name of the device(s) you want to test on as a value.
 
 ![Defining repository](/img/guides/jenkins_gradle_suite/git_repo.png)
 
-After that is done, scroll down to the "Source code management" section, select "Git" and enter the URL of the repository where your test is being hosted.
+After that is done, scroll down to the "Source code management" section, select "Git" and enter the URL of the repository where your test script is being hosted.
 
 
 ![Defining build](/img/guides/jenkins_gradle_suite/build.png)
 
-Next, scroll down to the "Build" section, click "Add build step" and select "Invoke Gradle script". Here are two scinarios, implement the one that works for you:
+Next, scroll down to the "Build" section, click "Add build step" and select "Invoke Gradle script". Here you have two options, and are free to implement the one that works for you:
 
 + select the "Invoke Gradle" option and make sure you do Not select the "(defaut)" one which has brackets, but you select instead the "default" one without brackets or another version you have.
 
@@ -95,33 +93,20 @@ Everything is set, now you just need to select "Build with parameters" from the 
 ***
 ***
 
-<h2 id="suite">  Suite setup</h2>
+<h2 id="suite">Suite setup</h2>
 <h3 id="step1">Step 1: adapt your test setup</h3>
 
-First of all, you will need to modify your existing setup so that it retrieves the information needed to initialise the test suite run on Testobject via environment variables.These can be different depending on the kind of test setup you are using. For example, if you are running a watcher setup, you will need to send over your TestObject API key and your suite Id you are using. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
+If you are running a Suite setup, you will need to send over your TestObject API key and your suite Id (which should be specified through the @TestObject annotation on top of your test class).
 
-{% highlight java %}
-    String apiKey = System.getenv("TESTOBJECT_API_KEY");
-    int suiteId = Integer.parseInt(System.getenv("TESTOBJECT_SUITE_ID"));
-{% endhighlight %}
-
-These values would then be sent through the appropriate DesiredCapabilities object in your setUp method:
+The capabilities in your setup method should look like this:
 
 {% highlight java %}
     DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("TESTOBJECT_API_KEY", apiKey);
-    capabilities.setCapability("TESTOBJECT_SUITE_ID", suiteId);
+    capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
+    capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
 {% endhighlight %}
 
-Or you can write it in this way:
-
-{% highlight java %}
-    DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("TESTOBJECT_API_KEY", apiKey);
-    capabilities.setCapability("TESTOBJECT_SUITE_ID", suiteId);
-{% endhighlight %}
-
-We will be injecting the required values as environment variables using the Jenkins Environment Injector Plugin.
+We will be injecting the api key as an environment variable using the [Jenkins Environment Injector Plugin](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin). This environment variable will be automatically picked up by the TestObject Test Result Watcher.
 
 <h3 id="step2">Step 2: set up a Jenkins job</h3>
 
@@ -132,9 +117,7 @@ Select new freestyle Jenkins project and insert a title of your choice, then pro
 
 ![Defining parameters](/img/guides/jenkins_gradle_suite/parameters.png)
 
-The first thing you will have to do is check the box next to the "This build is parameterized" label. A new button, "Add label", will appear. Select it and click on the option that reads "String parameter". This will be the field in which you input the value of your TestObject API key when you launch your test through Jenkins, so you will have to name it "TESTOBJECT_API_KEY" (or whatever other name you have specified in step 1) and give it the API key of the app you want to test as a value.
-
-You will have to repeat this step for the other capabilities as well. The second one will have "TESTOBJECT_SUITE_ID" as a name and the ID of the suite you want to test on  as a value.
+The first thing you will have to do is check the box next to the "This build is parameterized" label. A new button, "Add label", will appear. Select it and click on the option that reads "String parameter". This will be the field in which you input the value of your TestObject API key when you launch your test through Jenkins, so you will have to name it "TESTOBJECT_API_KEY" for it to be intercepted by the TestObject Test Result Watcher, and give it the API key of the app you want to test as a value.
 
 ![Defining repository](/img/guides/jenkins_gradle_suite/git_repo.png)
 
@@ -142,7 +125,7 @@ After that is done, scroll down to the "Source code management" section, select 
 
 ![Defining build](/img/guides/jenkins_gradle_suite/build.png)
 
-Next, scroll down to the "Build" section, click "Add build step" and select "Invoke Gradle script". Here are two scinarios, implement the ONE that works for you:
+Next, scroll down to the "Build" section, click "Add build step" and select "Invoke Gradle script". Here are two scenarios, implement the one that works for you:
 
 + select the "Invoke Gradle" option and make sure you do Not select the "(defaut)" one which has brackets, but you select instead the "default" one without brackets or another version you have.
 
