@@ -39,6 +39,8 @@ These values would then be sent through the appropriate DesiredCapabilities obje
     capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_DEVICE, deviceId);
 {% endhighlight %}
 
+For more information check out our [Appium setup guide.](https://help.testobject.com/docs/tools/appium/setups)
+
 We will be injecting the required values as environment variables using the [Jenkins Environment Injector Plugin](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin).
 
 <h3 id="step2">Step 2: set up a Jenkins job</h3>
@@ -105,6 +107,8 @@ The capabilities in your setup method should look like this:
     capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
     capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
 {% endhighlight %}
+
+For more information check out our [Appium setup guide.](https://help.testobject.com/docs/tools/appium/setups)
 
 We will be injecting the api key as an environment variable using the [Jenkins Environment Injector Plugin](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin). This environment variable will be automatically picked up by the TestObject Test Result Watcher.
 

@@ -9,7 +9,7 @@ alias: /docs/tools/appium/setup/
 It is possible to run Appium tests on TestObject using different languages, testing frameworks and approaches. Here you can find a list of sample test setups we recommend to our customers. For every language/framework, they are listed in order of growing complexity, with a more complex setup usually granting more advanced functionality.
 
 <h4 id="java">Java</h4>
-Java is the first language we chose to support for running tests on our platform. We currently support both <a href="http://junit.org/">JUnit</a> and <a href="http://testng.org/doc/index.html">TestNG</a>, with JUnit boasting the user-friendly, GUI-based <a href="junit/suites#suite-setup">Suite Setup</a>.
+Java is the first language we chose to support for running tests on our platform. We currently support both <a href="http://junit.org/">JUnit</a> and <a href="http://testng.org/doc/index.html">TestNG</a>, with JUnit boasting the user-friendly, GUI-based Suite Setup.
 
 <ul>
     <li>JUnit<ul>

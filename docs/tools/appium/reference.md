@@ -7,7 +7,6 @@ permalink: docs/tools/appium/reference/
 <ul>
 	<li><a href="#run-with-any-language">Run with Any Language</a></li>
 	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
-	<li><a href="#rest-api">REST API</a></li>
 	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
 </ul>
 

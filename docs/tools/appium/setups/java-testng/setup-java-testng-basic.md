@@ -18,8 +18,7 @@ public class BasicTestSetup {
 
         /* These are the capabilities we must provide to run our test on TestObject */
         capabilities.setCapability("testobject_api_key", "YOUR_API_KEY");
-        capabilities.setCapability("testobject_app_id", "1");
-        capabilities.setCapability("testobject_device", "YOUR_DEVICE");
+        capabilities.setCapability("testobject_device", "TESTOBJECT_DEVICE_NAME");
 
         /* The driver will take care of establishing the connection, so we must provide
         * it with the correct endpoint and the requested capabilities. */
@@ -43,9 +42,11 @@ public class BasicTestSetup {
 
 Along with the mandatory capabilities we have specified, you can send over some optional ones to customize your test runs:
 
-* testobject_appium_version, if you want to run your tests against an Appium version other than the default one (1.3.5)
-* testobject_test_name, if you want to specify a name for your test that will be displayed in place of the default one
-* testobject_suite_name, if you want to apply a label to your tests so that they are easier to group / find later on
+* <strong>testobject_app_id</strong>, if you want to use an app version other than the default one.
+* <strong>testobject_appium_version</strong>, if you want to run your tests against an Appium version other than the default one.
+* <strong>testobject_suite_name</strong>, if you want to apply a label to your tests so that they are easier to group / find later on.
+* <strong>testobject_test_name</strong>, if you want to specify a name for your test that will be displayed in place of the default one.
+
 
 The only needed dependencies for running such a test would be the [Appium Java Client](https://github.com/appium/java-client) and the [Selenium Standalone Server](http://www.seleniumhq.org/download/). In case you are building your project with Gradle, your dependencies in your build.gradle file should look something like this:
 

@@ -51,12 +51,12 @@ This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appi
 <h4>Environment variables</h4>
 You can overwrite the following parameters in your setup through environment variables:
 
-* TESTOBJECT_API_ENDPOINT, which is by default https://app.testobject.com:443/api, so pointing to our platform;
-* TESTOBJECT_API_KEY, which you always have to provide as it identifies the app you want to run your tests on;
-* TESTOBJECT_SUITE_ID, which is also mandatory as it tells our platform in which suite it should store the test results;
-* TESTOBJECT_DEVICE_IDS, which can be used to override the device selection you usually do through our web UI;
-* TESTOBJECT_APP_ID, which can be used to override the app version you have selected through your suite UI;
-* TESTOBJECT_TIMEOUT, which controls the maximum duration of the test suite.
+* <strong>TESTOBJECT_API_ENDPOINT</strong>, which is by default https://app.testobject.com:443/api, so pointing to our platform;
+* <strong>TESTOBJECT_API_KEY</strong>, which you always have to provide as it identifies the app you want to run your tests on;
+* <strong>TESTOBJECT_SUITE_ID</strong>, which is also mandatory as it tells our platform in which suite it should store the test results;
+* <strong>TESTOBJECT_DEVICE_IDS</strong>, which can be used to override the device selection you usually do through our web UI;
+* <strong>TESTOBJECT_APP_ID</strong>, which can be used to override the app version you have selected through your suite UI;
+* <strong>TESTOBJECT_TIMEOUT</strong>, which controls the maximum duration of the test suite.
 
 You can set the value of these environment variables through your CI server (for example Jenkins) and have a better, more flexible Appium testing experience!
 
