@@ -13,6 +13,7 @@ permalink: docs/general-reference/automation/
 <ul>    <li><a href="/docs/tools/appium/continuous-integration/travis-ci/">Run Appium Tests with Travis CI</a></li>
         <li><a href="/docs/guides/robotium-espresso-jenkins-ant/">Running Robotium and Espresso through Jenkins with Ant</a></li>
         <li><a href="/docs/tools/appium/continuous-integration/jenkins-gradle/">Running Appium tests through Jenkins</a></li>
+        <li><a href="/docs/tools/appium/continuous-integration/jenkins-gradle-suite/">Running Appium tests in suites through Jenkins</a></li>
         <li><a href="/docs/guides/robotium-espresso-ci/#gradle-plugin">Execute your tests with Gradle plugin</a>
 </li>
 </ul>
@@ -22,8 +23,8 @@ permalink: docs/general-reference/automation/
 Test automation allows you to run the same tests repeatedly and execute them in parallel on the <a href="/docs/general-reference/devices/">real devices</a> in the TestObject cloud.<br>
 What you will need to provide is a number of test suites complying with the requirements of the framework of your choice. In your test you will be able to interact  with UI elements, like a user would do. This will allow you to reproduce the various use cases of your application.
 
-There are a number of frameworks available on the market for this purpose. To execute your tests on the TestObject device cloud you can choose between several  frameworks to test native iOS and Android applications, as well as hybrid and web apps. 
- 
+There are a number of frameworks available on the market for this purpose. To execute your tests on the TestObject device cloud you can choose between several  frameworks to test native iOS and Android applications, as well as hybrid and web apps.
+
 
 <h3 id="frameworks">Test Automation Frameworks</h3>
 
@@ -43,7 +44,7 @@ To set up Appium on your system check out our <a href="/docs/guides/tutorials-ap
 
 <h3 id="scripts">Executing Test Scripts</h3>
 
-If you have created tests for one of the supported frameworks you will be able to use them on the TestObject devices. 
+If you have created tests for one of the supported frameworks you will be able to use them on the TestObject devices.
 For <a href="/docs/testing-tools/robotium-espresso/introduction/#Espresso">Espresso</a> and <a href="/docs/testing-tools/robotium-espresso/introduction/#Robotium">Robotium</a> you upload your test apk to our platform and execute your test suite from there. Your test apk will be installed together with the app you want to test. Your tests will then be executed automatically on the selected devices.<br>
 
 Appium works a bit differently, find out how to get up and running with one of our <a href="/docs/tools/appium/setups/">testing setups.</a><br>
