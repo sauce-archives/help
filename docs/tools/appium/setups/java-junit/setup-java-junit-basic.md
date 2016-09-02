@@ -42,7 +42,7 @@ public class BasicTestSetup {
 
 Along with the mandatory capabilities we have specified, you can send over some optional ones to customize your test runs:
 
-* <strong>testobject_app_id</strong>, if you want to use an app version other than the default one.
+* <strong>testobject_app_id</strong>, if you want to use an app version other than the active one.
 * <strong>testobject_appium_version</strong>, if you want to run your tests against an Appium version other than the default one.
 * <strong>testobject_suite_name</strong>, if you want to apply a label to your tests so that they are easier to group / find later on.
 * <strong>testobject_test_name</strong>, if you want to specify a name for your test that will be displayed in place of the default one.
