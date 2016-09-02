@@ -24,7 +24,7 @@ But before we start, are you looking for a [Basic Setup](#basic) or for a [Suite
 <h2 id="basic">Basic setup</h2>
 <h3 id="step1">Step 1: adapt your test setup</h3>
 
-First of all, you will need to modify your existing setup so that it retrieves the information needed to initialise the test run on TestObject via environment variables. These can be different depending on the kind of test setup you are using. For example, if you are running a watcher setup, you will need to send over your TestObject API key and an id specifying which device your test should run on. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
+First of all, you will need to modify your existing setup so that it retrieves the information needed to initialise the test run on TestObject via environment variables. These can be different depending on the kind of test setup you are using. For example, if you are running a [Watcher setup](https://help.testobject.com/docs/tools/appium/setups), you will need to send over your TestObject API key and an id specifying which device your test should run on. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
 
 {% highlight java %}
     String apiKey = System.getenv("TESTOBJECT_API_KEY");
@@ -38,8 +38,6 @@ These values would then be sent through the appropriate DesiredCapabilities obje
     capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, apiKey);
     capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_DEVICE, deviceId);
 {% endhighlight %}
-
-For more information check out our [Appium setup guide.](https://help.testobject.com/docs/tools/appium/setups)
 
 We will be injecting the required values as environment variables using the [Jenkins Environment Injector Plugin](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin).
 
@@ -98,7 +96,7 @@ Everything is set, now you just need to select "Build with parameters" from the 
 <h2 id="suite">Suite setup</h2>
 <h3 id="step1">Step 1: adapt your test setup</h3>
 
-If you are running a Suite setup, you will need to send over your TestObject API key and your suite Id (which should be specified through the @TestObject annotation on top of your test class).
+If you are running a [Suite setup](https://help.testobject.com/docs/tools/appium/setups), you will need to send over your TestObject API key and your suite Id (which should be specified through the @TestObject annotation on top of your test class).
 
 The capabilities in your setup method should look like this:
 
@@ -108,9 +106,7 @@ The capabilities in your setup method should look like this:
     capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
 {% endhighlight %}
 
-For more information check out our [Appium setup guide.](https://help.testobject.com/docs/tools/appium/setups)
-
-We will be injecting the api key as an environment variable using the [Jenkins Environment Injector Plugin](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin). This environment variable will be automatically picked up by the TestObject Test Result Watcher.
+We will be injecting the api key as an environment variable using the [Jenkins Environment Injector Plugin](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin_). This environment variable will be automatically picked up by the TestObject Test Result Watcher.
 
 <h3 id="step2">Step 2: set up a Jenkins job</h3>
 
