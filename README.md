@@ -21,7 +21,7 @@ Install Ruby:
 
     sudo make install
 
-You can make sure that Ruby is installed by writing:
+To can make sure that Ruby is installed:
 
     ruby-install --version
 
@@ -50,7 +50,7 @@ Update bundle inside the website directory to install the missing tools:
 
     bundle update
 
-Try to run Jekyll using Bundle inside the website directory:
+Try to build the project using Jekyll and Bundle:
 
     bundle exec jekyll serve build
 
@@ -59,12 +59,13 @@ If you get any message about missing files or directories, just go ahead and cre
 
 Run Jekyll:  
 
-    bundle exec jekyll serve serve
+    bundle exec jekyll serve
 
 and then open [localhost:4000](http://localhost:4000/) in your browser.
 
 To regenerate the HTML pages automatically when you make changes to Markdown source files, use:
 
-    bundle exec jekyll serve serve --watch  
+    bundle exec jekyll serve --watch  
+
 
 This guide has been tested on Linux ubuntu 16.04 LTS version.
