@@ -26,7 +26,12 @@ Different setups might have slightly different ways of handling capabilities and
 
 <h3 id="run-with-any-language">Run with Any Language</h3>
 
-Run your Appium tests on TestObject no matter what language you're using. Just add some extra <a href="#general-test-setup">capabilities</a> to your test. For more control you can optionally connect to our <a href="/docs/api/appium">REST API</a>.
+Appium tests can be run on TestObject no matter what language you're using. You will only need to specify the following capabilities:
+
+- `testobject_api_key`: Indicates the project that you are testing on.
+- `testobject_device`: Specifies which device you are testing on
+
+Additionally, you will need to change your appium endpoint to `http://appium.testobject.com/wd/hub`.
 
 <h3 id="live-view-and-report-urls">Live-View and Report URLs</h3>
 
