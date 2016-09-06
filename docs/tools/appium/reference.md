@@ -70,7 +70,7 @@ public void setup() throws MalformedURLException {
 
 By default, the TestObject platform uninstalls the application, performs device cleaning, and de-allocates the device between every Appium session. This means that if you have multiple test methods, you will by default wait for this cleaning process between every test method.
 
-To speed up test execution, you can set the desired capability `testobject_cache_device` to `"true"`. This will leave the device allocated to you for a short time after each Appium session. If you immediately start another test on the device, you won't need to wait for the allocation and device cleaning process to be repeated.  
+To speed up test execution, you can set the desired capability `testobject_cache_device` to `true`. This will leave the device allocated to you for a short time after each Appium session. If you immediately start another test on the device, you won't need to wait for the allocation and device cleaning process to be repeated.  
 
 <h3 id="accessing-testobject-via-proxy">Accessing TestObject Via Proxy</h3>
 
