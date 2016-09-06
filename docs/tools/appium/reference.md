@@ -15,9 +15,9 @@ permalink: docs/tools/appium/reference/
 <h3 id="appium-capabilities">Appium Capabilities</h3>
 When you are running an Appium test on TestObject, the Appium server on TestObject's side receives all the capabilities you set on the client side. This means you can theoretically set all the capabilities allowed by the Appium version you are running against. Due to the nature of our service though, setting some capabilities may produce a different outcome than you would expect from just running an Appium server locally. For example:
 
-- all the emulator-only capabilities will not work on TestObject, as we only provide access to real devices;
-- the 'app' capability is always overwritten to point the server to the app file you uploaded to our system;
-- the 'platformName' capability is overwritten because we select the platform your test will run on based on the kind of project you are pointing to with your API key;
+- all the emulator-only capabilities will not work on TestObject, as we only provide access to real devices.
+- the 'app' capability is always overwritten to point the server to the app file you uploaded to our system.
+- the 'platformName' capability is overwritten because we select the platform your test will run on based on the kind of project you are pointing to with your API key.
 - the 'noReset' capability only works if [testobject_cache_device](#device-caching) is set to true. By default, 'noReset' will be set to true.
 - for test suite runs, the 'testobject_suite_name' and "testobject_test_name' capabilities are ignored;
 - the 'deviceName' capability is always overwritten.
