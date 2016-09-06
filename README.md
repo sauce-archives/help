@@ -52,7 +52,7 @@ Update bundle inside the website directory to install the missing tools:
 
 Try to build the project using Jekyll and Bundle:
 
-    bundle exec jekyll serve build
+    bundle exec jekyll build
 
 If you get any message about missing files or directories, just go ahead and create the missing directories one by one using "mkdir your/new/folder" and create the missing file using "touch your/path/fileName".
 
