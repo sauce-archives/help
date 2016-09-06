@@ -21,7 +21,7 @@ Install Ruby:
 
     sudo make install
 
-To can make sure that Ruby is installed:
+To make sure that Ruby is installed:
 
     ruby-install --version
 
