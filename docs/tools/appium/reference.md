@@ -18,7 +18,7 @@ When you are running an Appium test on TestObject, the Appium server on TestObje
 - all the emulator-only capabilities will not work on TestObject, as we only provide access to real devices;
 - the 'app' capability is always overwritten to point the server to the app file you uploaded to our system;
 - the 'platformName' capability is overwritten because we select the platform your test will run on based on the kind of project you are pointing to with your API key;
-- the 'noReset' capability only works if [testobject_cache_device](#device-caching) is set to true
+- the 'noReset' capability only works if [testobject_cache_device](#device-caching) is set to true. By default, 'noReset' will be set to true.
 - for test suite runs, the 'testobject_suite_name' and "testobject_test_name' capabilities are ignored;
 - the 'deviceName' capability is always overwritten.
 
