@@ -5,9 +5,11 @@ permalink: docs/tools/appium/reference/
 ---
 
 <ul>
+	<li><a href="#appium-capabilities">Appium Capabilities</a></li>
 	<li><a href="#run-with-any-language">Run with Any Language</a></li>
-	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
-	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
+	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>	
+	<li><a href="#device-caching">Device Caching</a></li>
+  	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
 </ul>
 
 <h3 id="appium-capabilities">Appium Capabilities</h3>
@@ -16,7 +18,7 @@ When you are running an Appium test on TestObject, the Appium server on TestObje
 - all the emulator-only capabilities will not work on TestObject, as we only provide access to real devices;
 - the 'app' capability is always overwritten to point the server to the app file you uploaded to our system;
 - the 'platformName' capability is overwritten because we select the platform your test will run on based on the kind of project you are pointing to with your API key;
-- all the 'reset' capabilities will be ineffective on our public cloud, since we are always cleaning the phones after the session has ended (this means your app will not remain installed on the device even if you use 'noReset');
+- the 'noReset' capability only works if [device caching](#device-caching) is enabled. By default, 'noReset' will be set to false;
 - for test suite runs, the 'testobject_suite_name' and "testobject_test_name' capabilities are ignored;
 - the 'deviceName' capability is always overwritten.
 
@@ -63,6 +65,14 @@ public void setup() throws MalformedURLException {
 	...
 }
 {% endhighlight %}
+
+<h3 id="device-caching">Device Caching</h3>
+
+By default, the TestObject platform uninstalls the application, performs device cleaning, and de-allocates the device between every Appium session. This means that if you have multiple test methods, you will by default wait for this cleaning process between every test method.
+
+To speed up test execution, you can set the desired capability `testobject_cache_device` to `true`. This will leave the device allocated to you for a short time after each Appium session. If you immediately start another test on the device, you won't need to wait for the allocation and device cleaning process to be repeated.
+
+The `testobject_cache_device` capability can be used in conjunction with the standard `noReset` Appium capability. In the default case, where `noReset` is set to false, your application will be uninstalled and reinstalled after every test, as per normal Appium behaviour. If `noReset` is set to true, the application you are testing won't be uninstalled after every test run. This might save you further time, but it won't be suitable for test setups which require the application's state to be reset between tests. Note that while `testobject_cache_device` is set to true, no device cleaning will take place in between sessions, regardless of `noReset` value.
 
 <h3 id="accessing-testobject-via-proxy">Accessing TestObject Via Proxy</h3>
 
