@@ -15,10 +15,10 @@ permalink: docs/tools/appium/reference/
 <h3 id="appium-capabilities">Appium Capabilities</h3>
 When you are running an Appium test on TestObject, the Appium server on TestObject's side receives all the capabilities you set on the client side. This means you can theoretically set all the capabilities allowed by the Appium version you are running against. Due to the nature of our service though, setting some capabilities may produce a different outcome than you would expect from just running an Appium server locally. For example:
 
-- all the emulator-only capabilities will not work on TestObject, as we only provide access to real devices.
-- the 'app' capability is always overwritten to point the server to the app file you uploaded to our system.
-- the 'platformName' capability is overwritten because we select the platform your test will run on based on the kind of project you are pointing to with your API key.
-- the 'noReset' capability only works if [device caching](#device-caching) is enabled. By default, 'noReset' will be set to true.
+- all the emulator-only capabilities will not work on TestObject, as we only provide access to real devices;
+- the 'app' capability is always overwritten to point the server to the app file you uploaded to our system;
+- the 'platformName' capability is overwritten because we select the platform your test will run on based on the kind of project you are pointing to with your API key;
+- the 'noReset' capability only works if [device caching](#device-caching) is enabled. By default, 'noReset' will be set to false;
 - for test suite runs, the 'testobject_suite_name' and "testobject_test_name' capabilities are ignored;
 - the 'deviceName' capability is always overwritten.
 
@@ -70,7 +70,9 @@ public void setup() throws MalformedURLException {
 
 By default, the TestObject platform uninstalls the application, performs device cleaning, and de-allocates the device between every Appium session. This means that if you have multiple test methods, you will by default wait for this cleaning process between every test method.
 
-To speed up test execution, you can set the desired capability `testobject_cache_device` to `true`. This will leave the device allocated to you for a short time after each Appium session. If you immediately start another test on the device, you won't need to wait for the allocation and device cleaning process to be repeated.  
+To speed up test execution, you can set the desired capability `testobject_cache_device` to `true`. This will leave the device allocated to you for a short time after each Appium session. If you immediately start another test on the device, you won't need to wait for the allocation and device cleaning process to be repeated.
+
+The `testobject_cache_device` capability can be used in conjunction with the standard `noReset` Appium capability, which is set to false by default (your application will be uninstalled and reinstalled after every test, as per normal Appium behaviour). If `noReset` is set to true, the application you are testing won't be uninstalled after every test run. This might save you further time, but it won't be suitable for test setups which require the application's state to be reset between tests. Note that while `testobject_cache_device` is set, no device cleaning will take place before the end of the session, regardless of `noReset` value.
 
 <h3 id="accessing-testobject-via-proxy">Accessing TestObject Via Proxy</h3>
 
