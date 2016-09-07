@@ -4,7 +4,7 @@ layout: en
 permalink: docs/tools/appium/setups/webdriverio/basic/
 ---
 
-<a href="http://webdriver.io" target="_blank">WebdriverIO</a> is a powerful framework for webtesting. Webtests written using WebdriverIO can easily be configured to run on real mobile devices on TestObject. You can find a working example for running WebdriverIO tests on our github page: <a href="https://github.com/testobject/webdriverio-example" target="_blank">TestObject WebdriverIO example</a>.
+<a href="http://webdriver.io" target="_blank">WebdriverIO</a> is a powerful framework for web testing. Web tests written using WebdriverIO can easily be configured to run on real mobile devices on TestObject. You can find a working example for running WebdriverIO tests on our github page: <a href="https://github.com/testobject/webdriverio-example" target="_blank">TestObject WebdriverIO example</a>.
 
 To begin testing, you will first need to create a configuration file for your tests. You can call this file 'wdio.conf.js' and it should look like this:
 
@@ -83,7 +83,7 @@ describe('TestObject website', function() {
 });
 {% endhighlight %}
 
-Now that all of the neccessary files have been created, it is possible to run the tests. First, install the dependencies by running `npm install`. Next, run the tests by running `npm test`.
+Now that all of the necessary files have been created, it is possible to run the tests. First, install the dependencies by running `npm install`. Next, run the tests by running `npm test`.
 
 In our wdio.conf.js file, we specified the mandatory capabilities `testobject_api_key` and `testobject_device`. Along with the mandatory capabilities we have specified, you can send over some optional ones to customize your test runs:
 
