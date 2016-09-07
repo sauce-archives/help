@@ -110,3 +110,6 @@ Finally, click on "save" to save the configuration.
 <h3 id="step3">Step 3: run your tests!</h3>
 
 Everything is set, now you just need to select "Build with parameters" from the menu on the left and either immediately launch the build or modify the parameters (in case you want to change app, app version or test device) and then launch. Give the test some time to be run. As soon as it is done the build status icon will stop blinking and you will be able to access the "test results" section to see what the outcome of the test you just ran was.
+***
+***
+***
