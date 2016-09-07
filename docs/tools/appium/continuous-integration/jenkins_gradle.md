@@ -91,16 +91,6 @@ What to write in the <strong>Tasks</strong> field?
 
 ![Defining build](/img/guides/jenkins_gradle_suite/build_tasks_basic.png)
 
-In the case of [Basic setup](https://help.testobject.com/docs/tools/appium/setups) and you want to run only some of the tests in your project, modify your build.gradle file to exclude the excess ones or specify all those that should be included. An example of this would be:
-{% highlight java %}
-test {
-exclude 'your/package/name/TestToIgnore.class'
-}
-{% endhighlight %}
-You can find more information on how to do this on the official [Gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html).
-
-
-
 Once this is done, scroll down to the "Post-build Actions" section and, from the "Add post-build action" menu, select "Publish JUnit test result report". This way you will have access to the results of your tests not only on TestObject, but also directly from Jenkins.
 
 ![Defining post-build](/img/guides/jenkins_gradle/screenshot5.png)
