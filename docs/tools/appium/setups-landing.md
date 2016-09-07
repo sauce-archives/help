@@ -35,6 +35,12 @@ Ruby is our most recent addition as for supported languages for Appium tests. As
     </ul></li>
 </ul>
 
+<h4 id="webdriverio">WebdriverIO</h4>
+WebdriverIO is a testing framework that allows you to write web tests using Javascript. Currently only the basic setup is supported. This means that you can run your tests on TestObject, but the result of the test, whether it passed or failed, won't be visible from the test report on TestObject.
+<ul>
+	<li><a href="webdriverio/basic">Basic Setup</a></li>
+</ul>
+
 <h4 id="python">Python</h4>
 You can write your Appium tests using Python also. When setting up your tests, your Appium URL should be set to:
 
