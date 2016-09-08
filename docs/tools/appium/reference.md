@@ -9,6 +9,7 @@ permalink: docs/tools/appium/reference/
 	<li><a href="#run-with-any-language">Run with Any Language</a></li>
 	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>	
 	<li><a href="#device-caching">Device Caching</a></li>
+	<li><a href="#session-creation-timeout">Session Creation Timeout</a></li>
   	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
 </ul>
 
@@ -73,6 +74,10 @@ By default, the TestObject platform uninstalls the application, performs device 
 To speed up test execution, you can set the desired capability `testobject_cache_device` to `true`. This will leave the device allocated to you for a short time after each Appium session. If you immediately start another test on the device, you won't need to wait for the allocation and device cleaning process to be repeated.
 
 The `testobject_cache_device` capability can be used in conjunction with the standard `noReset` Appium capability. In the default case, where `noReset` is set to false, your application will be uninstalled and reinstalled after every test, as per normal Appium behaviour. If `noReset` is set to true, the application you are testing won't be uninstalled after every test run. This might save you further time, but it won't be suitable for test setups which require the application's state to be reset between tests. Note that while `testobject_cache_device` is set to true, no device cleaning will take place in between sessions, regardless of `noReset` value.
+
+<h3 id="session-creation-timeout">Session Creation Timeout</h3>
+
+When creating an Appium session on the TestObject public cloud, it may be the case that the device is "in use" and not currently available for testing. When this happens, the tests will by default wait for 15 minutes to create a session on the device. If you would like to set a custom timeout for session creation, you can do so using the desired capability `testobject_session_creation_timeout`. The value for this capability should be a string containing the desired timeout in milliseconds. The maximum allowed timeout is 30 minutes.
 
 <h3 id="accessing-testobject-via-proxy">Accessing TestObject Via Proxy</h3>
 
