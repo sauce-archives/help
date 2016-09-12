@@ -69,4 +69,4 @@ To regenerate the HTML pages automatically when you make changes to Markdown sou
     bundle exec jekyll serve --watch  
 
 
-This guide has been tested on Linux ubuntu 16.04 LTS version.
+This guide has been tested on Linux ubuntu 16.04 LTS version and OS X 10.11.5 .
