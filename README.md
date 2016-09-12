@@ -27,6 +27,7 @@ To make sure that Ruby is installed:
 
 If you want to install it On Mac OS X:
 
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew install ruby
 
 
