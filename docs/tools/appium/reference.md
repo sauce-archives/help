@@ -7,7 +7,7 @@ permalink: docs/tools/appium/reference/
 <ul>
 	<li><a href="#appium-capabilities">Appium Capabilities</a></li>
 	<li><a href="#run-with-any-language">Run with Any Language</a></li>
-	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>	
+	<li><a href="#live-view-and-report-urls">Live-View and Report URLs</a></li>
 	<li><a href="#device-caching">Device Caching</a></li>
 	<li><a href="#session-creation-timeout">Session Creation Timeout</a></li>
   	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
@@ -23,7 +23,7 @@ When you are running an Appium test on TestObject, the Appium server on TestObje
 - for test suite runs, the 'testobject_suite_name' and "testobject_test_name' capabilities are ignored;
 - the 'deviceName' capability is always overwritten.
 
-Different setups might have slightly different ways of handling capabilities and/or different requirements. Please make sure you also check the guide relative to your <a href="/docs/tools/appium/setups/junit/suites">specific setup</a> to make sure you are providing everything that is required.
+Different setups might have slightly different ways of handling capabilities and/or different requirements. Please make sure you also check the guide relative to your [specific setup](/docs/tools/appium/setups/) to make sure you are providing everything that is required.
 
 <h3 id="run-with-any-language">Run with Any Language</h3>
 

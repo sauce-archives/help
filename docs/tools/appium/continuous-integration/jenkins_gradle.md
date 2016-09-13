@@ -14,13 +14,13 @@ What you will need:
     * The Environment Injector Plugin to inject environment variables which will provide our test setup with the needed capabilities
     * The JUnit Jenkins plugin, for displaying test results
 
-You will find some difference between [Basic setup](https://help.testobject.com/docs/tools/appium/setups) and [Suite setup](https://help.testobject.com/docs/tools/appium/setups) in this guide.
+You will find some difference between [Basic setup](/docs/tools/appium/setups/basic-setups/) and [Suite setup](/docs/tools/appium/setups/suite-setups/) in this guide.
 ***
 <h3 id="step1">Step 1: adapt your test setup</h3>
 
 First of all, you will need to modify your existing setup so that it retrieves the information needed to initialise the test run on TestObject via environment variables. These can be different depending on the kind of test setup you are using.
 
-<strong>If you are running a</strong> [Basic setup](https://help.testobject.com/docs/tools/appium/setups), you will need to send over your TestObject API key and an id specifying which device your test should run on. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
+<strong>If you are running a</strong> [Basic setup](/docs/tools/appium/setups/basic-setups/), you will need to send over your TestObject API key and an id specifying which device your test should run on. In this case, you would need to modify your test setup slightly, so that you can obtain these values from your runtime environment:
 
 {% highlight java %}
 String apiKey = System.getenv("TESTOBJECT_API_KEY");
@@ -36,7 +36,7 @@ capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_DEVICE, deviceId);
 {% endhighlight %}
 
 
-But, <strong>if you are running a</strong> [Suite setup](https://help.testobject.com/docs/tools/appium/setups), then the device id capability is not needed, so you'll need to send over your TestObject API key and also your suite Id (which should be specified through the @TestObject annotation on top of your test class).
+But, <strong>if you are running a</strong> [Suite setup](/docs/tools/appium/setups/suite-setups/), then the device id capability is not needed, so you'll need to send over your TestObject API key and also your suite Id (which should be specified through the @TestObject annotation on top of your test class).
 
 The capabilities in your setup method should look like this:
 
@@ -83,11 +83,11 @@ Next, scroll down to the "Build" section, click "Add build step" and select "Inv
 ***
 What to write in the <strong>Tasks</strong> field?
 
-+ <strong>If you have a</strong> [Suite setup](https://help.testobject.com/docs/tools/appium/setups) and your tests are separated in more than one class, then you will have to add your class names one by one, after that you need to insert the "<strong>clean</strong>" and "<strong>test</strong>" tasks (as a single string "<strong>clean test</strong>") into the dedicated field. In this way, all your tests will be executed from a clean start every time. So your Tasks field will be like this:
++ <strong>If you have a</strong> [Suite setup](/docs/tools/appium/setups/suite-setups/) and your tests are separated in more than one class, then you will have to add your class names one by one, after that you need to insert the "<strong>clean</strong>" and "<strong>test</strong>" tasks (as a single string "<strong>clean test</strong>") into the dedicated field. In this way, all your tests will be executed from a clean start every time. So your Tasks field will be like this:
 
 ![Defining build](/img/guides/jenkins_gradle_suite/build_tasks_multiple_classes.png)
 
-+ But, <strong>if you have a</strong> [Basic setup](https://help.testobject.com/docs/tools/appium/setups), you can simply insert "<strong>clean test</strong>".
++ But, <strong>if you have a</strong> [Basic setup](/docs/tools/appium/setups/basic-setups/), you can simply insert "<strong>clean test</strong>".
 
 ![Defining build](/img/guides/jenkins_gradle_suite/build_tasks_basic.png)
 
