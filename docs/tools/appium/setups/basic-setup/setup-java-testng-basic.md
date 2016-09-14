@@ -52,8 +52,8 @@ The only needed dependencies for running such a test would be the [Appium Java C
 
 {% highlight bash %}
   dependencies {
-      testCompile 'io.appium:java-client:3.3.0'
-      testCompile 'org.seleniumhq.selenium:selenium-server:2.50.1'
+     testCompile 'io.appium:java-client:4.1.2'
+     testCompile 'org.seleniumhq.selenium:selenium-server:2.53.0'
   }
 {% endhighlight %}
 

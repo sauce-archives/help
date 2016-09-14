@@ -49,7 +49,7 @@ Along with the mandatory capabilities we have specified, you can send over some 
 * <strong>testobject_test_name</strong>, if you want to specify a name for your test that will be displayed in place of the default one.
 
 <h4>Dependencies</h4>
-This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
+This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
 {% highlight bash %}
   testCompile 'org.testobject:testobject-appium-java-api:0.0.24'
 {% endhighlight %}

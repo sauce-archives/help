@@ -53,7 +53,7 @@ The only needed dependencies for running such a test would be the [Appium Java C
   dependencies {
       testCompile group: 'junit', name: 'junit', version: '4.11'
 
-      testCompile 'io.appium:java-client:3.3.0'
+      testCompile 'io.appium:java-client:4.1.2'
       testCompile 'org.seleniumhq.selenium:selenium-server:2.53.0'
 
   }

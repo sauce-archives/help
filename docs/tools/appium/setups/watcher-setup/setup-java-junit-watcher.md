@@ -57,13 +57,13 @@ Along with the mandatory capabilities we have specified, you can send over some 
 * <strong>testobject_test_name</strong>, if you want to specify a name for your test that will be displayed in place of the default one.
 
 <h4>Dependencies</h4>
-This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-java-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
+This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
 {% highlight bash %}
   testCompile 'org.testobject:testobject-appium-java-api:0.0.24'
 {% endhighlight %}
 
 <h4>Why use it</h4>
-This setup allows you to register your test results on TestObject. If you are running many tests, it would probably make sense to organize them in suites. This can be achieved using the <a href="/docs/tools/appium/setups/junit/suites/">Suites Setup</a>.
+This setup allows you to register your test results on TestObject. If you are running many tests, it would probably make sense to organize them in suites. This can be achieved using the <a href="/docs/tools/appium/setups/suite-setups/">Suites Setup</a>.
 
 <h4 id="parallelized-setup">Running the Watcher Setup on Multiple Devices in Parallel</h4>
-If you want to run your tests on multiple devices, but for some reason cannot take advantage of the <a href="/docs/tools/appium/setups/junit/suites/">Suites Setup</a>, then you can still achieve a similar result with parameterized tests. The downside to this approach is that, when testing on TestObject, your test results won't be aggregated in suites. This is because you are basically just running several "single" tests without providing any way for the system to tell they are part of a single group. You can find an example of advanced setup that uses this approach [here](https://github.com/testobject/calculator-test-gradle/tree/parallelized_setup).
+If you want to run your tests on multiple devices, but for some reason cannot take advantage of the <a href="/docs/tools/appium/setups/suite-setups/">Suites Setup</a>, then you can still achieve a similar result with parameterized tests. The downside to this approach is that, when testing on TestObject, your test results won't be aggregated in suites. This is because you are basically just running several "single" tests without providing any way for the system to tell they are part of a single group. You can find an example of advanced setup that uses this approach [here](https://github.com/testobject/calculator-test-gradle/tree/parallelized_setup).
