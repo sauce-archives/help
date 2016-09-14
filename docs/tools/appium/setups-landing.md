@@ -5,13 +5,13 @@ permalink: docs/tools/appium/setups/
 ---
 
 ###Running Appium tests on TestObject
-It is possible to run Appium tests on TestObject using different languages, testing frameworks and approaches. But first, you need to choose and use one of the following setups.
+It is possible to run Appium tests on TestObject using different languages, testing frameworks and approaches. Here is a list of our go-to setups.
 
 ####[Basic setup](/docs/tools/appium/setups/basic-setups)
-Basic setup is the simplest and the fastest setup you can ever use to run your Appium tests on a single device on TestObject. It's been written in many languages/testing frameworks just to keep everything super easy for you. [Learn more](/docs/tools/appium/setups/basic-setups)
+The Basic setup is the simplest, fastest way you can get started with running your Appium tests on TestObject. You don't need to worry about importing any libraries whatsoever: just choose the language you are most comfortable with and the device you want to test on, and let TestObject do the rest! [Learn more](/docs/tools/appium/setups/basic-setups)
 
 ####[Watcher setup](/docs/tools/appium/setups/watcher-setups)
-Watcher setup is an improvment of the Basic setup, and it can be used simply for registering your test results on TestObject, that means that your test results will not be only available on your testing machine, but also on Testobject. So if you used the Watcher you will see your test results marked as "success" or "error" on TestObject, but if you didn't use it, you will see your test results always marked as "unknown". To get the most benefit of TestObject, we recommend you to use the Watcher setup. [Learn more](/docs/tools/appium/setups/watcher-setups)
+The Watcher setup is an improvement over the Basic setup. It works basically the same way, the only exception being that you need to import the TestObject Appium library so the results of your tests can be neatly saved on TestObject! [Learn more](/docs/tools/appium/setups/watcher-setups)
 
 ####[Suite setup](/docs/tools/appium/setups/suite-setups)
-You need to use Suite setup when you want to run your Appium tests on multiple devices at the same time. To do that, you only need to create a new suite on TestObject, then to add some testing devices to the created suite, after that you run your tests on the new suite using the number "suiteId". [Learn more](/docs/tools/appium/setups/suite-setups)
+If you want to easily run your tests in parallel on multiple devices while having your test reports neatly organized in suites, the Suite setup is what you are looking for! Just import our Appium API library, create a new suite on TestObject and link it with your test setup. [Learn more](/docs/tools/appium/setups/suite-setups)
