@@ -13,7 +13,7 @@ If you have any doubts, or want to get a first taste of what it is like to autom
 
 <h3 id="testing">Running Appium Tests on TestObject</h3>
 
-Running tests on TestObject with Appium is easy! Just check out our variety of <a href="/docs/tools/appium/setups/">pre-written test setups</a>, find out which one suits you best, and start testing either by running Appium scripts on your machine or through a CI server! We provide our own <a href="/docs/tools/appium/appium-java-api/">convenience library</a> to allow our customers to record their test results on our platform, and in some cases even organize them in suites. We try to support as many languages and testing frameworks as possible, with the intention of covering all the major combinations Appium itself supports.
+Running tests on TestObject with Appium is easy! Just check out our variety of <a href="/docs/tools/appium/setups/">pre-written test setups</a>, find out which one suits you best, and start testing either by running Appium scripts on your machine or through a CI server! We provide our own <a href="/docs/tools/appium/appium-api/">convenience library</a> to allow our customers to record their test results on our platform, and in some cases even organize them in suites. We try to support as many languages and testing frameworks as possible, with the intention of covering all the major combinations Appium itself supports.
 
 
 <h3 id="reporting">Reporting</h3>
@@ -32,9 +32,9 @@ Your existing Appium tests will run on the TestObject platform with just some sm
 
 <h4>How to get up and running in 10 minutes</h4>
 
-1. Create and activate a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>;
+1. Create and activate a <a href="https://app.testobject.com/#/signup" target="_blank">TestObject account</a>;
 2. Log into your account and upload the app you want to test. You can do this by providing the app file (.apk for Android, <a href="/docs/guides/creating-ipa/">.ipa for iOS</a>), or by providing a URL if you are trying to test a mobile website;
-3. Check out one of our <a href="/docs/tools/appium/setups/">basic setups</a> (depending on which language / testing framework you are using) to see how to quickly run a test on our platform;
+3. Check out one of our [Basic setups](/docs/tools/appium/setups/basic-setups) (depending on which language / testing framework you are using) to see how to quickly run a test on our platform;
 4. Navigate to Automated Testing -> Appium -> Setup Instructions -> Change Devices to select the device you want to test on, then paste the id in the appropriate capability in you test setup;
 5. Run the tests on your machine and see them being recorded on our platform in the project you have just created.
 

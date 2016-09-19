@@ -1,7 +1,7 @@
 ---
 title: Basic Setup on TestObject using TestNG
 layout: en
-permalink: docs/tools/appium/setups/testng/basic/
+permalink: docs/tools/appium/setups/basic-setup/testng/
 ---
 
 The basic setup is the quickest way to get testing on TestObject. Here is what it looks like with testNG.
@@ -52,8 +52,8 @@ The only needed dependencies for running such a test would be the [Appium Java C
 
 {% highlight bash %}
   dependencies {
-      testCompile 'io.appium:java-client:3.3.0'
-      testCompile 'org.seleniumhq.selenium:selenium-server:2.50.1'
+     testCompile 'io.appium:java-client:4.1.2'
+     testCompile 'org.seleniumhq.selenium:selenium-server:2.53.0'
   }
 {% endhighlight %}
 
@@ -70,4 +70,4 @@ Depending on your environment, you may also need to import TestNG as a dependenc
 </suite>
 {% endhighlight %}
 
-With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! All you need to do is upgrade to a <a href="/docs/tools/appium/setups/testng/watcher/">Watcher setup</a>.
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! All you need to do is upgrade to a [Watcher Setup](/docs/tools/appium/setups/watcher-setups).

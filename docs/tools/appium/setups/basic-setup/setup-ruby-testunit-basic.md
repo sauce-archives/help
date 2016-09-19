@@ -1,7 +1,7 @@
 ---
 title: Basic Setup on TestObject using Test::Unit
 layout: en
-permalink: docs/tools/appium/setups/testunit/basic/
+permalink: docs/tools/appium/setups/basic-setup/testunit/
 ---
 
 The basic setup is the quickest way to get testing on TestObject. Here is what it looks like with Test::Unit.
@@ -53,4 +53,4 @@ Along with the mandatory capabilities we have specified, you can send over some 
 * <strong>testobject_suite_name</strong>, if you want to apply a label to your tests so that they are easier to group / find later on.
 * <strong>testobject_test_name</strong>, if you want to specify a name for your test that will be displayed in place of the default one.
 
-With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! You can register your results on TestObject with our <a href="/docs/tools/appium/setups/testunit/watcher">Watcher Setup</a>.
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! You can register your results on TestObject with our [Watcher Setup](/docs/tools/appium/setups/watcher-setups).

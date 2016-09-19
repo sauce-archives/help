@@ -1,7 +1,7 @@
 ---
 title: Basic Setup on TestObject using WebdriverIO
 layout: en
-permalink: docs/tools/appium/setups/webdriverio/basic/
+permalink: docs/tools/appium/setups/basic-setup/webdriverio/
 ---
 
 <a href="http://webdriver.io" target="_blank">WebdriverIO</a> is a powerful framework for web testing. Web tests written using WebdriverIO can easily be configured to run on real mobile devices on TestObject. You can find a working example for running WebdriverIO tests on our github page: <a href="https://github.com/testobject/webdriverio-example" target="_blank">TestObject WebdriverIO example</a>.
@@ -19,11 +19,11 @@ var config = {
 		testobject_device: 'Motorola_Moto_G_2nd_gen_real'
 		browserName: 'Chrome'
 	}],
-	
+
 	specs: [
 		'./specs/**/*.js'
 	],
-	
+
 	sync: true,
 	logLevel: 'verbose',
 	coloredLogs: true,
@@ -72,7 +72,7 @@ describe('TestObject website', function() {
 		browser.timeouts('implicit', 10000);
 		browser.url('https://testobject.com');
 	});
-	
+
 	it('Opens features page', function() {
 		var learnMore = "//a[contains(text(), 'Learn More')]";
 		browser.scroll(learnMore);

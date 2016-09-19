@@ -1,7 +1,7 @@
 ---
-title: Suites Setup on TestObject using JUnit
+title: Suite Setup on TestObject using JUnit
 layout: en
-permalink: docs/tools/appium/setups/junit/suites/
+permalink: docs/tools/appium/setups/suite-setup/junit/
 ---
 
 To make sure you can distinguish and access your test results more efficiently, it is highly recommended that you use test suites. It doesn't take much to upgrade your setup to be able to run these:

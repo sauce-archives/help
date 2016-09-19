@@ -1,7 +1,7 @@
 ---
 title: Basic Setup on TestObject using JUnit
 layout: en
-permalink: docs/tools/appium/setups/junit/basic/
+permalink: docs/tools/appium/setups/basic-setup/junit/
 ---
 
 Whether you are starting from scratch or you have an already existing Appium test written, adapting it to run on TestObject is a matter of minutes. A first basic test setup with JUnit could look like this:
@@ -53,10 +53,10 @@ The only needed dependencies for running such a test would be the [Appium Java C
   dependencies {
       testCompile group: 'junit', name: 'junit', version: '4.11'
 
-      testCompile 'io.appium:java-client:3.3.0'
+      testCompile 'io.appium:java-client:4.1.2'
       testCompile 'org.seleniumhq.selenium:selenium-server:2.53.0'
 
   }
 {% endhighlight %}
 
-With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! All you need to do is upgrade to a <a href="/docs/tools/appium/setups/junit/watcher/">Watcher setup</a>.
+With this kind of barebones setup you will be able to run tests on the TestObject platform, but you will not be using it to its fullest potential, as the results of the tests won't be registered in the test reports on TestObject. Don't panic though! All you need to do is upgrade to a [Watcher Setup](/docs/tools/appium/setups/watcher-setups). If you want to run tests on multiple devices, use [Suite setups](/docs/tools/appium/setups/suite-setups).

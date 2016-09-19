@@ -13,8 +13,7 @@ permalink: docs/general-reference/automation/
 <ul>    <li><a href="/docs/tools/appium/continuous-integration/travis-ci/">Run Appium Tests with Travis CI</a></li>
         <li><a href="/docs/guides/robotium-espresso-jenkins-ant/">Running Robotium and Espresso through Jenkins with Ant</a></li>
         <li><a href="/docs/tools/appium/continuous-integration/jenkins-gradle/">Running Appium tests through Jenkins</a></li>
-        <li><a href="/docs/tools/appium/continuous-integration/jenkins-gradle-suite/">Running Appium tests in suites through Jenkins</a></li>
-        <li><a href="/docs/guides/robotium-espresso-ci/#gradle-plugin">Execute your tests with Gradle plugin</a>
+        <li><a href="/docs/tools/robotium-espresso/gradle-plugin/">Execute your tests with Gradle plugin</a>
 </li>
 </ul>
 

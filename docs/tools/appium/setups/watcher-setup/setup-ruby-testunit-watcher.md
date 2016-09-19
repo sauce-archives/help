@@ -1,7 +1,7 @@
 ---
 title: Watcher Setup on TestObject using Test::Unit
 layout: en
-permalink: docs/tools/appium/setups/testunit/watcher/
+permalink: docs/tools/appium/setups/watcher-setup/testunit/
 ---
 
 If you want to register your test result on TestObject, you will need to use our result watcher. This is what a simple Watcher setup with Test::Unit looks like.
