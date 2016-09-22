@@ -37,14 +37,14 @@ MobileElement signUpButton;
 
 Which annotation is going to be used? When we use Android and iOS annotations together, it doesn't at all mean that both of them are going to be used at the same time, only one of them will be, and it depends on the platform we use. So if we are testing on the Android platform and instantiating an Android Appium Driver in our setup method, then the Android annotation will be used. But if we have instantiated an iOS driver, the iOS annotation will be used.
 
-<h3 id="test_setup">Test setup</h3>
-A cross-platform test setup must be different from the normal setup, because the process of selecting a platform must be dynamic. Here is a simple cross-platform setup class:
+<h3 id="test_setup">Cross-platform Test Setup</h3>
+The aim of uaing a cross-platform setup is to make the process of selecting a platform (Android or iOS) dynamic. In this tutorial, we will cover two different setups. Feel free to use the one you want.
+
+<h4 id="simple_setup">Simple Setup</h4>
+This is a cross-platform test setup which shows you how to set your test up in the easiest way. The first class we need to create is "AbstractTest" which uses the TestObjectTestResultWatcher to register your result on TestObject, and also the AppiumDriverBuilder to establish the connection with TestObject.
 
 {% highlight java %}
 public class AbstractTest {
-
-    @Rule
-    public TestName testName = new TestName();
 
     @Rule
     public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
@@ -59,14 +59,12 @@ public class AbstractTest {
                 .build();
 
         resultWatcher.setAppiumDriver(driver);
-
         app = new Komoot(driver);
     }
 }
-
 {% endhighlight %}
 
-And the Appium Driver Builder will be:
+The AppiumDriverBuilder class is a helper class where we set our capabilities to connect to the Appium server, and also we instantiate an Appium driver depending on the "PLATFORM" environment variable:
 
 {% highlight java %}
 public class AppiumDriverBuilder {
@@ -86,10 +84,10 @@ public class AppiumDriverBuilder {
         // This capabilitiy is only needed for local testing.
         capabilities.setCapability("deviceName", "testDevice");
 
-        // Getting the platform from the environment variables.
+        // Getting the platform from the environment variable.
         String platform = System.getenv("PLATFORM");
 
-        // Selecting the test platform recording to the "PLATFORM" environment variable.
+        // Selecting the test platform depending on the "PLATFORM" environment variable.
         if (platform.equalsIgnoreCase("ios")) {
             return new IOSDriver(resultWatcher.getTestObjectOrLocalAppiumEndpointURL(), capabilities);
         } else if (platform.equalsIgnoreCase("android")) {
@@ -101,19 +99,14 @@ public class AppiumDriverBuilder {
 }
 {% endhighlight %}
 
-AppiumDriverBuilder is basically a helper class that helps you to connect to TestObject. It contains "TestObject Test Result Watcher" which is sending your test results to TestObject. You can see also some other mandatory capabilities to establish the connection, and the "if else" statement comes to determine on which platform ("android" or "ios") the test is going to be run. See Appium cross-platform [example](https://github.com/testobject/appium-cross-platform-example).
+Have a look at this Appium cross-platform [example](https://github.com/testobject/appium-cross-platform-example).
 
-####Alternative setup
-There is an alternative advanced way to determine the platform you are testing on by using device descriptors instead of environment variables, in this case your setup class will be:
+<h4 id="advanced_setup">Advanced setup</h4>
+This is an alternative and advanced way to set up your tests. The special thing in this setup is that we use the device descriptors to select the suitable platform automatically instead of supplying it manually through the environment variables. The "AbstractTest" class here is exactly the same as it is in the [Simple setup](#simple_setup) except that we use the "Device" class to determine the platform we use.
 
 {% highlight java %}
 public class AbstractTest {
 
-    protected static Logger log = Logger.getLogger(AbstractTest.class);
-    private final int timeout = 25;
-
-    @Rule
-    public TestName testName = new TestName();
     @Rule
     public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
 
@@ -122,176 +115,93 @@ public class AbstractTest {
 
     @Before
     public void connect() throws Exception {
+        AppiumDriverBuilder driverBuilder = new AppiumDriverBuilder();
+        Device device = new Device();
 
-		AppiumDriverBuilder driverBuilder = new AppiumDriverBuilder();
-		Device device = new Device();
-
-    this.driver = driverBuilder.build(device, resultWatcher);
-
-    resultWatcher.setAppiumDriver(driver);
-
-    driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
-
-    app = new App(driver, device);
-
-        log.info("[TEST] " + testName.getMethodName() + " live view: "
-                + driver.getCapabilities().getCapability("testobject_test_live_view_url"));
+        this.driver = driverBuilder.build(device, resultWatcher);
+        resultWatcher.setAppiumDriver(driver);
+        app = new App(driver, device);
     }
-
-    @After
-    public void tearDown(){
-		log.info("[TEST] " + testName.getMethodName() + " report: "
-			+ driver.getCapabilities().getCapability("testobject_test_report_url"));
-		log.info("Page source on last screen: " + driver.getPageSource());
-    }
-
-	public boolean isIOS() {
-		return driver instanceof IOSDriver;
-	}
-
-	public boolean isAndroid() {
-		return driver instanceof AndroidDriver;
-	}
-{% endhighlight %}
-
-And the Appium Driver Builder class will be:
-
-{% highlight java %}
-ublic class AppiumDriverBuilder {
-
-	private DesiredCapabilities capabilities;
-	private Device device;
-	private TestObjectTestResultWatcher resultWatcher;
-
-	public AppiumDriver build(Device testDevice, TestObjectTestResultWatcher watcher) throws Exception {
-
-		capabilities = new DesiredCapabilities();
-		device = testDevice;
-		resultWatcher = watcher;
-
-		// TestObject's basic mandatory capabilities for a JUnit suite setup.
-		capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
-		capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
-
-		Boolean testLocally = Boolean.parseBoolean(System.getenv("TESTOBJECT_TEST_LOCALLY"));
-
-		// Device object gets initialised differently depending on whether this is a local or cloud test run.
-		if (testLocally) {
-			configureForLocal();
-		} else {
-			configureForCloud();
-		}
-
-		// Provide needed platform version-specific capabilities and instantiate platform-specific AppiumDriver.
-		if (device.platform.equals(DeviceDescriptor.OS.IOS)) {
-			return getIosDriver();
-		} else if (device.platform.equals(DeviceDescriptor.OS.ANDROID)) {
-			return getAndroidDriver();
-		} else {
-			throw new Exception("Was unable to read device platform.");
-		}
-
-	}
-
-	private void configureForLocal() {
-		String deviceId = System.getenv("LOCAL_DEVICE");
-		capabilities.setCapability("deviceName", deviceId);
-		device.initWithLocalDeviceInformation();
-	}
-
-	private void configureForCloud() {
-		device.initWithCloudDeviceInformation(resultWatcher.getTestDeviceId());
-
-		// In case of execution from CI, provides a link to the build which generated the test report.
-		capabilities.setCapability("build_url", System.getenv("BUILD_URL"));
-	}
-
-	private AppiumDriver getAndroidDriver() throws MalformedURLException {
-		if (device.apiLevel <= 17) {
-			capabilities.setCapability("automationName", "Selendroid");
-			capabilities.setCapability("appWaitActivity", device.getAndroidStartingActivity());
-		}
-		return new AndroidDriver(resultWatcher.getTestObjectOrLocalAppiumEndpointURL(), capabilities);
-	}
-
-	private AppiumDriver getIosDriver() throws MalformedURLException {
-		return new IOSDriver(resultWatcher.getTestObjectOrLocalAppiumEndpointURL(), capabilities);
-	}
 }
 {% endhighlight %}
 
-Appium Driver Builder here is a class which takes care of initialising the correct AppiumDriver depending on a series of parameters. It supports both local and cloud (TestObject) Appium test runs. Needs different sets of environment variables
-based on whether it is used for local or cloud testing.
+The "AppiumDriverBuilder" class is consisting of only one method "build", and in this method we supply some mandatory capabilities to establish the connection with TestObject, then Configure the connection for the cloud by using the "Device" class and after that we return the suitable platform depending on the device descriptor result.
 
-The Device class is to get information about the device itself:
+{% highlight java %}
+public class AppiumDriverBuilder {
+
+    private DesiredCapabilities capabilities;
+    private Device device;
+    private TestObjectTestResultWatcher resultWatcher;
+
+    public AppiumDriver build(Device testDevice, TestObjectTestResultWatcher watcher) throws Exception {
+
+        capabilities = new DesiredCapabilities();
+        device = testDevice;
+        resultWatcher = watcher;
+
+        // TestObject's basic mandatory capabilities for a JUnit suite setup.
+        capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
+        capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
+
+        // Configure for the cloud.
+        device.initWithCloudDeviceInformation(resultWatcher.getTestDeviceId());
+
+        // Provide needed platform version-specific capabilities and instantiate platform-specific AppiumDriver.
+        if (device.platform.equals(DeviceDescriptor.OS.IOS)) {
+            return new IOSDriver(resultWatcher.getTestObjectOrLocalAppiumEndpointURL(), capabilities);
+        } else if (device.platform.equals(DeviceDescriptor.OS.ANDROID)) {
+            return new AndroidDriver(resultWatcher.getTestObjectOrLocalAppiumEndpointURL(), capabilities);
+        } else {
+            throw new Exception("Was unable to read device platform.");
+        }
+    }
+}
+{% endhighlight %}
+
+The "Device" class connects to TestObject using your TestObject username and password, then gets a list of the available devices, after that it determines which platform will be used.
 
 {% highlight java %}
 public class Device {
 
-	private final static String ANDROID_STARTING_ACTIVITY = "ANDROID_STARTING_ACTIVITY";
-	private final static String ANDROID_STARTING_PACKAGE = "ANDROID_STARTING_PACKAGE";
-	private final static String LOCAL_PLATFORM = "LOCAL_PLATFORM";
-	private final static String LOCAL_DEVICE = "LOCAL_DEVICE";
+    public DeviceDescriptor.OS platform;
+    public String deviceId;
 
-	public DeviceDescriptor.OS platform;
-	public String deviceId;
+    public void initWithCloudDeviceInformation(String watcherDeviceId) {
 
-	public void initWithCloudDeviceInformation(String watcherDeviceId) {
+        deviceId = watcherDeviceId;
 
-		deviceId = watcherDeviceId;
+        // Create a connection with TestObject using the your username and password
+        TestObjectClient client = TestObjectClient.Factory.create();
+        client.login(System.getenv("TESTOBJECT_USERNAME"), System.getenv("TESTOBJECT_PASSWORD"));
 
-		TestObjectClient client = TestObjectClient.Factory.create();
-		client.login(System.getenv("TESTOBJECT_USERNAME"), System.getenv("TESTOBJECT_PASSWORD"));
+        // Get a list of TestObject devices.
+        List<DeviceDescriptor> descriptorList = client.listDevices();
 
-		List<DeviceDescriptor> descriptorList = client.listDevices();
-
-		for (DeviceDescriptor descriptor : descriptorList) {
-			if (descriptor.id.equals(watcherDeviceId)) {
-				this.platform = descriptor.os;
-			}
-		}
-
-	}
-
-	public void initWithLocalDeviceInformation() {
-
-		deviceId = System.getenv(LOCAL_DEVICE);
-
-		if (System.getenv(LOCAL_PLATFORM).equals("iOS")) {
-			platform = DeviceDescriptor.OS.IOS;
-		} else if (System.getenv(LOCAL_PLATFORM).equals("Android")) {
-			platform = DeviceDescriptor.OS.ANDROID;
-		}
-	}
-
-	public String getAndroidStartingPackage() {
-		String property = deviceId + "_package";
-		return getEnvOrProperty(ANDROID_STARTING_PACKAGE, property);
-	}
-
-	public String getAndroidStartingActivity() {
-		String property = deviceId + "_activity";
-		return getEnvOrProperty(ANDROID_STARTING_ACTIVITY, property);
-	}
-
-	private String getEnvOrProperty(String envVariable, String property) {
-		String capability = System.getenv(envVariable);
-		if (capability == null) {
-			return PropertyHelper.getProperty("android-starting-packages.properties", property);
-		} else {
-			return capability;
-		}
-	}
+        for (DeviceDescriptor descriptor : descriptorList) {
+            if (descriptor.id.equals(watcherDeviceId)) {
+                this.platform = descriptor.os;
+            }
+        }
+    }
 }
 {% endhighlight %}
 
+Make sure to use the latest version of our [Appium Java API]("/docs/tools/appium/appium-api/").
+
 <h3 id="run">Run your test!</h3>
-After creating the project in the [PageObject](#page_object) way and writing your test methods, you just need to select "Build with parameters" from the menu and add the following environment variables:
+After creating the project in the [PageObject](#page_object) way and writing your test methods, you just need to select "Build with parameters" from the menu and add the following environment variables if you use the [Simple setup](#simple_setup):
 
 + <strong>TESTOBJECT_API_KEY</strong> and it must be equal to "your TestObject api key".
 + <strong>PLATFORM</strong> and it must be equal to "ios" or to "android".
 
-then launch the build. Give the test some time to be run. As soon as it is done the build status icon will stop blinking and you will be able to access the "test results" section to see what the outcome of the test you just ran was.
+But if you use the [Advanced setup](#advanced_setup), then you need to add the following environment variables:
+
++ <strong>TESTOBJECT_USERNAME</strong>
++ <strong>TESTOBJECT_PASSWORD</strong>
++ <strong>TESTOBJECT_API_KEY</strong>
+
+Then launch the build. Give the test some time to be run. As soon as it is done the build status icon will stop blinking and you will be able to access the "test results" section to see what the outcome of the test you just ran was.
 
 <h3 id="example">Example</h3>
 You can have a look at our [Appium cross-platform example](https://github.com/testobject/appium-cross-platform-example).
