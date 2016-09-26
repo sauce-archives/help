@@ -4,10 +4,10 @@ layout: en
 permalink: docs/guides/appium-cross-platform-automation/
 ---
 
-You have the same application on both platforms iOS and Android, and needs to be tested. The old way to do that is to write two separated scripts for each platform, one for Android and one for iOS. But it is unfortunatelly not a good idea at all, because in this way the script will be repeated twice and the maintenance of the code will be so complicated. But with Appium There is no need to duplicate a ton of code by creating two separate and almost identical test scripts! You will be able to write a single script and execute it on both Android and iOS for automation testing. Keep on reading to find out how.
+A cross-platform testing is basically to write only one testing script for two apps. In other words, if you have the same application on iOS and Android platforms and want to test it, then it is a good idea to do not write a separated script for each one, beacuse in this way, you will need to duplicate the same methods, and the maintaining of the code will be much harder. The best solution for that is to write a single script using [Appium](http://appium.io/) and execute it on both Android and iOS for automation testing. Keep on reading to find out how.
 
 ###Steps
-1. Open up an editor of your choice, create a new project, then write your [Test Setup](#test_setup) and your testing script by following the [PageObject design pattern](#page_object) way and using [Appium annotations](#appium_anno).
+1. Open up an editor of your choice, create a new testing project, then write your [Test Setup](#test_setup) and your testing script by following the [PageObject design pattern](#page_object) way and using [Appium annotations](#appium_anno).
 2. Open <a href="https://app.testobject.com" target="blank">TestObject</a> website, login and create two projects: the first project will be for your Android app and will contain your apk file, and the second project will be for your iOS app and will contain your ipa file.
 3. Create a suite in each project, and don't forget to add some devices to each suite (at least one).
 4. [Run](#run) your test.
@@ -187,10 +187,10 @@ public class Device {
 }
 {% endhighlight %}
 
-Make sure to use the latest version of our [Appium Java API]("/docs/tools/appium/appium-api/").
+Make sure to use the latest version of our [Appium Java API](/docs/tools/appium/appium-api/).
 
 <h3 id="run">Run your test!</h3>
-After creating the project in the [PageObject](#page_object) way and writing your test methods, you just need to select "Build with parameters" from the menu and add the following environment variables if you use the [Simple setup](#simple_setup):
+After creating the project in the [PageObject](#page_object) way and writing your test methods, you just need to select "Build with parameters" from the menu and to add the following environment variables, if you use the [Simple setup](#simple_setup):
 
 + <strong>TESTOBJECT_API_KEY</strong> and it must be equal to "your TestObject api key".
 + <strong>PLATFORM</strong> and it must be equal to "ios" or to "android".
@@ -204,7 +204,7 @@ But if you use the [Advanced setup](#advanced_setup), then you need to add the f
 Then launch the build. Give the test some time to be run. As soon as it is done the build status icon will stop blinking and you will be able to access the "test results" section to see what the outcome of the test you just ran was.
 
 <h3 id="example">Example</h3>
-You can have a look at our [Appium cross-platform example](https://github.com/testobject/appium-cross-platform-example).
+You can see our [Appium cross-platform example](https://github.com/testobject/appium-cross-platform-example).
 
 ---
 ---
