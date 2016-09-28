@@ -4,23 +4,17 @@ layout: en
 permalink: docs/guides/appium-cross-platform-automation/
 ---
 
-A cross-platform testing is basically to write only one testing script for two apps. In other words, if you have the same application on iOS and Android platforms and want to test it, then it is a good idea to do not write a separated script for each one, beacuse in this way, you will need to duplicate the same methods, and the maintaining of the code will be much harder. The best solution for that is to write a single script using [Appium](http://appium.io/) and execute it on both Android and iOS for automation testing. Keep on reading to find out how.
+One of Appium's most exciting features is the possibility to write a single test script that will run on both Android and iOS. This tutorial will show you how you can build your test setup so that it will take advantage of this feature.
 
-###Steps
-1. Open up an editor of your choice, create a new testing project, then write your [Test Setup](#test_setup) and your testing script by following the [PageObject design pattern](#page_object) way and using [Appium annotations](#appium_anno).
-2. Open <a href="https://app.testobject.com" target="blank">TestObject</a> website, login and create two projects: the first project will be for your Android app and will contain your apk file, and the second project will be for your iOS app and will contain your ipa file.
-3. Create a suite in each project, and don't forget to add some devices to each suite (at least one).
-4. [Run](#run) your test.
-5. <a href="#example" target="blank">Example</a>.
+<h3 id="page_object">Writing a PageObject setup</h3>
 
-
-<h3 id="page_object">PageObject design pattern</h3>
-Firstly, we will begin with the PageObject design pattern, which is basically a way of organising your code to make your setup more compact, more readable and to make the user interaction flow more evident using encapsulation.
+First of all, open up an editor of your choice, create a new project, then write your test setup by following the [PageObject design pattern](#page_object). This will allow us to leverage the power of the appium annotations, which will be fundamental for our purposes.
+Firstly, we will begin with the PageObject design pattern, which is basically a way of organising your code to make your setup more compact, more readable and to make the user interaction flow more evident.
 
 For more information about PageObject, see our [Appium setup with PageObject](/docs/guides/appium-advanced-setup/) guide.
 
 <h3 id="appium_anno">Appium annotations</h3>
-It is not convenient to use the old way of finding elements for a cross-platform project. So what we are going to do is to use <strong>@AndroidFindBy()</strong> and <strong>@iOSFindBy()</strong> Appium annotations to fetch UI elements in apps using (id, xpath or text, ...) of the elements. Here we are using only one annotation per element to grab it from the UI using its <strong>id</strong>:
+We are going to use <strong>@AndroidFindBy()</strong> and <strong>@iOSFindBy()</strong> Appium annotations to fetch UI elements in apps using different locators (id, xpath or text, ...). Here we are using only one annotation per element to grab it from the UI using its <strong>id</strong>:
 
 {% highlight java %}
 @AndroidFindBy(id = "signup_button")
@@ -35,40 +29,17 @@ In the case of a cross-platform project, we use both of <strong>@AndroidFindBy()
 MobileElement signUpButton;
 {% endhighlight %}
 
-Which annotation is going to be used? When we use Android and iOS annotations together, it doesn't at all mean that both of them are going to be used at the same time, only one of them will be, and it depends on the platform we use. So if we are testing on the Android platform and instantiating an Android Appium Driver in our setup method, then the Android annotation will be used. But if we have instantiated an iOS driver, the iOS annotation will be used.
+If we use two annotations, one on top of the other as shown here, the relevant one will be selected based on which kind of AppiumDriver we have instantiated (AndroidDriver or IOSDriver).
 
 <h3 id="test_setup">Cross-platform Test Setup</h3>
-The aim of uaing a cross-platform setup is to make the process of selecting a platform (Android or iOS) dynamic. In this tutorial, we will cover two different setups. Feel free to use the one you want.
+The aim of using a cross-platform setup is to make the process of selecting a platform (Android or iOS) dynamic. We will be covering two possible solutions: one based on environment variables and one based on cloud device descriptors.
 
-<h4 id="simple_setup">Simple Setup</h4>
-This is a cross-platform test setup which shows you how to set your test up in the easiest way. The first class we need to create is "AbstractTest" which uses the TestObjectTestResultWatcher to register your result on TestObject, and also the AppiumDriverBuilder to establish the connection with TestObject.
-
-{% highlight java %}
-public class AbstractTest {
-
-    @Rule
-    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
-
-    private AppiumDriver driver;
-    protected Komoot app;
-
-    @Before
-    public void connect() throws Exception {
-        this.driver = new AppiumDriverBuilder()
-                .withTestResultWatcher(resultWatcher)
-                .build();
-
-        resultWatcher.setAppiumDriver(driver);
-        app = new Komoot(driver);
-    }
-}
-{% endhighlight %}
-
-The AppiumDriverBuilder class is a helper class where we set our capabilities to connect to the Appium server, and also we instantiate an Appium driver depending on the "PLATFORM" environment variable:
+<h4 id="simple_setup">Determining the platform through environment variables</h4>
+If you have a PageObject-based setup, you probably have a class which takes care of instantiating your AppiumDriver. Our first solution is to instantiate the right kind of driver depending on the value of the environment variable we will be reading. This is what our class could look like:
 
 {% highlight java %}
 public class AppiumDriverBuilder {
-    // To resgister your tests results on TestObject
+
     private TestObjectTestResultWatcher resultWatcher;
 
     public AppiumDriverBuilder withTestResultWatcher(TestObjectTestResultWatcher resultWatcher) {
@@ -81,16 +52,17 @@ public class AppiumDriverBuilder {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
         capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
-        // This capabilitiy is only needed for local testing.
+        
+        // This capability is only needed for local testing.
         capabilities.setCapability("deviceName", "testDevice");
 
         // Getting the platform from the environment variable.
         String platform = System.getenv("PLATFORM");
 
         // Selecting the test platform depending on the "PLATFORM" environment variable.
-        if (platform.equalsIgnoreCase("ios")) {
+        if (platform.equals("ios")) {
             return new IOSDriver(resultWatcher.getTestObjectOrLocalAppiumEndpointURL(), capabilities);
-        } else if (platform.equalsIgnoreCase("android")) {
+        } else if (platform.equals("android")) {
             return new AndroidDriver(resultWatcher.getTestObjectOrLocalAppiumEndpointURL(), capabilities);
         } else {
             throw new Exception("Unable to read device platform.");
@@ -99,33 +71,10 @@ public class AppiumDriverBuilder {
 }
 {% endhighlight %}
 
-Have a look at this Appium cross-platform [example](https://github.com/testobject/appium-cross-platform-example).
+Have a look at this Appium cross-platform [example](https://github.com/testobject/appium-cross-platform-example) to have an overview of the whole setup.
 
 <h4 id="advanced_setup">Advanced setup</h4>
-This is an alternative and advanced way to set up your tests. The special thing in this setup is that we use the device descriptors to select the suitable platform automatically instead of supplying it manually through the environment variables. The "AbstractTest" class here is exactly the same as it is in the [Simple setup](#simple_setup) except that we use the "Device" class to determine the platform we use.
-
-{% highlight java %}
-public class AbstractTest {
-
-    @Rule
-    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
-
-    private AppiumDriver driver;
-    protected App app;
-
-    @Before
-    public void connect() throws Exception {
-        AppiumDriverBuilder driverBuilder = new AppiumDriverBuilder();
-        Device device = new Device();
-
-        this.driver = driverBuilder.build(device, resultWatcher);
-        resultWatcher.setAppiumDriver(driver);
-        app = new App(driver, device);
-    }
-}
-{% endhighlight %}
-
-The "AppiumDriverBuilder" class is consisting of only one method "build", and in this method we supply some mandatory capabilities to establish the connection with TestObject, then Configure the connection for the cloud by using the "Device" class and after that we return the suitable platform depending on the device descriptor result.
+This is an alternative, slightly more advanced way to set up your tests to conveniently run on both platforms. The special thing about this setup is that we look up our device's OS directly through its descriptor, which we can get from TestObject. This not only saves us the step of having to configure an environment variable to determine the platform we are running our tests on, but also allows us to do this on a per-test basis. 
 
 {% highlight java %}
 public class AppiumDriverBuilder {
@@ -171,13 +120,14 @@ public class Device {
 
         deviceId = watcherDeviceId;
 
-        // Create a connection with TestObject using the your username and password
+        // Establish a connection with TestObject using your username and password.
         TestObjectClient client = TestObjectClient.Factory.create();
         client.login(System.getenv("TESTOBJECT_USERNAME"), System.getenv("TESTOBJECT_PASSWORD"));
 
-        // Get a list of TestObject devices.
+        // Get the device descriptor list from TestObject.
         List<DeviceDescriptor> descriptorList = client.listDevices();
 
+        // Find the device descriptor corresponding to our chosen device and get its platform.
         for (DeviceDescriptor descriptor : descriptorList) {
             if (descriptor.id.equals(watcherDeviceId)) {
                 this.platform = descriptor.os;
