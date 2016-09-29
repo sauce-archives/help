@@ -52,7 +52,7 @@ public class AppiumDriverBuilder {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("testobject_api_key", resultWatcher.getApiKey());
         capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
-        
+
         // This capability is only needed for local testing.
         capabilities.setCapability("deviceName", "testDevice");
 
@@ -74,7 +74,7 @@ public class AppiumDriverBuilder {
 Have a look at this Appium cross-platform [example](https://github.com/testobject/appium-cross-platform-example) to have an overview of the whole setup.
 
 <h4 id="advanced_setup">Advanced setup</h4>
-This is an alternative, slightly more advanced way to set up your tests to conveniently run on both platforms. The special thing about this setup is that we look up our device's OS directly through its descriptor, which we can get from TestObject. This not only saves us the step of having to configure an environment variable to determine the platform we are running our tests on, but also allows us to do this on a per-test basis. 
+This is an alternative, slightly more advanced way to set up your tests to conveniently run on both platforms. The special thing about this setup is that we look up our device's OS directly through its descriptor, which we can get from TestObject. This not only saves us the step of having to configure an environment variable to determine the platform we are running our tests on, but also allows us to do this on a per-test basis.
 
 {% highlight java %}
 public class AppiumDriverBuilder {
@@ -140,18 +140,20 @@ public class Device {
 Make sure to use the latest version of our [Appium Java API](/docs/tools/appium/appium-api/).
 
 <h3 id="run">Run your test!</h3>
-After creating the project in the [PageObject](#page_object) way and writing your test methods, you just need to select "Build with parameters" from the menu and to add the following environment variables, if you use the [Simple setup](#simple_setup):
+After creating the project in the [PageObject](#page_object) way, you have the possibility to run your test either locally on your machine, or on the cloud using a CI server similar to what we did in [Appium Jenkins tutorial](/docs/tools/appium/continuous-integration/jenkins-gradle/). The following environment variables will be needed to run the test:
+
+For the [Simple setup](#simple_setup):
 
 + <strong>TESTOBJECT_API_KEY</strong> and it must be equal to "your TestObject api key".
-+ <strong>PLATFORM</strong> and it must be equal to "ios" or to "android".
++ <strong>PLATFORM</strong> it must be either "ios" or "android".
 
-But if you use the [Advanced setup](#advanced_setup), then you need to add the following environment variables:
+For the [Advanced setup](#advanced_setup):
 
-+ <strong>TESTOBJECT_USERNAME</strong>
-+ <strong>TESTOBJECT_PASSWORD</strong>
-+ <strong>TESTOBJECT_API_KEY</strong>
++ <strong>TESTOBJECT_API_KEY</strong> it must be equal to "your TestObject api key".
++ <strong>TESTOBJECT_USERNAME</strong> your TestObject username.
++ <strong>TESTOBJECT_PASSWORD</strong> your TestObject password.
 
-Then launch the build. Give the test some time to be run. As soon as it is done the build status icon will stop blinking and you will be able to access the "test results" section to see what the outcome of the test you just ran was.
+After adding them, click the "Run" button, or click "build with parameters" for the CI Server to run the test. Give it some time to be run. As soon as it is done, you will be able to see what the outcome of the test you just ran was.
 
 <h3 id="example">Example</h3>
 You can see our [Appium cross-platform example](https://github.com/testobject/appium-cross-platform-example).
