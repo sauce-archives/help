@@ -153,7 +153,7 @@ For the [Advanced setup](#advanced_setup):
 + <strong>TESTOBJECT_USERNAME</strong> your TestObject username.
 + <strong>TESTOBJECT_PASSWORD</strong> your TestObject password.
 
-After adding them, click the "Run" button, or click "build with parameters" for the CI Server to run the test. Give it some time to be run. As soon as it is done, you will be able to see what the outcome of the test you just ran was.
+After adding them, click the "Run" button, or click "Build with parameters" button for the CI Server to run the test. Give it some time to be run. As soon as it is done, you will be able to see what the outcome of the test you just ran was.
 
 <h3 id="example">Example</h3>
 You can see our [Appium cross-platform example](https://github.com/testobject/appium-cross-platform-example).
