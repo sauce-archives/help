@@ -1,10 +1,10 @@
 ---
-title: Appium cross-platform automation
+title: Setting Up Your Appium Project for Cross-Platform Automation
 layout: en
 permalink: docs/guides/appium-cross-platform-automation/
 ---
 
-One of Appium's most exciting features is the possibility to write a single test script that will run on both Android and iOS. This tutorial will show you how you can build your test setup so that it will take advantage of this feature.
+One of Appium's most exciting features is the possibility to write a single test script that will run on both Android and iOS. This tutorial will show you how you can build your test setup so that it will take advantage of this possibility. Even though this guide is at least partially based on TestObject's architecture, it is easily adaptable to different scenarios.
 
 <h3 id="page_object">Writing a PageObject setup</h3>
 
@@ -31,7 +31,7 @@ MobileElement signUpButton;
 
 If we use two annotations, one on top of the other as shown here, the relevant one will be selected based on which kind of AppiumDriver we have instantiated (AndroidDriver or IOSDriver).
 
-<h3 id="test_setup">Cross-platform Test Setup</h3>
+<h3 id="test_setup">Cross-platform test setup</h3>
 The aim of using a cross-platform setup is to make the process of selecting a platform (Android or iOS) dynamic. We will be covering two possible solutions: one based on environment variables and one based on cloud device descriptors.
 
 <h4 id="simple_setup">Determining the platform through environment variables</h4>
@@ -73,7 +73,7 @@ public class AppiumDriverBuilder {
 
 Have a look at this Appium cross-platform [example](https://github.com/testobject/appium-cross-platform-example) to have an overview of the whole setup.
 
-<h4 id="advanced_setup">Advanced setup</h4>
+<h4 id="advanced_setup">Determining the platform through device descriptors</h4>
 This is an alternative, slightly more advanced way to set up your tests to conveniently run on both platforms. The special thing about this setup is that we look up our device's OS directly through its descriptor, which we can get from TestObject. This not only saves us the step of having to configure an environment variable to determine the platform we are running our tests on, but also allows us to do this on a per-test basis.
 
 {% highlight java %}
@@ -108,7 +108,7 @@ public class AppiumDriverBuilder {
 }
 {% endhighlight %}
 
-The "Device" class connects to TestObject using your TestObject username and password, then gets a list of the available devices, after that it determines which platform will be used.
+The Device class connects to TestObject using your TestObject username and password, then gets a list of the available devices, after that it determines which platform will be used.
 
 {% highlight java %}
 public class Device {
@@ -140,23 +140,20 @@ public class Device {
 Make sure to use the latest version of our [Appium Java API](/docs/tools/appium/appium-api/).
 
 <h3 id="run">Run your test!</h3>
-After creating the project in the [PageObject](#page_object) way, you have the possibility to run your test either locally on your machine, or on the cloud using a CI server similar to what we did in [Appium Jenkins tutorial](/docs/tools/appium/continuous-integration/jenkins-gradle/). The following environment variables will be needed to run the test:
+After setting up your project as we just explained, you have the possibility to run your tests either locally on your machine, or in the cloud using a CI server. This last way of doing things is similar to what we did in [Appium Jenkins tutorial](/docs/tools/appium/continuous-integration/jenkins-gradle/). The following environment variables will be needed to run the test:
 
-For the [Simple setup](#simple_setup):
+For the [environment variable based setup](#simple_setup):
 
 + <strong>TESTOBJECT_API_KEY</strong> and it must be equal to "your TestObject api key".
 + <strong>PLATFORM</strong> it must be either "ios" or "android".
 
-For the [Advanced setup](#advanced_setup):
+For the [device descriptor based setup](#advanced_setup):
 
 + <strong>TESTOBJECT_API_KEY</strong> it must be equal to "your TestObject api key".
 + <strong>TESTOBJECT_USERNAME</strong> your TestObject username.
 + <strong>TESTOBJECT_PASSWORD</strong> your TestObject password.
 
 After adding them, click the "Run" button, or click "Build with parameters" button for the CI Server to run the test. Give it some time to be run. As soon as it is done, you will be able to see what the outcome of the test you just ran was.
-
-<h3 id="example">Example</h3>
-You can see our [Appium cross-platform example](https://github.com/testobject/appium-cross-platform-example).
 
 ---
 ---
