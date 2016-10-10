@@ -214,7 +214,7 @@ public class Calculator {
 }
 {% endhighlight %}
 
-<h4 id="abstract-screen">AstractScreen class</h4>
+<h4 id="abstract-screen">AbstractScreen class</h4>
 Your AbstractScreen class will contain all the methods that are shared between your Screen objects. These may be general purpose methods that perform gestures needed to interact with your app in multiple points (swiping, scrolling), wrappers that hide some more convoluted code to increase the readability of your test methods, synchronization methods and more.
 
 {% highlight java %}

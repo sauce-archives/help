@@ -63,7 +63,9 @@ For every test run you will get a detailed <a href="/docs/general-reference/auto
 Automated testing is a perfect match for your continuous integration process. To ensure the basic functionality of your app automate your most important test cases and run tests regularly. The test runs are triggered right from your CI-Server.<br>
 Use our tutorials to set up your Continuous Integration with TestObject:
 
-<a href="/docs/tools/appium/continuous-integration/travis-ci/">Run Appium Tests with Travis CI</a>
-<a href="/docs/guides/robotium-espresso-jenkins-ant/">Running Robotium and Espresso through Jenkins with Ant</a>
-<a href="/docs/tools/appium/continuous-integration/jenkins-gradle/">Running Appium tests through Jenkins</a>
-<a href="/docs/guides/robotium-espresso-ci/#gradle-plugin">Execute your tests with Gradle plugin</a>
+* <a href="/docs/tools/appium/continuous-integration/travis-ci/">Run Appium Tests with Travis CI</a>
+* <a href="/docs/guides/robotium-espresso-jenkins-ant/">Running Robotium and Espresso through Jenkins with Ant</a>
+* <a href="/docs/tools/appium/continuous-integration/jenkins-gradle/">Running Appium tests through Jenkins</a>
+* <a href="/docs/guides/robotium-espresso-ci/#gradle-plugin">Execute your tests with Gradle plugin</a>
+
+---
