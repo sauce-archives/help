@@ -71,7 +71,7 @@ public class AppiumDriverBuilder {
 }
 {% endhighlight %}
 
-Have a look at this Appium cross-platform [example](https://github.com/testobject/appium-cross-platform-example) to have an overview of the whole setup.
+Have a look at this Appium cross-platform <a href="https://github.com/testobject/appium-cross-platform-example" target="blank">example</a> to have an overview of the whole setup.
 
 <h4 id="advanced_setup">Determining the platform through device descriptors</h4>
 This is an alternative, slightly more advanced way to set up your tests to conveniently run on both platforms. The special thing about this setup is that we look up our device's OS directly through its descriptor, which we can get from TestObject. This not only saves us the step of having to configure an environment variable to determine the platform we are running our tests on, but also allows us to do this on a per-test basis.
@@ -136,6 +136,8 @@ public class Device {
     }
 }
 {% endhighlight %}
+
+Have a look at this Appium cross-platform Advanced Setup <a href="https://github.com/testobject/appium-cross-platform-example/tree/advanced-setup" target="blank">example</a> to have an overview of the whole setup.
 
 Make sure to use the latest version of our [Appium Java API](/docs/tools/appium/appium-api/).
 
