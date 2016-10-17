@@ -11,6 +11,7 @@ permalink: docs/tools/appium/reference/
 	<li><a href="#device-caching">Device Caching</a></li>
 	<li><a href="#session-creation-timeout">Session Creation Timeout</a></li>
   	<li><a href="#accessing-testobject-via-proxy">Accessing TestObject Via Proxy</a></li>
+	<li><a href="#cordova-app-testing">Cordova App Testing</a></li>
 </ul>
 
 <h3 id="appium-capabilities">Appium Capabilities</h3>
@@ -109,3 +110,9 @@ Or, to set them via the command line, which may be more useful if you are trigge
 prepend the system property with -D, for example:
 
 * `-Dhttps.proxyHost=www.example.com -Dhttps.proxyPort=8888`
+
+<h3 id="cordova-app-testing">Cordova App Testing</h3>
+
+When testing Hybrid applications using Appium, it's important to have access to the application's webview for interacting with the application. For Hybrid applications built for Android using Cordova or Crosswalk, Appium may have issues connecting to the webview. This issue is currently being resolved by the open source community, but you can already avoid this issue when testing on TestObject. 
+
+To avoid this issue, simply use our patched Appium version and set your Appium version to `1.5.2-patched-chromedriver`. You can specify this Appium version by setting the `testobject_appium_version` desired capability or by editing your test suite's settings if you're using the [Suite Setup](/docs/tools/appium/setups/suite-setups). This Appium version uses our patched Chromedriver version, and will allow you to access the webview for Cordova applications on Android.
