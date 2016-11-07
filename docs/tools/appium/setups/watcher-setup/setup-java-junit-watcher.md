@@ -10,6 +10,9 @@ If you want to register your test result on TestObject, you will need to use our
 {% highlight java %}
 public class WatcherTestSetup {
 
+	/* Specify if our test is being executed locally or on TestObject */
+	boolean isLocal = false;
+
     /* This is the key piece of our test, since it allows us to
    * connect to the device we will be running the app onto.*/
     private AppiumDriver driver;
@@ -20,7 +23,7 @@ public class WatcherTestSetup {
 
     /* Takes care of sending the result of the tests over to TestObject. */
     @Rule
-    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher();
+    public TestObjectTestResultWatcher resultWatcher = new TestObjectTestResultWatcher(isLocal);
 
     /* This is the setup that will be run before the test. */
     @Before
@@ -59,7 +62,7 @@ Along with the mandatory capabilities we have specified, you can send over some 
 <h4>Dependencies</h4>
 This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
 {% highlight bash %}
-  testCompile 'org.testobject:testobject-appium-java-api:0.0.24'
+  testCompile 'org.testobject:testobject-appium-java-api:0.0.26'
 {% endhighlight %}
 
 <h4>Why use it</h4>
