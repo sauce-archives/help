@@ -10,11 +10,11 @@ If you want to register your test result on TestObject, you will need to use our
 {% highlight java %}
 public class WatcherTestSetup {
 
-	/* Specify if our test is being executed locally or on TestObject */
-	boolean isLocal = false;
+    /* Specify if our test is being executed locally or on TestObject */
+    boolean isLocal = false;
 
     /* This is the key piece of our test, since it allows us to
-   * connect to the device we will be running the app onto.*/
+    * connect to the device we will be running the app onto.*/
     private AppiumDriver driver;
 
     /* Sets the test name to the name of the test method. */
