@@ -20,6 +20,11 @@ WebdriverIO is a testing framework that allows you to write web tests using Java
 
 + [WebDriverIO Setup](/docs/tools/appium/setups/basic-setup/webdriverio/)
 
+###PHP
+Codeception is a testing framework that allows you to write web tests using PHP. Currently only the basic setup is supported. This means that you can run your tests on TestObject, but the result of the test (whether it passed or failed) won't be visible in the test report on TestObject.
+
++ [Codeception Setup](/docs/tools/appium/setups/basic-setup/codeception/)
+
 ###Python
 It is possible to write and run Appium tests using Python on TestObject. To do that, you need to point to the following Appium server:
 
