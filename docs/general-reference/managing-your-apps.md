@@ -17,7 +17,6 @@ To test your application on TestObject you will need to follow some guidelines w
 
 <!-- info for whitelisting ip's -->
 
-<!-- duplicated in accout -->
 <h3 id="create-new-project">Create a New Project</h3>
 
 If this isn't the first project on your account, you will first need to select the "New App" button from your home screen:

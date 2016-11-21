@@ -29,18 +29,6 @@ After you agree to the <a href="https://testobject.com/terms" target="_blank">Te
 Now you are <strong>registered as a free user</strong> with TestObject. As a free user you are enabled to test on our <a href="#plans">free devices</a>. To access all of the available devices, you need to upgrade your plan within your <a href="#settings">Account Settings</a>.<br>
 Sign in with your previously set password.
 
-<h4>Upload an App</h4>
-
-In order to carry out your first test, you need to <strong>upload an app</strong>. There are several ways to do that:
-<br>
-<img class="center shadow" src="/img/settings/upload_app.png">
-<br>
-
-* Upload your native Android or iOS app directly from your system. For iOS applications make sure that you <a href="/docs/guides/creating-ipa/">exported your IPA file</a>  with an Ad Hoc Deployment Configuration to test on our platform.
-* Test a Mobile Website by adding the Website URL, a name and the version number
-* Integrate a build plugin, like Ant, Maven, Jenkins etc.
-* Get your latest app versions directly from HockeyApp. Enter your <a href="https://rink.hockeyapp.net/manage/auth_tokens" target="_blank">HockeyApp token</a> and you are set.
-
 <h3 id="settings">Account Settings</h3>
 
 In the right corner of your screen you can administrate your Account Settings.
