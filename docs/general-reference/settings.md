@@ -5,7 +5,7 @@ permalink: docs/general-reference/settings/
 alias: /docs/settings/
 ---
 
-This guide contains information about Managing your:
+This guide contains information about managing your:
 
 * <a href="#profile">Profile &amp; Password</a>
 * <a href="#team-accounts">Team Members</a>
@@ -14,13 +14,13 @@ This guide contains information about Managing your:
 
 
 <h3 id="settings">Account Settings</h3>
-To open account settings, click in the right corner of your screen, you can administrate your Account Settings.
+To open your account settings, click in the right corner of the screen and select the Account Settings item from the menu.
 <img class="center shadow" src="/img/general-reference/account-settings.png">
-<br>Click on the different tabs to manage your account.</br> 
+<br>Now, you can click on the different tabs to manage your account.</br> 
 <img class="shadow" src="/img/settings/profile.png"> 
 
 <h3 id="profile">Profile</h3>
-Here you can change your personal information given at your sign up, like the first name, the last name or the email address you use. But what you cannot change is your username (which can be used to login), because It is unique and must be the same without changing to ensure allocating your data with your account.
+Here you can change your personal information given at your sign up, like the first name, the last name or the email address you use. But what you cannot change is your username (which can be used to login), because it is unique and must be the same without changing to ensure allocating your data with your account.
 
 <h3 id="password">Password</h3>
 To change your password enter your new password into the text field and save. Done!<br>
@@ -31,7 +31,7 @@ If you made a typo or forgot what you chose as a password, you can always <a hre
 - Follow this link and enter a new password.
 
 <h3 id="team-accounts">Inviting Team Members</h3>
-If you have a Team plan, you will be able to test your companies apps in parallel with other teammates. Add and remove team members to your account.
+If you have a Team plan, then you are able to add or remove teammates to your account. This means, you will be able to test your apps together with other team members. To do that:
 
 - Open the Team tab.
 - Invite your teammates by adding their email address.
@@ -43,16 +43,21 @@ If you have a Team plan, you will be able to test your companies apps in paralle
 After the signup you will start with a <b>free plan</b> by default. You will be able to upload your app and try out most of the features on the platform. This is not a trial, so you will be able to stay on the free plan for as long as you like. The free plan allows you to access a limited selection of our free real devices.
 <img class="center shadow" src="/img/settings/free_devices.png"><br>
 
-The <a href="#pro_plans">professional plans</a> allow you test on all of the hundreds of real devices and enjoy additional support services, e.g. direct live support through our <a href="https://app.testobject.com/#/chat" target="_blank">Chat Tool</a> while testing. <br>
+The <a href="#pre_plans">Premium Plans</a> allow you testing on hundreds of real devices and enjoying additional support services, like our <a href="https://app.testobject.com/#/chat" target="_blank">Live Chat</a> tool which enables you to contact directly with our professional support team while testing.<br>
 
 TestObject offers two distinct types of plans for Manual and Automated testing. <a href="#manual_plan">Manual</a> and <a href="#automated_plan">Automated plans</a> need to be purchased separately. This allows you to choose the best individual solution for your app testing.
 All standard plans underly a <b>fair use</b> policy. <br/> To ensure that no single user blocks devices permanently for other TestObject users, we reserve the right to limit the daily usage time, depending on the purchased plan. Your testing won't be terminated automatically if you exceeded your time limit during an intense testing phase. If the daily average device time is exceeded regularly we will recommend to upgrade your plan. 
 
-To change your plan, go to your <a href="#settings">Account Settings</a> and select the plans tab from the menu. Upgrade or downgrade your plans easily.
+To change your plans:
 
-For more information, see our <a href="https://testobject.com/pricing" target="_blank">plans and pricing page</a>.
+* Navigate to your <a href="#settings">Account Settings</a>.
+* Select the Plans tab from the menu.
+* Choose the suitable plans for you.
+* Click on the <b>Upgrade</b> button to upgrade your plan, click on the <b>Change</b> button to change to the selected plan or click on the <b>Downgrade</b> button to downgrade or cancel a plan.
 
-<h3 id="pro_plans">Professional Plans</h3>
+For more information and FAQ about plans, have a look at our <a href="https://testobject.com/pricing" target="_blank">plans and pricing page</a>.
+
+<h3 id="pre_plans">Premium Plans</h3>
 
 * <a href="#manual_plan">Manual Testing plans</a> (a Single Plan or a Team Plan).
 * <a href="#automated_plan">Automated Testing plans</a> (a Starter Plan or an Advanced Plan).
@@ -74,12 +79,15 @@ Both plans are accessible for all users of your <a href="#team-accounts">team</a
 For more information, see our <a href="https://testobject.com/pricing" target="_blank">plans and pricing page</a>.
 
 <h4 id="enterprise_plan">Enterprise Plans</h4>
-Additionally to our standard plans we offer flexible, individual solutions for our customers.
+Additionally to our standard plans we offer flexible, individual  and special solutions for our enterprise customers.
 
-These plans are individually customizable. If you are not sure which plan to use, please contact our Sales Team: <a href="mailto:sales@testobject.com">sales@testobject.com</a> to discuss your needs.
+These plans are individually customizable.<br/>
+
+ For discussing needs and finding solutions, feel free to contact our Sales Team at <a href="mailto:sales@testobject.com">sales@testobject.com</a>
 
 <h3 id="billing">Billing</h3>
-Here you see your payment data and your billing history. Update your credit card information and check all your previous payments made to TestObject.
+Here you can see and update your credit card information. <br/>
+You can also see your Payment history and get invoices for previous payments made to TestObject.
 
 <h3>Payment</h3>
 
