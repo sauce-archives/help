@@ -43,6 +43,7 @@ Clicking "All Versions" gives you an overview of all previously uploaded version
 
 It's possible to use the icons on the right of each app version to:
 
+<img src="/img/settings/app-version-icons.png">
 
 - Set a new active app version
 - Archive the app version
