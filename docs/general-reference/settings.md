@@ -16,15 +16,15 @@ This guide contains information about managing your:
 <h3 id="settings">Account Settings</h3>
 To open your account settings, click in the right corner of the screen and select the Account Settings item from the menu.
 <img class="center shadow" src="/img/general-reference/account-settings.png">
-<br>Now, you can click on the different tabs to manage your account.</br> 
-<img class="shadow" src="/img/settings/profile.png"> 
+<br>Now, you can click on the different tabs to manage your account.</br>
+<img class="shadow" src="/img/settings/profile.png">
 
 <h3 id="profile">Profile</h3>
 Here you can change your personal information given at your sign up, like the first name, the last name or the email address you use. But what you cannot change is your username (which can be used to login), because it is unique and must be the same without changing to ensure allocating your data with your account.
 
 <h3 id="password">Password</h3>
 To change your password enter your new password into the text field and save. Done!<br>
-If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud. 
+If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud.
 
 - Enter your email address or user name
 - You will receive a link via email
@@ -46,7 +46,7 @@ After the signup you will start with a <b>free plan</b> by default. You will be 
 The <a href="#pre_plans">Premium Plans</a> allow you testing on hundreds of real devices and enjoying additional support services, like our <a href="https://app.testobject.com/#/chat" target="_blank">Live Chat</a> tool which enables you to contact directly with our professional support team while testing.<br>
 
 TestObject offers two distinct types of plans for Manual and Automated testing. <a href="#manual_plan">Manual</a> and <a href="#automated_plan">Automated plans</a> need to be purchased separately. This allows you to choose the best individual solution for your app testing.
-All standard plans underly a <b>fair use</b> policy. <br/> To ensure that no single user blocks devices permanently for other TestObject users, we reserve the right to limit the daily usage time, depending on the purchased plan. Your testing won't be terminated automatically if you exceeded your time limit during an intense testing phase. If the daily average device time is exceeded regularly we will recommend to upgrade your plan. 
+All standard plans underly a <b>fair use</b> policy. <br/> To ensure that no single user blocks devices permanently for other TestObject users, we reserve the right to limit the daily usage time, depending on the purchased plan. Your testing won't be terminated automatically if you exceeded your time limit during an intense testing phase. If the daily average device time is exceeded regularly we will recommend to upgrade your plan.
 
 To change your plans:
 
@@ -91,8 +91,8 @@ You can also see your Payment history and get invoices for previous payments mad
 
 <h3>Payment</h3>
 
-For every plan you have the choice between an annual and a monthly subscription. 
-An annual plan includes a 10% discount compared to a monthly payment. 
+For every plan you have the choice between an annual and a monthly subscription.
+An annual plan includes a 10% discount compared to a monthly payment.
 
 We accept credit card payments (Visa, MasterCard, Maestro).
 When you’ve subscribed to a monthly plan, your credit card will be charged monthly. When you’ve subscribed to an annual plan, the full amount for 12 months will be charged once at the beginning of the billing cycle.
@@ -100,7 +100,7 @@ When you’ve subscribed to a monthly plan, your credit card will be charged mon
 For annual plans we also accept PayPal or direct invoicing. Please contact our sales team for further information: <a href="mailto:sales@testobject.com">sales@testobject.com</a>.
 
 All plans are auto-renewed subscriptions and you will be charged automatically on a monthly or annual basis, depending on your plan.
-You can downgrade your plan any time before the end of a billing cycle. 
+You can downgrade your plan any time before the end of a billing cycle.
 
 <h3>Coupons</h3>
 To activate a coupon code, just navigate to your <a href="#settings">Account Settings</a> page, open the Coupon tab from the list, enter your code and press on the Redeem button.
