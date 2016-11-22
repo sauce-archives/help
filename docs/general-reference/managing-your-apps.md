@@ -19,16 +19,16 @@ To test your application on TestObject you will need to follow some guidelines w
 
 <h3 id="create-new-project">Create a New Project</h3>
 
-If you have already created other projects on TestObject, you will first need to select the "New App" button from your home screen. If this is your first time using TestObject, you can simply log in to your account.
-<img class="center shadow" src="/img/settings/new_app.png">
-
-
-From here, you will see options for creating a new project. If you have an app for Android or iOS, you can select "Android/iOS App" and upload the application to your account. If you are testing a website, you should select "Mobile Website" instead. If you don't have an application or website to test, you can also select "Sample App" to try the platform with a simple trial app. 
+After logging in to your account, you will see options for creating a new project. If you have an app for Android or iOS, you can select "Android/iOS App" and upload the application to your account. If you are testing a website, you should select "Mobile Website" instead. If you don't have an application or website to test, you can also select "Sample App" to try the platform with a simple trial app. 
 <br>
 <img class="center shadow" src="/img/settings/upload_app.png">
 <br>
 
-After uploading your application, you will then need to specify an app name and version. If you are testing a website, you will need to provide the URL of the website. Finally, you will be able to set default settings for the device. Don't worry, you can change the device settings for your project at any time. 
+After uploading your application, you will then need to specify an app name and version. If you are testing a website, you will also need to provide the URL of the website. Finally, you will be able to set default settings for the device. Don't worry, you can change the device settings for your project at any time. 
+
+To create additional projects, you will need to select the "New App" button from your home screen. You can then go through the same procedure that we just used to create our first project.
+
+<img class="center shadow" src="/img/settings/new_app.png">
 
 <h3 id="app-versions">Manage App Version</h3>
 
