@@ -13,52 +13,47 @@ alias: /docs/devices/
 <h3 id="device_farm">Device Farm</h3>
 <h4 id="real-devices-how-it-works">Real Devices: How It Works</h4>
 
-TestObject hosts hundreds of <strong>real smartphones and tablets in the cloud</strong> for manual and automated testing. You can remotely control all devices directly from your browser. 
+TestObject hosts hundreds of **real smartphones and tablets in the cloud** for manual and automated testing. You can remotely control all devices directly from your browser.
 
-The devices are located at TestObjects' data center in Germany, connected to servers. TestObject uses a virtual networking computer (VNC) to transmit mouse and keyboard events on a device. The VNC client on the device relays back the graphical screen, and you can control it remotely. It is almost like holding the device in your hands.
+The devices are located at TestObjects' data center in Germany. TestObject uses a virtual networking computer (VNC) to transmit mouse and keyboard events on a device. The VNC client on the device relays back the graphical screen, and you can control it remotely. It is almost like holding the device in your hands.
 
-You can upload and test your mobile applications on the devices directly from your browser. As opposed to testing on emulators our real devices allow you to see what your customers see when they use your app on their hardware. 
+You can upload and test your mobile applications on the devices directly from your browser. As opposed to testing on emulators, our real devices allow you to see what your customers see when they use your app on their hardware.
 
-A user accessing a device means that this phone is exclusively assigned to this user during the whole session and cannot be accessed by another user. To ensure frictionless testing TestObject provides several instances of the same device model. 
+A user accessing a device means that this phone is exclusively assigned to this user during the whole session and cannot be accessed by another user. To ensure frictionless testing, TestObject provides several instances of the same device model.
 
-Every time a session starts the app gets installed freshly on the respective phone and the chosen settings are applied. At the end of every session the device gets set back to its default settings, the phone is getting cleaned completely. <strong>None of your data remains on the phone.</strong>
+Every time a session starts the app gets installed freshly on the respective device and the chosen settings are applied. At the end of every session the device gets set back to its default settings, the phone is getting cleaned completely.
 
-Every user will be able to use a <strong>fresh, standard phone that is not modified</strong>. This guarantees reliable, realistic test runs for every user and application.
+Every user will be able to use a **fresh, standard phone that is not modified**. This guarantees reliable, realistic test runs for every user and application.
 
 <h4 id="device-list">Device List</h4>
 
-Currently, TestObject hosts <strong>more than 190 different models of real Android and iOS devices </strong>. We constantly add more devices to our pool. To see if the devices you want to test on are available, please refer to our <a href="https://devicelab.testobject.com/">Device Lab</a> for the complete device list, including device specifications.</b>
+Currently, TestObject hosts <strong>more than 200 different models of real Android and iOS devices </strong>. We are constantly adding more devices to our pool. To see if the devices you want to test on are available, please refer to our <a href="https://devicelab.testobject.com/">Device Lab</a>, where you will be able to access the complete device list, including device specifications.</b>
 
 <h3 id="free_pre">Free vs. Premium Devices</h3>
 
-Both Free and Premium devices are real devices and there is no defference at all between them. But if you have a free account, then you will need to use limited models of devices.
+While on a free (i.e. not premium) plan, you will be restricted to running your tests on free devices only. Free devices, just like premium ones, are real devices. The only difference is that they can be accessed from free users.
 
-If you upgraded your plan, then you will be able to access and do your tests on much more devices.
-Due to our **Fair Use** policy and to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan.
-You can get more priority for your tests by [upgrading your plan](/docs/general-reference/settings/#plans).
+If you upgraded to a premium plan, you will be able to access and run your tests on a much wider array of devices. Due to our *Fair Use* policy, which is in place to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan. You can get more testing time by [upgrading your plan](/docs/general-reference/settings/#plans).
 
-Our Enterprise Customers can get exclusively dedicated devices for their tests. [Become an enterprise customer now](/docs/general-reference/settings/#enterprise_plan).
+Our enterprise customers can get dedicated devices, which can not be allocated to other users, and which allow for higher performance when executing tests through shorter waiting times. [Become an enterprise customer now](/docs/general-reference/settings/#enterprise_plan).
 
 <h3 id="device_settings">Device settings</h3>
-It is important to configure the devices you use and change its settings to make it relevant to your testing purposes. Therefore, TestObject has given you the possibility to set your test settings for both of Manual and Automated Testing.
+TestObject gives you the possibility to set the default settings your devices will be launched with when you are testing on them. Among these are:
 
-The first setting you can change is the default **Device Orientation** (Portrait or Landscape), and this is useful if you want to run your test always in a specific orientation.
-
-There is also the **Device Language** Setting which enables you to test your application in the language you wish.
-
-Setting a **Proxy Settings** is also possible on Android but you need API level 17 or higher. You can easily enable it and clicking on the Save button after filling the requisted data.
+* *Device Orientation* can be set to portrait or landscape (this is useful if you want to run your test always in a specific orientation);
+* *Device Language* enables you to test your application in the language you wish;
+* *Proxy Settings* can also be set on Android API level 17 or higher.
 
 <img class="center shadow" src="/img/dashboard/device-settings.png">
 
 ***
 
-Some other setting are available only for **iOS**, like the **System Alerts Delay** which help you lunching your app without any issue related to the iOS system alerts.
-And if you prefer to use a **private container directory** for your app instead of the shared one, you can do that with only one click.
+Some other settings are available only for iOS, like the *System Alerts Delay*, which helps you running your tests without having to care about dismissing iOS system alerts. And if you prefer to use a *Private Container Directory* for your app instead of the shared one, you can do that with only one click.
 <img class="center shadow" src="/img/dashboard/device_settings_ios.png">
 
 ***
 
-While testing manually on our platform, you can control some further settings. [Learn more](/docs/testing-tools/manual-testing/). 
+You will be able to change most of the settings described above in real time while running manual testing. [Learn more](/docs/testing-tools/manual-testing/).
 
 <div class="center">
 	<h4><a href="https://devicelab.testobject.com/">devicelab.testobject.com</a></h4>
