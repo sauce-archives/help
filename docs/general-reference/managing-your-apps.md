@@ -19,7 +19,7 @@ To test your application on TestObject you will need to follow some guidelines w
 
 <h3 id="create-new-project">Create a New Project</h3>
 
-If this isn't the first project on your account, you will first need to select the "New App" button from your home screen:
+If you have already created other projects on TestObject, you will first need to select the "New App" button from your home screen. If this is your first time using TestObject, you can simply log in to your account.
 <img class="center shadow" src="/img/settings/new_app.png">
 
 
