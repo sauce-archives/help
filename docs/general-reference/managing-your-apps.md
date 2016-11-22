@@ -37,7 +37,7 @@ Now that you've created your new project, the project dashboard gives you inform
 <img class="center shadow" src="/img/dashboard/app-dashboard.png">
 
 
-Clicking "All Versions" gives you an overview of all previously uploaded versions of this app. On the left side of each app version, you see the ID. This can be used to specify specific app versions when performing automated testing. If you don't specify an app version, the active app version will be used. Also, for manual testing, the active app version is always used. You can see which version of your application is active by looking for "active" in the status column.
+Clicking "All Versions" gives you an overview of all previously uploaded versions of this app. On the left side of each app version, you see the ID. This can be used to select specific app versions when performing automated testing. If you don't specify an app version, the active app version will be used. Also, for manual testing, the active app version is always used. You can see which version of your application is active by looking for "active" in the status column.
 
 <img class="center shadow" src="/img/settings/app-versions.png">
 
