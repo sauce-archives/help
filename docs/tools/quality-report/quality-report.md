@@ -5,10 +5,9 @@ permalink: docs/testing-tools/quality-report/
 ---
 
 <li><a href="#introduction">What is a Quality Report?</a></li>
-<li><a href="#install-launch">Install&Launch</a></li>
+<li><a href="#install-launch">Install & Launch</a></li>
 <li><a href="#stress-test">Stress Test</a></li>
 <li><a href="#screenshot">Screenshots</a></li>
-
 <li><a href="#faq">Quality Report - FAQ</a></li>
 
 <br>
@@ -28,6 +27,9 @@ We know mobile app testing can be complex and time consuming. This is why we pro
 
 The Quality Report is best suited to test the basic functionality of your app on dozens of devices simultaneously with almost no effort. Your users will love your improved app!
 
+#####The Quality Report feature is only available with an automated testing plan. [Learn more](/docs/general-reference/settings/#pre_plans).
+
+***
 <img class="left shadow" src="/img/tools/quality-report/screenshot-quality-report.png" alt="Dashboard Quality Report">
 
 
@@ -42,3 +44,6 @@ We simulate random user inputs until an exception is thrown. Our Stress Test is 
 <h3 id="screenshots">Screenshots</h3>
 TestObject takes screenshots of different activities within your app. Using the screenshot test, you can get a quick overview on how your app looks on different devices. After the screenshots are taken, you can review them and open bugs if somethings not right.
 
+***
+***
+***
