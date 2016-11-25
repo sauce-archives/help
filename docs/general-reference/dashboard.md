@@ -8,7 +8,6 @@ The dashboard provides all important <b>information and settings on a specific a
 <ul>
     <li><a href="#tool-access">Access Testing Tools</a></li>
     <li><a href="#issues">Manage Issues</a></li>
-    <li><a href="#issue-tracker">Connect Issue Tracker</a></li>
     <li><a href="#activities">Keep Track of Your Activities</a></li>
     <li><a href="#app-versions">Manage Active App Version</a></li>
     <li><a href="#device-settings">Edit Device Settings</a></li>
@@ -22,34 +21,9 @@ The dashboard provides all important <b>information and settings on a specific a
  With only one click you can start testing on the different testing tools: <a href="/docs/testing-tools/manual-testing/">Manual Testing</a>, <a href="/docs/testing-tools/quality-report/">Quality Report</a>, and <a href="/docs/general-reference/automation/">Automated Testing</a>.
  
 <h3 id="issues">Manage Issues</h3>
-All the issues for the respective app are collected in the "Issues" section. Manage your issues directly inside TestObject or connect to one of the supported <a href="#issue-tracker">Issue Trackers</a>.
+All the issues for the respective app are collected in the "Issues" section. With <a href="/docs/general-reference/issue-tracking/">Issue Tracking</a> you can manage issues within TestObject or integrate with one of our supported <a href="/docs/general-reference/issue-tracking#third-party-integration">Issue Trackers</a>.
 
 <img class="center shadow" src="/img/dashboard/issues.png">
-
-
-The most recent issue are shown on top. You can search the list for specific issues, devices, OS versions, screen sizes etc.
-
-Navigate from here to the each issue created before. <strong>Every issue comprises a description of the bug as well as extensive reports</strong>. 
-
-Creating an <a href="/docs/testing-tools/manual-testing/#create-issue">issue in Manual Testing</a> will include a screenshot, logs, additional information on the app/device and your description of the issue.<br>
-For automated testing you will find attached a full <a href="/docs/general-reference/automation/reporting/">Test Report</a>.
-
-<img class="center shadow" src="/img/dashboard/issuelist.png">
-
-<!--
-<h3 id="issue-tracker">Connect Issue Tracker</h3>
-
-Ensure optimal bug fixing processes by connecting your TestObject account with your favorite issue tracker. So far <strong>Jira and GitHub</strong> are supported.
-
-To set up your issue tracker add your credentials and choose the project you want the issues to appear in. You are ready to go! 
-When you create an issue it will be transferred automatically to your Jira or GitHub account. 
-
-To view the details of your issue, you will find a  link in JIRA/GitHub. 
-
-Click on the link to have a closer look at the screenshots, logs and device specifications generated on TestObject.
-
-<img class="center shadow" src="/img/dashboard/jira-github.png">
--->
 
 <h3 id="activities">Keep Track of Your Activities</h3>
 

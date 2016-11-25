@@ -16,7 +16,7 @@ If you encounter a problem with your application while testing, you can track it
 
 <img class="center shadow" src="/img/general-reference/issue-tracking/new-issue-button.png">
 
-Your issue will automatically contain useful information such as the device information, app version, and device logs. For manual tests, a screenshot of the device is also included automatically. For automated tests, all other information, such as video, from the test report will be included. To leave additional information for tracking the issue, you can fill out a title and description.
+Your issue will automatically contain useful information related to the issue. For manual tests, a screenshot, logs, and additional information on the app and device will be included. For automated tests, the full test report will be attached. To leave additional information for tracking the issue, you can fill out a title and description.
 
 <img class="center shadow" src="/img/general-reference/issue-tracking/issue-form.png">
 
