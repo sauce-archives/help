@@ -121,18 +121,7 @@ The left menu is partitioned into several areas (from top):
 
 <h3 id="create-issue">Create an Issue</h3>
 
-Testing is only useful if you can document your findings. The best way to do so with Manual Testing is to create a 'New Issue'. <br>
-Clicking on the button creates a report.<br>
-To safe the issue you will need to add a title. For more detailed information add a more detailed description in the field below.<br>
-The report allows you to toggle between three different views, which include:
-
-* General info about the app under test and the device
-* A screenshot of the device is added
-* The full <a href="#logs">Device Log</a>
-
-'Create Issue' saves the report. For every app your issues will be saved centrally. To navigate there directly, click on the red bug symbol on top of the window bar. Or access your issues from your <a href="/docs/general-reference/dashboard/">app dashboard.</a> <br>
-You also have the option to intgrate this report with your favorite <a href="/docs/general-reference/dashboard/#issue-tracker">Isssue Tracker</a>.
-
+Testing is only useful if you can document your findings. The best way to do so with Manual Testing is to create a 'New Issue'. You can create a new issue during your manual test by selecting the 'New Issue' button. You can <a href="/docs/general-reference/issue-tracking">track issues</a> with the built in tracker or with a third party integration.
 
 <img class="center shadow" src="/img/tools/manual/issue.png" alt="Issue Creation">
 
