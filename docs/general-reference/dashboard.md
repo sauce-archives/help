@@ -36,6 +36,7 @@ For automated testing you will find attached a full <a href="/docs/general-refer
 
 <img class="center shadow" src="/img/dashboard/issuelist.png">
 
+<!--
 <h3 id="issue-tracker">Connect Issue Tracker</h3>
 
 Ensure optimal bug fixing processes by connecting your TestObject account with your favorite issue tracker. So far <strong>Jira and GitHub</strong> are supported.
@@ -48,6 +49,7 @@ To view the details of your issue, you will find a  link in JIRA/GitHub.
 Click on the link to have a closer look at the screenshots, logs and device specifications generated on TestObject.
 
 <img class="center shadow" src="/img/dashboard/jira-github.png">
+-->
 
 <h3 id="activities">Keep Track of Your Activities</h3>
 
