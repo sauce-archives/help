@@ -1,8 +1,8 @@
 ---
-title: Create an account
+title: Creating An Account
 layout: en
-permalink: docs/general-reference/create-account/
-alias: /docs/create-an-account/
+permalink: docs/general-reference/creating-an-account/
+alias: /docs/creating-an-account/
 ---
 
 Start testing your app on the TestObject cloud within less than a minute.
@@ -22,7 +22,7 @@ As a free user, you are able to run your tests on our <a href="/docs/general-ref
 The number of devices you can access and the testing time for free accounts are limited, apart from that you will be able to run your automated and manual tests on TestObject platform for free.<br>
 This free account is not a trial, this means, you will be able to stay a free user and use our platform as long as you want. 
 
-To enjoy more features and access all devices, you need to [upgrade your plan](/docs/general-reference/settings/#plans) to a premium one within your [account settings](/docs/general-reference/settings/#settings).
+To enjoy more features and access all devices, you need to [upgrade your plan](/docs/general-reference/managing-your-account/#plans) to a premium one within your [account settings](/docs/general-reference/managing-your-account/#settings).
  
 ***
 

@@ -1,8 +1,8 @@
 ---
-title: Managing your account
+title: Managing Your Account
 layout: en
-permalink: docs/general-reference/settings/
-alias: /docs/settings/
+permalink: docs/general-reference/managing-your-account/
+alias: /docs/managing-your-account/
 ---
 
 This guide contains information about managing your:
