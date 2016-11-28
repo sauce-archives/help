@@ -33,9 +33,9 @@ Currently, TestObject hosts <strong>more than 200 different models of real Andro
 
 While on a free (i.e. not premium) plan, you will be restricted to running your tests on free devices only. Free devices, just like premium ones, are real devices. The only difference is that they can be accessed from free users.
 
-If you upgraded to a premium plan, you will be able to access and run your tests on a much wider array of devices. Due to our *Fair Use* policy, which is in place to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan. You can get more testing time by [upgrading your plan](/docs/general-reference/settings/#plans).
+If you upgraded to a premium plan, you will be able to access and run your tests on a much wider array of devices. Due to our *Fair Use* policy, which is in place to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan. You can get more testing time by [upgrading your plan](/docs/general-reference/managing-your-account/#plans).
 
-Our enterprise customers can get dedicated devices, which can not be allocated to other users, and which allow for higher performance when executing tests through shorter waiting times. [Become an enterprise customer now](/docs/general-reference/settings/#enterprise_plan).
+Our enterprise customers can get dedicated devices, which can not be allocated to other users, and which allow for higher performance when executing tests through shorter waiting times. [Become an enterprise customer now](/docs/general-reference/managing-your-account/#enterprise_plan).
 
 <h3 id="device_settings">Device settings</h3>
 TestObject gives you the possibility to set the default settings your devices will be launched with when you are testing on them. Among these are:

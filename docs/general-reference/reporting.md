@@ -97,6 +97,6 @@ This screen provides you with all the details of a single test method execution 
 
 <h3 id="issue-tracking">Issue Tracking</h3>
 
-Tracking issues with your app is easy. Open a new issue directly from the report. If you had connected with an external issue tracker (GitHub or JIRA), the issue will be automatically transferred.
+<a href="/docs/general-reference/issue-tracking/">Tracking issues</a> with your app is easy. Open a new issue directly from the report. If you had connected with an external issue tracker (GitHub or JIRA), the issue will be automatically transferred.
 
 <img class="shadow" src="/img/tools/reporting/automation-report-individual-execution-issue-error.png">
