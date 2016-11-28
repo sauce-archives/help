@@ -70,3 +70,12 @@ To regenerate the HTML pages automatically when you make changes to Markdown sou
 
 
 This guide has been tested on Linux ubuntu 16.04 LTS version and OS X 10.11.5 .
+
+##Broken Links
+
+[broken-link-checker](https://www.npmjs.com/package/broken-link-checker) can be installed using `npm install broken-link-checker -g` (sudo may be required).
+
+A check can be run on the live help page with `blc http://help.testobject.com -ro`.
+
+A check can be run locally by first serving the jekyll site, then running `blc http://127.0.0.1:4000 -ro`. Note that our current redirect system only redirects when the site is running on Apache. This means that if you are running locally, some links may fail which would pass on production. To solve this, update links in the help page to not rely on redirect. 
+
