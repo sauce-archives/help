@@ -19,6 +19,7 @@ alias: [/docs/questions-and-answers/faq-security/, /docs/questions-and-answers/f
 <li><a href="#latest-devices">How long does it take until I can test on the latest devices?</a></li>
 <li><a href="#device-missing">You don't have the device that I need. Can you get it for me?</a></li>
 <li><a href="#device-camera">Is it possible to test the camera behavior using your devices?</a></li>
+<li><a href="#push-notifications">Is it possible to test push notifications?</a></li>
 
 <h4 id="are-real-devices-real">How real are the real devices?</h4>
 The devices at TestObject are real, physical devices. They are standard, commercially available devices and not modified or rooted. TestObject uses virtual networking computer (VNC) to transmit mouse and keyboard events on the devices. The VNC client on the devices relays back the graphical screen of the devices. (See also: <a href="/docs/general-reference/devices/#real-devices-how-it-works" target="_blank">Real Devices: How It Works</a>)  
@@ -38,6 +39,9 @@ Generally, yes. If the model you are looking for is not in our pool yet you can 
 <h4 id="device-camera">Is it possible to test the camera behaviour using your devices?</h4>
 Yes, of course it is possible to test the camera behaviour on our devices. In front of our cameras are nice TestObject Logos ;-). You should see something like this through the camera:
 <img class="center shadow" src="/img/faq/camera_view.png">
+
+<h4 id="push-notifications">Is it possible to test push notifications?</h4>
+Testing push notifications on TestObject depends on whether you are testing for Android or iOS. For iOS devices, it is currently not possible to test push notifications. This is because we must resign your application in order to install it on our real devices. For Android, there are no such issues, and it will be possible to test notifications.
 
 <h3 id="FAQ-Security">FAQ-Security</h3>
 <li><a href="#data-privacy">Is my app safe in the TestObject cloud?</a></li>
