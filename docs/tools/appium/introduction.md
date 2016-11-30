@@ -7,7 +7,10 @@ alias: /docs/testing-tools/automation/appium/
 
 <h3 id="about-appium">About Appium</h3>
 
-Appium is an open-source test-automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using a standardized protocol. Selenium uses the same protocol and design so if you are familiar with Selenium for web testing, Appium will definitely be easy to get started with.<br>
+Appium is an open-source test-automation framework for mobile apps &ndash; native, hybrid and web apps are supported. It drives iOS and Android apps using a standardized protocol. Selenium uses the same protocol and design so if you are familiar with Selenium for web testing, Appium will definitely be easy to get started with.
+
+One of the advantages of Appium is it's flexibility. Appium allows you to begin writing tests in several popular languages. You can write tests using Java, Javascript, Ruby, PHP, C#, and Python. This makes it signficantly easier to begin writing tests since you don't need to learn a new programming language to get started. You can write your tests using whichever language you are most comfortable with.
+
 If you have any doubts, or want to get a first taste of what it is like to automate tests using Appium, have a look at our <a href="/docs/guides/tutorials-appium/">Appium Tutorial Series</a>, where we help you set up Appium on your system and run your first test.
 
 
