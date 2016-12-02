@@ -1,7 +1,7 @@
 ---
 title: Quality Report - FAQ
 layout: en
-permalink: docs/testing-tools/qr-faq/
+permalink: docs/testing-tools/automated-testing/quality-report-faq/
 ---
 
 <h3 id="faq">Questions asked...</h3>
