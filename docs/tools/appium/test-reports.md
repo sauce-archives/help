@@ -6,9 +6,10 @@ permalink: docs/tools/appium/test-reports/
 
 <ul>
 	<li><a href="#introduction">Introduction</a></li>
-	<li><a href="#test-reports">Test Reports Page</a></h3>
-	<li><a href="#test-report-data">Test Report</a></h3>
-	<li><a href="#sharing-test-reports">Sharing Test Reports</a></h3>
+	<li><a href="#test-reports">Test Reports Page</a></li>
+	<li><a href="#test-report-data">Test Report Data</a></li>
+	<li><a href="#sharing-test-reports">Sharing Test Reports</a></li>
+	<li><a href="#open-an-issue">Open an Issue</a></li>
 </ul>
 
 <h3 id="introduction">Introduction</h3>
@@ -35,17 +36,20 @@ From the Test Reports page, you can select a particular test report for more inf
 	<li>Appium logs</li>
 </ul>
 
-Screenshots are not taken automatically, so it will be necessary to add screenshots to your Appium test. You can do this using the normal Appium screenshot command, and your screenshots will be automatically added to your test report.
+Screenshots are not taken automatically, so it will be necessary to add screenshots to your Appium test. You can do this using the normal Appium screenshot command, and your screenshots will be automatically added to your test report. All other data will be automatically added to your test report.
 
-<img class="center shadow" src="/img/tools/reporting/automation-report-individual-execution-info.png">
+<img class="center shadow" src="/img/tools/automation/Appium_Execution_Report.png">
 
 <h3 id="sharing-test-reports">Sharing Test Reports</h3>
 
-In order to share the test report with others, simply select the Share button from your test report. This will generate a link which you can share to other team members, giving them access to the full Test Report. This feature can be useful when trying to show a developer a failing test, or simply to showcase new changes to the application.
+In order to share the test report with others, simply select the Share button from your test report. This will generate a link which you can share with other team members, giving them access to the full Test Report. This feature can be useful when trying to show a developer a failing test, or simply to showcase new changes to the application.
 
 <img class="center shadow" src="/img/tools/automation/appium/share-test-report.png">
 
 To manage your test report link, select the Share button again. This will give you access to the link as well as an option to un-share the test report.
 
+<h3 id="open-an-issue">Open an Issue</h3>
 
+<a href="/docs/general-reference/issue-tracking/">Tracking issues</a> with your app is easy. You can open a new issue directly from the report by selecting the New Issue button. The new issue will be tracked using the built in issue tracker. You can also integrate with a <a href="/docs/general-reference/issue-tracking/#third-party-integration">third party tracker</a> such as Github or Jira and the issue will be tracked there. The new issue will automatically include the full test report, as well as your title and description of the issue.
 
+<img class="center shadow" src="/img/general-reference/issue-tracking/new-issue-button.png">
