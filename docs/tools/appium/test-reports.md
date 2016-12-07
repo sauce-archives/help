@@ -42,7 +42,7 @@ Screenshots are not taken automatically, so it will be necessary to add screensh
 
 <h3 id="sharing-test-reports">Sharing Test Reports</h3>
 
-In order to share the test report with others, simply select the Share button from your test report. This will generate a link which you can share with other team members, giving them access to the full Test Report. This feature can be useful when trying to show a developer a failing test, or simply to showcase new changes to the application.
+In order to share the test report with others, simply select the Share button from your test report. This will generate a link which you can share with your collaborators, giving them access to the full Test Report. This feature can be useful when trying to show a developer a failing test, or simply to showcase new changes to the application. They will be able to view the link conveniently, without needing an account on TestObject.
 
 <img class="center shadow" src="/img/tools/automation/appium/share-test-report.png">
 
