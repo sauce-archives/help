@@ -18,7 +18,7 @@ When running Appium tests on TestObject, test reports give you a convenient and 
 
 <h3 id="test-reports">Test Reports Page</h3>
 
-To view your test reports, first navigate to your [project dashboard](/docs/general-reference/dashboard/). From here, open the Automated Testing tab and select Appium. From your Test Reports page, you can now view all of your Test Reports to get an overview of your testing. To record if your tests passed or failed, you will need to use the [Watcher Setup](/docs/tools/appium/setups/watcher-setups/) or the more advanced [Suite Setup](/docs/tools/appium/setups/suite-setups/). If you are using the Suite Setup, you can select the Test Suites tab to view your test reports. 
+To view your test reports, first navigate to your project dashboard. From here, open the Automated Testing tab and select Appium. From your Test Reports page, you can now view all of your Test Reports to get an overview of your testing. To record if your tests passed or failed, you will need to use the [Watcher Setup](/docs/tools/appium/setups/watcher-setups/) or the more advanced [Suite Setup](/docs/tools/appium/setups/suite-setups/). If you are using the Suite Setup, you can select the Test Suites tab to view your test reports. 
 
 <img src="/img/tools/automation/appium/test-results.png">
 
