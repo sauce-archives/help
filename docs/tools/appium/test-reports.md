@@ -14,7 +14,7 @@ permalink: docs/tools/appium/test-reports/
 
 <h3 id="introduction">Introduction</h3>
 
-When running Appium tests on TestObject, test reports give you a convenient and organised way to browse your results. Quickly find which executions failed and which devices cause the most trouble. The test reports will automatically organise test information, such as video and device logs. You can share the report with your colleagues and also use the report to create and track [issues](/docs/general-reference/issue-tracking/).
+When running Appium tests on TestObject, test reports give you a convenient and organised way to browse your results. Quickly find which executions failed and which devices cause the most trouble. The test reports will automatically organise test information, such as video and device logs. This can be valuable for seeing exactly why a test failed and resolving any issues with your application. You can share the report with your colleagues and also use the report to create and track [issues](/docs/general-reference/issue-tracking/).
 
 <h3 id="test-reports">Test Reports Page</h3>
 
