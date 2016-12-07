@@ -59,7 +59,7 @@ Along with the mandatory capabilities we have specified, you can send over some 
 <h4>Dependencies</h4>
 This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
 {% highlight bash %}
-  testCompile 'org.testobject:testobject-appium-java-api:0.0.24'
+  testCompile 'org.testobject:testobject-appium-java-api:0.0.26'
 {% endhighlight %}
 
 <h4>Why use it</h4>

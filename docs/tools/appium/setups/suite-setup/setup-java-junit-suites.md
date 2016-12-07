@@ -46,7 +46,7 @@ public class CompleteTestSetup {
 <h3>Dependencies</h3>
 This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-api/), so you will have to add the instruction to compile our dependency to your `build.gradle` file:
 {% highlight bash %}
-  testCompile 'org.testobject:testobject-appium-java-api:0.0.24'
+  testCompile 'org.testobject:testobject-appium-java-api:0.0.26'
 {% endhighlight %}
 For the Maven projects without the build.gradle file, you need instead to add the [TestObject Appium Java Api](/docs/tools/appium/appium-api/) to your `pom.xml` file as:
 {% highlight bash %}
@@ -54,7 +54,7 @@ For the Maven projects without the build.gradle file, you need instead to add th
     <dependency>
         <groupId>org.testobject</groupId>
         <artifactId>testobject-appium-java-api</artifactId>
-        <version>0.0.24</version>
+        <version>0.0.26</version>
     </dependency>
 </dependencies>
 {% endhighlight %}
