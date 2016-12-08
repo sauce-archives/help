@@ -79,3 +79,6 @@ A check can be run on the live help page with `blc http://help.testobject.com -r
 
 A check can be run locally by first serving the jekyll site, then running `blc http://127.0.0.1:4000 -ro`. Note that our current redirect system only redirects when the site is running on Apache. This means that if you are running locally, some links may fail which would pass on production. To solve this, update links in the help page to not rely on redirect. 
 
+##Redirects
+
+The help page is linked to in many places in product and users may have some pages bookmarked. To avoid 404 errors in these cases, add a redirect when removing a url. This can be done using the `alias` field in the header.
