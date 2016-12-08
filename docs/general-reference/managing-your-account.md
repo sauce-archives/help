@@ -20,15 +20,15 @@ To open your account settings, click in the right corner of the screen and selec
 <img class="shadow" src="/img/settings/profile.png">
 
 <h3 id="profile">Profile</h3>
-Here you can change your personal information given at your sign up, like the first name, the last name or the email address you use. But what you cannot change is your username (which can be used to login), because it is unique and must be the same without changing to ensure allocating your data with your account.
+Here you can change your personal information given at your sign up, like the first name, the last name or the email address you use. You won't be able to change your username, as it is unique for each and every account.
 
 <h3 id="password">Password</h3>
 To change your password enter your new password into the text field and save. Done!<br>
-If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud.
+If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">reset your password</a> when you login to the TestObject cloud.
 
 - Enter your email address or user name
 - You will receive a link via email
-- Follow this link and enter a new password.
+- Follow this link and enter a new password
 
 <h3 id="team-accounts">Inviting Team Members</h3>
 If you have a Team plan, then you are able to add or remove teammates to your account. This means, you will be able to test your apps together with other team members. To do that:

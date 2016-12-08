@@ -8,36 +8,37 @@ If you want to register your test result on TestObject, you will need to use our
 
 {% highlight java %}
 @Listeners({ TestObjectTestNGTestResultWatcher.class })
-public class IntermediateSetupTestTestNG implements AppiumDriverProvider {
+public class AppiumDriverCalculatorWatcherTestTestNG implements TestObjectWatcherProvider {
 
-    private AppiumDriver driver;
+	private TestObjectListenerProvider provider = TestObjectListenerProvider.newInstance();
 
-    @BeforeMethod
-    public void beforeTest() throws MalformedURLException {
+	@BeforeMethod
+	public void beforeTest() throws MalformedURLException {
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+		DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability("testobject_api_key", "YOUR_API_KEY");
-        capabilities.setCapability("testobject_device", "TESTOBJECT_DEVICE_NAME");
+		capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_API_KEY, "YOUR_API_KEY");
+		capabilities.setCapability(TestObjectCapabilities.TESTOBJECT_DEVICE, "TESTOBJECT_DEVICE_NAME");
 
-        driver = new AndroidDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
+		AppiumDriver appiumDriver = new AndroidDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
+		provider.setDriver(appiumDriver);
+		provider.setLocalTest(false);
+	}
 
-    }
+	@Test
+	public void testMethod() {
+		/* Your test. */
+	}
 
-    @Test
-    public void testMethod() {
-        /* Your test. */
-    }
+	@AfterMethod
+	public void tearDown() {
+		provider.getAppiumDriver().quit();
+	}
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
-
-    @Override
-    public AppiumDriver getAppiumDriver() {
-        return this.driver;
-    }
+	@Override
+	public TestObjectListenerProvider getProvider() {
+		return provider;
+	}
 }
 {% endhighlight %}
 
@@ -51,5 +52,5 @@ Along with the mandatory capabilities we have specified, you can send over some 
 <h4>Dependencies</h4>
 This setup needs the latest [TestObject Appium Java Api](/docs/tools/appium/appium-api/), so you will have to add the instruction to compile our dependency to your build.gradle file:
 {% highlight bash %}
-  testCompile 'org.testobject:testobject-appium-java-api:0.0.24'
+  testCompile 'org.testobject:testobject-appium-java-api:0.0.26'
 {% endhighlight %}
