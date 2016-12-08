@@ -2,6 +2,7 @@
 title: Quality Report
 layout: en
 permalink: docs/tools/automated-testing/quality-report/
+alias: [/docs/testing-tools/quality-report/, /docs/testing-tools/quality-report]
 ---
 
 * [What is a Quality Report?](#introduction)

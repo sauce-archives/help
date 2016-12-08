@@ -33,7 +33,7 @@ Currently, TestObject hosts **more than 200 different models of real Android and
 
 While on a free (i.e. not premium) plan, you will be restricted to running your tests on free devices only. Free devices, just like premium ones, are real devices. On all free Android devices, access to Settings and Google Play Store is blocked. To access devices in which Settings and Google Play Store are accessible, it is necessary to [upgrade to a premium plan](/docs/general-reference/managing-your-account/#plans).
 
-If you upgraded to a premium plan, you will be able to access and run your tests on a much wider array of devices. Due to our [Fair Use](www.testobject.com/pricing) policy, which is in place to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan. You can get more testing time by upgrading your plan.
+If you upgraded to a premium plan, you will be able to access and run your tests on a much wider array of devices. Due to our [Fair Use](http://testobject.com/pricing) policy, which is in place to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan. You can get more testing time by upgrading your plan.
 
 Our enterprise customers can get dedicated devices as part of a private pool plan. This means the devices are only visible to them, and cannot be allocated to other users. This allows for higher performance when executing tests through shorter waiting times. [Become an enterprise customer now](/docs/general-reference/managing-your-account/#enterprise_plan).
 
