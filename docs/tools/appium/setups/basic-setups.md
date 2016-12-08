@@ -25,6 +25,11 @@ Codeception is a testing framework that allows you to write automated web tests 
 
 + [Codeception Setup](/docs/tools/appium/setups/basic-setup/codeception/)
 
+###C&#35;
+Tests written in C# can also be run on TestObject. Currently only the basic setup is supported. This means that you can run your tests on TestObject, but the result of the test (whether it passed or failed) won't be visible in the test report on TestObject.
+
++ [NUnit Setup](/docs/tools/appium/setups/basic-setup/nunit/)
+
 ###Python
 It is possible to write and run Appium tests using Python on TestObject. To do that, you need to point to the following Appium server:
 
