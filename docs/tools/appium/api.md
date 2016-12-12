@@ -1,11 +1,11 @@
 ---
-title: Our Appium APIs
+title: Our Appium Libraries
 layout: en
 permalink: docs/tools/appium/appium-api/
 alias: /docs/tools/appium/appium-java-api/
 ---
 
-To make things more convenient for our customers, we provide our own Appium API, which contains everything that is necessary to run our  Appium [Test Setups](/docs/tools/appium/setups/) in a variety of supported languages.
+To make things more convenient for our customers, we provide our own Appium libraries, which contain everything that is necessary to run our Appium [Test Setups](/docs/tools/appium/setups/) in a variety of supported languages.
 
 We are constantly improving our libraries, so we recommend our users to check this page from time to time to make sure they are using the latest version. Our goal is to make Appium testing on TestObject as easy and convenient as possible, so we are always looking to support more advanced setups and interesting testing frameworks.
 
