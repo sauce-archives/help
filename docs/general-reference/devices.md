@@ -11,7 +11,7 @@ alias: /docs/devices/
 
 
 <h3 id="device_farm">Device Farm</h3>
-<h4 id="real-devices-how-it-works">Real Devices: How It Works</h4>
+<h4 id="real-devices-how-it-works">How does it work?</h4>
 
 TestObject hosts hundreds of **real smartphones and tablets in the cloud** for manual and automated testing. You can remotely control all devices directly from your browser.
 
@@ -25,17 +25,17 @@ Every time a session starts the app gets installed freshly on the respective dev
 
 Every user will be able to use a **fresh, standard phone that is not modified**. This guarantees reliable, realistic test runs for every user and application.
 
-<h4 id="device-list">Device List</h4>
+<h4 id="device-list">Which devices do you have?</h4>
 
-Currently, TestObject hosts <strong>more than 200 different models of real Android and iOS devices </strong>. We are constantly adding more devices to our pool. To see if the devices you want to test on are available, please refer to our <a href="https://devicelab.testobject.com/">Device Lab</a>, where you will be able to access the complete device list, including device specifications.</b>
+Currently, TestObject hosts **more than 200 different models of real Android and iOS devices**. We are constantly adding more devices to our pool. To see if the devices you want to test on are available, please refer to our <a href="https://devicelab.testobject.com/">Device Lab</a>, where you will be able to access the complete device list, including device specifications.</b>
 
 <h3 id="free_pre">Free vs. Premium Devices</h3>
 
-While on a free (i.e. not premium) plan, you will be restricted to running your tests on free devices only. Free devices, just like premium ones, are real devices. The only difference is that they can be accessed from free users.
+While on a free (i.e. not premium) plan, you will be restricted to running your tests on free devices only. Free devices, just like premium ones, are real devices. On all free Android devices, access to Settings and Google Play Store is blocked. To access devices in which Settings and Google Play Store are accessible, it is necessary to [upgrade to a premium plan](/docs/general-reference/managing-your-account/#plans).
 
-If you upgraded to a premium plan, you will be able to access and run your tests on a much wider array of devices. Due to our *Fair Use* policy, which is in place to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan. You can get more testing time by [upgrading your plan](/docs/general-reference/managing-your-account/#plans).
+If you upgraded to a premium plan, you will be able to access and run your tests on a much wider array of devices. Due to our [Fair Use](http://testobject.com/pricing) policy, which is in place to ensure that no single user is blocking devices permanently, we reserve the right to limit the daily usage time, depending on the purchased plan. You can get more testing time by upgrading your plan.
 
-Our enterprise customers can get dedicated devices, which can not be allocated to other users, and which allow for higher performance when executing tests through shorter waiting times. [Become an enterprise customer now](/docs/general-reference/managing-your-account/#enterprise_plan).
+Our enterprise customers can get dedicated devices as part of a private pool plan. This means the devices are only visible to them, and cannot be allocated to other users. This allows for higher performance when executing tests through shorter waiting times. [Become an enterprise customer now](/docs/general-reference/managing-your-account/#enterprise_plan).
 
 <h3 id="device_settings">Device settings</h3>
 TestObject gives you the possibility to set the default settings your devices will be launched with when you are testing on them. Among these are:

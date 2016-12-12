@@ -20,15 +20,15 @@ To open your account settings, click in the right corner of the screen and selec
 <img class="shadow" src="/img/settings/profile.png">
 
 <h3 id="profile">Profile</h3>
-Here you can change your personal information given at your sign up, like the first name, the last name or the email address you use. But what you cannot change is your username (which can be used to login), because it is unique and must be the same without changing to ensure allocating your data with your account.
+Here you can change your personal information given at your sign up, like the first name, the last name or the email address you use. You won't be able to change your username, as it is unique for each and every account.
 
 <h3 id="password">Password</h3>
 To change your password enter your new password into the text field and save. Done!<br>
-If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">set back your password</a> when you login to the TestObject cloud.
+If you made a typo or forgot what you chose as a password, you can always <a href="https://app.testobject.com/#/forgot" target="_blank">reset your password</a> when you login to the TestObject cloud.
 
 - Enter your email address or user name
 - You will receive a link via email
-- Follow this link and enter a new password.
+- Follow this link and enter a new password
 
 <h3 id="team-accounts">Inviting Team Members</h3>
 If you have a Team plan, then you are able to add or remove teammates to your account. This means, you will be able to test your apps together with other team members. To do that:
@@ -68,7 +68,7 @@ For more information and FAQ about plans, have a look at our <a href="https://te
 <img class="left shadow" src="/img/settings/manual-bar.png">
 
 You will have the choice between a <b>Single Plan</b> or a <b>Team Plan</b>.<br/>
-The plans differ in the number of users, parallel sessions and the available device time a day.<br> Unfortunately, you cannot run a [Quality Report](/docs/testing-tools/quality-report/) test with this plan, since it is a part of the <a href="#automated_plan">automated testing plans</a>. <br>
+The plans differ in the number of users, parallel sessions and the available device time a day.<br> Unfortunately, you cannot run a [Quality Report](/docs/tools/automated-testing/quality-report/) test with this plan, since it is a part of the <a href="#automated_plan">automated testing plans</a>. <br>
 For more information, see our <a href="https://testobject.com/pricing" target="_blank">plans and pricing page</a>.
 
 <h4 id="automated_plan">Automated Testing plans</h4>
@@ -76,7 +76,7 @@ For more information, see our <a href="https://testobject.com/pricing" target="_
 
 For automated testing you can purchase the <b>Starter Plan</b> or the <b>Advanced plan</b>.<br/>
 Both plans are accessible for all users of your <a href="#team-accounts">team</a>. They differ in the number of possible concurrent test runs, the available device time and the priority of the test execution.
-And with an *automated testing plan*, you are able to run a [Quality Report](/docs/testing-tools/quality-report/) test.<br>
+And with an *automated testing plan*, you are able to run a [Quality Report](/docs/tools/automated-testing/quality-report/) test.<br>
 For more information, see our <a href="https://testobject.com/pricing" target="_blank">plans and pricing page</a>.
 
 <h4 id="enterprise_plan">Enterprise Plans</h4>

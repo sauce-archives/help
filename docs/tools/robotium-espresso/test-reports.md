@@ -1,7 +1,8 @@
 ---
 title: Execution Reports
 layout: en
-permalink: docs/general-reference/automation/reporting/
+permalink: docs/tools/robotium-espresso/test-reports/
+alias: [docs/general-reference/automation/reporting, docs/general-reference/automation/reporting/]
 ---
 
 
@@ -85,7 +86,6 @@ This screen provides you with all the details of a single test method execution 
 * Screenshots, if you had specified to take any
 * Video capturing the exection of this test method
 * Device log, which you can search, filter and download
-* Appium log, if you were using the Appium framework
 
 <img class="shadow" src="/img/tools/reporting/automation-report-individual-execution-info.png">
 <img class="shadow" src="/img/tools/reporting/automation-report-individual-execution-error.png">
