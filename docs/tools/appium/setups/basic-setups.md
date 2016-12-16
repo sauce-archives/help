@@ -31,6 +31,9 @@ Tests written in C# can also be run on TestObject. Currently only the basic setu
 + [NUnit Setup](/docs/tools/appium/setups/basic-setup/nunit/)
 
 ###Python
-It is possible to write and run Appium tests using Python on TestObject. To do that, you need to point to the following Appium server:
+It is possible to write and run Appium tests using Python on TestObject. Currently only the basic setup is supported. This means that you can run your tests on TestObject, but the result of the test (whether it passed or failed) won't be visible in the test report on TestObject.
 
-    http://appium.testobject.com:80/api/appium/wd/hub
++ [Unittest Setup](/docs/tools/appium/setups/basic-setup/python-unittest/)
+   
+***
+***
