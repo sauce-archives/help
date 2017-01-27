@@ -15,8 +15,8 @@ var config = {
 	port: '443',
 	path: '/api/appium/wd/hub',
 	capabilities: [{
-		testobject_api_key: 'YOUR API KEY'
-		testobject_device: 'Motorola_Moto_G_2nd_gen_real'
+		testobject_api_key: 'YOUR API KEY',
+		testobject_device: 'Motorola_Moto_G_2nd_gen_real',
 		browserName: 'Chrome'
 	}],
 
