@@ -34,7 +34,7 @@ public class WatcherTestSetup {
         driver = new AndroidDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
 
         /* IMPORTANT! We need to provide the Watcher with our initialized AppiumDriver */
-        resultWatcher.setAppiumDriver(driver);
+        resultWatcher.setRemoteWebDriver(driver);
 
     }
 
