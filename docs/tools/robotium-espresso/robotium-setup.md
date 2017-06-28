@@ -9,7 +9,7 @@ Run an existing Espresso/Robotium test on the TestObject device cloud within min
 
 Steps to get started:
 <ol>
-<li> Create a <a href="https://app.testobject.com/signup" target="_blank">TestObject account</a>
+<li> Create a <a href="https://app.testobject.com/#/signup" target="_blank">TestObject account</a>
 </li>
 
 <li> Add a <b>new app</b> to your account, upload your apk for native apps or enter the url for web apps.
