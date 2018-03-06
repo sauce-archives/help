@@ -103,9 +103,12 @@ Yes, you will receive an invoice for every payment via email. You also can acces
 To test your iOS application on our platform you have to export your IPA file as an Ad Hoc Deployment. Check out this <a href="/docs/guides/creating-ipa/">short guide</a> on how to do it!
 
 <h4 id="Whitelisting">My app is only available within our internal network. Can I use TestObject devices for my testing?</h4>
-Yes. All TestObject devices access the internet through the IP address **37.44.7.110**.
+Yes. All TestObject devices access the internet through the following IP ranges:
+ 
+ - **185.94.24.0/22** for _European data center_
+ - **162.222.72.0/21** and **66.85.48.0/21** for _US data center_
 
-Sometimes apps are designed to be run on internal networks, or on networks that can be accessed only from specific IP addresses. In this case, you can add an exception for TestObject to your network's whitelist for the IP address **37.44.7.110**.
+Sometimes apps are designed to be run on internal networks, or on networks that can be accessed only from specific IP addresses. In this case, you can add an exception for TestObject to your network's whitelist for the IP ranges mentioned above.
 
 <!-- <h4 id="permissions"></h4>
 For Android
